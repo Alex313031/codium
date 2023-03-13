@@ -4,14 +4,19 @@
 # to run with Bash: "C:\Program Files\Git\bin\bash.exe" ./build/build.sh
 ###
 
-export APP_NAME="VSCodium"
+export APP_NAME="Codium"
 export CI_BUILD="no"
 export SHOULD_BUILD="yes"
-export SKIP_ASSETS="yes"
+export SKIP_ASSETS="no"
 export SKIP_BUILD="no"
 export SKIP_SOURCE="no"
 export VSCODE_LATEST="no"
 export VSCODE_QUALITY="stable"
+
+export CFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+export CXXFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+export CPPFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+export LDFLAGS="-Wl,-O3 -msse3"
 
 while getopts ":ilop" opt; do
   case "$opt" in
@@ -25,13 +30,20 @@ while getopts ":ilop" opt; do
       export SKIP_BUILD="yes"
       ;;
     p)
-      export SKIP_ASSETS="no"
+      export SKIP_ASSETS="yes"
       ;;
     s)
       export SKIP_SOURCE="yes"
       ;;
   esac
 done
+
+installDeps () {
+	sudo apt-get install build-essential git g++ pkg-config automake make gcc libsecret-1-dev fakeroot rpm dpkg dpkg-dev imagemagick libx11-dev libxkbfile-dev nodejs npm node-gyp node-istanbul jq python3 python-is-python3
+}
+case $1 in
+	--deps) installDeps; exit 0;;
+esac
 
 case "${OSTYPE}" in
   darwin*)

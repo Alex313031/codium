@@ -133,14 +133,6 @@ else
     yarn gulp "vscode-linux-${VSCODE_ARCH}-build-deb"
   fi
 
-  if [[ "${SHOULD_BUILD_RPM}" != "no" ]]; then
-    yarn gulp "vscode-linux-${VSCODE_ARCH}-build-rpm"
-  fi
-
-  if [[ "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
-    . ../build/linux/appimage/build.sh
-  fi
-
   cd ..
 
   if [[ "${SHOULD_BUILD_TAR}" != "no" ]]; then
@@ -153,18 +145,6 @@ else
   if [[ "${SHOULD_BUILD_DEB}" != "no" ]]; then
     echo "Moving DEB"
     mv vscode/.build/linux/deb/*/deb/*.deb assets/
-  fi
-
-  if [[ "${SHOULD_BUILD_RPM}" != "no" ]]; then
-    echo "Moving RPM"
-    mv vscode/.build/linux/rpm/*/*.rpm assets/
-  fi
-
-  if [[ "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
-    echo "Moving AppImage"
-    mv build/linux/appimage/out/*.AppImage* assets/
-
-    find assets -name '*.AppImage*' -exec bash -c 'mv $0 ${0/_-_/-}' {} \;
   fi
 
   VSCODE_PLATFORM="linux"
