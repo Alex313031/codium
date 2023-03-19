@@ -2,7 +2,7 @@
     <br />
     <img src="./src/stable/resources/linux/code.png" alt="VSCodium Logo" width="200"/>
     <h1>Codium</h1>
-    <h3>Free/Libre Open Source Software Binaries of <a href="https://github.com/microsoft/vscode">VS Code</a> - Compiler optimized fork of <a href="https://github.com/VSCodium/vscodium">VSCodium</a></h3>
+    <h3>Free/Libre Open Source Software Binaries of <a target="_blank" href="https://github.com/microsoft/vscode">VS Code</a> - Compiler optimized fork of <a target="_blank" href="https://github.com/VSCodium/vscodium">VSCodium</a></h3>
 </div>
 
 <div id="badges" align="center">
