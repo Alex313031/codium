@@ -78,8 +78,8 @@ elif [[ "${OS_NAME}" == "windows" ]]; then
     yarn gulp "vscode-win32-${VSCODE_ARCH}-archive"
   fi
 
-  if [[ "${SHOULD_BUILD_EXE_SYS}" != "no" ]]; then
-    yarn gulp "vscode-win32-${VSCODE_ARCH}-system-setup"
+  if [[ "${SHOULD_BUILD_EXE_USR}" != "no" ]]; then
+    yarn gulp "vscode-win32-${VSCODE_ARCH}-user-setup"
   fi
 
   cd ..
@@ -89,9 +89,9 @@ elif [[ "${OS_NAME}" == "windows" ]]; then
     mv "vscode\\.build\\win32-${VSCODE_ARCH}\\archive\\VSCode-win32-${VSCODE_ARCH}.zip" "assets\\${APP_NAME}-win32-${VSCODE_ARCH}-${RELEASE_VERSION}.zip"
   fi
 
-  if [[ "${SHOULD_BUILD_EXE_SYS}" != "no" ]]; then
-    echo "Moving System EXE"
-    mv "vscode\\.build\\win32-${VSCODE_ARCH}\\system-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}Setup-${VSCODE_ARCH}-${RELEASE_VERSION}.exe"
+  if [[ "${SHOULD_BUILD_EXE_USR}" != "no" ]]; then
+    echo "Moving User EXE"
+    mv "vscode\\.build\\win32-${VSCODE_ARCH}\\user-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}UserSetup-${VSCODE_ARCH}-${RELEASE_VERSION}.exe"
   fi
 
   VSCODE_PLATFORM="win32"
