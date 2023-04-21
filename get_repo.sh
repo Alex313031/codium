@@ -20,8 +20,8 @@ if [[ -z "${RELEASE_VERSION}" ]]; then
   fi
 
   if [[ -z "${MS_COMMIT}" ]]; then
-    export MS_COMMIT="7f329fe6c66b0f86ae1574c2911b681ad5a45d63"
-    export MS_TAG="1.77.0"
+    export MS_COMMIT="704ed70d4fd1c6bd6342c436f1ede30d1cff4710"
+    export MS_TAG="1.77.3"
 
     if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
       export MS_TAG="${MS_TAG/\-insider/}"
@@ -77,8 +77,8 @@ if [[ -z "${MS_TAG}" ]]; then
   else
     UPDATE_INFO=$( curl --silent https://update.code.visualstudio.com/api/update/darwin/stable/lol )
   fi
-  export MS_COMMIT="7f329fe6c66b0f86ae1574c2911b681ad5a45d63"
-  export MS_TAG="1.77.0"
+  export MS_COMMIT="704ed70d4fd1c6bd6342c436f1ede30d1cff4710"
+  export MS_TAG="1.77.3"
 elif [[ -z "${MS_COMMIT}" ]]; then
   REFERENCE=$( git ls-remote --tags | grep -x ".*refs\/tags\/${MS_TAG}" | head -1 )
 
@@ -86,8 +86,8 @@ elif [[ -z "${MS_COMMIT}" ]]; then
     echo "The following tag can't be found: ${MS_TAG}"
     exit 1
   elif [[ "${REFERENCE}" =~ ^([[:alnum:]]+)[[:space:]]+refs\/tags\/([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
-    export MS_COMMIT="7f329fe6c66b0f86ae1574c2911b681ad5a45d63"
-    export MS_TAG="1.77.0"
+    export MS_COMMIT="704ed70d4fd1c6bd6342c436f1ede30d1cff4710"
+    export MS_TAG="1.77.3"
   else
     echo "The following reference can't be parsed: ${REFERENCE}"
     exit 1
