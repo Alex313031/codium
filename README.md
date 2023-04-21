@@ -1,8 +1,8 @@
 <div id="vscodium-logo" align="center">
     <br />
-    <img src="./icons/stable/codium_cnl.svg" alt="VSCodium Logo" width="200"/>
-    <h1>VSCodium</h1>
-    <h3>Free/Libre Open Source Software Binaries of VS Code</h3>
+    <img src="./src/stable/resources/linux/code.png" alt="VSCodium Logo" width="200"/>
+    <h1>Codium</h1>
+    <h3>Free/Libre Open Source Software Binaries of <a rel="noopener" target="_blank" href="https://github.com/microsoft/vscode">VS Code</a> - Compiler optimized fork of <a rel="noopener" target="_blank" href="https://github.com/VSCodium/vscodium">VSCodium</a></h3>
 </div>
 
 <div id="badges" align="center">

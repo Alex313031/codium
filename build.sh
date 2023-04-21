@@ -17,6 +17,11 @@ if [[ "${SHOULD_BUILD}" == "yes" ]]; then
   . prepare_vscode.sh
 
   cd vscode || { echo "'vscode' dir not found"; exit 1; }
+  
+  export CFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+  export CXXFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+  export CPPFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+  export LDFLAGS="-Wl,-O3 -msse3"
 
   yarn monaco-compile-check
   yarn valid-layers-check

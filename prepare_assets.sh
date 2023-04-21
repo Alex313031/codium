@@ -78,22 +78,8 @@ elif [[ "${OS_NAME}" == "windows" ]]; then
     yarn gulp "vscode-win32-${VSCODE_ARCH}-archive"
   fi
 
-  if [[ "${SHOULD_BUILD_EXE_SYS}" != "no" ]]; then
-    yarn gulp "vscode-win32-${VSCODE_ARCH}-system-setup"
-  fi
-
   if [[ "${SHOULD_BUILD_EXE_USR}" != "no" ]]; then
     yarn gulp "vscode-win32-${VSCODE_ARCH}-user-setup"
-  fi
-
-  if [[ "${VSCODE_ARCH}" == "ia32" || "${VSCODE_ARCH}" == "x64" ]]; then
-    if [[ "${SHOULD_BUILD_MSI}" != "no" ]]; then
-      . ../build/windows/msi/build.sh
-    fi
-
-    if [[ "${SHOULD_BUILD_MSI_NOUP}" != "no" ]]; then
-      . ../build/windows/msi/build-updates-disabled.sh
-    fi
   fi
 
   cd ..
@@ -103,26 +89,9 @@ elif [[ "${OS_NAME}" == "windows" ]]; then
     mv "vscode\\.build\\win32-${VSCODE_ARCH}\\archive\\VSCode-win32-${VSCODE_ARCH}.zip" "assets\\${APP_NAME}-win32-${VSCODE_ARCH}-${RELEASE_VERSION}.zip"
   fi
 
-  if [[ "${SHOULD_BUILD_EXE_SYS}" != "no" ]]; then
-    echo "Moving System EXE"
-    mv "vscode\\.build\\win32-${VSCODE_ARCH}\\system-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}Setup-${VSCODE_ARCH}-${RELEASE_VERSION}.exe"
-  fi
-
   if [[ "${SHOULD_BUILD_EXE_USR}" != "no" ]]; then
     echo "Moving User EXE"
     mv "vscode\\.build\\win32-${VSCODE_ARCH}\\user-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}UserSetup-${VSCODE_ARCH}-${RELEASE_VERSION}.exe"
-  fi
-
-  if [[ "${VSCODE_ARCH}" == "ia32" || "${VSCODE_ARCH}" == "x64" ]]; then
-    if [[ "${SHOULD_BUILD_MSI}" != "no" ]]; then
-      echo "Moving MSI"
-      mv "build\\windows\\msi\\releasedir\\${APP_NAME}-${VSCODE_ARCH}-${RELEASE_VERSION}.msi" assets/
-    fi
-
-    if [[ "${SHOULD_BUILD_MSI_NOUP}" != "no" ]]; then
-      echo "Moving MSI with disabled updates"
-      mv "build\\windows\\msi\\releasedir\\${APP_NAME}-${VSCODE_ARCH}-updates-disabled-${RELEASE_VERSION}.msi" assets/
-    fi
   fi
 
   VSCODE_PLATFORM="win32"
@@ -131,14 +100,6 @@ else
 
   if [[ "${SHOULD_BUILD_DEB}" != "no" || "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
     yarn gulp "vscode-linux-${VSCODE_ARCH}-build-deb"
-  fi
-
-  if [[ "${SHOULD_BUILD_RPM}" != "no" ]]; then
-    yarn gulp "vscode-linux-${VSCODE_ARCH}-build-rpm"
-  fi
-
-  if [[ "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
-    . ../build/linux/appimage/build.sh
   fi
 
   cd ..
@@ -153,18 +114,6 @@ else
   if [[ "${SHOULD_BUILD_DEB}" != "no" ]]; then
     echo "Moving DEB"
     mv vscode/.build/linux/deb/*/deb/*.deb assets/
-  fi
-
-  if [[ "${SHOULD_BUILD_RPM}" != "no" ]]; then
-    echo "Moving RPM"
-    mv vscode/.build/linux/rpm/*/*.rpm assets/
-  fi
-
-  if [[ "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
-    echo "Moving AppImage"
-    mv build/linux/appimage/out/*.AppImage* assets/
-
-    find assets -name '*.AppImage*' -exec bash -c 'mv $0 ${0/_-_/-}' {} \;
   fi
 
   VSCODE_PLATFORM="linux"
