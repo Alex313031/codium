@@ -13,14 +13,14 @@ if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
   PRODUCT_NAME="Codium Dev"
   PRODUCT_SKU="codium-dev"
   PRODUCT_CODE="CodiumDev"
-  PRODUCT_UPGRADE_CODE="1C9B7195-5A9A-43B3-B4BD-583E20498467"
+  PRODUCT_UPGRADE_CODE="F0804DA5-D7E3-4D65-9BFF-1B975E9E21F6"
   ICON_DIR="..\\..\\..\\src\\insider\\resources\\win32"
   SETUP_RESOURCES_DIR=".\\resources\\insider"
 else
   PRODUCT_NAME="Codium"
   PRODUCT_SKU="codium"
   PRODUCT_CODE="Codium"
-  PRODUCT_UPGRADE_CODE="965370CD-253C-4720-82FC-2E6B02A53808"
+  PRODUCT_UPGRADE_CODE="3BF736A3-9DC8-41A7-ABE9-1C87371B4B84"
   ICON_DIR="..\\..\\..\\src\\stable\\resources\\win32"
   SETUP_RESOURCES_DIR=".\\resources\\stable"
 fi
@@ -37,9 +37,9 @@ LICENSE_DIR="..\\..\\..\\vscode"
 PROGRAM_FILES_86=$( env | sed -n 's/^ProgramFiles(x86)=//p' )
 
 if [[ -z "${1}" ]]; then
-	OUTPUT_BASE_FILENAME="Codium-${VSCODE_ARCH}-${RELEASE_VERSION}"
+	OUTPUT_BASE_FILENAME="Codium_${VSCODE_ARCH}_${RELEASE_VERSION}"
 else
-	OUTPUT_BASE_FILENAME="Codium-${VSCODE_ARCH}-${1}-${RELEASE_VERSION}"
+	OUTPUT_BASE_FILENAME="Codium_${VSCODE_ARCH}_${1}-${RELEASE_VERSION}"
 fi
 
 if [[ "${VSCODE_ARCH}" == "ia32" ]]; then
