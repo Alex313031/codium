@@ -135,7 +135,7 @@ if [[ "${SKIP_BUILD}" == "no" ]]; then
     cd ..
   fi
 
-  . build.sh
+  . build_ci.sh
 
   if [[ "${VSCODE_QUALITY}" == "insider" && "${VSCODE_LATEST}" == "yes" ]]; then
     echo "$( cat "insider.json" | jq --arg 'tag' "${MS_TAG/\-insider/}" --arg 'commit' "${MS_COMMIT}" '. | .tag=$tag | .commit=$commit' )" > "insider.json"

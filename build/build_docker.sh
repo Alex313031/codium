@@ -55,7 +55,7 @@ echo "VSCODE_QUALITY=\"${VSCODE_QUALITY}\""
 rm -rf vscode* VSCode*
 
 . get_repo.sh
-. build.sh
+. build_ci.sh
 
 if [[ "${SKIP_ASSETS}" == "no" ]]; then
   . prepare_assets.sh
