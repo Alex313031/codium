@@ -42,7 +42,6 @@
 - png2icns (`npm install png2icns -g`)
 - librsvg
 
-
 ### <a id="dependencies-windows"></a>Windows
 
 - powershell

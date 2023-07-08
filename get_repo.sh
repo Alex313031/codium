@@ -10,18 +10,18 @@ fi
 if [[ -z "${RELEASE_VERSION}" ]]; then
   if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
     if [[ "${VSCODE_LATEST}" == "yes" ]] || [[ ! -f "insider.json" ]]; then
-      UPDATE_INFO=$( curl --silent https://update.code.visualstudio.com/api/update/darwin/insider/lol )
+      UPDATE_INFO=$( curl --silent https://update.code.visualstudio.com/api/update/win32/insider/lol )
     else
       export MS_COMMIT=$(jq -r '.commit' insider.json)
       export MS_TAG=$(jq -r '.tag' insider.json)
     fi
   else
-    UPDATE_INFO=$( curl --silent https://update.code.visualstudio.com/api/update/darwin/stable/lol )
+    UPDATE_INFO=$( curl --silent https://update.code.visualstudio.com/api/update/win32/stable/lol )
   fi
 
   if [[ -z "${MS_COMMIT}" ]]; then
-    export MS_COMMIT=$( echo "${UPDATE_INFO}" | jq -r '.version' )
-    export MS_TAG=$( echo "${UPDATE_INFO}" | jq -r '.name' )
+    export MS_COMMIT="660393deaaa6d1996740ff4880f1bad43768c814"
+    export MS_TAG="1.80.0"
 
     if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
       export MS_TAG="${MS_TAG/\-insider/}"
@@ -77,8 +77,8 @@ if [[ -z "${MS_TAG}" ]]; then
   else
     UPDATE_INFO=$( curl --silent https://update.code.visualstudio.com/api/update/darwin/stable/lol )
   fi
-  export MS_COMMIT=$( echo "${UPDATE_INFO}" | jq -r '.version' )
-  export MS_TAG=$( echo "${UPDATE_INFO}" | jq -r '.name' )
+  export MS_COMMIT="660393deaaa6d1996740ff4880f1bad43768c814"
+  export MS_TAG="1.80.0"
 elif [[ -z "${MS_COMMIT}" ]]; then
   REFERENCE=$( git ls-remote --tags | grep -x ".*refs\/tags\/${MS_TAG}" | head -1 )
 
@@ -86,8 +86,8 @@ elif [[ -z "${MS_COMMIT}" ]]; then
     echo "The following tag can't be found: ${MS_TAG}"
     exit 1
   elif [[ "${REFERENCE}" =~ ^([[:alnum:]]+)[[:space:]]+refs\/tags\/([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
-    export MS_COMMIT="${BASH_REMATCH[1]}"
-    export MS_TAG="${BASH_REMATCH[2]}"
+    export MS_COMMIT="660393deaaa6d1996740ff4880f1bad43768c814"
+    export MS_TAG="1.80.0"
   else
     echo "The following reference can't be parsed: ${REFERENCE}"
     exit 1
