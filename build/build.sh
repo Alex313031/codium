@@ -131,9 +131,6 @@ if [[ "${SKIP_BUILD}" == "no" ]]; then
   if [[ "${SKIP_SOURCE}" != "no" ]]; then
     cd vscode || { echo "'vscode' dir not found"; exit 1; }
 
-    git add .
-    git reset -q --hard HEAD
-
     cd ..
   fi
 
