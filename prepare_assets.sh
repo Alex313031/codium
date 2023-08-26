@@ -91,12 +91,12 @@ elif [[ "${OS_NAME}" == "windows" ]]; then
 
   if [[ "${SHOULD_BUILD_EXE_SYS}" != "no" ]]; then
     echo "Moving System EXE"
-    mv "vscode\\.build\\win32-${VSCODE_ARCH}\\system-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}Setup_${VSCODE_ARCH}_${RELEASE_VERSION}.exe"
+    mv "vscode\\.build\\win32-${VSCODE_ARCH}\\system-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}_Setup_${VSCODE_ARCH}_${RELEASE_VERSION}.exe"
   fi
 
   if [[ "${SHOULD_BUILD_EXE_USR}" != "no" ]]; then
     echo "Moving User EXE"
-    mv "vscode\\.build\\win32-${VSCODE_ARCH}\\user-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}UserSetup_${VSCODE_ARCH}_${RELEASE_VERSION}.exe"
+    mv "vscode\\.build\\win32-${VSCODE_ARCH}\\user-setup\\VSCodeSetup.exe" "assets\\${APP_NAME}_User_Setup_${VSCODE_ARCH}_${RELEASE_VERSION}.exe"
   fi
 
   VSCODE_PLATFORM="win32"
