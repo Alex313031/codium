@@ -59,7 +59,7 @@ export ELECTRON_SKIP_BINARY_DOWNLOAD=1
 export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 if [[ "${OS_NAME}" == "osx" ]]; then
-  CHILD_CONCURRENCY=1 yarn --frozen-lockfile --network-timeout 180000
+  CHILD_CONCURRENCY=1 yarn --network-timeout 180000
 
   yarn postinstall
 else
@@ -82,7 +82,7 @@ else
     cd ../..
   fi
 
-  CHILD_CONCURRENCY=1 yarn --frozen-lockfile --network-timeout 180000
+  CHILD_CONCURRENCY=1 yarn --network-timeout 180000
 fi
 
 setpath() {
