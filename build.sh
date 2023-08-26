@@ -74,6 +74,8 @@ export CXXFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
 export CPPFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
 export LDFLAGS="-Wl,-O3 -msse3 -s" &&
 
+export RELEASE_VERSION="1.81.2" &&
+
 ./build/build.sh -s
 
 exit 0
