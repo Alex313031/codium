@@ -9,9 +9,6 @@ on:
       new_release:
         type: boolean
         description: Force new Release
-      test_asset_builder:
-        type: boolean
-        description: Test the assets builder
   schedule:
     - cron: '0 8 * * *'
   push:
@@ -54,8 +51,6 @@ jobs:
         run: ./get_repo.sh
 
       - name: Check PR or cron
-        env:
-          TEST_ASSET_BUILDER: ${{ github.event.inputs.test_asset_builder }}
         run: ./check_cron_or_pr.sh
 
   dependencies:
@@ -73,7 +68,7 @@ jobs:
         - vscode_arch: x64
           image: vscodium/vscodium-linux-build-agent:centos7-devtoolset8-x64
         # - vscode_arch: arm64
-        #   image: vscodium/vscodium-linux-build-agent:centos7-devtoolset8-arm64
+        #   image: vscodium/vscodium-linux-build-agent:bionic-x64
     container:
       image: ${{ matrix.image }}
     if: needs.check.outputs.SHOULD_BUILD == 'yes' || needs.check.outputs.SHOULD_DEPLOY == 'yes'
@@ -89,8 +84,25 @@ jobs:
       - uses: docker/setup-qemu-action@v2
         if: matrix.vscode_arch == 'arm64' || matrix.vscode_arch == 'ppc64le'
 
-      - name: Install remote dependencies
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install remote dependencies (x64)
+        env:
+          npm_config_arch: x64
         run: ./install_remote_dependencies.sh
+        if: matrix.vscode_arch == 'x64'
+
+      # - name: Install remote dependencies (arm64)
+      #   run: |
+      #     set -e
+      #     docker run -e VSCODE_QUALITY -e GITHUB_TOKEN -v $(pwd):/root/vscodium vscodium/vscodium-linux-build-agent:centos7-devtoolset8-arm64 /root/vscodium/install_remote_dependencies.sh
+      #   if: matrix.vscode_arch == 'arm64'
 
       - name: Save remote dependencies
         uses: actions/upload-artifact@v3
@@ -120,13 +132,13 @@ jobs:
           image: vscodium/vscodium-linux-build-agent:bionic-x64
         - vscode_arch: arm64
           npm_arch: arm64
-          image: vscodium/vscodium-linux-build-agent:bionic-arm64
-        - vscode_arch: armhf
-          npm_arch: arm
-          image: vscodium/vscodium-linux-build-agent:bionic-armhf
+          image: vscodium/vscodium-linux-build-agent:buster-arm64
         - vscode_arch: ppc64le
           npm_arch: ppc64
           image: vscodium/vscodium-linux-build-agent:bionic-ppc64le
+        - vscode_arch: armhf
+          npm_arch: arm
+          image: vscodium/vscodium-linux-build-agent:buster-armhf
     container:
       image: ${{ matrix.image }}
       env:
@@ -147,6 +159,14 @@ jobs:
 
       - name: Install GH
         run: ./install_gh.sh
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Yarn
+        run: npm install -g yarn
 
       - name: Check existing VSCodium tags/releases
         env:
@@ -170,7 +190,7 @@ jobs:
 
       - name: Prepare assets
         run: ./prepare_assets.sh
-        if: env.SHOULD_BUILD == 'yes' && (env.SHOULD_DEPLOY == 'yes' || github.event.inputs.test_asset_builder == 'true')
+        if: env.SHOULD_BUILD == 'yes' && env.SHOULD_DEPLOY == 'yes'
 
       - name: Release
         env:
