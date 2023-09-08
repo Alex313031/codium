@@ -69,13 +69,6 @@ while getopts ":ilops" opt; do
   esac
 done
 
-installDeps () {
-	sudo apt-get install build-essential git g++ pkg-config automake make gcc libsecret-1-dev fakeroot rpm dpkg dpkg-dev imagemagick libx11-dev libxkbfile-dev nodejs npm node-gyp node-istanbul jq python3 python-is-python3
-}
-case $1 in
-	--deps) installDeps; exit 0;;
-esac
-
 case "${OSTYPE}" in
   darwin*)
     export OS_NAME="osx"
