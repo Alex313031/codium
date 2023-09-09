@@ -58,9 +58,7 @@ set -x
 export ELECTRON_SKIP_BINARY_DOWNLOAD=1
 export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
-if [[ "${OS_NAME}" == "linux" ]]; then
-  export VSCODE_SKIP_NODE_VERSION_CHECK=1
-fi
+export VSCODE_SKIP_NODE_VERSION_CHECK=1
 
 if [[ "${OS_NAME}" == "osx" ]]; then
   CHILD_CONCURRENCY=1 yarn --network-timeout 180000
