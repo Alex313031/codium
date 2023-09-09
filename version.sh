@@ -19,3 +19,4 @@ if [[ -z "${BUILD_SOURCEVERSION}" ]]; then
 fi
 
 export BUILD_SOURCEVERSION
+echo "BUILD_SOURCEVERSION=\"${BUILD_SOURCEVERSION}\"" >> build.env

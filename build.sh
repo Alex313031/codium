@@ -66,9 +66,6 @@ printf "${bold}${YEL}Use the --help flag to show this help.${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
-# Set version for build script
-export RELEASE_VERSION="1.81.2" &&
-
 buildLinux (){
 printf "\n" &&
 printf "${bold}${GRE}Building Codium for Linux...${c0}\n" &&

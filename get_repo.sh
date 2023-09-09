@@ -113,3 +113,7 @@ fi
 export MS_TAG
 export MS_COMMIT
 export RELEASE_VERSION
+
+echo "MS_TAG=\"${MS_TAG}\"" > build.env
+echo "MS_COMMIT=\"${MS_COMMIT}\"" >> build.env
+echo "RELEASE_VERSION=\"${RELEASE_VERSION}\"" >> build.env

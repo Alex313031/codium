@@ -115,6 +115,7 @@ else
     rm -rf VSCode*
   fi
 
+  . version.sh
   . build.env
 
   echo "MS_TAG=\"${MS_TAG}\""
