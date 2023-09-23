@@ -13,7 +13,7 @@
     <SetProperty Id="ARPINSTALLLOCATION" Value="[APPLICATIONFOLDER]" After="CostFinalize" />
     <Icon Id="code.ico" SourceFile="$(var.IconDir)\code.ico" />
 
-    <!-- Microsoft .NET Framework 4.5.2 is required for VSCodium. If you are using Windows 7, please make sure .NET Framework 4.5.2 is installed. -->
+    <!-- Microsoft .NET Framework 4.5.2 is required for Codium. If you are using Windows 7, please make sure .NET Framework 4.5.2 is installed. -->
     <PropertyRef Id='WIX_IS_NETFRAMEWORK_452_OR_LATER_INSTALLED' />
 	<Condition Message="!(loc.MinimumNetFramworkRequired)">
       <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_452_OR_LATER_INSTALLED]]>
@@ -39,7 +39,7 @@
       <Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
       <!--
         In general it seems very hard to track what files may have changed
-        between vscodium versions. As files are crawled with heat and GUIDs
+        between codium versions. As files are crawled with heat and GUIDs
         are automatically generated some MSI "optimization" features are not
         available. But no real problem, it only takes some more seconds to
         upgrade between versions.
