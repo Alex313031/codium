@@ -101,8 +101,6 @@ echo "MS_COMMIT=\"${MS_COMMIT}\""
 git fetch --depth 1 origin "${MS_COMMIT}"
 git checkout FETCH_HEAD
 
-/usr/bin/find ./ \( -type d -name .git -prune -type d -name node_modules -prune \) -o -type f -name package.json -print0 | xargs -0 sed -i 's/\"\@types\/node\"\:\ \"18\.x\"/\"\@types\/node\"\:\ \"16\.x\"/g' &&
-
 cd ..
 
 # for GH actions
