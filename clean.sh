@@ -30,6 +30,7 @@ printf "\n" &&
 printf "${bold}${YEL} Cleaning assets, artifacts, and build directory...${c0}\n" &&
 printf "\n" &&
 
+rm -r -f build.env &&
 rm -r -f assets &&
 rm -r -f vscode &&
 rm -r -f VSCode-linux-x64 &&
