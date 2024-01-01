@@ -6,7 +6,7 @@ set -e
 cd vscode || { echo "'vscode' dir not found"; exit 1; }
 
 # Make patch
-# git diff -U1 > ../nt6.patch
+# git diff > ../nt6.patch
 
 git apply --ignore-whitespace ../nt6.patch  &&
 

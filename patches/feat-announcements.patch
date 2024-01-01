@@ -62,7 +62,7 @@ index 9dd5330..9e2b6a2 100644
 +		if (this.announcementList) { this.announcementList.dispose(); }
 +
 +		const announcementList = this.announcementList = new GettingStartedIndexList({
-+			title: localize('announcements', "Codium Announcements"),
++			title: localize('announcements', "VSCodium Announcements"),
 +			klass: 'announcements',
 +			limit: 5,
 +			empty: $('.empty-recent', {}, localize('noAnnouncements', "There are no current announcements.")),

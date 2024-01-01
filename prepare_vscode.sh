@@ -24,6 +24,7 @@ cd vscode || { echo "'vscode' dir not found"; exit 1; }
 for file in ../patches/*.patch; do
   if [[ -f "${file}" ]]; then
     echo applying patch: "${file}";
+    # grep '^+++' "${file}"  | sed -e 's#+++ [ab]/#./vscode/#' | while read line; do shasum -a 256 "${line}"; done
     if ! git apply --ignore-whitespace "${file}"; then
       echo failed to apply patch "${file}" >&2
       exit 1
@@ -165,6 +166,7 @@ cat product.json
 cp package.json{,.bak}
 
 # setpath for rcedit here TODO
+setpath "package" "version" "$( echo "${RELEASE_VERSION}" | sed -n -E "s/^(.*)\.([0-9]+)(-insider)?$/\1/p" )"
 setpath "package" "release" "$( echo "${RELEASE_VERSION}" | sed -n -E "s/^(.*)\.([0-9]+)(-insider)?$/\2/p" )"
 
 replace 's|Microsoft Corporation|Alex313031|' package.json

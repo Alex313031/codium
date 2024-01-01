@@ -9,23 +9,19 @@ if [[ "${CI_BUILD}" != "no" ]]; then
 fi
 
 if [[ -z "${RELEASE_VERSION}" ]]; then
-  if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-    if [[ "${VSCODE_LATEST}" == "yes" ]] || [[ ! -f "insider.json" ]]; then
-      UPDATE_INFO=$( curl --silent --fail https://update.code.visualstudio.com/api/update/win32/insider/0000000000000000000000000000000000000000 )
-    else
-      MS_COMMIT="f1b07bd25dfad64b0167beb15359ae573aecd2cc"
-      MS_TAG="1.83.1"
-    fi
+  if [[ "${VSCODE_LATEST}" == "yes" ]] || [[ ! -f "${VSCODE_QUALITY}.json" ]]; then
+    UPDATE_INFO=$( curl --silent --fail "https://update.code.visualstudio.com/api/update/win32/${VSCODE_QUALITY}/0000000000000000000000000000000000000000" )
   else
-    UPDATE_INFO=$( curl --silent --fail https://update.code.visualstudio.com/api/update/win32/stable/0000000000000000000000000000000000000000 )
+    MS_COMMIT=$( jq -r '.commit' "${VSCODE_QUALITY}.json" )
+    MS_TAG=$( jq -r '.tag' "${VSCODE_QUALITY}.json" )
   fi
 
   if [[ -z "${MS_COMMIT}" ]]; then
-    MS_COMMIT="f1b07bd25dfad64b0167beb15359ae573aecd2cc"
-    MS_TAG="1.83.1"
+    MS_COMMIT="1a5daa3a0231a0fbba4f14db7ec463cf99d7768e"
+    MS_TAG="1.84.2"
 
     if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-      MS_TAG="1.83.1"
+      MS_TAG="1.84.2"
     fi
   fi
 
@@ -40,26 +36,26 @@ else
   if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
     if [[ "${RELEASE_VERSION}" =~ ^([0-9]+\.[0-9]+\.[0-9]+)\.[0-9]+-insider$ ]];
     then
-      MS_TAG="1.83.1"
+      MS_TAG="1.84.2"
     else
       echo "Error: Bad RELEASE_VERSION: ${RELEASE_VERSION}"
-      exit 1
-    fi
-
-    if [[ "${MS_TAG}" == "$( jq -r '.tag' insider.json )" ]]; then
-      MS_COMMIT="f1b07bd25dfad64b0167beb15359ae573aecd2cc"
-    else
-      echo "Error: No MS_COMMIT for ${RELEASE_VERSION}"
       exit 1
     fi
   else
     if [[ "${RELEASE_VERSION}" =~ ^([0-9]+\.[0-9]+\.[0-9]+)\.[0-9]+$ ]];
     then
-      MS_TAG="1.83.1"
+      MS_TAG="1.84.2"
     else
       echo "Error: Bad RELEASE_VERSION: ${RELEASE_VERSION}"
       exit 1
     fi
+  fi
+
+  if [[ "${MS_TAG}" == "$( jq -r '.tag' "${VSCODE_QUALITY}".json )" ]]; then
+    MS_COMMIT=$( jq -r '.commit' "${VSCODE_QUALITY}".json )
+  else
+    echo "Error: No MS_COMMIT for ${RELEASE_VERSION}"
+    exit 1
   fi
 fi
 
@@ -73,13 +69,9 @@ git remote add origin https://github.com/Microsoft/vscode.git
 
 # figure out latest tag by calling MS update API
 if [[ -z "${MS_TAG}" ]]; then
-  if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-    UPDATE_INFO=$( curl --silent --fail https://update.code.visualstudio.com/api/update/darwin/insider/0000000000000000000000000000000000000000 )
-  else
-    UPDATE_INFO=$( curl --silent --fail https://update.code.visualstudio.com/api/update/darwin/stable/0000000000000000000000000000000000000000 )
-  fi
-  MS_COMMIT="f1b07bd25dfad64b0167beb15359ae573aecd2cc"
-  MS_TAG="1.83.1"
+  UPDATE_INFO=$( curl --silent --fail "https://update.code.visualstudio.com/api/update/win32/${VSCODE_QUALITY}/0000000000000000000000000000000000000000" )
+  MS_COMMIT="1a5daa3a0231a0fbba4f14db7ec463cf99d7768e"
+  MS_TAG="1.84.2"
 elif [[ -z "${MS_COMMIT}" ]]; then
   REFERENCE=$( git ls-remote --tags | grep -x ".*refs\/tags\/${MS_TAG}" | head -1 )
 
@@ -87,8 +79,8 @@ elif [[ -z "${MS_COMMIT}" ]]; then
     echo "Error: The following tag can't be found: ${MS_TAG}"
     exit 1
   elif [[ "${REFERENCE}" =~ ^([[:alnum:]]+)[[:space:]]+refs\/tags\/([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
-    MS_COMMIT="f1b07bd25dfad64b0167beb15359ae573aecd2cc"
-    MS_TAG="1.83.1"
+    MS_COMMIT="1a5daa3a0231a0fbba4f14db7ec463cf99d7768e"
+    MS_TAG="1.84.2"
   else
     echo "Error: The following reference can't be parsed: ${REFERENCE}"
     exit 1

@@ -3,17 +3,12 @@ name: stable-windows
 on:
   workflow_dispatch:
     inputs:
-      new_release:
-        type: boolean
-        description: Force new Release
       force_version:
         type: boolean
         description: Force update version
       test_asset_builder:
         type: boolean
         description: Test the assets builder
-  schedule:
-    - cron: '0 18 * * *'
   push:
     branches: [ master ]
     paths-ignore:
@@ -44,7 +39,7 @@ jobs:
       matrix:
         vscode_arch:
           - x64
-          - ia32
+          # - ia32
           - arm64
     outputs:
       RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
@@ -54,7 +49,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18.17'
 
@@ -64,7 +59,7 @@ jobs:
       - name: Setup Python 3
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Clone VSCode repo
         run: ./get_repo.sh
@@ -77,7 +72,6 @@ jobs:
       - name: Check existing VSCodium tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NEW_RELEASE: ${{ github.event.inputs.new_release }}
         run: ./check_tags.sh
         if: env.SHOULD_DEPLOY == 'yes'
 
