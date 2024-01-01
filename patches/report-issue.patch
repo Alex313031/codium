@@ -47,7 +47,7 @@ index d0c4789..9e6bfc5 100644
 @@ -667,3 +636,3 @@ export class IssueReporter extends Disposable {
  		sourceSelect.append(this.makeOption('', localize('selectSource', "Select source"), true));
 -		sourceSelect.append(this.makeOption('vscode', localize('vscode', "Visual Studio Code"), false));
-+		sourceSelect.append(this.makeOption('vscode', localize('vscode', "VSCodium"), false));
++		sourceSelect.append(this.makeOption('vscode', localize('vscode', "Codium"), false));
  		sourceSelect.append(this.makeOption('extension', localize('extension', "An extension"), false));
 diff --git a/src/vs/code/electron-sandbox/issue/issueReporterModel.ts b/src/vs/code/electron-sandbox/issue/issueReporterModel.ts
 index 98338df..6d2f581 100644
@@ -56,7 +56,7 @@ index 98338df..6d2f581 100644
 @@ -77,3 +77,3 @@ ${this._data.issueDescription}
  ${this.getExtensionVersion()}
 -VS Code version: ${this._data.versionInfo && this._data.versionInfo.vscodeVersion}
-+VSCodium version: ${this._data.versionInfo && this._data.versionInfo.vscodeVersion}
++Codium version: ${this._data.versionInfo && this._data.versionInfo.vscodeVersion}
  OS version: ${this._data.versionInfo && this._data.versionInfo.os}
 diff --git a/src/vs/code/electron-sandbox/issue/issueReporterPage.ts b/src/vs/code/electron-sandbox/issue/issueReporterPage.ts
 index 0eedb21..c83e092 100644
@@ -79,5 +79,5 @@ index 87839a6..49727fc 100644
 @@ -153,3 +153,3 @@ class ReportExtensionSlowAction extends Action {
  - OS Version: \`${osVersion}\`
 -- VS Code version: \`${this._productService.version}\`\n\n${message}`);
-+- VSCodium version: \`${this._productService.version}\`\n\n${message}`);
++- Codium version: \`${this._productService.version}\`\n\n${message}`);
  
