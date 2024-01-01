@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2129
 
-set -e
-
 # git workaround
 if [[ "${CI_BUILD}" != "no" ]]; then
   git config --global --add safe.directory "/__w/$( echo "${GITHUB_REPOSITORY}" | awk '{print tolower($0)}' )"
@@ -12,8 +10,8 @@ if [[ -z "${RELEASE_VERSION}" ]]; then
   if [[ "${VSCODE_LATEST}" == "yes" ]] || [[ ! -f "${VSCODE_QUALITY}.json" ]]; then
     UPDATE_INFO=$( curl --silent --fail "https://update.code.visualstudio.com/api/update/win32/${VSCODE_QUALITY}/0000000000000000000000000000000000000000" )
   else
-    MS_COMMIT=$( jq -r '.commit' "${VSCODE_QUALITY}.json" )
-    MS_TAG=$( jq -r '.tag' "${VSCODE_QUALITY}.json" )
+    MS_COMMIT="1a5daa3a0231a0fbba4f14db7ec463cf99d7768e"
+    MS_TAG="1.84.2"
   fi
 
   if [[ -z "${MS_COMMIT}" ]]; then
@@ -52,7 +50,7 @@ else
   fi
 
   if [[ "${MS_TAG}" == "$( jq -r '.tag' "${VSCODE_QUALITY}".json )" ]]; then
-    MS_COMMIT=$( jq -r '.commit' "${VSCODE_QUALITY}".json )
+    MS_COMMIT="1a5daa3a0231a0fbba4f14db7ec463cf99d7768e"
   else
     echo "Error: No MS_COMMIT for ${RELEASE_VERSION}"
     exit 1
