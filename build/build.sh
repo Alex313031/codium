@@ -103,7 +103,6 @@ if [[ "${SKIP_SOURCE}" == "no" ]]; then
   rm -rf vscode* VSCode*
 
   . get_repo.sh
-  . nt_6.sh
   . version.sh
 
   # save variables for later
