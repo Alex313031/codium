@@ -129,4 +129,4 @@ Special thanks to:
 
 ## <a id="license"></a>License
 
-[MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
+[MIT](https://github.com/Alex313031/codium/blob/master/LICENSE.md)
