@@ -125,6 +125,13 @@ else
     mv vscode/.build/linux/deb/*/deb/*.deb assets/
   fi
 
+  if [[ "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
+    echo "Moving AppImage"
+    mv build/linux/appimage/out/*.AppImage* assets/
+
+  #   find assets -name '*.AppImage*' -exec bash -c 'mv $0 ${0/_-_/-}' {} \;
+  fi
+
   VSCODE_PLATFORM="linux"
 fi
 
