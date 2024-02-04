@@ -24,15 +24,7 @@ __This is a fork of <a rel="noopener" target="_blank" href="https://github.com/V
 ## Table of Contents
 
 - [Download/Install](#download-install)
-  - [Install with Brew](#install-with-brew)
-  - [Install with Windows Package Manager (WinGet)](#install-with-winget)
-  - [Install with Chocolatey](#install-with-choco)
-  - [Install with Scoop](#install-with-scoop)
-  - [Install with snap](#install-with-snap)
-  - [Install with Package Manager](#install-with-package-manager)
-  - [Install on Arch Linux](#install-on-arch-linux)
-  - [Flatpak Option](#flatpak)
-- [Build](#build)
+- [Building](#build)
 - [Why Does This Exist](#why)
 - [More Info](#more-info)
 - [Supported Platforms](#supported-platforms)
