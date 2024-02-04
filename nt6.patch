@@ -390,7 +390,7 @@ index 68f6989..0e89508 100644
  const product = require('../../product.json');
  const packageJson = require('../../package.json');
 diff --git a/build/linux/debian/dep-lists.js b/build/linux/debian/dep-lists.js
-index bdb265b..659d36b 100644
+index bdb265b..b5bc7ba 100644
 --- a/build/linux/debian/dep-lists.js
 +++ b/build/linux/debian/dep-lists.js
 @@ -8,11 +8,13 @@ exports.referenceGeneratedDepsByArch = exports.recommendedDeps = exports.additio
@@ -405,8 +405,8 @@ index bdb265b..659d36b 100644
 -    'xdg-utils (>= 1.0.2)', // OS integration
 +    'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
 +    'xdg-utils (>= 1.0.2)',
-+    'libgssapi-krb5-2',
-+    'libkrb5-3',
++    'libgssapi-krb5-2 (>= 1.16)',
++    'libkrb5-3 (>= 1.16)',
  ];
  // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends
  // Dependencies that we can only recommend
@@ -431,11 +431,11 @@ index bdb265b..659d36b 100644
 -        'libgssapi-krb5-2 (>= 1.17)',
 +        'libglib2.0-0 (>= 2.16.0)',
 +        'libglib2.0-0 (>= 2.39.4)',
-+        'libgssapi-krb5-2',
++        'libgssapi-krb5-2 (>= 1.16)',
          'libgtk-3-0 (>= 3.9.10)',
          'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
 -        'libkrb5-3 (>= 1.6.dfsg.2)',
-+        'libkrb5-3',
++        'libkrb5-3 (>= 1.16)',
          'libnspr4 (>= 2:4.9-2~)',
 -        'libnss3 (>= 2:3.30)',
 +        'libnss3 (>= 2:3.22)',
@@ -484,11 +484,11 @@ index bdb265b..659d36b 100644
 -        'libgssapi-krb5-2 (>= 1.17)',
 +        'libglib2.0-0 (>= 2.12.0)',
 +        'libglib2.0-0 (>= 2.39.4)',
-+        'libgssapi-krb5-2',
++        'libgssapi-krb5-2 (>= 1.16)',
          'libgtk-3-0 (>= 3.9.10)',
          'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
 -        'libkrb5-3 (>= 1.6.dfsg.2)',
-+        'libkrb5-3',
++        'libkrb5-3 (>= 1.16)',
          'libnspr4 (>= 2:4.9-2~)',
 -        'libnss3 (>= 2:3.30)',
 +        'libnss3 (>= 2:3.22)',
@@ -528,11 +528,11 @@ index bdb265b..659d36b 100644
 -        'libgssapi-krb5-2 (>= 1.17)',
 +        'libglib2.0-0 (>= 2.12.0)',
 +        'libglib2.0-0 (>= 2.39.4)',
-+        'libgssapi-krb5-2',
++        'libgssapi-krb5-2 (>= 1.16)',
          'libgtk-3-0 (>= 3.9.10)',
          'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
 -        'libkrb5-3 (>= 1.6.dfsg.2)',
-+        'libkrb5-3',
++        'libkrb5-3 (>= 1.16)',
          'libnspr4 (>= 2:4.9-2~)',
 -        'libnss3 (>= 2:3.30)',
 +        'libnss3 (>= 2:3.22)',
@@ -558,17 +558,16 @@ index bdb265b..659d36b 100644
 -//# sourceMappingURL=dep-lists.js.map
 \ No newline at end of file
 +//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVwLWxpc3RzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiZGVwLWxpc3RzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTs7O2dHQUdnRzs7O0FBRWhHLGtIQUFrSDtBQUNsSCw0REFBNEQ7QUFDL0MsUUFBQSxjQUFjLEdBQUc7SUFDN0IsaUJBQWlCO0lBQ2pCLHFDQUFxQztJQUNyQyxtQkFBbUI7SUFDbkIsc0RBQXNEO0lBQ3RELHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsV0FBVztDQUNYLENBQUM7QUFFRixvSEFBb0g7QUFDcEgsMENBQTBDO0FBQzFDLDhEQUE4RDtBQUNqRCxRQUFBLGVBQWUsR0FBRztJQUM5QixZQUFZLENBQUMseUVBQXlFO0NBQ3RGLENBQUM7QUFFVyxRQUFBLDRCQUE0QixHQUFHO0lBQzNDLE9BQU8sRUFBRTtRQUNSLGlCQUFpQjtRQUNqQix3QkFBd0I7UUFDeEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QiwyQkFBMkI7UUFDM0IsaUJBQWlCO1FBQ2pCLGlCQUFpQjtRQUNqQixrQkFBa0I7UUFDbEIsc0JBQXNCO1FBQ3RCLHNEQUFzRDtRQUN0RCx5QkFBeUI7UUFDekIscUJBQXFCO1FBQ3JCLHNCQUFzQjtRQUN0Qix5QkFBeUI7UUFDekIsMEJBQTBCO1FBQzFCLDBCQUEwQjtRQUMxQixrQkFBa0I7UUFDbEIsd0JBQXdCO1FBQ3hCLHFDQUFxQztRQUNyQyxXQUFXO1FBQ1gsd0JBQXdCO1FBQ3hCLHFCQUFxQjtRQUNyQixtQkFBbUI7UUFDbkIsNEJBQTRCO1FBQzVCLHlCQUF5QjtRQUN6QixVQUFVO1FBQ1YsMEJBQTBCO1FBQzFCLG9CQUFvQjtRQUNwQiwrQkFBK0I7UUFDL0Isd0JBQXdCO1FBQ3hCLFVBQVU7UUFDVixZQUFZO1FBQ1osMEJBQTBCO1FBQzFCLGFBQWE7UUFDYixZQUFZO1FBQ1osc0JBQXNCO0tBQ3RCO0lBQ0QsT0FBTyxFQUFFO1FBQ1IsaUJBQWlCO1FBQ2pCLHdCQUF3QjtRQUN4QiwrQkFBK0I7UUFDL0Isd0JBQXdCO1FBQ3hCLDJCQUEyQjtRQUMzQixpQkFBaUI7UUFDakIsaUJBQWlCO1FBQ2pCLGdCQUFnQjtRQUNoQixnQkFBZ0I7UUFDaEIsZ0JBQWdCO1FBQ2hCLHNCQUFzQjtRQUN0QixzREFBc0Q7UUFDdEQseUJBQXlCO1FBQ3pCLHFCQUFxQjtRQUNyQixzQkFBc0I7UUFDdEIseUJBQXlCO1FBQ3pCLDBCQUEwQjtRQUMxQiwwQkFBMEI7UUFDMUIsa0JBQWtCO1FBQ2xCLHdCQUF3QjtRQUN4QixxQ0FBcUM7UUFDckMsV0FBVztRQUNYLHdCQUF3QjtRQUN4QixxQkFBcUI7UUFDckIsbUJBQW1CO1FBQ25CLDRCQUE0QjtRQUM1Qix5QkFBeUI7UUFDekIsbUJBQW1CO1FBQ25CLHFCQUFxQjtRQUNyQixtQkFBbUI7UUFDbkIsVUFBVTtRQUNWLDBCQUEwQjtRQUMxQixvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QixVQUFVO1FBQ1YsWUFBWTtRQUNaLDBCQUEwQjtRQUMxQixhQUFhO1FBQ2IsWUFBWTtRQUNaLHNCQUFzQjtLQUN0QjtJQUNELE9BQU8sRUFBRTtRQUNSLGlCQUFpQjtRQUNqQix3QkFBd0I7UUFDeEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QiwyQkFBMkI7UUFDM0IsaUJBQWlCO1FBQ2pCLHNCQUFzQjtRQUN0QixzREFBc0Q7UUFDdEQsd0JBQXdCO1FBQ3hCLHFCQUFxQjtRQUNyQixzQkFBc0I7UUFDdEIseUJBQXlCO1FBQ3pCLDBCQUEwQjtRQUMxQiwwQkFBMEI7UUFDMUIsa0JBQWtCO1FBQ2xCLHdCQUF3QjtRQUN4QixxQ0FBcUM7UUFDckMsV0FBVztRQUNYLHdCQUF3QjtRQUN4QixxQkFBcUI7UUFDckIsbUJBQW1CO1FBQ25CLDRCQUE0QjtRQUM1Qix5QkFBeUI7UUFDekIsbUJBQW1CO1FBQ25CLHFCQUFxQjtRQUNyQixtQkFBbUI7UUFDbkIsVUFBVTtRQUNWLDBCQUEwQjtRQUMxQixvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QixVQUFVO1FBQ1YsWUFBWTtRQUNaLDBCQUEwQjtRQUMxQixhQUFhO1FBQ2IsWUFBWTtRQUNaLHNCQUFzQjtLQUN0QjtDQUNELENBQUMifQ==
-\ No newline at end of file
 diff --git a/build/linux/debian/dep-lists.ts b/build/linux/debian/dep-lists.ts
-index 3d6c2eb..aace840 100644
+index 3d6c2eb..5bd2ff2 100644
 --- a/build/linux/debian/dep-lists.ts
 +++ b/build/linux/debian/dep-lists.ts
 @@ -11,6 +11,8 @@ export const additionalDeps = [
  	'libnss3 (>= 3.26)',
  	'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3', // For Breakpad crash reports.
  	'xdg-utils (>= 1.0.2)', // OS integration
-+	'libgssapi-krb5-2',
-+	'libkrb5-3',
++	'libgssapi-krb5-2 (>= 1.16)',
++	'libkrb5-3 (>= 1.16)',
  ];
  
  // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends
@@ -593,11 +592,11 @@ index 3d6c2eb..aace840 100644
 -		'libgssapi-krb5-2 (>= 1.17)',
 +		'libglib2.0-0 (>= 2.16.0)',
 +		'libglib2.0-0 (>= 2.39.4)',
-+		'libgssapi-krb5-2',
++		'libgssapi-krb5-2 (>= 1.16)',
  		'libgtk-3-0 (>= 3.9.10)',
  		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
 -		'libkrb5-3 (>= 1.6.dfsg.2)',
-+		'libkrb5-3',
++		'libkrb5-3 (>= 1.16)',
  		'libnspr4 (>= 2:4.9-2~)',
 -		'libnss3 (>= 2:3.30)',
 +		'libnss3 (>= 2:3.22)',
@@ -646,11 +645,11 @@ index 3d6c2eb..aace840 100644
 -		'libgssapi-krb5-2 (>= 1.17)',
 +		'libglib2.0-0 (>= 2.12.0)',
 +		'libglib2.0-0 (>= 2.39.4)',
-+		'libgssapi-krb5-2',
++		'libgssapi-krb5-2 (>= 1.16)',
  		'libgtk-3-0 (>= 3.9.10)',
  		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
 -		'libkrb5-3 (>= 1.6.dfsg.2)',
-+		'libkrb5-3',
++		'libkrb5-3 (>= 1.16)',
  		'libnspr4 (>= 2:4.9-2~)',
 -		'libnss3 (>= 2:3.30)',
 +		'libnss3 (>= 2:3.22)',
@@ -690,11 +689,11 @@ index 3d6c2eb..aace840 100644
 -		'libgssapi-krb5-2 (>= 1.17)',
 +		'libglib2.0-0 (>= 2.12.0)',
 +		'libglib2.0-0 (>= 2.39.4)',
-+		'libgssapi-krb5-2',
++		'libgssapi-krb5-2 (>= 1.16)',
  		'libgtk-3-0 (>= 3.9.10)',
  		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
 -		'libkrb5-3 (>= 1.6.dfsg.2)',
-+		'libkrb5-3',
++		'libkrb5-3 (>= 1.16)',
  		'libnspr4 (>= 2:4.9-2~)',
 -		'libnss3 (>= 2:3.30)',
 +		'libnss3 (>= 2:3.22)',
