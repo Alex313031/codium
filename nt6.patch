@@ -600,3 +600,115 @@ index a90d28e..18a1412 100644
  				}, () => {
  					socket.removeListener('error', e);
  					socket.pause();
+diff --git a/yarn.lock b/yarn.lock
+index 0fc6389..926c208 100644
+--- a/yarn.lock
++++ b/yarn.lock
+@@ -1134,21 +1134,16 @@
+   resolved "https://registry.yarnpkg.com/@types/node/-/node-4.2.22.tgz#cf488a0f6b4a9c245d09927f4f757ca278b9c8ce"
+   integrity sha512-LXRap3bb4AjtLZ5NOFc4ssVZrQPTgdPcNm++0SEJuJZaOA+xHkojJNYqy33A5q/94BmG5tA6yaMeD4VdCv5aSA==
+ 
+-"@types/node@18.x":
+-  version "18.15.13"
+-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.13.tgz#f64277c341150c979e42b00e4ac289290c9df469"
+-  integrity sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==
++"@types/node@16.x", "@types/node@^16.11.26":
++  version "16.18.79"
++  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.79.tgz#153e25561b271cf87dc1b28d38f98cebd514d788"
++  integrity sha512-Qd7jdLR5zmnIyMhfDrfPqN5tUCvreVpP3Qrf2oSM+F7SNzlb/MwHISGUkdFHtevfkPJ3iAGyeQI/jsbh9EStgQ==
+ 
+ "@types/node@^10.11.7":
+   version "10.12.21"
+   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.21.tgz#7e8a0c34cf29f4e17a36e9bd0ea72d45ba03908e"
+   integrity sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
+ 
+-"@types/node@^18.11.18":
+-  version "18.16.19"
+-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.19.tgz#cb03fca8910fdeb7595b755126a8a78144714eea"
+-  integrity sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==
+-
+ "@types/q@^1.5.1":
+   version "1.5.4"
+   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
+@@ -1344,10 +1339,9 @@
+     "@typescript-eslint/types" "5.57.0"
+     eslint-visitor-keys "^3.3.0"
+ 
+-"@vscode/gulp-electron@^1.36.0":
++"@vscode/gulp-electron@git+https://github.com/Alex313031/vscode-gulp-electron.git":
+   version "1.36.0"
+-  resolved "https://registry.yarnpkg.com/@vscode/gulp-electron/-/gulp-electron-1.36.0.tgz#b2895c4bafaa0cf2b13042aa654e9fdd1f3a90cd"
+-  integrity sha512-zGNnxN2mccAa0fgyjUn0+HUX4sv4syUfoLQru3/QAQYki1oeqnkPpCXZxhismFmWpXwTwsf5sXeh1AOs8uyU0g==
++  resolved "git+https://github.com/Alex313031/vscode-gulp-electron.git#f8229575868ca8751e44dc750b8c96310cf52bc0"
+   dependencies:
+     "@electron/get" "^2.0.2"
+     "@octokit/rest" "^18.0.14"
+@@ -1359,9 +1353,9 @@
+     mkdirp "^0.5.1"
+     plist "^3.0.1"
+     progress "^1.1.8"
+-    rcedit "^0.3.0"
++    rcedit "1.1.2"
+     rimraf "^2.4.2"
+-    semver "^4.3.4"
++    semver "^5.7.2"
+     sumchecker "^3.0.1"
+     temp "^0.8.3"
+     vinyl "^3.0.0"
+@@ -3570,13 +3564,13 @@ electron-to-chromium@^1.4.202:
+   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.207.tgz#9c3310ebace2952903d05dcaba8abe3a4ed44c01"
+   integrity sha512-piH7MJDJp4rJCduWbVvmUd59AUne1AFBJ8JaRQvk0KzNTSUnZrVXHCZc+eg+CGE4OujkcLJznhGKD6tuAshj5Q==
+ 
+-electron@27.2.3:
+-  version "27.2.3"
+-  resolved "https://registry.yarnpkg.com/electron/-/electron-27.2.3.tgz#ef8c7a33175bb9fc91ae5508c560aea719b49232"
+-  integrity sha512-AbDL5WhoyN56Nb6Ox26eFNXo3PcoxPQGUfBMBT8WXY19uD8kI+l6XF8mI09ezMejo3JjKu4kh3zZUPcgskzIng==
++electron@22.3.27:
++  version "22.3.27"
++  resolved "https://registry.yarnpkg.com/electron/-/electron-22.3.27.tgz#b77451a53f0c502e7559cceac28ac58eb289eef8"
++  integrity sha512-7Rht21vHqj4ZFRnKuZdFqZFsvMBCmDqmjetiMqPtF+TmTBiGne1mnstVXOA/SRGhN2Qy5gY5bznJKpiqogjM8A==
+   dependencies:
+     "@electron/get" "^2.0.0"
+-    "@types/node" "^18.11.18"
++    "@types/node" "^16.11.26"
+     extract-zip "^2.0.1"
+ 
+ emoji-regex@^7.0.1:
+@@ -8177,15 +8171,10 @@ rc@^1.2.7:
+     minimist "^1.2.0"
+     strip-json-comments "~2.0.1"
+ 
+-rcedit@^0.3.0:
+-  version "0.3.0"
+-  resolved "https://registry.yarnpkg.com/rcedit/-/rcedit-0.3.0.tgz#cb5eee185e546f9eda597c248c9906186fa96bce"
+-  integrity sha1-y17uGF5Ub57aWXwkjJkGGG+pa84=
+-
+-rcedit@^1.1.0:
+-  version "1.1.0"
+-  resolved "https://registry.yarnpkg.com/rcedit/-/rcedit-1.1.0.tgz#ae21c28d4efdd78e95fcab7309a5dd084920b16a"
+-  integrity sha512-JkXJ0IrUcdupLoIx6gE4YcFaMVSGtu7kQf4NJoDJUnfBZGuATmJ2Yal2v55KTltp+WV8dGr7A0RtOzx6jmtM6Q==
++rcedit@1.1.2, rcedit@^1.1.2:
++  version "1.1.2"
++  resolved "https://registry.yarnpkg.com/rcedit/-/rcedit-1.1.2.tgz#7a28edf981953f75b5f3e5d4cbc1f9ffa0abbc78"
++  integrity sha512-z2ypB4gbINhI6wVe0JJMmdpmOpmNc4g90sE6/6JSuch5kYnjfz9CxvVPqqhShgR6GIkmtW3W2UlfiXhWljA0Fw==
+ 
+ read-pkg-up@^1.0.1:
+   version "1.0.1"
+@@ -8611,16 +8600,11 @@ semver-greatest-satisfied-range@^1.1.0:
+   dependencies:
+     sver-compat "^1.5.0"
+ 
+-"semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
++"semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.2:
+   version "5.7.2"
+   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.2.tgz#48d55db737c3287cd4835e17fa13feace1c41ef8"
+   integrity sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==
+ 
+-semver@^4.3.4:
+-  version "4.3.6"
+-  resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
+-  integrity sha512-IrpJ+yoG4EOH8DFWuVg+8H1kW1Oaof0Wxe7cPcXW3x9BjkN/eVo54F15LyqemnDIUYskQWr9qvl/RihmSy6+xQ==
+-
+ semver@^6.0.0, semver@^6.2.0, semver@^6.3.0:
+   version "6.3.1"
+   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
