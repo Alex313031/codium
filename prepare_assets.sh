@@ -107,6 +107,10 @@ else
     yarn gulp "vscode-linux-${VSCODE_ARCH}-build-deb"
   fi
 
+  if [[ "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
+    . ../build/linux/appimage/build.sh
+  fi
+
   cd ..
 
   if [[ "${SHOULD_BUILD_TAR}" != "no" ]]; then
