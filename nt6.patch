@@ -389,6 +389,37 @@ index 68f6989..0e89508 100644
  const { typescript } = require('tree-sitter-typescript');
  const product = require('../../product.json');
  const packageJson = require('../../package.json');
+diff --git a/build/linux/debian/install-sysroot.js b/build/linux/debian/install-sysroot.js
+index 40ca42e..658a817 100644
+--- a/build/linux/debian/install-sysroot.js
++++ b/build/linux/debian/install-sysroot.js
+@@ -10,6 +10,7 @@ const os_1 = require("os");
+ const fs = require("fs");
+ const https = require("https");
+ const path = require("path");
++const fetch = require("node-fetch");
+ const crypto_1 = require("crypto");
+ const ansiColors = require("ansi-colors");
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:build/linux/sysroot_scripts/install-sysroot.py.
+@@ -213,4 +214,4 @@ async function getChromiumSysroot(arch) {
+     return sysroot;
+ }
+ exports.getChromiumSysroot = getChromiumSysroot;
+-//# sourceMappingURL=install-sysroot.js.map
+\ No newline at end of file
++//# sourceMappingURL=install-sysroot.js.map
+diff --git a/build/linux/debian/install-sysroot.ts b/build/linux/debian/install-sysroot.ts
+index 37ea883..dc1f752 100644
+--- a/build/linux/debian/install-sysroot.ts
++++ b/build/linux/debian/install-sysroot.ts
+@@ -8,6 +8,7 @@ import { tmpdir } from 'os';
+ import * as fs from 'fs';
+ import * as https from 'https';
+ import * as path from 'path';
++import * as fetch from 'node-fetch';
+ import { createHash } from 'crypto';
+ import { DebianArchString } from './types';
+ import * as ansiColors from 'ansi-colors';
 diff --git a/build/package.json b/build/package.json
 index 52b1f47..c46e62d 100644
 --- a/build/package.json
