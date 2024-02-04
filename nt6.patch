@@ -1,0 +1,571 @@
+diff --git a/.nvmrc b/.nvmrc
+index 4a1f488..c85fa1b 100644
+--- a/.nvmrc
++++ b/.nvmrc
+@@ -1 +1 @@
+-18.17.1
++16.17.1
+diff --git a/.yarnrc b/.yarnrc
+index 105cc49..083bd80 100644
+--- a/.yarnrc
++++ b/.yarnrc
+@@ -1,5 +1,5 @@
+ disturl "https://electronjs.org/headers"
+-target "25.9.7"
++target "22.3.27"
+ ms_build_id "26354273"
+ runtime "electron"
+ build_from_source "true"
+diff --git a/build/checksums/electron.txt b/build/checksums/electron.txt
+index 9551123..2d1c9eb 100644
+--- a/build/checksums/electron.txt
++++ b/build/checksums/electron.txt
+@@ -1,75 +1,75 @@
+-6d0c679fa3f8a9498b708f93c40c0918523c5790bb0e0055b0e8ac871efc228d *chromedriver-v25.9.7-darwin-arm64.zip
+-cd758c34bb6a5bf0ce0df48627fafa4fab5d1f22f2622b29cba3f5c5cc2dd4ae *chromedriver-v25.9.7-darwin-x64.zip
+-bcfd29d527ba4d243b496dddee58a73e82a2aeaae5c1c15d55a5729a5d714576 *chromedriver-v25.9.7-linux-arm64.zip
+-869e2584570e1a472bd60bf6a405abc53702e1c8c20f24ff9e6e74449e49fad6 *chromedriver-v25.9.7-linux-armv7l.zip
+-af8c4bc1277cf816bc9b94d1da4febda0083f7764318dbaca6d678527bffcc4f *chromedriver-v25.9.7-linux-x64.zip
+-9c7ce39bc74da1db6a95ed63683649001a42306476a288afb55c53c3fca1fef0 *chromedriver-v25.9.7-mas-arm64.zip
+-123fbab9b17aac3142051bfd3c60f1ac1b0eb6e71049b9e6d489a0f917daa909 *chromedriver-v25.9.7-mas-x64.zip
+-e6a52e4181ee1a3a15ba254c237043147b72904f38b7b925e40e85d37cf1d44a *chromedriver-v25.9.7-win32-arm64.zip
+-4c5b8d1df6efe5c9ec5db033a3fc2ec7f93f429d0c43d6025fe0f7b96f2cf449 *chromedriver-v25.9.7-win32-ia32.zip
+-388cc0cce6ce11a60d0b81c5b37b8cb04bcbade533616973a4ef7161487aa59f *chromedriver-v25.9.7-win32-x64.zip
+-0bfdc68d235fb824b809f59394a0e39c735235a07c1a715df26cc65cd55141b0 *electron-api.json
+-bba809f7e84b67efabe8b9c92d2cf976d4d90c56c0d20d88fa893d0e47674e50 *electron-v25.9.7-darwin-arm64-dsym-snapshot.zip
+-9058c533f955a792ad491094b4b2c31def667916301eb42f8d36d3b60b7bcf69 *electron-v25.9.7-darwin-arm64-dsym.zip
+-59c72fb1bd0c58b4ad05a2478bb3fba69c05e195b4d5972b3723c13b70d04fa6 *electron-v25.9.7-darwin-arm64-symbols.zip
+-f0fd83b62946669849c535f89eb8a44e17fa1d1a454058447759d2a2f5ce03fc *electron-v25.9.7-darwin-arm64.zip
+-75473483e4dbdd7416e1dd78ab8123940904e7c63d5ae47efd481a3806dedc34 *electron-v25.9.7-darwin-x64-dsym-snapshot.zip
+-119e21d1961f11978a85dc0fef58d689a94ea9593ee4122519a02e449da52cf8 *electron-v25.9.7-darwin-x64-dsym.zip
+-77aaac85c725d32ca9a79e9efa1749d1404bbacb72aa9e15846da566c49543f1 *electron-v25.9.7-darwin-x64-symbols.zip
+-a3c61f288d416a7ddc23c9b5db779502243f630bffaba47ab66c0f00c0018fdb *electron-v25.9.7-darwin-x64.zip
+-d8fe114d07c4d0953e4ab40da6d9c958b401e4304755a7a133f13156b8ca48e4 *electron-v25.9.7-linux-arm64-debug.zip
+-1e0df565ec278b6515adee40f9eed06f5931297a72a6eb71c1472f8d31dbe8b1 *electron-v25.9.7-linux-arm64-symbols.zip
+-c889eec8bdb2737ff03d03d571df7834e3cef764527688db87f6578f54684d7c *electron-v25.9.7-linux-arm64.zip
+-d8fe114d07c4d0953e4ab40da6d9c958b401e4304755a7a133f13156b8ca48e4 *electron-v25.9.7-linux-armv7l-debug.zip
+-d58185a0eff29461868d5e8b15a387ccf8f2ffd407c06e787f1a89b73ce8b794 *electron-v25.9.7-linux-armv7l-symbols.zip
+-56b31812f7b4b010f34240bb3e3ea186c8c7f87e75be483a3877f93d7b9442d1 *electron-v25.9.7-linux-armv7l.zip
+-1818221bd66f005fc6cd843375db9a13dd0c8ef9709725ed9708177fbc2e26d0 *electron-v25.9.7-linux-x64-debug.zip
+-87907fb6fec001e7dcd4ebb9e6340a008385a5de2e59ce06c6de0828f2ed6aaa *electron-v25.9.7-linux-x64-symbols.zip
+-54b458ac590c495bef05ed6708a4667bbeac6a1865734ac3ecbb4da24ab57d26 *electron-v25.9.7-linux-x64.zip
+-bba809f7e84b67efabe8b9c92d2cf976d4d90c56c0d20d88fa893d0e47674e50 *electron-v25.9.7-mas-arm64-dsym-snapshot.zip
+-7d8271d31dc3a1348ccdf7f70bd111ca43f8f5dbba509dcbafafa607432070d4 *electron-v25.9.7-mas-arm64-dsym.zip
+-965d581a44d70e6597b3da8864754eeb3470d1db0451d5d4385c43063e78a80d *electron-v25.9.7-mas-arm64-symbols.zip
+-1ddbe56386e08612f6196f5a9b1ad6de4e45cb1525175f4a8dbb1abd14673614 *electron-v25.9.7-mas-arm64.zip
+-2b2c4ae842cd6da1d4d7784e40a6e28ee087b399320d73fa8470b91570efa92f *electron-v25.9.7-mas-x64-dsym-snapshot.zip
+-abed370155c8f758ab25f1e201791889cd1d1c81e967f56b1eb0e7f2116d307b *electron-v25.9.7-mas-x64-dsym.zip
+-2b5d527fd2c4658dea4a0ec5c16c44f79f4be6d316a450c300cbd2635131ab2f *electron-v25.9.7-mas-x64-symbols.zip
+-ca0a53619c4c71331f1641d4186496a6ad9f557357e24028c49fa25b5e8ab3e2 *electron-v25.9.7-mas-x64.zip
+-491d76cd80b52bac63000c4affdf63f11a043fb196e75974648ef3cacba8eb0b *electron-v25.9.7-win32-arm64-pdb.zip
+-238a44d5c38ef9b3ec521a17af3808f7148bb6106c285b37148a9a45142029e9 *electron-v25.9.7-win32-arm64-symbols.zip
+-e7b968fc53cc7a10a4ccb5133af045968479685ebb9617f06817f03667fdd425 *electron-v25.9.7-win32-arm64-toolchain-profile.zip
+-d3a90da294b5137177af45d492d09603363db39a9c77ce43be24d80fea03347f *electron-v25.9.7-win32-arm64.zip
+-5c1a25b57e6a50ab0224f1eaef5572e122905ff0c690dda58f1c767100eab405 *electron-v25.9.7-win32-ia32-pdb.zip
+-96706d1eab97189ae3eda815a270ebe02bef3e228428fcd343065866569a3a16 *electron-v25.9.7-win32-ia32-symbols.zip
+-e7b968fc53cc7a10a4ccb5133af045968479685ebb9617f06817f03667fdd425 *electron-v25.9.7-win32-ia32-toolchain-profile.zip
+-16fecd283bae6b72747132b8a7da68520a69752ac9d5fa1d39f3a43a8920f366 *electron-v25.9.7-win32-ia32.zip
+-4c2c40cb56ee8e6091a8860c8eec1e59542d525e3c23506e0f265aec29aacb49 *electron-v25.9.7-win32-x64-pdb.zip
+-5c4e56dce95bdfac8d91e7d2b6af69b7dab98d823377392a68e41352e4098daf *electron-v25.9.7-win32-x64-symbols.zip
+-e7b968fc53cc7a10a4ccb5133af045968479685ebb9617f06817f03667fdd425 *electron-v25.9.7-win32-x64-toolchain-profile.zip
+-d4b77ec5b7cfc8d156a0518ebd82eb373440ce2abf1af92b6faa32cf444b7256 *electron-v25.9.7-win32-x64.zip
+-c80b2154d9de94a520c09b038b27f4a5e93177f8de48821c3f129cea0e52bd1c *electron.d.ts
+-65f4ed4292b9114f79385dac6e79c468ad686f97b0c4d507943ad7b9a28821c4 *ffmpeg-v25.9.7-darwin-arm64.zip
+-5259bd7c62211644aa6bb982a8e80d36b5c0049a76917cc1d39fc2226df02da5 *ffmpeg-v25.9.7-darwin-x64.zip
+-bd52d57ff97fb56ac01a3482af905d04f0d4e9c13c53858c6d9f99957eca82da *ffmpeg-v25.9.7-linux-arm64.zip
+-9b3d09177fa1e63e2a6beecfa70aeec30aeb5c1873ff21128a68051c4e23f95d *ffmpeg-v25.9.7-linux-armv7l.zip
+-edc7b1c9f1a0733f109a2c0375a4e40c5bfe0bf28b7f06dcc76e1ada0aa2f125 *ffmpeg-v25.9.7-linux-x64.zip
+-3eb7218d6fa54ebb3836773df6414d1b0e119071761151dc48dd39ab7421a1ba *ffmpeg-v25.9.7-mas-arm64.zip
+-0dbbba4c8120c1a0a00cffec6e4ad70013eab35b77e19877c79fc7ae9caff1e9 *ffmpeg-v25.9.7-mas-x64.zip
+-11853e7c01586a0b9b2a58caee308282b6cf1662b7b5bf9ac5d74de423b16f1c *ffmpeg-v25.9.7-win32-arm64.zip
+-7306690feb13bb97491ca0c4ac3fa78feb5d3227043b317febddb10136eb0b2b *ffmpeg-v25.9.7-win32-ia32.zip
+-da487bff8151e47827fa684607d1799e5d0c0b53dcd51e76c955ed5d2ee8f24a *ffmpeg-v25.9.7-win32-x64.zip
+-77b9a9567a24c5583722d97a3cb23a075ebf1eec885cec660c53cd1b54992b30 *hunspell_dictionaries.zip
+-9a3395cbd02f241134df5eb6cb65788052919bc19816c92befe6cb500eeb398c *libcxx-objects-v25.9.7-linux-arm64.zip
+-1feea6b4bd9ee66c0dfd0327e422f07b4b52cb24e872b12aa37e98d819fbadc6 *libcxx-objects-v25.9.7-linux-armv7l.zip
+-2f3bbda5de58e46705d622d1f671224973cef54de9cbdb8355dfe270ca092288 *libcxx-objects-v25.9.7-linux-x64.zip
+-324a1eed3f8197bbeac0a513d50a394b2eaa0ac92c92f9526b0b07d74f12c4e8 *libcxx_headers.zip
+-8052c0a22a9ad673d32c1ae157df9638838fbd017a030263d4cce21aeed5c824 *libcxxabi_headers.zip
+-7dd7ddb90482c84fb7d29e10ca8293bc85ed692c4f1f636624229bbe8ac103af *mksnapshot-v25.9.7-darwin-arm64.zip
+-696f5eb1d7eb5941ea0c2cca1e0682d77d7883f71ff18f577e6ccdb1591e8a4e *mksnapshot-v25.9.7-darwin-x64.zip
+-aff92c1eb4ef1c33fa4d1fcda43ee6123f87c5acd72093f78c8d22daaba2622d *mksnapshot-v25.9.7-linux-arm64-x64.zip
+-8e7463c9714b99d8fafee3830f5bcbf335ff9f66b9d8b9a77d285a688a0691c0 *mksnapshot-v25.9.7-linux-armv7l-x64.zip
+-329c285e158322667844cccf99767ea1ef39ada804edbbfe99ddbe2c228ddc21 *mksnapshot-v25.9.7-linux-x64.zip
+-aa30c1cb96f52bfc68e44dd7c2420a153de577652a9312a5c85256a1f2769f48 *mksnapshot-v25.9.7-mas-arm64.zip
+-e32f14ed222f7e01d81982959601df7881928d5f90ada773454a06203bd83412 *mksnapshot-v25.9.7-mas-x64.zip
+-472ffc38d34c059c1e1036784a11109f6d998e91d4b8c4bb0e84ded3d66f7bea *mksnapshot-v25.9.7-win32-arm64-x64.zip
+-882a8880a03deffa40b24cbc59af31ac285a6a1e0e049d053f750d3db17853ea *mksnapshot-v25.9.7-win32-ia32.zip
+-dfe408f01ddcc9b4f52b59fcefe49386f30eb097cef78fb98b8667deb42bc7f1 *mksnapshot-v25.9.7-win32-x64.zip
++e462d1d1f42fbd95f59606138c5f2d127ec7a0194627e613429fd6589f38c778 *chromedriver-v22.3.27-darwin-arm64.zip
++59c89191158c810208dbe6a49015d9232e114330eca514efe362bdf1f9c8c819 *chromedriver-v22.3.27-darwin-x64.zip
++09d1b16ab31a17a914b9a871158458d34c7e5a52c7686ea923b9a9878e6d4539 *chromedriver-v22.3.27-linux-arm64.zip
++f020427cc1972928fd784b4f9ee912e8b42691c782c325fe7624aa2b38a7fcec *chromedriver-v22.3.27-linux-armv7l.zip
++2c0eb7ccc5d68ac52dfcf7264e8dc61de4a9480ededb464c35c0ad7db41b8e53 *chromedriver-v22.3.27-linux-x64.zip
++a6efc976fc8efd469ece8ef7349ba655128496929950beb7b4db4f910ca946fd *chromedriver-v22.3.27-mas-arm64.zip
++5b6dcd7edb370a88037cf858e63e0f03ead9c0089d337d6b5c6eee310dca228f *chromedriver-v22.3.27-mas-x64.zip
++e57141363f51445819436ca9320115931394e9349e6f6bfb2aa8123cb2a2ce21 *chromedriver-v22.3.27-win32-arm64.zip
++56e2a0e427cf889045ef533e350bb9be1c628c95d74b11e6477d654dba459b29 *chromedriver-v22.3.27-win32-ia32.zip
++8d01b742ca0e0f5b6d9eb73a2b650aaf5aeea4e060a6880bdfbf968d710793f7 *chromedriver-v22.3.27-win32-x64.zip
++918f116f80da1fdef14ba3a3a9bb628aac09cb6c3c5fff87cffca9d3c47771ff *electron-api.json
++e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-darwin-arm64-dsym-snapshot.zip
++dbff939cdfec7ce4d9fa16187fb69a357193ebc9ae4082e8da771dd5a5511a23 *electron-v22.3.27-darwin-arm64-dsym.zip
++6c67025cd392fbfd78fbb5676f437eaf62dbc083770899794f43ad10da07a311 *electron-v22.3.27-darwin-arm64-symbols.zip
++2b87e9f766692caaa16d7750bfab2f609c0eab906f55996c7d438d8e18ac8867 *electron-v22.3.27-darwin-arm64.zip
++57120f63f8b6aa91009aa20c76b75d4548b94ab0fdda7d62b835389d0ecc9ae2 *electron-v22.3.27-darwin-x64-dsym-snapshot.zip
++3552ff075bd25128bc6c0fc6a6aafa4db69db7299794aa40187ad87ddb0535b3 *electron-v22.3.27-darwin-x64-dsym.zip
++fef4cc317aeb4d6c790938dba14357932dba488e2116db84570edf0e3d1c5675 *electron-v22.3.27-darwin-x64-symbols.zip
++01f053d08cb2855acb14f0465f4e36324a41bd13b3b2ead142970a56df3e9db1 *electron-v22.3.27-darwin-x64.zip
++3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-arm64-debug.zip
++57806ef01cdceaecf6a4b7138aa035b91c63cc19b168adb91a45a855d724f6d0 *electron-v22.3.27-linux-arm64-symbols.zip
++60279395a5ce4eaf3c08f1e717771b203830902d3fe3a7c311bc37deb1a0e15e *electron-v22.3.27-linux-arm64.zip
++3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-armv7l-debug.zip
++136beb93675d0244e74ab51297c2f2cbe956c9ff8dfcdf74337a8e973cbc94f7 *electron-v22.3.27-linux-armv7l-symbols.zip
++9f8372606e5ede83cf1c73a3d8ff07047e4e3ef614aa89a76cd497dc06cf119d *electron-v22.3.27-linux-armv7l.zip
++6ac494b29e67781d55e3b4fbe73ffe2bdf1b422f883f3c265a753bc1547cc24a *electron-v22.3.27-linux-x64-debug.zip
++94b89f034554318d66098a6657d5bacaeb7f03ad98a2f856c8720aed31e75348 *electron-v22.3.27-linux-x64-symbols.zip
++631d8eb08098c48ce2b29421e74c69ac0312b1e42f445d8a805414ba1242bf3a *electron-v22.3.27-linux-x64.zip
++e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-mas-arm64-dsym-snapshot.zip
++b6cf5b125c6be773d3f915a64b13be9e96a4d44a1969c3de74d30cac9c73aafd *electron-v22.3.27-mas-arm64-dsym.zip
++19980e05fc846f45090a3e4571998981a33dccb5766ebfcfd375552bc99066eb *electron-v22.3.27-mas-arm64-symbols.zip
++7757470e871827b15c0b5c64e1734866e9334528689a69b34e64c15a9caada35 *electron-v22.3.27-mas-arm64.zip
++bf8f821d3650bbafa29ff4ea366799d13bda6e21aeab334f961a60a0d662e2b2 *electron-v22.3.27-mas-x64-dsym-snapshot.zip
++e082f5172e1ec429b688606a209eff0a20027b01bb5fac4782bc0b61f2d4d3d9 *electron-v22.3.27-mas-x64-dsym.zip
++f3313c2f9263e19cf9f59d16af86cd672f2581fb894c7b4c849a7cf3a7a989bf *electron-v22.3.27-mas-x64-symbols.zip
++b7c61f0c7c21377630572904ea8a499db9830a3e400672bb23da246c19e6e6a1 *electron-v22.3.27-mas-x64.zip
++3f0caf3642a756aa61c1cedb910fe36c9d0d252df479598940d3c56185da1349 *electron-v22.3.27-win32-arm64-pdb.zip
++a8e5997fcab7774f95301e8687d82538862944c03c50ec75702f32fb053c6b90 *electron-v22.3.27-win32-arm64-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-arm64-toolchain-profile.zip
++555371d63cae449625c169e9c32b00b1530cdee29bccef8b832f57cebfe8824e *electron-v22.3.27-win32-arm64.zip
++e9693674e527144ad4a4322d2eda8e19dd0042a63dadd51d3029effefe62dec6 *electron-v22.3.27-win32-ia32-pdb.zip
++819b0b9fe7ad888caec215f8e66aa07e3c476638617b969d0e169a973c58a479 *electron-v22.3.27-win32-ia32-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-ia32-toolchain-profile.zip
++1119ac7112590cb9c10a8c9b0bb5be65c0e11648a4f1311e6b7a5a00e497c2ce *electron-v22.3.27-win32-ia32.zip
++aa6a29c2b4a678ce5ec1e487d85e154d1e58c1c727b1858a24efe2610b7610c5 *electron-v22.3.27-win32-x64-pdb.zip
++8e9c3e42930b1937393b6478c37750f317872786c51f5296de09cec3c8af815e *electron-v22.3.27-win32-x64-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-x64-toolchain-profile.zip
++ad723ed7dad32f9459f7a9de1fd6d718cf713c4809c2431503bea62ce8f786e6 *electron-v22.3.27-win32-x64.zip
++f7dd34e0b335a1980d6aebc62d4d1383a051d6a1f895052f73a3ff8f9dd03cce *electron.d.ts
++cc5f6b70a3d57e34492ee85a11346ed3a1aaf3b4f9f17c2594afe4048414e654 *ffmpeg-v22.3.27-darwin-arm64.zip
++ff4586bd27b1a0a4d19f9da9d1a77b30ff6afb6a9a868a3d4c9844b7d4aa8ae1 *ffmpeg-v22.3.27-darwin-x64.zip
++59d2e2b2f2cc515a86a4e0cfd1116d10a8b25a8d58d45bb04de3512e156c944b *ffmpeg-v22.3.27-linux-arm64.zip
++b9d3b227bee17666d395ee7882ef477a733c3eeef3f1d9f2e3616d2d02eb3376 *ffmpeg-v22.3.27-linux-armv7l.zip
++fa07ef910b23a4ef4b6761bc16d20c0e70ff0259325c4d523129e2d9c5084174 *ffmpeg-v22.3.27-linux-x64.zip
++5ecdc59a23417cc59ddb5a943cc2aa4fcad5da7c115d070fb697135662d1922e *ffmpeg-v22.3.27-mas-arm64.zip
++faee7693f94b51094210d2fb3355deb16fd1b15d4c04d4e51ab8f77633a50f58 *ffmpeg-v22.3.27-mas-x64.zip
++ab34f1ff4a781e71f6c268b5198e893ed4f6bd6962639eaa01779292e89bad0b *ffmpeg-v22.3.27-win32-arm64.zip
++b14e3730694de4763061d83bc3006e68c2b235de0bf087a64aedc10182eb8b79 *ffmpeg-v22.3.27-win32-ia32.zip
++9c503e5a180c756094c1bcba1d1f71f18eeb1f58ed00d7ed53a8442befce3f71 *ffmpeg-v22.3.27-win32-x64.zip
++d2869fbeb76c750dfdc7ab3cc18379ac7da596d3b67f96f7b37153410420a17b *hunspell_dictionaries.zip
++f5959546231f39e70fde4c10a21ec9cb6bf21792ce48260450a2fe8d79078f90 *libcxx-objects-v22.3.27-linux-arm64.zip
++64aede20ce330331b11021ac2a5bfb664cf85582d2d94a5fab83945ebd074720 *libcxx-objects-v22.3.27-linux-armv7l.zip
++25dcaf59ca47ed6ce9828b8134980f7ab7719623407aee6549335314b555d84c *libcxx-objects-v22.3.27-linux-x64.zip
++c38f100d27955a60e563aa0ffc5e03edbd37ad70ef5294e4021fd9971af262e7 *libcxx_headers.zip
++aa703a89c36fc6c3970e491321b09aa9c22387da7fc24e033cd6ff4f1bd69fb3 *libcxxabi_headers.zip
++160987240aafcf545ee73feeeda31cf9b9d59084a5268f2d8a83cf83703a7b72 *mksnapshot-v22.3.27-darwin-arm64.zip
++ed46ab6112a3e4aaf12b223e1761896fcfa44ccf13a4d01445b71272dcb22b21 *mksnapshot-v22.3.27-darwin-x64.zip
++3a0e5ef31b91d2b7beb28ebc87e2ab5bd1abc8a3ab1902a147322c8824601ab2 *mksnapshot-v22.3.27-linux-arm64-x64.zip
++2614d68292d6267e8d7d2a598c605938d48c84ce895607137599ae4841086e41 *mksnapshot-v22.3.27-linux-armv7l-x64.zip
++cf128df524c9c5e6916f41dcc49d094834cdad7d7cbb050deee9d55645a3bcab *mksnapshot-v22.3.27-linux-x64.zip
++0b02cab2889af3576c60f3b1912717827811c0084c54d636ee3f8bc33417e53d *mksnapshot-v22.3.27-mas-arm64.zip
++a9cffdd62850d4b62793556ed1aaa13664a75a26837543a364400e4fcd5ee4ea *mksnapshot-v22.3.27-mas-x64.zip
++3d69cf2b841f79892141ca5d5335e156bc2fda4208c172406a247786089fe4d1 *mksnapshot-v22.3.27-win32-arm64-x64.zip
++6323cffb19bbd7b8ba99080e1299f91f75ed96e4ffbe226a7dc5000a0db8bc3c *mksnapshot-v22.3.27-win32-ia32.zip
++e61ed6727564ff5155c0c6df5394092c16f55c84542b55de6381d7b77fb638db *mksnapshot-v22.3.27-win32-x64.zip
+\ No newline at end of file
+diff --git a/build/checksums/nodejs.txt b/build/checksums/nodejs.txt
+index 7159352..edc1af9 100644
+--- a/build/checksums/nodejs.txt
++++ b/build/checksums/nodejs.txt
+@@ -1,6 +1,34 @@
+-bd302a689c3c34e2b61d86b97de66d26a335881a17af09b6a0a4bb1019df56e4  node-v18.15.0-darwin-arm64.tar.gz
+-76add174d2d3f98da08907412e82add7352b8cb6f639324d352a65c084b99c7e  node-v18.15.0-darwin-x64.tar.gz
+-8ef7aa7a679360ddbf0c7c8511881030b3de9d1f54451d92ba5c8d59a91c7073  node-v18.15.0-linux-arm64.tar.gz
+-ca2186313d3cbe5c67d0c08e931a6d290906f4f13c584e63fefa05a04dee9c58  node-v18.15.0-linux-armv7l.tar.gz
+-b298a73a9fc07badfa9e4a2e86ed48824fc9201327cdc43e3f3f58b273c535e7  node-v18.15.0-linux-x64.tar.gz
+-17fd75d8a41bf9b4c475143e19ff2808afa7a92f7502ede731537d9da674d5e8  win-x64/node.exe
++dfb37570ef34ac04f34c26d0ec558df60a9665df5961c01c1657c0ca495f2f01  node-v16.17.1-aix-ppc64.tar.gz
++f9f02f7872e2e8ee54320fce13deb9d56904f32bb0615b6e21aa3371d8899150  node-v16.17.1-darwin-arm64.tar.gz
++09a45f60bfb9dfbea4f69044dc733ef983945acd92ca89ccccac267f3d71bd44  node-v16.17.1-darwin-arm64.tar.xz
++3db26761ad8493b894d42260d7e65094b7af9bc473588739e61bc1c32d6ff955  node-v16.17.1-darwin-x64.tar.gz
++8e7089956fa01cf7d0045945c0863d282dc6818fb0476237c1396497e29a4254  node-v16.17.1-darwin-x64.tar.xz
++35ccb95caf02cda3bd680da4350a8ae5d666a7a9eae3afe5c2a1b3ef29aef108  node-v16.17.1-headers.tar.gz
++554c8d1b4b16e0f4c073b9df7c49c893716a3a533f25ac646f23619f5ccee7df  node-v16.17.1-headers.tar.xz
++adc7032888d4e672a4aac886baede8c04fccdd1a2e7ab4bcf325e3f336f44a3d  node-v16.17.1-linux-arm64.tar.gz
++3dfb8fd8f6b97df69cdc56524abc906c50ef1d0bf091188616802e6c7c731389  node-v16.17.1-linux-arm64.tar.xz
++aeab05e35f1d2824ecfb88ca321f1408b44d292b2775f2890972c828e00216d0  node-v16.17.1-linux-armv7l.tar.gz
++a035ceefb5e16f5fce98c8ddfdf721b96eec20542c72fb8781bcbb6ef20c5550  node-v16.17.1-linux-armv7l.tar.xz
++1f48de7bed99e973c4c50f1b7fc99fc9af5144d093fd6d2b50a1e43b5818bf05  node-v16.17.1-linux-ppc64le.tar.gz
++70305934661f89fca64053b85317a75f233d5e3fdb2caa6546a19262a519cf20  node-v16.17.1-linux-ppc64le.tar.xz
++029dad48018bda07b481213816549b632059fc673c30fdc7a353e04619128344  node-v16.17.1-linux-s390x.tar.gz
++1a47f604944c6aff37cb7483503155671cdb34bda9bfb8962007bc440fa04d77  node-v16.17.1-linux-s390x.tar.xz
++da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0  node-v16.17.1-linux-x64.tar.gz
++06ba2eb34aa385967f5f58c87a44753f83212f6cccea892b33f80a2e7fda8384  node-v16.17.1-linux-x64.tar.xz
++12d10476ea7483298364c810c037b9316d1a73dc8c81cfeff7d794aecadde498  node-v16.17.1.pkg
++e423985f6019b2026f9a191adb56a96ae83ecd56cdf839cf94aa980168b7a90f  node-v16.17.1.tar.gz
++6721feb4152d56d2c6b358ce397abd5a7f1daf09ee2e25c5021b9b4d3f86a330  node-v16.17.1.tar.xz
++9777e8c4b2864c5b54a0e4e9400f14887db68560a09b94b4113b560a64d1e680  node-v16.17.1-win-x64.7z
++ed290151efb417262b9808a70738d4ab79e9d53653a6a9f4b8dd97912e279dce  node-v16.17.1-win-x64.zip
++0f8101648d5c9e49e89fee541da9e574f899716c32b7c51a732b1766b9fc4526  node-v16.17.1-win-x86.7z
++189b5e8b23226403e7b07a46614de19b444d369e694901e3668e2f549799cbcd  node-v16.17.1-win-x86.zip
++1bdff65fb7642425c0d6826084d63c4be43520316f0ea0b46e6a51999a0ed7fc  node-v16.17.1-x64.msi
++b737eb23a2c67c253b9364b5284123faf5220d567615bebd4ec4b81070e4d177  node-v16.17.1-x86.msi
++f518a70dcab7c3fac5b2e1ef100b4f628edfb160f4fafa9a94ef222da8a6e9ab  win-x64/node.exe
++2f459a64647db493da63c790ce368ad54f59f086d9f22f59c5018680420197b3  win-x64/node.lib
++23215ce7d1e9de9777c3407239e7cf18d29d60f757b772219421ab361ac67c74  win-x64/node_pdb.7z
++8e32ec12028fd3e3147435be79a858ed9c870aaafa1fcb291362307ef3c47547  win-x64/node_pdb.zip
++2393aff88be19dbe0205cbde4ff0c1d89911b15de5c99c80f6e5e29604eecd12  win-x86/node.exe
++5018c3d42f3fbacbd06cb943b3f2696c8e67ca9bdf6864d0e263d6d6911dffd2  win-x86/node.lib
++05a4db56444a60ee70b0d2642d7f2d82a33339894d2d73bd07b1a41d6c869e04  win-x86/node_pdb.7z
++8f86eacb7f13a1bf6738cb0819d7854a2abca40fc2e9e1f91421e44ba52cad7e  win-x86/node_pdb.zip
+diff --git a/build/lib/builtInExtensionsCG.js b/build/lib/builtInExtensionsCG.js
+index 30b6791..df22f2d 100644
+--- a/build/lib/builtInExtensionsCG.js
++++ b/build/lib/builtInExtensionsCG.js
+@@ -4,6 +4,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ Object.defineProperty(exports, "__esModule", { value: true });
++const node_fetch_1 = require("node-fetch");
+ const fs = require("fs");
+ const path = require("path");
+ const url = require("url");
+@@ -22,9 +23,9 @@ async function downloadExtensionDetails(extension) {
+     const repositoryContentBaseUrl = `https://${token ? `${token}@` : ''}${contentBasePath}/${repository}/v${extension.version}`;
+     async function getContent(fileName) {
+         try {
+-            const response = await fetch(`${repositoryContentBaseUrl}/${fileName}`);
++            const response = await (0, node_fetch_1.default)(`${repositoryContentBaseUrl}/${fileName}`);
+             if (response.ok) {
+-                return { fileName, body: Buffer.from(await response.arrayBuffer()) };
++                return { fileName, body: await response.buffer() };
+             }
+             else if (response.status === 404) {
+                 return { fileName, body: undefined };
+@@ -76,4 +77,4 @@ main().then(() => {
+     console.error(err);
+     process.exit(1);
+ });
+-//# sourceMappingURL=builtInExtensionsCG.js.map
+\ No newline at end of file
++//# sourceMappingURL=builtInExtensionsCG.js.map
+diff --git a/build/lib/builtInExtensionsCG.ts b/build/lib/builtInExtensionsCG.ts
+index 62d0949..a84f431 100644
+--- a/build/lib/builtInExtensionsCG.ts
++++ b/build/lib/builtInExtensionsCG.ts
+@@ -3,6 +3,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ 
++import fetch from 'node-fetch';
+ import * as fs from 'fs';
+ import * as path from 'path';
+ import * as url from 'url';
+@@ -29,7 +30,7 @@ async function downloadExtensionDetails(extension: IExtensionDefinition): Promis
+ 		try {
+ 			const response = await fetch(`${repositoryContentBaseUrl}/${fileName}`);
+ 			if (response.ok) {
+-				return { fileName, body: Buffer.from(await response.arrayBuffer()) };
++				return { fileName, body: await response.buffer() };
+ 			} else if (response.status === 404) {
+ 				return { fileName, body: undefined };
+ 			} else {
+diff --git a/build/lib/compilation.ts b/build/lib/compilation.ts
+index 228bca4..ebc9ded 100644
+--- a/build/lib/compilation.ts
++++ b/build/lib/compilation.ts
+@@ -221,7 +221,7 @@ class MonacoGenerator {
+ 		}
+ 	}
+ 
+-	private _executeSoonTimer: NodeJS.Timeout | null = null;
++	private _executeSoonTimer: NodeJS.Timer | null = null;
+ 	private _executeSoon(): void {
+ 		if (this._executeSoonTimer !== null) {
+ 			clearTimeout(this._executeSoonTimer);
+diff --git a/build/lib/fetch.js b/build/lib/fetch.js
+index 71dbfd0..ba1ecd8 100644
+--- a/build/lib/fetch.js
++++ b/build/lib/fetch.js
+@@ -6,6 +6,7 @@
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.fetchGithub = exports.fetchUrl = exports.fetchUrls = void 0;
+ const es = require("event-stream");
++const node_fetch_1 = require("node-fetch");
+ const VinylFile = require("vinyl");
+ const log = require("fancy-log");
+ const ansiColors = require("ansi-colors");
+@@ -42,7 +43,7 @@ async function fetchUrl(url, options, retries = 10, retryDelay = 1000) {
+         const controller = new AbortController();
+         const timeout = setTimeout(() => controller.abort(), 30 * 1000);
+         try {
+-            const response = await fetch(url, {
++            const response = await (0, node_fetch_1.default)(url, {
+                 ...options.nodeFetchOptions,
+                 signal: controller.signal /* Typings issue with lib.dom.d.ts */
+             });
+@@ -50,7 +51,7 @@ async function fetchUrl(url, options, retries = 10, retryDelay = 1000) {
+                 log(`Fetch completed: Status ${response.status}. Took ${ansiColors.magenta(`${new Date().getTime() - startTime} ms`)}`);
+             }
+             if (response.ok && (response.status >= 200 && response.status < 300)) {
+-                const contents = Buffer.from(await response.arrayBuffer());
++                const contents = await response.buffer();
+                 if (options.checksumSha256) {
+                     const actualSHA256Checksum = crypto.createHash('sha256').update(contents).digest('hex');
+                     if (actualSHA256Checksum !== options.checksumSha256) {
+@@ -132,4 +133,4 @@ function fetchGithub(repo, options) {
+     }));
+ }
+ exports.fetchGithub = fetchGithub;
+-//# sourceMappingURL=fetch.js.map
+\ No newline at end of file
++//# sourceMappingURL=fetch.js.map
+diff --git a/build/lib/fetch.ts b/build/lib/fetch.ts
+index 58803c3..238f0ac 100644
+--- a/build/lib/fetch.ts
++++ b/build/lib/fetch.ts
+@@ -4,6 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ 
+ import * as es from 'event-stream';
++import fetch, { RequestInit } from 'node-fetch';
+ import * as VinylFile from 'vinyl';
+ import * as log from 'fancy-log';
+ import * as ansiColors from 'ansi-colors';
+@@ -60,7 +61,7 @@ export async function fetchUrl(url: string, options: IFetchOptions, retries = 10
+ 				log(`Fetch completed: Status ${response.status}. Took ${ansiColors.magenta(`${new Date().getTime() - startTime} ms`)}`);
+ 			}
+ 			if (response.ok && (response.status >= 200 && response.status < 300)) {
+-				const contents = Buffer.from(await response.arrayBuffer());
++				const contents = await response.buffer();
+ 				if (options.checksumSha256) {
+ 					const actualSHA256Checksum = crypto.createHash('sha256').update(contents).digest('hex');
+ 					if (actualSHA256Checksum !== options.checksumSha256) {
+diff --git a/build/lib/policies.js b/build/lib/policies.js
+index 466295b..2b9d8af 100644
+--- a/build/lib/policies.js
++++ b/build/lib/policies.js
+@@ -10,6 +10,7 @@ const path = require("path");
+ const byline = require("byline");
+ const ripgrep_1 = require("@vscode/ripgrep");
+ const Parser = require("tree-sitter");
++const node_fetch_1 = require("node-fetch");
+ const { typescript } = require('tree-sitter-typescript');
+ const product = require('../../product.json');
+ const packageJson = require('../../package.json');
+@@ -425,7 +426,7 @@ async function getSpecificNLS(resourceUrlTemplate, languageId, version) {
+         path: 'extension/translations/main.i18n.json'
+     };
+     const url = resourceUrlTemplate.replace(/\{([^}]+)\}/g, (_, key) => resource[key]);
+-    const res = await fetch(url);
++    const res = await (0, node_fetch_1.default)(url);
+     if (res.status !== 200) {
+         throw new Error(`[${res.status}] Error downloading language pack ${languageId}@${version}`);
+     }
+@@ -446,7 +447,7 @@ function compareVersions(a, b) {
+     return a[2] - b[2];
+ }
+ async function queryVersions(serviceUrl, languageId) {
+-    const res = await fetch(`${serviceUrl}/extensionquery`, {
++    const res = await (0, node_fetch_1.default)(`${serviceUrl}/extensionquery`, {
+         method: 'POST',
+         headers: {
+             'Accept': 'application/json;api-version=3.0-preview.1',
+@@ -523,4 +524,4 @@ if (require.main === module) {
+         process.exit(1);
+     });
+ }
+-//# sourceMappingURL=policies.js.map
+\ No newline at end of file
++//# sourceMappingURL=policies.js.map
+diff --git a/build/lib/policies.ts b/build/lib/policies.ts
+index 68f6989..0e89508 100644
+--- a/build/lib/policies.ts
++++ b/build/lib/policies.ts
+@@ -9,6 +9,7 @@ import * as path from 'path';
+ import * as byline from 'byline';
+ import { rgPath } from '@vscode/ripgrep';
+ import * as Parser from 'tree-sitter';
++import fetch from 'node-fetch';
+ const { typescript } = require('tree-sitter-typescript');
+ const product = require('../../product.json');
+ const packageJson = require('../../package.json');
+diff --git a/build/package.json b/build/package.json
+index a06baec..c943db2 100644
+--- a/build/package.json
++++ b/build/package.json
+@@ -50,6 +50,7 @@
+     "jsonc-parser": "^2.3.0",
+     "mime": "^1.4.1",
+     "mkdirp": "^1.0.4",
++    "node-fetch": "2.7.0",
+     "source-map": "0.6.1",
+     "ternary-stream": "^3.0.0",
+     "through2": "^4.0.2",
+diff --git a/cgmanifest.json b/cgmanifest.json
+index 5de4d62..f08c529 100644
+--- a/cgmanifest.json
++++ b/cgmanifest.json
+@@ -6,7 +6,7 @@
+ 				"git": {
+ 					"name": "chromium",
+ 					"repositoryUrl": "https://chromium.googlesource.com/chromium/src",
+-					"commitHash": "88c0a3606e1a856ad43651130d27bb880e1833d6"
++					"commitHash": "513ac8b2c47c7e1ac6b9f4fb5ea98e965cf29b66"
+ 				}
+ 			},
+ 			"licenseDetail": [
+@@ -40,7 +40,7 @@
+ 				"SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+ 			],
+ 			"isOnlyProductionDependency": true,
+-			"version": "114.0.5735.289"
++			"version": "108.0.5359.215"
+ 		},
+ 		{
+ 			"component": {
+@@ -48,7 +48,7 @@
+ 				"git": {
+ 					"name": "ffmpeg",
+ 					"repositoryUrl": "https://chromium.googlesource.com/chromium/third_party/ffmpeg",
+-					"commitHash": "8d21d41d8bec5c0b266ee305d1a708dc5c23b594"
++					"commitHash": "b9f01c3c54576330b2cf8918c54d5ee5be8faefe"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+@@ -516,11 +516,11 @@
+ 				"git": {
+ 					"name": "nodejs",
+ 					"repositoryUrl": "https://github.com/nodejs/node",
+-					"commitHash": "a94966ffc114e831d4a917a97f9958d3385ab6f7"
++					"commitHash": "6b06e89c7dfccec6792008302af1cee57649445c"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+-			"version": "18.15.0"
++			"version": "16.17.1"
+ 		},
+ 		{
+ 			"component": {
+@@ -528,12 +528,12 @@
+ 				"git": {
+ 					"name": "electron",
+ 					"repositoryUrl": "https://github.com/electron/electron",
+-					"commitHash": "55738ddac34a75be9bfbdda3ac1638adfd0e5479"
++					"commitHash": "e2dac668c680a8b58f204ce14ad88431a2db4339"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+ 			"license": "MIT",
+-			"version": "25.9.7"
++			"version": "22.3.27"
+ 		},
+ 		{
+ 			"component": {
+diff --git a/package.json b/package.json
+index 2f4cf30..7d8303f 100644
+--- a/package.json
++++ b/package.json
+@@ -119,7 +119,7 @@
+     "@types/kerberos": "^1.1.2",
+     "@types/minimist": "^1.2.1",
+     "@types/mocha": "^9.1.1",
+-    "@types/node": "18.x",
++    "@types/node": "16.x",
+     "@types/sinon": "^10.0.2",
+     "@types/sinon-test": "^2.4.2",
+     "@types/trusted-types": "^1.0.6",
+@@ -133,7 +133,7 @@
+     "@typescript-eslint/eslint-plugin": "^5.57.0",
+     "@typescript-eslint/experimental-utils": "^5.57.0",
+     "@typescript-eslint/parser": "^5.57.0",
+-    "@vscode/gulp-electron": "^1.36.0",
++    "@vscode/gulp-electron": "git+https://github.com/Alex313031/vscode-gulp-electron.git",
+     "@vscode/l10n-dev": "0.0.21",
+     "@vscode/telemetry-extractor": "^1.10.2",
+     "@vscode/test-cli": "^0.0.3",
+@@ -150,7 +150,7 @@
+     "cssnano": "^4.1.11",
+     "debounce": "^1.0.0",
+     "deemon": "^1.8.0",
+-    "electron": "25.9.7",
++    "electron": "22.3.27",
+     "eslint": "8.36.0",
+     "eslint-plugin-header": "3.1.1",
+     "eslint-plugin-jsdoc": "^46.5.0",
+@@ -198,7 +198,7 @@
+     "p-all": "^1.0.0",
+     "path-browserify": "^1.0.1",
+     "pump": "^1.0.1",
+-    "rcedit": "^1.1.0",
++    "rcedit": "^1.1.2",
+     "rimraf": "^2.2.8",
+     "sinon": "^12.0.1",
+     "sinon-test": "^3.1.3",
+diff --git a/remote/.yarnrc b/remote/.yarnrc
+index b6dff58..9d11f75 100644
+--- a/remote/.yarnrc
++++ b/remote/.yarnrc
+@@ -1,5 +1,5 @@
+ disturl "https://nodejs.org/dist"
+-target "18.15.0"
++target "16.17.1"
+ ms_build_id "243295"
+ runtime "node"
+ build_from_source "true"
+diff --git a/src/vs/base/node/shell.ts b/src/vs/base/node/shell.ts
+index 9da701f..55d97ca 100644
+--- a/src/vs/base/node/shell.ts
++++ b/src/vs/base/node/shell.ts
+@@ -33,7 +33,7 @@ function getSystemShellUnixLike(os: platform.OperatingSystem, env: platform.IPro
+ 	}
+ 
+ 	if (!_TERMINAL_DEFAULT_SHELL_UNIX_LIKE) {
+-		let unixLikeTerminal: string | undefined;
++		let unixLikeTerminal: string | undefined | null;
+ 		if (platform.isWindows) {
+ 			unixLikeTerminal = '/bin/bash'; // for WSL
+ 		} else {
+diff --git a/src/vs/base/parts/sandbox/common/electronTypes.ts b/src/vs/base/parts/sandbox/common/electronTypes.ts
+index f8c7a35..d54657e 100644
+--- a/src/vs/base/parts/sandbox/common/electronTypes.ts
++++ b/src/vs/base/parts/sandbox/common/electronTypes.ts
+@@ -21,7 +21,7 @@ export interface MessageBoxOptions {
+ 	 * displays the same icon as `info`, unless you set an icon using the `icon`
+ 	 * option. On macOS, both `warning` and `error` display the same warning icon.
+ 	 */
+-	type?: ('none' | 'info' | 'error' | 'question' | 'warning');
++	type?: string;
+ 	/**
+ 	 * Array of texts for buttons. On Windows, an empty array will result in one button
+ 	 * labeled "OK".
+diff --git a/src/vs/platform/windows/electron-main/windowImpl.ts b/src/vs/platform/windows/electron-main/windowImpl.ts
+index b68fb6e..15e5136 100644
+--- a/src/vs/platform/windows/electron-main/windowImpl.ts
++++ b/src/vs/platform/windows/electron-main/windowImpl.ts
+@@ -313,11 +313,7 @@ export abstract class BaseWindow extends Disposable implements IBaseWindow {
+ 		// macOS: traffic lights
+ 		else if (isMacintosh && options.height !== undefined) {
+ 			const verticalOffset = (options.height - 15) / 2; // 15px is the height of the traffic lights
+-			if (!verticalOffset) {
+-				win.setWindowButtonPosition(null);
+-			} else {
+-				win.setWindowButtonPosition({ x: verticalOffset, y: verticalOffset });
+-			}
++			win.setTrafficLightPosition({ x: verticalOffset, y: verticalOffset });
+ 		}
+ 	}
+ 
+diff --git a/src/vs/server/node/remoteExtensionHostAgentServer.ts b/src/vs/server/node/remoteExtensionHostAgentServer.ts
+index d1a0f51..5a2d994 100644
+--- a/src/vs/server/node/remoteExtensionHostAgentServer.ts
++++ b/src/vs/server/node/remoteExtensionHostAgentServer.ts
+@@ -551,8 +551,7 @@ class RemoteExtensionHostAgentServer extends Disposable implements IServerAPI {
+ 			const socket = net.createConnection(
+ 				{
+ 					host: host,
+-					port: port,
+-					autoSelectFamily: true
++					port: port
+ 				}, () => {
+ 					socket.removeListener('error', e);
+ 					socket.pause();
