@@ -19,7 +19,7 @@
 
 </div>
 
-__This is a fork of <a rel="noopener" target="_blank" href="https://github.com/VSCodium/vscodium">VSCodium</a> with compiler optimizations, rebranding as "Codium", reverting the icon to upstream, and *RESTORED WINDOWS 7/8/8.1 Support!*. It also supports Ubuntu 18.04/Debian 9.__
+__This is a fork of <a rel="noopener" target="_blank" href="https://github.com/VSCodium/vscodium">VSCodium</a> with compiler optimizations, rebranding as "Codium", restoration of the upstream icon, and *RESTORED WINDOWS 7/8/8.1 Support!*. It also supports Ubuntu 18.04/Debian 9.__
 
 ## Table of Contents
 
