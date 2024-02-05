@@ -23,6 +23,11 @@ printf "\n" &&
 # git diff > ../nt6.patch
 
 git apply --reject ../nt6.patch  &&
+
+printf "\n" &&
+printf "${GRE}Patching vscode for Ubuntu 18.04/Debian 9...${c0}\n" &&
+printf "\n" &&
+
 git apply --reject ../bionic.patch  &&
 
 /usr/bin/find ./ \( -type d -name .git -prune -type d -name node_modules -prune \) -o -type f -name package.json -print0 | xargs -0 sed -i 's/\"\@types\/node\"\:\ \"18\.x\"/\"\@types\/node\"\:\ \"16\.x\"/g' &&
