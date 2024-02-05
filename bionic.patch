@@ -9,7 +9,7 @@ index 6304df9..202ddcf 100644
 -        return !dependency.startsWith('libgcc-s1');
 +		return !dependency.startsWith('libgcc-s1') &&
 +			!dependency.startsWith('libgssapi-krb5-2') &&
-+			!dependency.startsWith('libkrb5-3');
++			!dependency.startsWith('libkrb5-3') &&
 +			!dependency.startsWith('libxkbfile1');
      }).sort();
      const requires = new Set(filteredDeps);
