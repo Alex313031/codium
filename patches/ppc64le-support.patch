@@ -53,6 +53,18 @@ index 92f8065..c16687b 100644
 +				`-l${vscodeSysroot}/lib/ppc64le-linux-gnu`);
 +			break;
  	}
+@@ -79,9 +79,11 @@ function calculatePackageDeps(binaryPath, arch, chromiumSysroot, vscodeSysroot)
+     // TODO(deepak1556): remove this workaround in favor of computing the
+     // versions from build container for native modules.
+     const filteredDeps = depsStr.split(', ').filter(dependency => {
+-        return !dependency.startsWith('libgcc-s1');
++		return !dependency.startsWith('libgcc-s1') &&
++			!dependency.startsWith('libgssapi-krb5-2') &&
++			!dependency.startsWith('libkrb5-3');
+     }).sort();
+     const requires = new Set(filteredDeps);
+     return requires;
+ }
 diff --git a/build/linux/debian/dep-lists.ts b/build/linux/debian/dep-lists.ts
 index 3d6c2eb..a4587bd 100644
 --- a/build/linux/debian/dep-lists.ts
