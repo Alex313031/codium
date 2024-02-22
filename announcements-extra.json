@@ -1,7 +1,7 @@
 [
   {
-    "id": "#1497",
-    "title": "Restored Windows 7/8/8.1 Support!",
-    "url": "https://github.com/Alex313031/codium/blob/master/nt6.patch"
+    "id": "#1498",
+    "title": "Restored Ubuntu 18.04/Debian 9!",
+    "url": "https://github.com/Alex313031/codium/blob/master/bionic.patch"
   }
 ]

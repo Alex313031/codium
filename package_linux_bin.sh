@@ -13,6 +13,11 @@ chown -R root:root vscode
 
 cd vscode || { echo "'vscode' dir not found"; exit 1; }
 
+export CFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+export CXXFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+export CPPFLAGS="-DNDEBUG -msse3 -O3 -g0 -s"
+export LDFLAGS="-Wl,-O3 -msse3 -s"
+
 export VSCODE_SKIP_NODE_VERSION_CHECK=1
 export VSCODE_SYSROOT_PREFIX='-glibc-2.17'
 

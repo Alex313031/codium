@@ -1,4 +1,4 @@
-# How to build VSCodium
+# How to build Codium
 
 ## Table of Contents
 
@@ -78,7 +78,7 @@ The script `build/build.sh` provides several flags:
 
 ## <a id="build-docker"></a>Build in Docker
 
-To build for Linux, you can alternatively build VSCodium in docker
+To build for Linux, you can alternatively build Codium in docker
 
 ### <a id="build-docker-x64"></a>X64
 
@@ -141,7 +141,7 @@ review-tools.snap-review --allow-classic codium*.snap
 
 - run `./build/build_<os>.sh`, if a patch is failing then,
 - run `./build/update_patches.sh`
-- when the script pauses at `Press any key when the conflict have been resolved...`, open `vscode` directory in **VSCodium**
+- when the script pauses at `Press any key when the conflict have been resolved...`, open `vscode` directory in **Codium**
 - fix all the `*.rej` files
 - run `yarn watch`
 - run `./script/code.sh` until everything is ok
@@ -150,7 +150,7 @@ review-tools.snap-review --allow-classic codium*.snap
 ## <a id="patch-update-process-manual"></a>Manual
 
 - run `./build/build_<os>.sh`, if a patch is failing then,
-- open `vscode` directory in **VSCodium**
+- open `vscode` directory in **Codium**
 - revert all changes
 - run `git apply --reject ../patches/<name>.patch`
 - fix all the `*.rej` files

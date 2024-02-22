@@ -83,7 +83,6 @@ elif [[ "${OS_NAME}" == "osx" ]]; then
 
   yarn postinstall
 else
-
   # TODO: Should be replaced with upstream URL once https://github.com/nodejs/node-gyp/pull/2825
   # gets merged.
   #rm -rf .build/node-gyp
@@ -102,9 +101,9 @@ else
 
   #cd ../..
 
-  #if [[ "${npm_config_arch}" == "arm" ]]; then
-  #  export npm_config_arm_version=7
-  #fi
+  if [[ "${npm_config_arch}" == "arm" ]]; then
+    export npm_config_arm_version=7
+  fi
 
   CHILD_CONCURRENCY=1 yarn --check-files --network-timeout 180000
 fi
@@ -206,7 +205,6 @@ cat product.json
 # package.json
 cp package.json{,.bak}
 
-# setpath for rcedit here TODO
 setpath "package" "version" "$( echo "${RELEASE_VERSION}" | sed -n -E "s/^(.*)\.([0-9]+)(-insider)?$/\1/p" )"
 setpath "package" "release" "$( echo "${RELEASE_VERSION}" | sed -n -E "s/^(.*)\.([0-9]+)(-insider)?$/\2/p" )"
 
@@ -225,7 +223,7 @@ replace 's|([0-9]) Microsoft|\1 Codium|' build/lib/electron.ts
 if [[ "${OS_NAME}" == "linux" ]]; then
   # microsoft adds their apt repo to sources
   # unless the app name is code-oss
-  # as we are renaming the application to vscodium
+  # as we are renaming the application to codium
   # we need to edit a line in the post install template
   if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
     sed -i "s/code-oss/codium-dev/" resources/linux/debian/postinst.template
@@ -237,12 +235,12 @@ if [[ "${OS_NAME}" == "linux" ]]; then
   # code.appdata.xml
   sed -i 's|Visual Studio Code|Codium|g' resources/linux/code.appdata.xml
   sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/Alex313031/codium#download-install|' resources/linux/code.appdata.xml
-  sed -i 's|https://code.visualstudio.com/home/home-screenshot-linux-lg.png|https://vscodium.com/img/vscodium.png|' resources/linux/code.appdata.xml
-  sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com/home/home-screenshot-linux-lg.png|https://github.com/Alex313031/codium/blob/master/Logo.png|' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com|https://github.com/Alex313031/codium#readme|' resources/linux/code.appdata.xml
 
   # control.template
   sed -i 's|Microsoft Corporation <vscode-linux@microsoft.com>|Alex313031 <alex313031@gmail.com>|'  resources/linux/debian/control.template
-  sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/debian/control.template
+  sed -i 's|https://code.visualstudio.com|https://github.com/Alex313031/codium#readme|' resources/linux/debian/control.template
   sed -i 's|Visual Studio Code|Codium|g' resources/linux/debian/control.template
   sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/Alex313031/codium#download-install|' resources/linux/debian/control.template
 
@@ -250,7 +248,7 @@ if [[ "${OS_NAME}" == "linux" ]]; then
   sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/Alex313031/codium#download-install|' resources/linux/rpm/code.spec.template
   sed -i 's|Microsoft Corporation|Alex313031|' resources/linux/rpm/code.spec.template
   sed -i 's|Visual Studio Code Team <vscode-linux@microsoft.com>|Alex313031 <alex313031@gmail.com>|' resources/linux/rpm/code.spec.template
-  sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/rpm/code.spec.template
+  sed -i 's|https://code.visualstudio.com|https://github.com/Alex313031/codium#readme|' resources/linux/rpm/code.spec.template
   sed -i 's|Visual Studio Code|Codium|' resources/linux/rpm/code.spec.template
 
   # snapcraft.yaml
