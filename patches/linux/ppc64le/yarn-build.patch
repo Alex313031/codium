@@ -2,7 +2,7 @@ diff --git a/.yarnrc b/.yarnrc
 index 6d69893..849e761 100644
 --- a/.yarnrc
 +++ b/.yarnrc
-@@ -3,3 +3,3 @@ target "27.2.3"
+@@ -3,3 +3,3 @@ target "22.3.27"
  ms_build_id "26908389"
 -runtime "electron"
 -build_from_source "true"
@@ -12,7 +12,7 @@ diff --git a/remote/.yarnrc b/remote/.yarnrc
 index cac528f..0f997ad 100644
 --- a/remote/.yarnrc
 +++ b/remote/.yarnrc
-@@ -3,3 +3,3 @@ target "18.17.1"
+@@ -3,3 +3,3 @@ target "16.17.1"
  ms_build_id "255375"
 -runtime "node"
 -build_from_source "true"

@@ -20,7 +20,7 @@ index cac528f..0d11e36 100644
 @@ -1,3 +1,3 @@
  disturl "https://nodejs.org/dist"
 -target "18.17.1"
-+target "16.20.2"
++target "16.17.1"
  ms_build_id "255375"
 diff --git a/remote/package.json b/remote/package.json
 index b1fbc7b..87716c0 100644

@@ -1,0 +1,1375 @@
+diff --git a/.nvmrc b/.nvmrc
+index 4a1f488..c85fa1b 100644
+--- a/.nvmrc
++++ b/.nvmrc
+@@ -1 +1 @@
+-18.17.1
++16.17.1
+diff --git a/.yarnrc b/.yarnrc
+index c95a4be..f77bd0a 100644
+--- a/.yarnrc
++++ b/.yarnrc
+@@ -1,5 +1,5 @@
+ disturl "https://electronjs.org/headers"
+-target "27.2.3"
++target "22.3.27"
+ ms_build_id "26495564"
+ runtime "electron"
+ build_from_source "true"
+diff --git a/build/checksums/electron.txt b/build/checksums/electron.txt
+index bcd4bfe..2d1c9eb 100644
+--- a/build/checksums/electron.txt
++++ b/build/checksums/electron.txt
+@@ -1,75 +1,75 @@
+-5e12800023944ba203820eac76382b57ccd5dad371f70650889bd77decbc372b *chromedriver-v27.2.3-darwin-arm64.zip
+-d271649b18bbbe7aa2c8fe8633bbb335611d018c95ddb6b4f54e6cd037163219 *chromedriver-v27.2.3-darwin-x64.zip
+-1c94c33c01cb23b1e9bf6ab34093abd1a8b8cfa8b6021a70c8142022b6d8f0a0 *chromedriver-v27.2.3-linux-arm64.zip
+-4491b78e7fc45f27388abc022841aeecb48fd2907f7aed2be42caf3db3149284 *chromedriver-v27.2.3-linux-armv7l.zip
+-1ec4ddb99209017df0f3252799e87bd04f2ae6d14b1ed3dc638e8bfbc512441b *chromedriver-v27.2.3-linux-x64.zip
+-a9384b769f0b47eab221a0576c6eb5b6f8a390943621dac0b4b03c6c11b4db9b *chromedriver-v27.2.3-mas-arm64.zip
+-2dc6bb386adb60426ed9902cae118073d289bea9d2ad739162aa3534464637b0 *chromedriver-v27.2.3-mas-x64.zip
+-23587604cdc9aa9b434879a8615f96d023cb5f7bc1bbb1d672b232bda21f3c48 *chromedriver-v27.2.3-win32-arm64.zip
+-aceae2b417ae6a83bc6ddd3a762bd99e48455765b9db4d65fcfbc1fe17182bae *chromedriver-v27.2.3-win32-ia32.zip
+-a3797c5d58fb73b22b8d06b58250c57be94673f2c7e6862095a0bd768feee278 *chromedriver-v27.2.3-win32-x64.zip
+-39ec5429329af2990470a0c46ba865851863610ff46b47c4a25f7055670f1604 *electron-api.json
+-6cd6e53a0fdccbf3e89da8634d6fda7f04e0e521ffd3f494dfb4e9f7087c5ff2 *electron-v27.2.3-darwin-arm64-dsym-snapshot.zip
+-cc13dbdb4f319cbc31c8ef76560a92b695d19e1f88709dda5f2f26d87fc04469 *electron-v27.2.3-darwin-arm64-dsym.zip
+-949cfa456931a3f9190504a7b135a726eb75d223fd769d38c5c0258ab2328db0 *electron-v27.2.3-darwin-arm64-symbols.zip
+-20d6d486f6e0e428182dbbafd293f3007fc91760d37bbc3559e813d55ee15d85 *electron-v27.2.3-darwin-arm64.zip
+-b1b4e7d7212336fe28e8a461b920e7ca0a358a313000592d160adbf335c7e65b *electron-v27.2.3-darwin-x64-dsym-snapshot.zip
+-55f88e9491c237675cb1f7e3d055d404db70e4682e906ede79ff433d8794679f *electron-v27.2.3-darwin-x64-dsym.zip
+-75262139cb49ce5070501f6e74dade18bf9f0eb3b968d848765a937560f6338b *electron-v27.2.3-darwin-x64-symbols.zip
+-602b89308fb114631d90bda4bbef611aa571c57588fbb1bfcec781e22d584c22 *electron-v27.2.3-darwin-x64.zip
+-94989909484abff147b4334a100ace00571d810da94b717e54c82cb76d7acf11 *electron-v27.2.3-linux-arm64-debug.zip
+-9e57241fa5df5e09c70a99aff5099350f5b7126895f7a4ab8ca401352b4bd99a *electron-v27.2.3-linux-arm64-symbols.zip
+-86c98c25f1a7e02f3c8e3fc837e8785e1cd88518c4e5f005c59e039bb6e79054 *electron-v27.2.3-linux-arm64.zip
+-94989909484abff147b4334a100ace00571d810da94b717e54c82cb76d7acf11 *electron-v27.2.3-linux-armv7l-debug.zip
+-43a89997cb8acd88f37d69649ef4e8f6bbb9ffce187004e09604c410e396e788 *electron-v27.2.3-linux-armv7l-symbols.zip
+-7a581252c59514696f920f21af0e97f997e01c9df44d6788c457825bf398c0ea *electron-v27.2.3-linux-armv7l.zip
+-8a27e845f4405a44fb16297362782531aff03219a002a3e23b3b439fd610b6dd *electron-v27.2.3-linux-x64-debug.zip
+-b8ddc3f92f23d5351c096287b76ff106c53560bf44cdbc3ba33ed2bd9609bb63 *electron-v27.2.3-linux-x64-symbols.zip
+-3347f4ff220fa63b286d91fec129d7f8d636ce883dba3c53c50b7e5834c940e1 *electron-v27.2.3-linux-x64.zip
+-b474af6f1681e204e09906f92d26e1474bc84b35510e4454a3f6bbaaf4df387b *electron-v27.2.3-mas-arm64-dsym-snapshot.zip
+-3c829ad8fafd12a3ee5c633bee0ae12137a9d780b7bc003785fd1badfafe3d97 *electron-v27.2.3-mas-arm64-dsym.zip
+-1a0ff4e32b980aabbcc21b533b17c16dbe1eb431408e9cc61dccddbcb673c695 *electron-v27.2.3-mas-arm64-symbols.zip
+-dd59ca093811646c953c71aaa12bf30c773ed7a77ea1344029d87af40281a114 *electron-v27.2.3-mas-arm64.zip
+-70b04af2ef42f99becdf0de53efaa4cf419151ceeed1b2ed77759c1f7c1332cc *electron-v27.2.3-mas-x64-dsym-snapshot.zip
+-89c379f6648a1864250adb420e09bcd1ac7422958a4daf6c830c0b15cfb2babc *electron-v27.2.3-mas-x64-dsym.zip
+-b0215c7b1496352b92547543c2a107fcf4c70023c10043a5a6777bdf82b22287 *electron-v27.2.3-mas-x64-symbols.zip
+-781f618ec0b16fdee5c0a76430b617f66152aa2e02ccf953fae1c81e57fab950 *electron-v27.2.3-mas-x64.zip
+-d7deac3628b145c006ab935d90694a9b009fbfdce2e73f4ccc861ce739452af7 *electron-v27.2.3-win32-arm64-pdb.zip
+-4b767cd84c8fccdd0350fa5b82a3424779994bfcd4e3c4f864f003ea3ec4fd33 *electron-v27.2.3-win32-arm64-symbols.zip
+-c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v27.2.3-win32-arm64-toolchain-profile.zip
+-407f86a40574152ee89e4f01878e43d389876bbf23058352b77d5d3363ab98d3 *electron-v27.2.3-win32-arm64.zip
+-b5de17188f154b5041978b90f0471089a94d552d2c96e1f953154484f65bfe31 *electron-v27.2.3-win32-ia32-pdb.zip
+-f7ac401c08cdfe3d1f60d3e61c1de995f20a476f4762e3a21057a5132ff42735 *electron-v27.2.3-win32-ia32-symbols.zip
+-c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v27.2.3-win32-ia32-toolchain-profile.zip
+-f637d01467cdb808530391508ac268b397675eaa620b71d9d2f0d71d25cafe53 *electron-v27.2.3-win32-ia32.zip
+-a7463a6993a6d938c110dfa61c4af7c751081aac581f81d803efa9af063f4530 *electron-v27.2.3-win32-x64-pdb.zip
+-32fd37c76cfe8ac40738f0c9775f991971ec6a787bd81216ae2822ade8695e7a *electron-v27.2.3-win32-x64-symbols.zip
+-c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v27.2.3-win32-x64-toolchain-profile.zip
+-36b75f90dde9013e13afd47576192fba1ee1ddf6790cca285e78fd58828d5961 *electron-v27.2.3-win32-x64.zip
+-57900d1631e5f15f976d8aac2ce11dab56127d83358bbbc09ae8db4aa5698516 *electron.d.ts
+-a6863fa69d352b46e28966dc0f7ca2af08d91cc5e894421d9c8b21d9a552cf1c *ffmpeg-v27.2.3-darwin-arm64.zip
+-e35fa1f8f5884dc3dca29b6e7b03f30509dc20012abffcdac027ddda4d2e1602 *ffmpeg-v27.2.3-darwin-x64.zip
+-be517ba93c5b5f36d2e55af148213f4c2fc43177563825601bee6f88dd4f7b05 *ffmpeg-v27.2.3-linux-arm64.zip
+-926d0da25ffcea3d05a6cbcae15e5d7729d93bc43394ae4439747669d2210e1d *ffmpeg-v27.2.3-linux-armv7l.zip
+-6f9c0ef52af14828ad547a80b17f8c63cac51a18b8d5769a2f33e4fa6cccfc7e *ffmpeg-v27.2.3-linux-x64.zip
+-e2e099bba965b13050d65980705aca2fb26698c9b0bcf1e66725896e6a3702cf *ffmpeg-v27.2.3-mas-arm64.zip
+-6104f719783d7d910a520dde756555ee77a284e29c3b14d8c2e9c53d409e8efa *ffmpeg-v27.2.3-mas-x64.zip
+-c7c574fe9afc3a42f207b805543b56b36e3f4fe65b48a5c6a5a4dc03353a6d41 *ffmpeg-v27.2.3-win32-arm64.zip
+-165bb1e9b42cc8f1bc233f26e823e1f53ae7f1e278fac1ec864273ceb3bfe5eb *ffmpeg-v27.2.3-win32-ia32.zip
+-1ccc98816757a19f01c838bd67c73fa53e11495bf075fbc101754aeb38a09d8d *ffmpeg-v27.2.3-win32-x64.zip
+-27490d54e045651a7c2c3d220bb23cf76a98fd9f7566737f5b06e75809e7959e *hunspell_dictionaries.zip
+-b49f4a784414819807de510a3d8ace198118997c11693cd693807c31260ac47d *libcxx-objects-v27.2.3-linux-arm64.zip
+-c62630afb544f42749bd2b9f7d0b54d8d44e109fb115f88822a5d7102f61088c *libcxx-objects-v27.2.3-linux-armv7l.zip
+-f4f8c72bc6b545959a18ba2caf4db05f05ce8c70b234509f95d2826dd54273e2 *libcxx-objects-v27.2.3-linux-x64.zip
+-f26fd6d3216afb9e9c16be9f88d27d82bb13500eac4957ae2d83c90682a201fc *libcxx_headers.zip
+-ba6952490ded27c344150527543dee9693e5906ca419a6975a38cb61da6be794 *libcxxabi_headers.zip
+-fd1e8aed99530f94bec125a60f5b6ea34f2586deb8034f5f437e95f58c951340 *mksnapshot-v27.2.3-darwin-arm64.zip
+-8508fbbd71c1654b79a02336cdd042101f9596ebf4e1666d2d55ab8d3f363c8f *mksnapshot-v27.2.3-darwin-x64.zip
+-9c0ecb392aab08f59cddd54b0f3116f3a19442549ec3d3523208ac0807e3d504 *mksnapshot-v27.2.3-linux-arm64-x64.zip
+-ccc26dd636dbfc9c99c8e76fa55535dc66154c19a7de18d2f462ee4e1269ae95 *mksnapshot-v27.2.3-linux-armv7l-x64.zip
+-d7ceffae1aeb4022660fd2354bb4b8e3f62fd4531c1f77989039a3e47be17303 *mksnapshot-v27.2.3-linux-x64.zip
+-efc12f63c71b290c8f07b337098bcd0f54aa9dfa92a1ed16603db5e9f232d100 *mksnapshot-v27.2.3-mas-arm64.zip
+-65f9fc4c3a639d4b5279fd80b57be79099815a04bcdc504631170a15f8a7efdb *mksnapshot-v27.2.3-mas-x64.zip
+-b46cc5f28cfb49a2a2b5f4c66cb8d0cfc530877201d4df85b7568c1ad8d5da1c *mksnapshot-v27.2.3-win32-arm64-x64.zip
+-39878ef70de05b000b86c2e593a62f9d76703d46d1bd5bfdb525e2826ea85d9f *mksnapshot-v27.2.3-win32-ia32.zip
+-c19a90b8149d0ba9a623d1134c058f514234975dce32ca37e7e97bdf474eb9fd *mksnapshot-v27.2.3-win32-x64.zip
++e462d1d1f42fbd95f59606138c5f2d127ec7a0194627e613429fd6589f38c778 *chromedriver-v22.3.27-darwin-arm64.zip
++59c89191158c810208dbe6a49015d9232e114330eca514efe362bdf1f9c8c819 *chromedriver-v22.3.27-darwin-x64.zip
++09d1b16ab31a17a914b9a871158458d34c7e5a52c7686ea923b9a9878e6d4539 *chromedriver-v22.3.27-linux-arm64.zip
++f020427cc1972928fd784b4f9ee912e8b42691c782c325fe7624aa2b38a7fcec *chromedriver-v22.3.27-linux-armv7l.zip
++2c0eb7ccc5d68ac52dfcf7264e8dc61de4a9480ededb464c35c0ad7db41b8e53 *chromedriver-v22.3.27-linux-x64.zip
++a6efc976fc8efd469ece8ef7349ba655128496929950beb7b4db4f910ca946fd *chromedriver-v22.3.27-mas-arm64.zip
++5b6dcd7edb370a88037cf858e63e0f03ead9c0089d337d6b5c6eee310dca228f *chromedriver-v22.3.27-mas-x64.zip
++e57141363f51445819436ca9320115931394e9349e6f6bfb2aa8123cb2a2ce21 *chromedriver-v22.3.27-win32-arm64.zip
++56e2a0e427cf889045ef533e350bb9be1c628c95d74b11e6477d654dba459b29 *chromedriver-v22.3.27-win32-ia32.zip
++8d01b742ca0e0f5b6d9eb73a2b650aaf5aeea4e060a6880bdfbf968d710793f7 *chromedriver-v22.3.27-win32-x64.zip
++918f116f80da1fdef14ba3a3a9bb628aac09cb6c3c5fff87cffca9d3c47771ff *electron-api.json
++e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-darwin-arm64-dsym-snapshot.zip
++dbff939cdfec7ce4d9fa16187fb69a357193ebc9ae4082e8da771dd5a5511a23 *electron-v22.3.27-darwin-arm64-dsym.zip
++6c67025cd392fbfd78fbb5676f437eaf62dbc083770899794f43ad10da07a311 *electron-v22.3.27-darwin-arm64-symbols.zip
++2b87e9f766692caaa16d7750bfab2f609c0eab906f55996c7d438d8e18ac8867 *electron-v22.3.27-darwin-arm64.zip
++57120f63f8b6aa91009aa20c76b75d4548b94ab0fdda7d62b835389d0ecc9ae2 *electron-v22.3.27-darwin-x64-dsym-snapshot.zip
++3552ff075bd25128bc6c0fc6a6aafa4db69db7299794aa40187ad87ddb0535b3 *electron-v22.3.27-darwin-x64-dsym.zip
++fef4cc317aeb4d6c790938dba14357932dba488e2116db84570edf0e3d1c5675 *electron-v22.3.27-darwin-x64-symbols.zip
++01f053d08cb2855acb14f0465f4e36324a41bd13b3b2ead142970a56df3e9db1 *electron-v22.3.27-darwin-x64.zip
++3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-arm64-debug.zip
++57806ef01cdceaecf6a4b7138aa035b91c63cc19b168adb91a45a855d724f6d0 *electron-v22.3.27-linux-arm64-symbols.zip
++60279395a5ce4eaf3c08f1e717771b203830902d3fe3a7c311bc37deb1a0e15e *electron-v22.3.27-linux-arm64.zip
++3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-armv7l-debug.zip
++136beb93675d0244e74ab51297c2f2cbe956c9ff8dfcdf74337a8e973cbc94f7 *electron-v22.3.27-linux-armv7l-symbols.zip
++9f8372606e5ede83cf1c73a3d8ff07047e4e3ef614aa89a76cd497dc06cf119d *electron-v22.3.27-linux-armv7l.zip
++6ac494b29e67781d55e3b4fbe73ffe2bdf1b422f883f3c265a753bc1547cc24a *electron-v22.3.27-linux-x64-debug.zip
++94b89f034554318d66098a6657d5bacaeb7f03ad98a2f856c8720aed31e75348 *electron-v22.3.27-linux-x64-symbols.zip
++631d8eb08098c48ce2b29421e74c69ac0312b1e42f445d8a805414ba1242bf3a *electron-v22.3.27-linux-x64.zip
++e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-mas-arm64-dsym-snapshot.zip
++b6cf5b125c6be773d3f915a64b13be9e96a4d44a1969c3de74d30cac9c73aafd *electron-v22.3.27-mas-arm64-dsym.zip
++19980e05fc846f45090a3e4571998981a33dccb5766ebfcfd375552bc99066eb *electron-v22.3.27-mas-arm64-symbols.zip
++7757470e871827b15c0b5c64e1734866e9334528689a69b34e64c15a9caada35 *electron-v22.3.27-mas-arm64.zip
++bf8f821d3650bbafa29ff4ea366799d13bda6e21aeab334f961a60a0d662e2b2 *electron-v22.3.27-mas-x64-dsym-snapshot.zip
++e082f5172e1ec429b688606a209eff0a20027b01bb5fac4782bc0b61f2d4d3d9 *electron-v22.3.27-mas-x64-dsym.zip
++f3313c2f9263e19cf9f59d16af86cd672f2581fb894c7b4c849a7cf3a7a989bf *electron-v22.3.27-mas-x64-symbols.zip
++b7c61f0c7c21377630572904ea8a499db9830a3e400672bb23da246c19e6e6a1 *electron-v22.3.27-mas-x64.zip
++3f0caf3642a756aa61c1cedb910fe36c9d0d252df479598940d3c56185da1349 *electron-v22.3.27-win32-arm64-pdb.zip
++a8e5997fcab7774f95301e8687d82538862944c03c50ec75702f32fb053c6b90 *electron-v22.3.27-win32-arm64-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-arm64-toolchain-profile.zip
++555371d63cae449625c169e9c32b00b1530cdee29bccef8b832f57cebfe8824e *electron-v22.3.27-win32-arm64.zip
++e9693674e527144ad4a4322d2eda8e19dd0042a63dadd51d3029effefe62dec6 *electron-v22.3.27-win32-ia32-pdb.zip
++819b0b9fe7ad888caec215f8e66aa07e3c476638617b969d0e169a973c58a479 *electron-v22.3.27-win32-ia32-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-ia32-toolchain-profile.zip
++1119ac7112590cb9c10a8c9b0bb5be65c0e11648a4f1311e6b7a5a00e497c2ce *electron-v22.3.27-win32-ia32.zip
++aa6a29c2b4a678ce5ec1e487d85e154d1e58c1c727b1858a24efe2610b7610c5 *electron-v22.3.27-win32-x64-pdb.zip
++8e9c3e42930b1937393b6478c37750f317872786c51f5296de09cec3c8af815e *electron-v22.3.27-win32-x64-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-x64-toolchain-profile.zip
++ad723ed7dad32f9459f7a9de1fd6d718cf713c4809c2431503bea62ce8f786e6 *electron-v22.3.27-win32-x64.zip
++f7dd34e0b335a1980d6aebc62d4d1383a051d6a1f895052f73a3ff8f9dd03cce *electron.d.ts
++cc5f6b70a3d57e34492ee85a11346ed3a1aaf3b4f9f17c2594afe4048414e654 *ffmpeg-v22.3.27-darwin-arm64.zip
++ff4586bd27b1a0a4d19f9da9d1a77b30ff6afb6a9a868a3d4c9844b7d4aa8ae1 *ffmpeg-v22.3.27-darwin-x64.zip
++59d2e2b2f2cc515a86a4e0cfd1116d10a8b25a8d58d45bb04de3512e156c944b *ffmpeg-v22.3.27-linux-arm64.zip
++b9d3b227bee17666d395ee7882ef477a733c3eeef3f1d9f2e3616d2d02eb3376 *ffmpeg-v22.3.27-linux-armv7l.zip
++fa07ef910b23a4ef4b6761bc16d20c0e70ff0259325c4d523129e2d9c5084174 *ffmpeg-v22.3.27-linux-x64.zip
++5ecdc59a23417cc59ddb5a943cc2aa4fcad5da7c115d070fb697135662d1922e *ffmpeg-v22.3.27-mas-arm64.zip
++faee7693f94b51094210d2fb3355deb16fd1b15d4c04d4e51ab8f77633a50f58 *ffmpeg-v22.3.27-mas-x64.zip
++ab34f1ff4a781e71f6c268b5198e893ed4f6bd6962639eaa01779292e89bad0b *ffmpeg-v22.3.27-win32-arm64.zip
++b14e3730694de4763061d83bc3006e68c2b235de0bf087a64aedc10182eb8b79 *ffmpeg-v22.3.27-win32-ia32.zip
++9c503e5a180c756094c1bcba1d1f71f18eeb1f58ed00d7ed53a8442befce3f71 *ffmpeg-v22.3.27-win32-x64.zip
++d2869fbeb76c750dfdc7ab3cc18379ac7da596d3b67f96f7b37153410420a17b *hunspell_dictionaries.zip
++f5959546231f39e70fde4c10a21ec9cb6bf21792ce48260450a2fe8d79078f90 *libcxx-objects-v22.3.27-linux-arm64.zip
++64aede20ce330331b11021ac2a5bfb664cf85582d2d94a5fab83945ebd074720 *libcxx-objects-v22.3.27-linux-armv7l.zip
++25dcaf59ca47ed6ce9828b8134980f7ab7719623407aee6549335314b555d84c *libcxx-objects-v22.3.27-linux-x64.zip
++c38f100d27955a60e563aa0ffc5e03edbd37ad70ef5294e4021fd9971af262e7 *libcxx_headers.zip
++aa703a89c36fc6c3970e491321b09aa9c22387da7fc24e033cd6ff4f1bd69fb3 *libcxxabi_headers.zip
++160987240aafcf545ee73feeeda31cf9b9d59084a5268f2d8a83cf83703a7b72 *mksnapshot-v22.3.27-darwin-arm64.zip
++ed46ab6112a3e4aaf12b223e1761896fcfa44ccf13a4d01445b71272dcb22b21 *mksnapshot-v22.3.27-darwin-x64.zip
++3a0e5ef31b91d2b7beb28ebc87e2ab5bd1abc8a3ab1902a147322c8824601ab2 *mksnapshot-v22.3.27-linux-arm64-x64.zip
++2614d68292d6267e8d7d2a598c605938d48c84ce895607137599ae4841086e41 *mksnapshot-v22.3.27-linux-armv7l-x64.zip
++cf128df524c9c5e6916f41dcc49d094834cdad7d7cbb050deee9d55645a3bcab *mksnapshot-v22.3.27-linux-x64.zip
++0b02cab2889af3576c60f3b1912717827811c0084c54d636ee3f8bc33417e53d *mksnapshot-v22.3.27-mas-arm64.zip
++a9cffdd62850d4b62793556ed1aaa13664a75a26837543a364400e4fcd5ee4ea *mksnapshot-v22.3.27-mas-x64.zip
++3d69cf2b841f79892141ca5d5335e156bc2fda4208c172406a247786089fe4d1 *mksnapshot-v22.3.27-win32-arm64-x64.zip
++6323cffb19bbd7b8ba99080e1299f91f75ed96e4ffbe226a7dc5000a0db8bc3c *mksnapshot-v22.3.27-win32-ia32.zip
++e61ed6727564ff5155c0c6df5394092c16f55c84542b55de6381d7b77fb638db *mksnapshot-v22.3.27-win32-x64.zip
+\ No newline at end of file
+diff --git a/build/checksums/nodejs.txt b/build/checksums/nodejs.txt
+index 9ed8af5..edc1af9 100644
+--- a/build/checksums/nodejs.txt
++++ b/build/checksums/nodejs.txt
+@@ -1,6 +1,34 @@
+-18ca716ea57522b90473777cb9f878467f77fdf826d37beb15a0889fdd74533e  node-v18.17.1-darwin-arm64.tar.gz
+-b3e083d2715f07ec3f00438401fb58faa1e0bdf3c7bde9f38b75ed17809d92fa  node-v18.17.1-darwin-x64.tar.gz
+-8f5203f5c6dc44ea50ac918b7ecbdb1c418e4f3d9376d8232a1ef9ff38f9c480  node-v18.17.1-linux-arm64.tar.gz
+-1ab79868859b2d37148c6d8ecee3abb5ee55b88731ab5df01928ed4f6f9bfbad  node-v18.17.1-linux-armv7l.tar.gz
+-2cb75f2bc04b0a3498733fbee779b2f76fe3f655188b4ac69ef2887b6721da2d  node-v18.17.1-linux-x64.tar.gz
+-afb45186ad4f4217c2fc1dfc2239ff5ab016ef0ba5fc329bc6aa8fd10c7ecc88  win-x64/node.exe
++dfb37570ef34ac04f34c26d0ec558df60a9665df5961c01c1657c0ca495f2f01  node-v16.17.1-aix-ppc64.tar.gz
++f9f02f7872e2e8ee54320fce13deb9d56904f32bb0615b6e21aa3371d8899150  node-v16.17.1-darwin-arm64.tar.gz
++09a45f60bfb9dfbea4f69044dc733ef983945acd92ca89ccccac267f3d71bd44  node-v16.17.1-darwin-arm64.tar.xz
++3db26761ad8493b894d42260d7e65094b7af9bc473588739e61bc1c32d6ff955  node-v16.17.1-darwin-x64.tar.gz
++8e7089956fa01cf7d0045945c0863d282dc6818fb0476237c1396497e29a4254  node-v16.17.1-darwin-x64.tar.xz
++35ccb95caf02cda3bd680da4350a8ae5d666a7a9eae3afe5c2a1b3ef29aef108  node-v16.17.1-headers.tar.gz
++554c8d1b4b16e0f4c073b9df7c49c893716a3a533f25ac646f23619f5ccee7df  node-v16.17.1-headers.tar.xz
++adc7032888d4e672a4aac886baede8c04fccdd1a2e7ab4bcf325e3f336f44a3d  node-v16.17.1-linux-arm64.tar.gz
++3dfb8fd8f6b97df69cdc56524abc906c50ef1d0bf091188616802e6c7c731389  node-v16.17.1-linux-arm64.tar.xz
++aeab05e35f1d2824ecfb88ca321f1408b44d292b2775f2890972c828e00216d0  node-v16.17.1-linux-armv7l.tar.gz
++a035ceefb5e16f5fce98c8ddfdf721b96eec20542c72fb8781bcbb6ef20c5550  node-v16.17.1-linux-armv7l.tar.xz
++1f48de7bed99e973c4c50f1b7fc99fc9af5144d093fd6d2b50a1e43b5818bf05  node-v16.17.1-linux-ppc64le.tar.gz
++70305934661f89fca64053b85317a75f233d5e3fdb2caa6546a19262a519cf20  node-v16.17.1-linux-ppc64le.tar.xz
++029dad48018bda07b481213816549b632059fc673c30fdc7a353e04619128344  node-v16.17.1-linux-s390x.tar.gz
++1a47f604944c6aff37cb7483503155671cdb34bda9bfb8962007bc440fa04d77  node-v16.17.1-linux-s390x.tar.xz
++da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0  node-v16.17.1-linux-x64.tar.gz
++06ba2eb34aa385967f5f58c87a44753f83212f6cccea892b33f80a2e7fda8384  node-v16.17.1-linux-x64.tar.xz
++12d10476ea7483298364c810c037b9316d1a73dc8c81cfeff7d794aecadde498  node-v16.17.1.pkg
++e423985f6019b2026f9a191adb56a96ae83ecd56cdf839cf94aa980168b7a90f  node-v16.17.1.tar.gz
++6721feb4152d56d2c6b358ce397abd5a7f1daf09ee2e25c5021b9b4d3f86a330  node-v16.17.1.tar.xz
++9777e8c4b2864c5b54a0e4e9400f14887db68560a09b94b4113b560a64d1e680  node-v16.17.1-win-x64.7z
++ed290151efb417262b9808a70738d4ab79e9d53653a6a9f4b8dd97912e279dce  node-v16.17.1-win-x64.zip
++0f8101648d5c9e49e89fee541da9e574f899716c32b7c51a732b1766b9fc4526  node-v16.17.1-win-x86.7z
++189b5e8b23226403e7b07a46614de19b444d369e694901e3668e2f549799cbcd  node-v16.17.1-win-x86.zip
++1bdff65fb7642425c0d6826084d63c4be43520316f0ea0b46e6a51999a0ed7fc  node-v16.17.1-x64.msi
++b737eb23a2c67c253b9364b5284123faf5220d567615bebd4ec4b81070e4d177  node-v16.17.1-x86.msi
++f518a70dcab7c3fac5b2e1ef100b4f628edfb160f4fafa9a94ef222da8a6e9ab  win-x64/node.exe
++2f459a64647db493da63c790ce368ad54f59f086d9f22f59c5018680420197b3  win-x64/node.lib
++23215ce7d1e9de9777c3407239e7cf18d29d60f757b772219421ab361ac67c74  win-x64/node_pdb.7z
++8e32ec12028fd3e3147435be79a858ed9c870aaafa1fcb291362307ef3c47547  win-x64/node_pdb.zip
++2393aff88be19dbe0205cbde4ff0c1d89911b15de5c99c80f6e5e29604eecd12  win-x86/node.exe
++5018c3d42f3fbacbd06cb943b3f2696c8e67ca9bdf6864d0e263d6d6911dffd2  win-x86/node.lib
++05a4db56444a60ee70b0d2642d7f2d82a33339894d2d73bd07b1a41d6c869e04  win-x86/node_pdb.7z
++8f86eacb7f13a1bf6738cb0819d7854a2abca40fc2e9e1f91421e44ba52cad7e  win-x86/node_pdb.zip
+diff --git a/build/lib/builtInExtensionsCG.js b/build/lib/builtInExtensionsCG.js
+index 30b6791..df22f2d 100644
+--- a/build/lib/builtInExtensionsCG.js
++++ b/build/lib/builtInExtensionsCG.js
+@@ -4,6 +4,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ Object.defineProperty(exports, "__esModule", { value: true });
++const node_fetch_1 = require("node-fetch");
+ const fs = require("fs");
+ const path = require("path");
+ const url = require("url");
+@@ -22,9 +23,9 @@ async function downloadExtensionDetails(extension) {
+     const repositoryContentBaseUrl = `https://${token ? `${token}@` : ''}${contentBasePath}/${repository}/v${extension.version}`;
+     async function getContent(fileName) {
+         try {
+-            const response = await fetch(`${repositoryContentBaseUrl}/${fileName}`);
++            const response = await (0, node_fetch_1.default)(`${repositoryContentBaseUrl}/${fileName}`);
+             if (response.ok) {
+-                return { fileName, body: Buffer.from(await response.arrayBuffer()) };
++                return { fileName, body: await response.buffer() };
+             }
+             else if (response.status === 404) {
+                 return { fileName, body: undefined };
+@@ -76,4 +77,4 @@ main().then(() => {
+     console.error(err);
+     process.exit(1);
+ });
+-//# sourceMappingURL=builtInExtensionsCG.js.map
+\ No newline at end of file
++//# sourceMappingURL=builtInExtensionsCG.js.map
+diff --git a/build/lib/builtInExtensionsCG.ts b/build/lib/builtInExtensionsCG.ts
+index 62d0949..a84f431 100644
+--- a/build/lib/builtInExtensionsCG.ts
++++ b/build/lib/builtInExtensionsCG.ts
+@@ -3,6 +3,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ 
++import fetch from 'node-fetch';
+ import * as fs from 'fs';
+ import * as path from 'path';
+ import * as url from 'url';
+@@ -29,7 +30,7 @@ async function downloadExtensionDetails(extension: IExtensionDefinition): Promis
+ 		try {
+ 			const response = await fetch(`${repositoryContentBaseUrl}/${fileName}`);
+ 			if (response.ok) {
+-				return { fileName, body: Buffer.from(await response.arrayBuffer()) };
++				return { fileName, body: await response.buffer() };
+ 			} else if (response.status === 404) {
+ 				return { fileName, body: undefined };
+ 			} else {
+diff --git a/build/lib/compilation.ts b/build/lib/compilation.ts
+index 228bca4..ebc9ded 100644
+--- a/build/lib/compilation.ts
++++ b/build/lib/compilation.ts
+@@ -221,7 +221,7 @@ class MonacoGenerator {
+ 		}
+ 	}
+ 
+-	private _executeSoonTimer: NodeJS.Timeout | null = null;
++	private _executeSoonTimer: NodeJS.Timer | null = null;
+ 	private _executeSoon(): void {
+ 		if (this._executeSoonTimer !== null) {
+ 			clearTimeout(this._executeSoonTimer);
+diff --git a/build/lib/fetch.js b/build/lib/fetch.js
+index ba23e78..053785a 100644
+--- a/build/lib/fetch.js
++++ b/build/lib/fetch.js
+@@ -6,6 +6,7 @@
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.fetchGithub = exports.fetchUrl = exports.fetchUrls = void 0;
+ const es = require("event-stream");
++const node_fetch_1 = require("node-fetch");
+ const VinylFile = require("vinyl");
+ const log = require("fancy-log");
+ const ansiColors = require("ansi-colors");
+@@ -42,7 +43,7 @@ async function fetchUrl(url, options, retries = 10, retryDelay = 1000) {
+         const controller = new AbortController();
+         const timeout = setTimeout(() => controller.abort(), 30 * 1000);
+         try {
+-            const response = await fetch(url, {
++            const response = await (0, node_fetch_1.default)(url, {
+                 ...options.nodeFetchOptions,
+                 signal: controller.signal /* Typings issue with lib.dom.d.ts */
+             });
+@@ -50,7 +51,7 @@ async function fetchUrl(url, options, retries = 10, retryDelay = 1000) {
+                 log(`Fetch completed: Status ${response.status}. Took ${ansiColors.magenta(`${new Date().getTime() - startTime} ms`)}`);
+             }
+             if (response.ok && (response.status >= 200 && response.status < 300)) {
+-                const contents = Buffer.from(await response.arrayBuffer());
++                const contents = await response.buffer();
+                 if (options.checksumSha256) {
+                     const actualSHA256Checksum = crypto.createHash('sha256').update(contents).digest('hex');
+                     if (actualSHA256Checksum !== options.checksumSha256) {
+@@ -136,4 +137,4 @@ function fetchGithub(repo, options) {
+     }));
+ }
+ exports.fetchGithub = fetchGithub;
+-//# sourceMappingURL=fetch.js.map
+\ No newline at end of file
++//# sourceMappingURL=fetch.js.map
+diff --git a/build/lib/fetch.ts b/build/lib/fetch.ts
+index dc1de77..ac9ac7c 100644
+--- a/build/lib/fetch.ts
++++ b/build/lib/fetch.ts
+@@ -4,6 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ 
+ import * as es from 'event-stream';
++import fetch, { RequestInit } from 'node-fetch';
+ import * as VinylFile from 'vinyl';
+ import * as log from 'fancy-log';
+ import * as ansiColors from 'ansi-colors';
+@@ -60,7 +61,7 @@ export async function fetchUrl(url: string, options: IFetchOptions, retries = 10
+ 				log(`Fetch completed: Status ${response.status}. Took ${ansiColors.magenta(`${new Date().getTime() - startTime} ms`)}`);
+ 			}
+ 			if (response.ok && (response.status >= 200 && response.status < 300)) {
+-				const contents = Buffer.from(await response.arrayBuffer());
++				const contents = await response.buffer();
+ 				if (options.checksumSha256) {
+ 					const actualSHA256Checksum = crypto.createHash('sha256').update(contents).digest('hex');
+ 					if (actualSHA256Checksum !== options.checksumSha256) {
+diff --git a/build/lib/policies.js b/build/lib/policies.js
+index 466295b..2b9d8af 100644
+--- a/build/lib/policies.js
++++ b/build/lib/policies.js
+@@ -10,6 +10,7 @@ const path = require("path");
+ const byline = require("byline");
+ const ripgrep_1 = require("@vscode/ripgrep");
+ const Parser = require("tree-sitter");
++const node_fetch_1 = require("node-fetch");
+ const { typescript } = require('tree-sitter-typescript');
+ const product = require('../../product.json');
+ const packageJson = require('../../package.json');
+@@ -425,7 +426,7 @@ async function getSpecificNLS(resourceUrlTemplate, languageId, version) {
+         path: 'extension/translations/main.i18n.json'
+     };
+     const url = resourceUrlTemplate.replace(/\{([^}]+)\}/g, (_, key) => resource[key]);
+-    const res = await fetch(url);
++    const res = await (0, node_fetch_1.default)(url);
+     if (res.status !== 200) {
+         throw new Error(`[${res.status}] Error downloading language pack ${languageId}@${version}`);
+     }
+@@ -446,7 +447,7 @@ function compareVersions(a, b) {
+     return a[2] - b[2];
+ }
+ async function queryVersions(serviceUrl, languageId) {
+-    const res = await fetch(`${serviceUrl}/extensionquery`, {
++    const res = await (0, node_fetch_1.default)(`${serviceUrl}/extensionquery`, {
+         method: 'POST',
+         headers: {
+             'Accept': 'application/json;api-version=3.0-preview.1',
+@@ -523,4 +524,4 @@ if (require.main === module) {
+         process.exit(1);
+     });
+ }
+-//# sourceMappingURL=policies.js.map
+\ No newline at end of file
++//# sourceMappingURL=policies.js.map
+diff --git a/build/lib/policies.ts b/build/lib/policies.ts
+index 68f6989..0e89508 100644
+--- a/build/lib/policies.ts
++++ b/build/lib/policies.ts
+@@ -9,6 +9,7 @@ import * as path from 'path';
+ import * as byline from 'byline';
+ import { rgPath } from '@vscode/ripgrep';
+ import * as Parser from 'tree-sitter';
++import fetch from 'node-fetch';
+ const { typescript } = require('tree-sitter-typescript');
+ const product = require('../../product.json');
+ const packageJson = require('../../package.json');
+diff --git a/build/linux/debian/dep-lists.js b/build/linux/debian/dep-lists.js
+index bdb265b..b5bc7ba 100644
+--- a/build/linux/debian/dep-lists.js
++++ b/build/linux/debian/dep-lists.js
+@@ -8,11 +8,13 @@ exports.referenceGeneratedDepsByArch = exports.recommendedDeps = exports.additio
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/additional_deps
+ // Additional dependencies not in the dpkg-shlibdeps output.
+ exports.additionalDeps = [
+-    'ca-certificates', // Make sure users have SSL certificates.
++    'ca-certificates',
+     'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+     'libnss3 (>= 3.26)',
+-    'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3', // For Breakpad crash reports.
+-    'xdg-utils (>= 1.0.2)', // OS integration
++    'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
++    'xdg-utils (>= 1.0.2)',
++    'libgssapi-krb5-2 (>= 1.16)',
++    'libkrb5-3 (>= 1.16)',
+ ];
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends
+ // Dependencies that we can only recommend
+@@ -28,25 +30,25 @@ exports.referenceGeneratedDepsByArch = {
+         'libatk1.0-0 (>= 2.2.0)',
+         'libatspi2.0-0 (>= 2.9.90)',
+         'libc6 (>= 2.14)',
+-        'libc6 (>= 2.16)',
+         'libc6 (>= 2.17)',
+         'libc6 (>= 2.2.5)',
+-        'libc6 (>= 2.28)',
+         'libcairo2 (>= 1.6.0)',
+         'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-        'libdbus-1-3 (>= 1.9.14)',
+-        'libdrm2 (>= 2.4.75)',
+-        'libexpat1 (>= 2.1~beta3)',
++        'libdbus-1-3 (>= 1.5.12)',
++        'libdrm2 (>= 2.4.60)',
++        'libexpat1 (>= 2.0.1)',
+         'libgbm1 (>= 17.1.0~rc2)',
+-        'libglib2.0-0 (>= 2.37.3)',
+-        'libgssapi-krb5-2 (>= 1.17)',
++        'libglib2.0-0 (>= 2.16.0)',
++        'libglib2.0-0 (>= 2.39.4)',
++        'libgssapi-krb5-2 (>= 1.16)',
+         'libgtk-3-0 (>= 3.9.10)',
+         'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-        'libkrb5-3 (>= 1.6.dfsg.2)',
++        'libkrb5-3 (>= 1.16)',
+         'libnspr4 (>= 2:4.9-2~)',
+-        'libnss3 (>= 2:3.30)',
++        'libnss3 (>= 2:3.22)',
+         'libnss3 (>= 3.26)',
+         'libpango-1.0-0 (>= 1.14.0)',
++        'libsecret-1-0 (>= 0.18)',
+         'libx11-6',
+         'libx11-6 (>= 2:1.4.99.1)',
+         'libxcb1 (>= 1.9.2)',
+@@ -54,11 +56,10 @@ exports.referenceGeneratedDepsByArch = {
+         'libxdamage1 (>= 1:1.1)',
+         'libxext6',
+         'libxfixes3',
+-        'libxkbcommon0 (>= 0.5.0)',
+-        'libxkbfile1 (>= 1:1.1.0)',
++        'libxkbcommon0 (>= 0.4.1)',
++        'libxkbfile1',
+         'libxrandr2',
+-        'xdg-utils (>= 1.0.2)',
+-        'zlib1g (>= 1:1.2.3.4)'
++        'xdg-utils (>= 1.0.2)'
+     ],
+     'armhf': [
+         'ca-certificates',
+@@ -66,27 +67,28 @@ exports.referenceGeneratedDepsByArch = {
+         'libatk-bridge2.0-0 (>= 2.5.3)',
+         'libatk1.0-0 (>= 2.2.0)',
+         'libatspi2.0-0 (>= 2.9.90)',
+-        'libc6 (>= 2.16)',
++        'libc6 (>= 2.15)',
+         'libc6 (>= 2.17)',
+-        'libc6 (>= 2.28)',
+         'libc6 (>= 2.4)',
++        'libc6 (>= 2.8)',
+         'libc6 (>= 2.9)',
+         'libcairo2 (>= 1.6.0)',
+         'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-        'libdbus-1-3 (>= 1.9.14)',
+-        'libdrm2 (>= 2.4.75)',
+-        'libexpat1 (>= 2.1~beta3)',
++        'libdbus-1-3 (>= 1.5.12)',
++        'libdrm2 (>= 2.4.60)',
++        'libexpat1 (>= 2.0.1)',
+         'libgbm1 (>= 17.1.0~rc2)',
+-        'libglib2.0-0 (>= 2.37.3)',
+-        'libgssapi-krb5-2 (>= 1.17)',
++        'libglib2.0-0 (>= 2.12.0)',
++        'libglib2.0-0 (>= 2.39.4)',
++        'libgssapi-krb5-2 (>= 1.16)',
+         'libgtk-3-0 (>= 3.9.10)',
+         'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-        'libkrb5-3 (>= 1.6.dfsg.2)',
++        'libkrb5-3 (>= 1.16)',
+         'libnspr4 (>= 2:4.9-2~)',
+-        'libnss3 (>= 2:3.30)',
++        'libnss3 (>= 2:3.22)',
+         'libnss3 (>= 3.26)',
+         'libpango-1.0-0 (>= 1.14.0)',
+-        'libstdc++6 (>= 4.1.1)',
++        'libsecret-1-0 (>= 0.18)',
+         'libstdc++6 (>= 5)',
+         'libstdc++6 (>= 5.2)',
+         'libstdc++6 (>= 6)',
+@@ -97,8 +99,8 @@ exports.referenceGeneratedDepsByArch = {
+         'libxdamage1 (>= 1:1.1)',
+         'libxext6',
+         'libxfixes3',
+-        'libxkbcommon0 (>= 0.5.0)',
+-        'libxkbfile1 (>= 1:1.1.0)',
++        'libxkbcommon0 (>= 0.4.1)',
++        'libxkbfile1',
+         'libxrandr2',
+         'xdg-utils (>= 1.0.2)'
+     ],
+@@ -109,23 +111,23 @@ exports.referenceGeneratedDepsByArch = {
+         'libatk1.0-0 (>= 2.2.0)',
+         'libatspi2.0-0 (>= 2.9.90)',
+         'libc6 (>= 2.17)',
+-        'libc6 (>= 2.28)',
+         'libcairo2 (>= 1.6.0)',
+         'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-        'libdbus-1-3 (>= 1.9.14)',
+-        'libdrm2 (>= 2.4.75)',
+-        'libexpat1 (>= 2.1~beta3)',
++        'libdbus-1-3 (>= 1.0.2)',
++        'libdrm2 (>= 2.4.60)',
++        'libexpat1 (>= 2.0.1)',
+         'libgbm1 (>= 17.1.0~rc2)',
+-        'libglib2.0-0 (>= 2.37.3)',
+-        'libgssapi-krb5-2 (>= 1.17)',
++        'libglib2.0-0 (>= 2.12.0)',
++        'libglib2.0-0 (>= 2.39.4)',
++        'libgssapi-krb5-2 (>= 1.16)',
+         'libgtk-3-0 (>= 3.9.10)',
+         'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-        'libkrb5-3 (>= 1.6.dfsg.2)',
++        'libkrb5-3 (>= 1.16)',
+         'libnspr4 (>= 2:4.9-2~)',
+-        'libnss3 (>= 2:3.30)',
++        'libnss3 (>= 2:3.22)',
+         'libnss3 (>= 3.26)',
+         'libpango-1.0-0 (>= 1.14.0)',
+-        'libstdc++6 (>= 4.1.1)',
++        'libsecret-1-0 (>= 0.18)',
+         'libstdc++6 (>= 5)',
+         'libstdc++6 (>= 5.2)',
+         'libstdc++6 (>= 6)',
+@@ -136,10 +138,10 @@ exports.referenceGeneratedDepsByArch = {
+         'libxdamage1 (>= 1:1.1)',
+         'libxext6',
+         'libxfixes3',
+-        'libxkbcommon0 (>= 0.5.0)',
+-        'libxkbfile1 (>= 1:1.1.0)',
++        'libxkbcommon0 (>= 0.4.1)',
++        'libxkbfile1',
+         'libxrandr2',
+         'xdg-utils (>= 1.0.2)'
+     ]
+ };
+-//# sourceMappingURL=dep-lists.js.map
+\ No newline at end of file
++//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVwLWxpc3RzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiZGVwLWxpc3RzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTs7O2dHQUdnRzs7O0FBRWhHLGtIQUFrSDtBQUNsSCw0REFBNEQ7QUFDL0MsUUFBQSxjQUFjLEdBQUc7SUFDN0IsaUJBQWlCO0lBQ2pCLHFDQUFxQztJQUNyQyxtQkFBbUI7SUFDbkIsc0RBQXNEO0lBQ3RELHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsV0FBVztDQUNYLENBQUM7QUFFRixvSEFBb0g7QUFDcEgsMENBQTBDO0FBQzFDLDhEQUE4RDtBQUNqRCxRQUFBLGVBQWUsR0FBRztJQUM5QixZQUFZLENBQUMseUVBQXlFO0NBQ3RGLENBQUM7QUFFVyxRQUFBLDRCQUE0QixHQUFHO0lBQzNDLE9BQU8sRUFBRTtRQUNSLGlCQUFpQjtRQUNqQix3QkFBd0I7UUFDeEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QiwyQkFBMkI7UUFDM0IsaUJBQWlCO1FBQ2pCLGlCQUFpQjtRQUNqQixrQkFBa0I7UUFDbEIsc0JBQXNCO1FBQ3RCLHNEQUFzRDtRQUN0RCx5QkFBeUI7UUFDekIscUJBQXFCO1FBQ3JCLHNCQUFzQjtRQUN0Qix5QkFBeUI7UUFDekIsMEJBQTBCO1FBQzFCLDBCQUEwQjtRQUMxQixrQkFBa0I7UUFDbEIsd0JBQXdCO1FBQ3hCLHFDQUFxQztRQUNyQyxXQUFXO1FBQ1gsd0JBQXdCO1FBQ3hCLHFCQUFxQjtRQUNyQixtQkFBbUI7UUFDbkIsNEJBQTRCO1FBQzVCLHlCQUF5QjtRQUN6QixVQUFVO1FBQ1YsMEJBQTBCO1FBQzFCLG9CQUFvQjtRQUNwQiwrQkFBK0I7UUFDL0Isd0JBQXdCO1FBQ3hCLFVBQVU7UUFDVixZQUFZO1FBQ1osMEJBQTBCO1FBQzFCLGFBQWE7UUFDYixZQUFZO1FBQ1osc0JBQXNCO0tBQ3RCO0lBQ0QsT0FBTyxFQUFFO1FBQ1IsaUJBQWlCO1FBQ2pCLHdCQUF3QjtRQUN4QiwrQkFBK0I7UUFDL0Isd0JBQXdCO1FBQ3hCLDJCQUEyQjtRQUMzQixpQkFBaUI7UUFDakIsaUJBQWlCO1FBQ2pCLGdCQUFnQjtRQUNoQixnQkFBZ0I7UUFDaEIsZ0JBQWdCO1FBQ2hCLHNCQUFzQjtRQUN0QixzREFBc0Q7UUFDdEQseUJBQXlCO1FBQ3pCLHFCQUFxQjtRQUNyQixzQkFBc0I7UUFDdEIseUJBQXlCO1FBQ3pCLDBCQUEwQjtRQUMxQiwwQkFBMEI7UUFDMUIsa0JBQWtCO1FBQ2xCLHdCQUF3QjtRQUN4QixxQ0FBcUM7UUFDckMsV0FBVztRQUNYLHdCQUF3QjtRQUN4QixxQkFBcUI7UUFDckIsbUJBQW1CO1FBQ25CLDRCQUE0QjtRQUM1Qix5QkFBeUI7UUFDekIsbUJBQW1CO1FBQ25CLHFCQUFxQjtRQUNyQixtQkFBbUI7UUFDbkIsVUFBVTtRQUNWLDBCQUEwQjtRQUMxQixvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QixVQUFVO1FBQ1YsWUFBWTtRQUNaLDBCQUEwQjtRQUMxQixhQUFhO1FBQ2IsWUFBWTtRQUNaLHNCQUFzQjtLQUN0QjtJQUNELE9BQU8sRUFBRTtRQUNSLGlCQUFpQjtRQUNqQix3QkFBd0I7UUFDeEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QiwyQkFBMkI7UUFDM0IsaUJBQWlCO1FBQ2pCLHNCQUFzQjtRQUN0QixzREFBc0Q7UUFDdEQsd0JBQXdCO1FBQ3hCLHFCQUFxQjtRQUNyQixzQkFBc0I7UUFDdEIseUJBQXlCO1FBQ3pCLDBCQUEwQjtRQUMxQiwwQkFBMEI7UUFDMUIsa0JBQWtCO1FBQ2xCLHdCQUF3QjtRQUN4QixxQ0FBcUM7UUFDckMsV0FBVztRQUNYLHdCQUF3QjtRQUN4QixxQkFBcUI7UUFDckIsbUJBQW1CO1FBQ25CLDRCQUE0QjtRQUM1Qix5QkFBeUI7UUFDekIsbUJBQW1CO1FBQ25CLHFCQUFxQjtRQUNyQixtQkFBbUI7UUFDbkIsVUFBVTtRQUNWLDBCQUEwQjtRQUMxQixvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLHdCQUF3QjtRQUN4QixVQUFVO1FBQ1YsWUFBWTtRQUNaLDBCQUEwQjtRQUMxQixhQUFhO1FBQ2IsWUFBWTtRQUNaLHNCQUFzQjtLQUN0QjtDQUNELENBQUMifQ==
+diff --git a/build/linux/debian/dep-lists.ts b/build/linux/debian/dep-lists.ts
+index 3d6c2eb..5bd2ff2 100644
+--- a/build/linux/debian/dep-lists.ts
++++ b/build/linux/debian/dep-lists.ts
+@@ -11,6 +11,8 @@ export const additionalDeps = [
+ 	'libnss3 (>= 3.26)',
+ 	'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3', // For Breakpad crash reports.
+ 	'xdg-utils (>= 1.0.2)', // OS integration
++	'libgssapi-krb5-2 (>= 1.16)',
++	'libkrb5-3 (>= 1.16)',
+ ];
+ 
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends
+@@ -28,25 +30,25 @@ export const referenceGeneratedDepsByArch = {
+ 		'libatk1.0-0 (>= 2.2.0)',
+ 		'libatspi2.0-0 (>= 2.9.90)',
+ 		'libc6 (>= 2.14)',
+-		'libc6 (>= 2.16)',
+ 		'libc6 (>= 2.17)',
+ 		'libc6 (>= 2.2.5)',
+-		'libc6 (>= 2.28)',
+ 		'libcairo2 (>= 1.6.0)',
+ 		'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-		'libdbus-1-3 (>= 1.9.14)',
+-		'libdrm2 (>= 2.4.75)',
+-		'libexpat1 (>= 2.1~beta3)',
++		'libdbus-1-3 (>= 1.5.12)',
++		'libdrm2 (>= 2.4.60)',
++		'libexpat1 (>= 2.0.1)',
+ 		'libgbm1 (>= 17.1.0~rc2)',
+-		'libglib2.0-0 (>= 2.37.3)',
+-		'libgssapi-krb5-2 (>= 1.17)',
++		'libglib2.0-0 (>= 2.16.0)',
++		'libglib2.0-0 (>= 2.39.4)',
++		'libgssapi-krb5-2 (>= 1.16)',
+ 		'libgtk-3-0 (>= 3.9.10)',
+ 		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-		'libkrb5-3 (>= 1.6.dfsg.2)',
++		'libkrb5-3 (>= 1.16)',
+ 		'libnspr4 (>= 2:4.9-2~)',
+-		'libnss3 (>= 2:3.30)',
++		'libnss3 (>= 2:3.22)',
+ 		'libnss3 (>= 3.26)',
+ 		'libpango-1.0-0 (>= 1.14.0)',
++		'libsecret-1-0 (>= 0.18)',
+ 		'libx11-6',
+ 		'libx11-6 (>= 2:1.4.99.1)',
+ 		'libxcb1 (>= 1.9.2)',
+@@ -54,11 +56,10 @@ export const referenceGeneratedDepsByArch = {
+ 		'libxdamage1 (>= 1:1.1)',
+ 		'libxext6',
+ 		'libxfixes3',
+-		'libxkbcommon0 (>= 0.5.0)',
+-		'libxkbfile1 (>= 1:1.1.0)',
++		'libxkbcommon0 (>= 0.4.1)',
++		'libxkbfile1',
+ 		'libxrandr2',
+-		'xdg-utils (>= 1.0.2)',
+-		'zlib1g (>= 1:1.2.3.4)'
++		'xdg-utils (>= 1.0.2)'
+ 	],
+ 	'armhf': [
+ 		'ca-certificates',
+@@ -66,27 +67,28 @@ export const referenceGeneratedDepsByArch = {
+ 		'libatk-bridge2.0-0 (>= 2.5.3)',
+ 		'libatk1.0-0 (>= 2.2.0)',
+ 		'libatspi2.0-0 (>= 2.9.90)',
+-		'libc6 (>= 2.16)',
++		'libc6 (>= 2.15)',
+ 		'libc6 (>= 2.17)',
+-		'libc6 (>= 2.28)',
+ 		'libc6 (>= 2.4)',
++		'libc6 (>= 2.8)',
+ 		'libc6 (>= 2.9)',
+ 		'libcairo2 (>= 1.6.0)',
+ 		'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-		'libdbus-1-3 (>= 1.9.14)',
+-		'libdrm2 (>= 2.4.75)',
+-		'libexpat1 (>= 2.1~beta3)',
++		'libdbus-1-3 (>= 1.5.12)',
++		'libdrm2 (>= 2.4.60)',
++		'libexpat1 (>= 2.0.1)',
+ 		'libgbm1 (>= 17.1.0~rc2)',
+-		'libglib2.0-0 (>= 2.37.3)',
+-		'libgssapi-krb5-2 (>= 1.17)',
++		'libglib2.0-0 (>= 2.12.0)',
++		'libglib2.0-0 (>= 2.39.4)',
++		'libgssapi-krb5-2 (>= 1.16)',
+ 		'libgtk-3-0 (>= 3.9.10)',
+ 		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-		'libkrb5-3 (>= 1.6.dfsg.2)',
++		'libkrb5-3 (>= 1.16)',
+ 		'libnspr4 (>= 2:4.9-2~)',
+-		'libnss3 (>= 2:3.30)',
++		'libnss3 (>= 2:3.22)',
+ 		'libnss3 (>= 3.26)',
+ 		'libpango-1.0-0 (>= 1.14.0)',
+-		'libstdc++6 (>= 4.1.1)',
++		'libsecret-1-0 (>= 0.18)',
+ 		'libstdc++6 (>= 5)',
+ 		'libstdc++6 (>= 5.2)',
+ 		'libstdc++6 (>= 6)',
+@@ -97,8 +99,8 @@ export const referenceGeneratedDepsByArch = {
+ 		'libxdamage1 (>= 1:1.1)',
+ 		'libxext6',
+ 		'libxfixes3',
+-		'libxkbcommon0 (>= 0.5.0)',
+-		'libxkbfile1 (>= 1:1.1.0)',
++		'libxkbcommon0 (>= 0.4.1)',
++		'libxkbfile1',
+ 		'libxrandr2',
+ 		'xdg-utils (>= 1.0.2)'
+ 	],
+@@ -109,23 +111,23 @@ export const referenceGeneratedDepsByArch = {
+ 		'libatk1.0-0 (>= 2.2.0)',
+ 		'libatspi2.0-0 (>= 2.9.90)',
+ 		'libc6 (>= 2.17)',
+-		'libc6 (>= 2.28)',
+ 		'libcairo2 (>= 1.6.0)',
+ 		'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-		'libdbus-1-3 (>= 1.9.14)',
+-		'libdrm2 (>= 2.4.75)',
+-		'libexpat1 (>= 2.1~beta3)',
++		'libdbus-1-3 (>= 1.0.2)',
++		'libdrm2 (>= 2.4.60)',
++		'libexpat1 (>= 2.0.1)',
+ 		'libgbm1 (>= 17.1.0~rc2)',
+-		'libglib2.0-0 (>= 2.37.3)',
+-		'libgssapi-krb5-2 (>= 1.17)',
++		'libglib2.0-0 (>= 2.12.0)',
++		'libglib2.0-0 (>= 2.39.4)',
++		'libgssapi-krb5-2 (>= 1.16)',
+ 		'libgtk-3-0 (>= 3.9.10)',
+ 		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-		'libkrb5-3 (>= 1.6.dfsg.2)',
++		'libkrb5-3 (>= 1.16)',
+ 		'libnspr4 (>= 2:4.9-2~)',
+-		'libnss3 (>= 2:3.30)',
++		'libnss3 (>= 2:3.22)',
+ 		'libnss3 (>= 3.26)',
+ 		'libpango-1.0-0 (>= 1.14.0)',
+-		'libstdc++6 (>= 4.1.1)',
++		'libsecret-1-0 (>= 0.18)',
+ 		'libstdc++6 (>= 5)',
+ 		'libstdc++6 (>= 5.2)',
+ 		'libstdc++6 (>= 6)',
+@@ -136,8 +138,8 @@ export const referenceGeneratedDepsByArch = {
+ 		'libxdamage1 (>= 1:1.1)',
+ 		'libxext6',
+ 		'libxfixes3',
+-		'libxkbcommon0 (>= 0.5.0)',
+-		'libxkbfile1 (>= 1:1.1.0)',
++		'libxkbcommon0 (>= 0.4.1)',
++		'libxkbfile1',
+ 		'libxrandr2',
+ 		'xdg-utils (>= 1.0.2)'
+ 	]
+diff --git a/build/linux/debian/install-sysroot.js b/build/linux/debian/install-sysroot.js
+index 40ca42e..658a817 100644
+--- a/build/linux/debian/install-sysroot.js
++++ b/build/linux/debian/install-sysroot.js
+@@ -10,6 +10,7 @@ const os_1 = require("os");
+ const fs = require("fs");
+ const https = require("https");
+ const path = require("path");
++const fetch = require("node-fetch");
+ const crypto_1 = require("crypto");
+ const ansiColors = require("ansi-colors");
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:build/linux/sysroot_scripts/install-sysroot.py.
+@@ -213,4 +214,4 @@ async function getChromiumSysroot(arch) {
+     return sysroot;
+ }
+ exports.getChromiumSysroot = getChromiumSysroot;
+-//# sourceMappingURL=install-sysroot.js.map
+\ No newline at end of file
++//# sourceMappingURL=install-sysroot.js.map
+diff --git a/build/linux/debian/install-sysroot.ts b/build/linux/debian/install-sysroot.ts
+index 37ea883..dc1f752 100644
+--- a/build/linux/debian/install-sysroot.ts
++++ b/build/linux/debian/install-sysroot.ts
+@@ -8,6 +8,7 @@ import { tmpdir } from 'os';
+ import * as fs from 'fs';
+ import * as https from 'https';
+ import * as path from 'path';
++import * as fetch from 'node-fetch';
+ import { createHash } from 'crypto';
+ import { DebianArchString } from './types';
+ import * as ansiColors from 'ansi-colors';
+diff --git a/build/linux/rpm/dep-lists.js b/build/linux/rpm/dep-lists.js
+index e824f19..bfbcb67 100644
+--- a/build/linux/rpm/dep-lists.js
++++ b/build/linux/rpm/dep-lists.js
+@@ -8,7 +8,7 @@ exports.referenceGeneratedDepsByArch = exports.additionalDeps = void 0;
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/rpm/additional_deps
+ // Additional dependencies not in the rpm find-requires output.
+ exports.additionalDeps = [
+-    'ca-certificates', // Make sure users have SSL certificates.
++    'ca-certificates',
+     'libgtk-3.so.0()(64bit)',
+     'libnss3.so(NSS_3.22)(64bit)',
+     'libssl3.so(NSS_3.28)(64bit)',
+@@ -42,11 +42,7 @@ exports.referenceGeneratedDepsByArch = {
+         'libc.so.6(GLIBC_2.15)(64bit)',
+         'libc.so.6(GLIBC_2.16)(64bit)',
+         'libc.so.6(GLIBC_2.17)(64bit)',
+-        'libc.so.6(GLIBC_2.18)(64bit)',
+         'libc.so.6(GLIBC_2.2.5)(64bit)',
+-        'libc.so.6(GLIBC_2.25)(64bit)',
+-        'libc.so.6(GLIBC_2.27)(64bit)',
+-        'libc.so.6(GLIBC_2.28)(64bit)',
+         'libc.so.6(GLIBC_2.3)(64bit)',
+         'libc.so.6(GLIBC_2.3.2)(64bit)',
+         'libc.so.6(GLIBC_2.3.3)(64bit)',
+@@ -59,7 +55,6 @@ exports.referenceGeneratedDepsByArch = {
+         'libcairo.so.2()(64bit)',
+         'libcurl.so.4()(64bit)',
+         'libdbus-1.so.3()(64bit)',
+-        'libdbus-1.so.3(LIBDBUS_1_3)(64bit)',
+         'libdl.so.2()(64bit)',
+         'libdl.so.2(GLIBC_2.2.5)(64bit)',
+         'libdrm.so.2()(64bit)',
+@@ -67,8 +62,6 @@ exports.referenceGeneratedDepsByArch = {
+         'libgbm.so.1()(64bit)',
+         'libgcc_s.so.1()(64bit)',
+         'libgcc_s.so.1(GCC_3.0)(64bit)',
+-        'libgcc_s.so.1(GCC_3.3)(64bit)',
+-        'libgcc_s.so.1(GCC_4.2.0)(64bit)',
+         'libgio-2.0.so.0()(64bit)',
+         'libglib-2.0.so.0()(64bit)',
+         'libgobject-2.0.so.0()(64bit)',
+@@ -84,11 +77,9 @@ exports.referenceGeneratedDepsByArch = {
+         'libnss3.so(NSS_3.11)(64bit)',
+         'libnss3.so(NSS_3.12)(64bit)',
+         'libnss3.so(NSS_3.12.1)(64bit)',
+-        'libnss3.so(NSS_3.13)(64bit)',
+         'libnss3.so(NSS_3.2)(64bit)',
+         'libnss3.so(NSS_3.22)(64bit)',
+         'libnss3.so(NSS_3.3)(64bit)',
+-        'libnss3.so(NSS_3.30)(64bit)',
+         'libnss3.so(NSS_3.4)(64bit)',
+         'libnss3.so(NSS_3.5)(64bit)',
+         'libnss3.so(NSS_3.9.2)(64bit)',
+@@ -103,6 +94,7 @@ exports.referenceGeneratedDepsByArch = {
+         'libpthread.so.0(GLIBC_2.3.4)(64bit)',
+         'librt.so.1()(64bit)',
+         'librt.so.1(GLIBC_2.2.5)(64bit)',
++        'libsecret-1.so.0()(64bit)',
+         'libsmime3.so()(64bit)',
+         'libsmime3.so(NSS_3.10)(64bit)',
+         'libsmime3.so(NSS_3.2)(64bit)',
+@@ -111,10 +103,7 @@ exports.referenceGeneratedDepsByArch = {
+         'libutil.so.1(GLIBC_2.2.5)(64bit)',
+         'libxcb.so.1()(64bit)',
+         'libxkbcommon.so.0()(64bit)',
+-        'libxkbcommon.so.0(V_0.5.0)(64bit)',
+         'libxkbfile.so.1()(64bit)',
+-        'libz.so.1()(64bit)',
+-        'libz.so.1(ZLIB_1.2.3.4)(64bit)',
+         'rpmlib(FileDigests) <= 4.6.0-1',
+         'rtld(GNU_HASH)',
+         'xdg-utils'
+@@ -141,10 +130,7 @@ exports.referenceGeneratedDepsByArch = {
+         'libc.so.6(GLIBC_2.15)',
+         'libc.so.6(GLIBC_2.16)',
+         'libc.so.6(GLIBC_2.17)',
+-        'libc.so.6(GLIBC_2.18)',
+         'libc.so.6(GLIBC_2.25)',
+-        'libc.so.6(GLIBC_2.27)',
+-        'libc.so.6(GLIBC_2.28)',
+         'libc.so.6(GLIBC_2.4)',
+         'libc.so.6(GLIBC_2.6)',
+         'libc.so.6(GLIBC_2.7)',
+@@ -153,7 +139,6 @@ exports.referenceGeneratedDepsByArch = {
+         'libcairo.so.2',
+         'libcurl.so.4()(64bit)',
+         'libdbus-1.so.3',
+-        'libdbus-1.so.3(LIBDBUS_1_3)',
+         'libdl.so.2',
+         'libdl.so.2(GLIBC_2.4)',
+         'libdrm.so.2',
+@@ -162,7 +147,6 @@ exports.referenceGeneratedDepsByArch = {
+         'libgcc_s.so.1',
+         'libgcc_s.so.1(GCC_3.0)',
+         'libgcc_s.so.1(GCC_3.5)',
+-        'libgcc_s.so.1(GCC_4.3.0)',
+         'libgio-2.0.so.0',
+         'libglib-2.0.so.0',
+         'libgobject-2.0.so.0',
+@@ -179,12 +163,10 @@ exports.referenceGeneratedDepsByArch = {
+         'libnss3.so(NSS_3.11)',
+         'libnss3.so(NSS_3.12)',
+         'libnss3.so(NSS_3.12.1)',
+-        'libnss3.so(NSS_3.13)',
+         'libnss3.so(NSS_3.2)',
+         'libnss3.so(NSS_3.22)',
+         'libnss3.so(NSS_3.22)(64bit)',
+         'libnss3.so(NSS_3.3)',
+-        'libnss3.so(NSS_3.30)',
+         'libnss3.so(NSS_3.4)',
+         'libnss3.so(NSS_3.5)',
+         'libnss3.so(NSS_3.9.2)',
+@@ -196,6 +178,7 @@ exports.referenceGeneratedDepsByArch = {
+         'libpthread.so.0(GLIBC_2.4)',
+         'librt.so.1',
+         'librt.so.1(GLIBC_2.4)',
++        'libsecret-1.so.0',
+         'libsmime3.so',
+         'libsmime3.so(NSS_3.10)',
+         'libsmime3.so(NSS_3.2)',
+@@ -221,7 +204,6 @@ exports.referenceGeneratedDepsByArch = {
+         'libutil.so.1(GLIBC_2.4)',
+         'libxcb.so.1',
+         'libxkbcommon.so.0',
+-        'libxkbcommon.so.0(V_0.5.0)',
+         'libxkbfile.so.1',
+         'rpmlib(FileDigests) <= 4.6.0-1',
+         'rtld(GNU_HASH)',
+@@ -245,10 +227,7 @@ exports.referenceGeneratedDepsByArch = {
+         'libatspi.so.0()(64bit)',
+         'libc.so.6()(64bit)',
+         'libc.so.6(GLIBC_2.17)(64bit)',
+-        'libc.so.6(GLIBC_2.18)(64bit)',
+         'libc.so.6(GLIBC_2.25)(64bit)',
+-        'libc.so.6(GLIBC_2.27)(64bit)',
+-        'libc.so.6(GLIBC_2.28)(64bit)',
+         'libcairo.so.2()(64bit)',
+         'libcurl.so.4()(64bit)',
+         'libdbus-1.so.3()(64bit)',
+@@ -260,7 +239,6 @@ exports.referenceGeneratedDepsByArch = {
+         'libgbm.so.1()(64bit)',
+         'libgcc_s.so.1()(64bit)',
+         'libgcc_s.so.1(GCC_3.0)(64bit)',
+-        'libgcc_s.so.1(GCC_3.3)(64bit)',
+         'libgcc_s.so.1(GCC_4.2.0)(64bit)',
+         'libgcc_s.so.1(GCC_4.5.0)(64bit)',
+         'libgio-2.0.so.0()(64bit)',
+@@ -278,11 +256,9 @@ exports.referenceGeneratedDepsByArch = {
+         'libnss3.so(NSS_3.11)(64bit)',
+         'libnss3.so(NSS_3.12)(64bit)',
+         'libnss3.so(NSS_3.12.1)(64bit)',
+-        'libnss3.so(NSS_3.13)(64bit)',
+         'libnss3.so(NSS_3.2)(64bit)',
+         'libnss3.so(NSS_3.22)(64bit)',
+         'libnss3.so(NSS_3.3)(64bit)',
+-        'libnss3.so(NSS_3.30)(64bit)',
+         'libnss3.so(NSS_3.4)(64bit)',
+         'libnss3.so(NSS_3.5)(64bit)',
+         'libnss3.so(NSS_3.9.2)(64bit)',
+@@ -293,6 +269,7 @@ exports.referenceGeneratedDepsByArch = {
+         'libpthread.so.0(GLIBC_2.17)(64bit)',
+         'librt.so.1()(64bit)',
+         'librt.so.1(GLIBC_2.17)(64bit)',
++        'libsecret-1.so.0()(64bit)',
+         'libsmime3.so()(64bit)',
+         'libsmime3.so(NSS_3.10)(64bit)',
+         'libsmime3.so(NSS_3.2)(64bit)',
+@@ -324,4 +301,4 @@ exports.referenceGeneratedDepsByArch = {
+         'xdg-utils'
+     ]
+ };
+-//# sourceMappingURL=dep-lists.js.map
+\ No newline at end of file
++//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVwLWxpc3RzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiZGVwLWxpc3RzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTs7O2dHQUdnRzs7O0FBRWhHLCtHQUErRztBQUMvRywrREFBK0Q7QUFDbEQsUUFBQSxjQUFjLEdBQUc7SUFDN0IsaUJBQWlCO0lBQ2pCLHdCQUF3QjtJQUN4Qiw2QkFBNkI7SUFDN0IsNkJBQTZCO0lBQzdCLGdDQUFnQztJQUNoQyx5QkFBeUI7SUFDekIsdUJBQXVCO0lBQ3ZCLFdBQVcsQ0FBQyxpQkFBaUI7Q0FDN0IsQ0FBQztBQUVXLFFBQUEsNEJBQTRCLEdBQUc7SUFDM0MsUUFBUSxFQUFFO1FBQ1QsaUJBQWlCO1FBQ2pCLCtCQUErQjtRQUMvQiwwQ0FBMEM7UUFDMUMsd0NBQXdDO1FBQ3hDLHNCQUFzQjtRQUN0Qiw2QkFBNkI7UUFDN0IsMEJBQTBCO1FBQzFCLHVCQUF1QjtRQUN2Qix5QkFBeUI7UUFDekIseUJBQXlCO1FBQ3pCLHlCQUF5QjtRQUN6QixpQ0FBaUM7UUFDakMsc0NBQXNDO1FBQ3RDLDBCQUEwQjtRQUMxQixpQ0FBaUM7UUFDakMsd0JBQXdCO1FBQ3hCLG9CQUFvQjtRQUNwQiw4QkFBOEI7UUFDOUIsOEJBQThCO1FBQzlCLDhCQUE4QjtRQUM5Qiw4QkFBOEI7UUFDOUIsOEJBQThCO1FBQzlCLDhCQUE4QjtRQUM5QiwrQkFBK0I7UUFDL0IsNkJBQTZCO1FBQzdCLCtCQUErQjtRQUMvQiwrQkFBK0I7UUFDL0IsK0JBQStCO1FBQy9CLDZCQUE2QjtRQUM3Qiw2QkFBNkI7UUFDN0IsNkJBQTZCO1FBQzdCLDZCQUE2QjtRQUM3Qiw2QkFBNkI7UUFDN0Isd0JBQXdCO1FBQ3hCLHVCQUF1QjtRQUN2Qix5QkFBeUI7UUFDekIscUJBQXFCO1FBQ3JCLGdDQUFnQztRQUNoQyxzQkFBc0I7UUFDdEIsd0JBQXdCO1FBQ3hCLHNCQUFzQjtRQUN0Qix3QkFBd0I7UUFDeEIsK0JBQStCO1FBQy9CLDBCQUEwQjtR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
+\ No newline at end of file
+diff --git a/build/linux/rpm/dep-lists.ts b/build/linux/rpm/dep-lists.ts
+index 1c38df6..5788ec3 100644
+--- a/build/linux/rpm/dep-lists.ts
++++ b/build/linux/rpm/dep-lists.ts
+@@ -41,11 +41,7 @@ export const referenceGeneratedDepsByArch = {
+ 		'libc.so.6(GLIBC_2.15)(64bit)',
+ 		'libc.so.6(GLIBC_2.16)(64bit)',
+ 		'libc.so.6(GLIBC_2.17)(64bit)',
+-		'libc.so.6(GLIBC_2.18)(64bit)',
+ 		'libc.so.6(GLIBC_2.2.5)(64bit)',
+-		'libc.so.6(GLIBC_2.25)(64bit)',
+-		'libc.so.6(GLIBC_2.27)(64bit)',
+-		'libc.so.6(GLIBC_2.28)(64bit)',
+ 		'libc.so.6(GLIBC_2.3)(64bit)',
+ 		'libc.so.6(GLIBC_2.3.2)(64bit)',
+ 		'libc.so.6(GLIBC_2.3.3)(64bit)',
+@@ -58,7 +54,6 @@ export const referenceGeneratedDepsByArch = {
+ 		'libcairo.so.2()(64bit)',
+ 		'libcurl.so.4()(64bit)',
+ 		'libdbus-1.so.3()(64bit)',
+-		'libdbus-1.so.3(LIBDBUS_1_3)(64bit)',
+ 		'libdl.so.2()(64bit)',
+ 		'libdl.so.2(GLIBC_2.2.5)(64bit)',
+ 		'libdrm.so.2()(64bit)',
+@@ -66,8 +61,6 @@ export const referenceGeneratedDepsByArch = {
+ 		'libgbm.so.1()(64bit)',
+ 		'libgcc_s.so.1()(64bit)',
+ 		'libgcc_s.so.1(GCC_3.0)(64bit)',
+-		'libgcc_s.so.1(GCC_3.3)(64bit)',
+-		'libgcc_s.so.1(GCC_4.2.0)(64bit)',
+ 		'libgio-2.0.so.0()(64bit)',
+ 		'libglib-2.0.so.0()(64bit)',
+ 		'libgobject-2.0.so.0()(64bit)',
+@@ -83,11 +76,9 @@ export const referenceGeneratedDepsByArch = {
+ 		'libnss3.so(NSS_3.11)(64bit)',
+ 		'libnss3.so(NSS_3.12)(64bit)',
+ 		'libnss3.so(NSS_3.12.1)(64bit)',
+-		'libnss3.so(NSS_3.13)(64bit)',
+ 		'libnss3.so(NSS_3.2)(64bit)',
+ 		'libnss3.so(NSS_3.22)(64bit)',
+ 		'libnss3.so(NSS_3.3)(64bit)',
+-		'libnss3.so(NSS_3.30)(64bit)',
+ 		'libnss3.so(NSS_3.4)(64bit)',
+ 		'libnss3.so(NSS_3.5)(64bit)',
+ 		'libnss3.so(NSS_3.9.2)(64bit)',
+@@ -102,6 +93,7 @@ export const referenceGeneratedDepsByArch = {
+ 		'libpthread.so.0(GLIBC_2.3.4)(64bit)',
+ 		'librt.so.1()(64bit)',
+ 		'librt.so.1(GLIBC_2.2.5)(64bit)',
++		'libsecret-1.so.0()(64bit)',
+ 		'libsmime3.so()(64bit)',
+ 		'libsmime3.so(NSS_3.10)(64bit)',
+ 		'libsmime3.so(NSS_3.2)(64bit)',
+@@ -110,10 +102,7 @@ export const referenceGeneratedDepsByArch = {
+ 		'libutil.so.1(GLIBC_2.2.5)(64bit)',
+ 		'libxcb.so.1()(64bit)',
+ 		'libxkbcommon.so.0()(64bit)',
+-		'libxkbcommon.so.0(V_0.5.0)(64bit)',
+ 		'libxkbfile.so.1()(64bit)',
+-		'libz.so.1()(64bit)',
+-		'libz.so.1(ZLIB_1.2.3.4)(64bit)',
+ 		'rpmlib(FileDigests) <= 4.6.0-1',
+ 		'rtld(GNU_HASH)',
+ 		'xdg-utils'
+@@ -140,10 +129,7 @@ export const referenceGeneratedDepsByArch = {
+ 		'libc.so.6(GLIBC_2.15)',
+ 		'libc.so.6(GLIBC_2.16)',
+ 		'libc.so.6(GLIBC_2.17)',
+-		'libc.so.6(GLIBC_2.18)',
+ 		'libc.so.6(GLIBC_2.25)',
+-		'libc.so.6(GLIBC_2.27)',
+-		'libc.so.6(GLIBC_2.28)',
+ 		'libc.so.6(GLIBC_2.4)',
+ 		'libc.so.6(GLIBC_2.6)',
+ 		'libc.so.6(GLIBC_2.7)',
+@@ -152,7 +138,6 @@ export const referenceGeneratedDepsByArch = {
+ 		'libcairo.so.2',
+ 		'libcurl.so.4()(64bit)',
+ 		'libdbus-1.so.3',
+-		'libdbus-1.so.3(LIBDBUS_1_3)',
+ 		'libdl.so.2',
+ 		'libdl.so.2(GLIBC_2.4)',
+ 		'libdrm.so.2',
+@@ -161,7 +146,6 @@ export const referenceGeneratedDepsByArch = {
+ 		'libgcc_s.so.1',
+ 		'libgcc_s.so.1(GCC_3.0)',
+ 		'libgcc_s.so.1(GCC_3.5)',
+-		'libgcc_s.so.1(GCC_4.3.0)',
+ 		'libgio-2.0.so.0',
+ 		'libglib-2.0.so.0',
+ 		'libgobject-2.0.so.0',
+@@ -178,12 +162,10 @@ export const referenceGeneratedDepsByArch = {
+ 		'libnss3.so(NSS_3.11)',
+ 		'libnss3.so(NSS_3.12)',
+ 		'libnss3.so(NSS_3.12.1)',
+-		'libnss3.so(NSS_3.13)',
+ 		'libnss3.so(NSS_3.2)',
+ 		'libnss3.so(NSS_3.22)',
+ 		'libnss3.so(NSS_3.22)(64bit)',
+ 		'libnss3.so(NSS_3.3)',
+-		'libnss3.so(NSS_3.30)',
+ 		'libnss3.so(NSS_3.4)',
+ 		'libnss3.so(NSS_3.5)',
+ 		'libnss3.so(NSS_3.9.2)',
+@@ -195,6 +177,7 @@ export const referenceGeneratedDepsByArch = {
+ 		'libpthread.so.0(GLIBC_2.4)',
+ 		'librt.so.1',
+ 		'librt.so.1(GLIBC_2.4)',
++		'libsecret-1.so.0',
+ 		'libsmime3.so',
+ 		'libsmime3.so(NSS_3.10)',
+ 		'libsmime3.so(NSS_3.2)',
+@@ -220,7 +203,6 @@ export const referenceGeneratedDepsByArch = {
+ 		'libutil.so.1(GLIBC_2.4)',
+ 		'libxcb.so.1',
+ 		'libxkbcommon.so.0',
+-		'libxkbcommon.so.0(V_0.5.0)',
+ 		'libxkbfile.so.1',
+ 		'rpmlib(FileDigests) <= 4.6.0-1',
+ 		'rtld(GNU_HASH)',
+@@ -244,10 +226,7 @@ export const referenceGeneratedDepsByArch = {
+ 		'libatspi.so.0()(64bit)',
+ 		'libc.so.6()(64bit)',
+ 		'libc.so.6(GLIBC_2.17)(64bit)',
+-		'libc.so.6(GLIBC_2.18)(64bit)',
+ 		'libc.so.6(GLIBC_2.25)(64bit)',
+-		'libc.so.6(GLIBC_2.27)(64bit)',
+-		'libc.so.6(GLIBC_2.28)(64bit)',
+ 		'libcairo.so.2()(64bit)',
+ 		'libcurl.so.4()(64bit)',
+ 		'libdbus-1.so.3()(64bit)',
+@@ -259,7 +238,6 @@ export const referenceGeneratedDepsByArch = {
+ 		'libgbm.so.1()(64bit)',
+ 		'libgcc_s.so.1()(64bit)',
+ 		'libgcc_s.so.1(GCC_3.0)(64bit)',
+-		'libgcc_s.so.1(GCC_3.3)(64bit)',
+ 		'libgcc_s.so.1(GCC_4.2.0)(64bit)',
+ 		'libgcc_s.so.1(GCC_4.5.0)(64bit)',
+ 		'libgio-2.0.so.0()(64bit)',
+@@ -277,11 +255,9 @@ export const referenceGeneratedDepsByArch = {
+ 		'libnss3.so(NSS_3.11)(64bit)',
+ 		'libnss3.so(NSS_3.12)(64bit)',
+ 		'libnss3.so(NSS_3.12.1)(64bit)',
+-		'libnss3.so(NSS_3.13)(64bit)',
+ 		'libnss3.so(NSS_3.2)(64bit)',
+ 		'libnss3.so(NSS_3.22)(64bit)',
+ 		'libnss3.so(NSS_3.3)(64bit)',
+-		'libnss3.so(NSS_3.30)(64bit)',
+ 		'libnss3.so(NSS_3.4)(64bit)',
+ 		'libnss3.so(NSS_3.5)(64bit)',
+ 		'libnss3.so(NSS_3.9.2)(64bit)',
+@@ -292,6 +268,7 @@ export const referenceGeneratedDepsByArch = {
+ 		'libpthread.so.0(GLIBC_2.17)(64bit)',
+ 		'librt.so.1()(64bit)',
+ 		'librt.so.1(GLIBC_2.17)(64bit)',
++		'libsecret-1.so.0()(64bit)',
+ 		'libsmime3.so()(64bit)',
+ 		'libsmime3.so(NSS_3.10)(64bit)',
+ 		'libsmime3.so(NSS_3.2)(64bit)',
+diff --git a/build/package.json b/build/package.json
+index 52b1f47..c46e62d 100644
+--- a/build/package.json
++++ b/build/package.json
+@@ -50,6 +50,7 @@
+     "jsonc-parser": "^2.3.0",
+     "mime": "^1.4.1",
+     "mkdirp": "^1.0.4",
++    "node-fetch": "2.7.0",
+     "source-map": "0.6.1",
+     "ternary-stream": "^3.0.0",
+     "through2": "^4.0.2",
+diff --git a/cgmanifest.json b/cgmanifest.json
+index 1a676f2..f08c529 100644
+--- a/cgmanifest.json
++++ b/cgmanifest.json
+@@ -6,7 +6,7 @@
+ 				"git": {
+ 					"name": "chromium",
+ 					"repositoryUrl": "https://chromium.googlesource.com/chromium/src",
+-					"commitHash": "b1f5594cf472956192e71c38ebfc22472d44a03d"
++					"commitHash": "513ac8b2c47c7e1ac6b9f4fb5ea98e965cf29b66"
+ 				}
+ 			},
+ 			"licenseDetail": [
+@@ -40,7 +40,7 @@
+ 				"SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+ 			],
+ 			"isOnlyProductionDependency": true,
+-			"version": "118.0.5993.159"
++			"version": "108.0.5359.215"
+ 		},
+ 		{
+ 			"component": {
+@@ -48,7 +48,7 @@
+ 				"git": {
+ 					"name": "ffmpeg",
+ 					"repositoryUrl": "https://chromium.googlesource.com/chromium/third_party/ffmpeg",
+-					"commitHash": "0ba37733400593b162e5ae9ff26b384cff49c250"
++					"commitHash": "b9f01c3c54576330b2cf8918c54d5ee5be8faefe"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+@@ -516,11 +516,11 @@
+ 				"git": {
+ 					"name": "nodejs",
+ 					"repositoryUrl": "https://github.com/nodejs/node",
+-					"commitHash": "2e414d5d1082233c3516fca923fe351d5186c80e"
++					"commitHash": "6b06e89c7dfccec6792008302af1cee57649445c"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+-			"version": "18.17.1"
++			"version": "16.17.1"
+ 		},
+ 		{
+ 			"component": {
+@@ -528,12 +528,12 @@
+ 				"git": {
+ 					"name": "electron",
+ 					"repositoryUrl": "https://github.com/electron/electron",
+-					"commitHash": "b3ca1a1f96bae5352f420ef1f77cc9d7fd5957c6"
++					"commitHash": "e2dac668c680a8b58f204ce14ad88431a2db4339"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+ 			"license": "MIT",
+-			"version": "27.2.3"
++			"version": "22.3.27"
+ 		},
+ 		{
+ 			"component": {
+diff --git a/package.json b/package.json
+index 7720eab..7ec1ae2 100644
+--- a/package.json
++++ b/package.json
+@@ -119,7 +119,7 @@
+     "@types/kerberos": "^1.1.2",
+     "@types/minimist": "^1.2.1",
+     "@types/mocha": "^9.1.1",
+-    "@types/node": "18.x",
++    "@types/node": "16.x",
+     "@types/sinon": "^10.0.2",
+     "@types/sinon-test": "^2.4.2",
+     "@types/trusted-types": "^1.0.6",
+@@ -133,7 +133,7 @@
+     "@typescript-eslint/eslint-plugin": "^5.57.0",
+     "@typescript-eslint/experimental-utils": "^5.57.0",
+     "@typescript-eslint/parser": "^5.57.0",
+-    "@vscode/gulp-electron": "^1.36.0",
++    "@vscode/gulp-electron": "git+https://github.com/Alex313031/vscode-gulp-electron.git",
+     "@vscode/l10n-dev": "0.0.30",
+     "@vscode/telemetry-extractor": "^1.10.2",
+     "@vscode/test-cli": "^0.0.3",
+@@ -150,7 +150,7 @@
+     "cssnano": "^4.1.11",
+     "debounce": "^1.0.0",
+     "deemon": "^1.8.0",
+-    "electron": "27.2.3",
++    "electron": "22.3.27",
+     "eslint": "8.36.0",
+     "eslint-plugin-header": "3.1.1",
+     "eslint-plugin-jsdoc": "^46.5.0",
+@@ -198,7 +198,7 @@
+     "p-all": "^1.0.0",
+     "path-browserify": "^1.0.1",
+     "pump": "^1.0.1",
+-    "rcedit": "^1.1.0",
++    "rcedit": "^1.1.2",
+     "rimraf": "^2.2.8",
+     "sinon": "^12.0.1",
+     "sinon-test": "^3.1.3",
+diff --git a/remote/.yarnrc b/remote/.yarnrc
+index adbe2d2..2309b4e 100644
+--- a/remote/.yarnrc
++++ b/remote/.yarnrc
+@@ -1,5 +1,5 @@
+ disturl "https://nodejs.org/dist"
+-target "18.17.1"
++target "16.17.1"
+ ms_build_id "252256"
+ runtime "node"
+ build_from_source "true"
+diff --git a/src/vs/base/node/shell.ts b/src/vs/base/node/shell.ts
+index 9da701f..55d97ca 100644
+--- a/src/vs/base/node/shell.ts
++++ b/src/vs/base/node/shell.ts
+@@ -33,7 +33,7 @@ function getSystemShellUnixLike(os: platform.OperatingSystem, env: platform.IPro
+ 	}
+ 
+ 	if (!_TERMINAL_DEFAULT_SHELL_UNIX_LIKE) {
+-		let unixLikeTerminal: string | undefined;
++		let unixLikeTerminal: string | undefined | null;
+ 		if (platform.isWindows) {
+ 			unixLikeTerminal = '/bin/bash'; // for WSL
+ 		} else {
+diff --git a/src/vs/base/parts/sandbox/common/electronTypes.ts b/src/vs/base/parts/sandbox/common/electronTypes.ts
+index f8c7a35..d54657e 100644
+--- a/src/vs/base/parts/sandbox/common/electronTypes.ts
++++ b/src/vs/base/parts/sandbox/common/electronTypes.ts
+@@ -21,7 +21,7 @@ export interface MessageBoxOptions {
+ 	 * displays the same icon as `info`, unless you set an icon using the `icon`
+ 	 * option. On macOS, both `warning` and `error` display the same warning icon.
+ 	 */
+-	type?: ('none' | 'info' | 'error' | 'question' | 'warning');
++	type?: string;
+ 	/**
+ 	 * Array of texts for buttons. On Windows, an empty array will result in one button
+ 	 * labeled "OK".
+diff --git a/src/vs/platform/windows/electron-main/windowImpl.ts b/src/vs/platform/windows/electron-main/windowImpl.ts
+index c0ca43e..cbd7d24 100644
+--- a/src/vs/platform/windows/electron-main/windowImpl.ts
++++ b/src/vs/platform/windows/electron-main/windowImpl.ts
+@@ -321,11 +321,7 @@ export abstract class BaseWindow extends Disposable implements IBaseWindow {
+ 		// macOS: traffic lights
+ 		else if (isMacintosh && options.height !== undefined) {
+ 			const verticalOffset = (options.height - 15) / 2; // 15px is the height of the traffic lights
+-			if (!verticalOffset) {
+-				win.setWindowButtonPosition(null);
+-			} else {
+-				win.setWindowButtonPosition({ x: verticalOffset, y: verticalOffset });
+-			}
++			win.setTrafficLightPosition({ x: verticalOffset, y: verticalOffset });
+ 		}
+ 	}
+ 
+diff --git a/src/vs/server/node/remoteExtensionHostAgentServer.ts b/src/vs/server/node/remoteExtensionHostAgentServer.ts
+index a90d28e..18a1412 100644
+--- a/src/vs/server/node/remoteExtensionHostAgentServer.ts
++++ b/src/vs/server/node/remoteExtensionHostAgentServer.ts
+@@ -551,8 +551,7 @@ class RemoteExtensionHostAgentServer extends Disposable implements IServerAPI {
+ 			const socket = net.createConnection(
+ 				{
+ 					host: host,
+-					port: port,
+-					autoSelectFamily: true
++					port: port
+ 				}, () => {
+ 					socket.removeListener('error', e);
+ 					socket.pause();
+diff --git a/yarn.lock b/yarn.lock
+index 0fc6389..926c208 100644
+--- a/yarn.lock
++++ b/yarn.lock
+@@ -1134,21 +1134,16 @@
+   resolved "https://registry.yarnpkg.com/@types/node/-/node-4.2.22.tgz#cf488a0f6b4a9c245d09927f4f757ca278b9c8ce"
+   integrity sha512-LXRap3bb4AjtLZ5NOFc4ssVZrQPTgdPcNm++0SEJuJZaOA+xHkojJNYqy33A5q/94BmG5tA6yaMeD4VdCv5aSA==
+ 
+-"@types/node@18.x":
+-  version "18.15.13"
+-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.13.tgz#f64277c341150c979e42b00e4ac289290c9df469"
+-  integrity sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==
++"@types/node@16.x", "@types/node@^16.11.26":
++  version "16.18.79"
++  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.79.tgz#153e25561b271cf87dc1b28d38f98cebd514d788"
++  integrity sha512-Qd7jdLR5zmnIyMhfDrfPqN5tUCvreVpP3Qrf2oSM+F7SNzlb/MwHISGUkdFHtevfkPJ3iAGyeQI/jsbh9EStgQ==
+ 
+ "@types/node@^10.11.7":
+   version "10.12.21"
+   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.21.tgz#7e8a0c34cf29f4e17a36e9bd0ea72d45ba03908e"
+   integrity sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
+ 
+-"@types/node@^18.11.18":
+-  version "18.16.19"
+-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.19.tgz#cb03fca8910fdeb7595b755126a8a78144714eea"
+-  integrity sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==
+-
+ "@types/q@^1.5.1":
+   version "1.5.4"
+   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
+@@ -1344,10 +1339,9 @@
+     "@typescript-eslint/types" "5.57.0"
+     eslint-visitor-keys "^3.3.0"
+ 
+-"@vscode/gulp-electron@^1.36.0":
++"@vscode/gulp-electron@git+https://github.com/Alex313031/vscode-gulp-electron.git":
+   version "1.36.0"
+-  resolved "https://registry.yarnpkg.com/@vscode/gulp-electron/-/gulp-electron-1.36.0.tgz#b2895c4bafaa0cf2b13042aa654e9fdd1f3a90cd"
+-  integrity sha512-zGNnxN2mccAa0fgyjUn0+HUX4sv4syUfoLQru3/QAQYki1oeqnkPpCXZxhismFmWpXwTwsf5sXeh1AOs8uyU0g==
++  resolved "git+https://github.com/Alex313031/vscode-gulp-electron.git#f8229575868ca8751e44dc750b8c96310cf52bc0"
+   dependencies:
+     "@electron/get" "^2.0.2"
+     "@octokit/rest" "^18.0.14"
+@@ -1359,9 +1353,9 @@
+     mkdirp "^0.5.1"
+     plist "^3.0.1"
+     progress "^1.1.8"
+-    rcedit "^0.3.0"
++    rcedit "1.1.2"
+     rimraf "^2.4.2"
+-    semver "^4.3.4"
++    semver "^5.7.2"
+     sumchecker "^3.0.1"
+     temp "^0.8.3"
+     vinyl "^3.0.0"
+@@ -3570,13 +3564,13 @@ electron-to-chromium@^1.4.202:
+   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.207.tgz#9c3310ebace2952903d05dcaba8abe3a4ed44c01"
+   integrity sha512-piH7MJDJp4rJCduWbVvmUd59AUne1AFBJ8JaRQvk0KzNTSUnZrVXHCZc+eg+CGE4OujkcLJznhGKD6tuAshj5Q==
+ 
+-electron@27.2.3:
+-  version "27.2.3"
+-  resolved "https://registry.yarnpkg.com/electron/-/electron-27.2.3.tgz#ef8c7a33175bb9fc91ae5508c560aea719b49232"
+-  integrity sha512-AbDL5WhoyN56Nb6Ox26eFNXo3PcoxPQGUfBMBT8WXY19uD8kI+l6XF8mI09ezMejo3JjKu4kh3zZUPcgskzIng==
++electron@22.3.27:
++  version "22.3.27"
++  resolved "https://registry.yarnpkg.com/electron/-/electron-22.3.27.tgz#b77451a53f0c502e7559cceac28ac58eb289eef8"
++  integrity sha512-7Rht21vHqj4ZFRnKuZdFqZFsvMBCmDqmjetiMqPtF+TmTBiGne1mnstVXOA/SRGhN2Qy5gY5bznJKpiqogjM8A==
+   dependencies:
+     "@electron/get" "^2.0.0"
+-    "@types/node" "^18.11.18"
++    "@types/node" "^16.11.26"
+     extract-zip "^2.0.1"
+ 
+ emoji-regex@^7.0.1:
+@@ -8177,15 +8171,10 @@ rc@^1.2.7:
+     minimist "^1.2.0"
+     strip-json-comments "~2.0.1"
+ 
+-rcedit@^0.3.0:
+-  version "0.3.0"
+-  resolved "https://registry.yarnpkg.com/rcedit/-/rcedit-0.3.0.tgz#cb5eee185e546f9eda597c248c9906186fa96bce"
+-  integrity sha1-y17uGF5Ub57aWXwkjJkGGG+pa84=
+-
+-rcedit@^1.1.0:
+-  version "1.1.0"
+-  resolved "https://registry.yarnpkg.com/rcedit/-/rcedit-1.1.0.tgz#ae21c28d4efdd78e95fcab7309a5dd084920b16a"
+-  integrity sha512-JkXJ0IrUcdupLoIx6gE4YcFaMVSGtu7kQf4NJoDJUnfBZGuATmJ2Yal2v55KTltp+WV8dGr7A0RtOzx6jmtM6Q==
++rcedit@1.1.2, rcedit@^1.1.2:
++  version "1.1.2"
++  resolved "https://registry.yarnpkg.com/rcedit/-/rcedit-1.1.2.tgz#7a28edf981953f75b5f3e5d4cbc1f9ffa0abbc78"
++  integrity sha512-z2ypB4gbINhI6wVe0JJMmdpmOpmNc4g90sE6/6JSuch5kYnjfz9CxvVPqqhShgR6GIkmtW3W2UlfiXhWljA0Fw==
+ 
+ read-pkg-up@^1.0.1:
+   version "1.0.1"
+@@ -8611,16 +8600,11 @@ semver-greatest-satisfied-range@^1.1.0:
+   dependencies:
+     sver-compat "^1.5.0"
+ 
+-"semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
++"semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.2:
+   version "5.7.2"
+   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.2.tgz#48d55db737c3287cd4835e17fa13feace1c41ef8"
+   integrity sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==
+ 
+-semver@^4.3.4:
+-  version "4.3.6"
+-  resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
+-  integrity sha512-IrpJ+yoG4EOH8DFWuVg+8H1kW1Oaof0Wxe7cPcXW3x9BjkN/eVo54F15LyqemnDIUYskQWr9qvl/RihmSy6+xQ==
+-
+ semver@^6.0.0, semver@^6.2.0, semver@^6.3.0:
+   version "6.3.1"
+   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"

@@ -17,11 +17,11 @@
 
 ## <a id="dependencies"></a>Dependencies
 
-- node 18.15
+- node 16
 - yarn
 - jq
 - git
-- python3 3.11
+- python3 3.10
 
 ### <a id="dependencies-linux"></a>Linux
 
@@ -38,7 +38,7 @@
 - rpmbuild
 - dpkg
 - imagemagick (for AppImage)
-- snapcraft
+- snapcraft (for .snap)
 
 ### <a id="dependencies-macos"></a>MacOS
 
