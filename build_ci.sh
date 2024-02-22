@@ -48,7 +48,7 @@ if [[ "${SHOULD_BUILD}" == "yes" ]]; then
 
       find "../VSCode-linux-${VSCODE_ARCH}" -print0 | xargs -0 touch -c
 
-      SHOULD_BUILD_REH="no"
+      # SHOULD_BUILD_REH="no"
     fi
 
     VSCODE_PLATFORM="linux"
