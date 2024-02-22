@@ -71,11 +71,12 @@ set -x
 export ELECTRON_SKIP_BINARY_DOWNLOAD=1
 export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
-export VSCODE_SKIP_NODE_VERSION_CHECK=1
+if [[ "${OS_NAME}" == "linux" ]]; then
+  export VSCODE_SKIP_NODE_VERSION_CHECK=1
 
-if [[ "${npm_config_arch}" == "arm" ]]; then
-  export npm_config_arm_version=7
-fi
+  if [[ "${npm_config_arch}" == "arm" ]]; then
+    export npm_config_arm_version=7
+  fi
 
   CHILD_CONCURRENCY=1 yarn --check-files --network-timeout 180000
 elif [[ "${OS_NAME}" == "osx" ]]; then
