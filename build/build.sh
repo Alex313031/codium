@@ -35,7 +35,7 @@ esac
 
 export APP_NAME="Codium"
 export BINARY_NAME="codium"
-export CI_BUILD="no"
+export CI_BUILD="yes"
 export SHOULD_BUILD="yes"
 export SKIP_ASSETS="no"
 export SKIP_BUILD="no"
