@@ -21,8 +21,11 @@ displayHelp () {
 	printf "${bold}${GRE}Script to build Codium for Linux or Windows.${c0}\n" &&
 	printf "${bold}${YEL}Use the --deps flag to install build dependencies.${c0}\n" &&
 	printf "${bold}${YEL}Use the --linux flag to build for Linux.${c0}\n" &&
+	printf "${bold}${YEL}Use the --linux-arm flag to build for Linux (arm64).${c0}\n" &&
+	printf "${bold}${YEL}Use the --avx flag to build for Linux (AVX Version).${c0}\n" &&
 	printf "${bold}${YEL}Use the --win flag to build for Windows.${c0}\n" &&
 	printf "${bold}${YEL}Use the --mac flag to build for MacOS.${c0}\n" &&
+	printf "${bold}${YEL}Use the --mac-arm flag to build for MacOS (arm64).${c0}\n" &&
 	printf "${bold}${YEL}Use the --clean flag to remove all artifacts.\n" &&
 	printf "${bold}${YEL}Use the --help flag to show this help.${c0}\n" &&
 	printf "\n"
@@ -51,9 +54,11 @@ printf "\n" &&
 printf "${bold}${GRE}Script to build Codium for Linux or Windows.${c0}\n" &&
 printf "${bold}${YEL}Use the --deps flag to install build dependencies.${c0}\n" &&
 printf "${bold}${YEL}Use the --linux flag to build for Linux.${c0}\n" &&
+printf "${bold}${YEL}Use the --linux-arm flag to build for Linux (arm64).${c0}\n" &&
 printf "${bold}${YEL}Use the --avx flag to build for Linux (AVX Version).${c0}\n" &&
 printf "${bold}${YEL}Use the --win flag to build for Windows.${c0}\n" &&
 printf "${bold}${YEL}Use the --mac flag to build for MacOS.${c0}\n" &&
+printf "${bold}${YEL}Use the --mac-arm flag to build for MacOS (arm64).${c0}\n" &&
 printf "${bold}${YEL}Use the --clean flag to remove all artifacts.\n" &&
 printf "${bold}${YEL}Use the --help flag to show this help.${c0}\n" &&
 printf "\n" &&
@@ -74,6 +79,23 @@ export LDFLAGS="-Wl,-O3 -msse3 -s" &&
 }
 case $1 in
 	--linux) buildLinux; exit 0;;
+esac
+
+buildLinuxArm (){
+printf "\n" &&
+printf "${bold}${GRE}Building Codium for Linux...${c0}\n" &&
+printf "\n" &&
+tput sgr0 &&
+
+export CFLAGS="-DNDEBUG -march=armv8-a+simd -O3 -g0 -s" &&
+export CXXFLAGS="-DNDEBUG -march=armv8-a+simd -O3 -g0 -s" &&
+export CPPFLAGS="-DNDEBUG -march=armv8-a+simd -O3 -g0 -s" &&
+export LDFLAGS="-Wl,-O3 -march=armv8-a+simd -s" &&
+
+. ./build/build.sh -s -a
+}
+case $1 in
+	--linux-arm) buildLinuxArm; exit 0;;
 esac
 
 buildLinuxAVX (){
@@ -115,7 +137,13 @@ tput sgr0 &&
 # Set msvs_version for node-gyp on Windows
 export MSVS_VERSION="2022" &&
 export GYP_MSVS_VERSION="2022" &&
+set MSVS_VERSION="2022" &&
+set GYP_MSVS_VERSION="2022" &&
 
+export CFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
+export CXXFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
+export CPPFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
+export LDFLAGS="-Wl,-O3 -msse3 -s" &&
 set CFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
 set CXXFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
 set CPPFLAGS="-DNDEBUG -msse3 -O3 -g0 -s" &&
@@ -129,7 +157,7 @@ esac
 
 buildMac (){
 printf "\n" &&
-printf "${bold}${GRE}Building Codium for MacOS...${c0}\n" &&
+printf "${bold}${GRE}Building Codium for MacOS (x86_64 version)...${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
@@ -142,6 +170,23 @@ export LDFLAGS="-msse3 -s" &&
 }
 case $1 in
 	--mac) buildMac; exit 0;;
+esac
+
+buildMacArm (){
+printf "\n" &&
+printf "${bold}${GRE}Building Codium for MacOS (arm64 version)...${c0}\n" &&
+printf "\n" &&
+tput sgr0 &&
+
+export CFLAGS="-DNDEBUG -march=armv8.3-a+simd -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CXXFLAGS="-DNDEBUG -march=armv8.3-a+simd -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CPPFLAGS="-DNDEBUG -march=armv8.3-a+simd -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export LDFLAGS="-march=armv8.3-a+simd -s" &&
+
+. ./build/build.sh -s -a
+}
+case $1 in
+	--mac-arm) buildMacArm; exit 0;;
 esac
 
 exit 0

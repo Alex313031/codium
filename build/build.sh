@@ -49,7 +49,17 @@ export VSCODE_LATEST="no"
 export VSCODE_QUALITY="stable"
 export VSCODE_SKIP_NODE_VERSION_CHECK="yes"
 
-while getopts ":ilops" opt; do
+UNAME_ARCH=$( uname -m )
+
+if [[ "${UNAME_ARCH}" == "arm64" ]]; then
+  export VSCODE_ARCH="arm64"
+elif [[ "${UNAME_ARCH}" == "ppc64le" ]]; then
+  export VSCODE_ARCH="ppc64le"
+else
+  export VSCODE_ARCH="x64"
+fi
+
+while getopts ":ilopsa" opt; do
   case "$opt" in
     i)
       export BINARY_NAME="codium-dev"
@@ -67,6 +77,9 @@ while getopts ":ilops" opt; do
     s)
       export SKIP_SOURCE="yes"
       ;;
+    a)
+      export VSCODE_ARCH="arm64"
+      ;;
     *)
       ;;
   esac
@@ -83,16 +96,6 @@ case "${OSTYPE}" in
     export OS_NAME="linux"
     ;;
 esac
-
-UNAME_ARCH=$( uname -m )
-
-if [[ "${UNAME_ARCH}" == "arm64" ]]; then
-  export VSCODE_ARCH="arm64"
-elif [[ "${UNAME_ARCH}" == "ppc64le" ]]; then
-  export VSCODE_ARCH="ppc64le"
-else
-  export VSCODE_ARCH="x64"
-fi
 
 echo "OS_NAME=\"${OS_NAME}\""
 echo "SKIP_SOURCE=\"${SKIP_SOURCE}\""
