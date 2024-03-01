@@ -87,10 +87,10 @@ printf "${bold}${GRE}Building Codium for Linux...${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
-export CFLAGS="-DNDEBUG -march=armv8-a+simd -O3 -g0 -s" &&
-export CXXFLAGS="-DNDEBUG -march=armv8-a+simd -O3 -g0 -s" &&
-export CPPFLAGS="-DNDEBUG -march=armv8-a+simd -O3 -g0 -s" &&
-export LDFLAGS="-Wl,-O3 -march=armv8-a+simd -s" &&
+export CFLAGS="-DNDEBUG -O3 -g0 -s" &&
+export CXXFLAGS="-DNDEBUG -O3 -g0 -s" &&
+export CPPFLAGS="-DNDEBUG -O3 -g0 -s" &&
+export LDFLAGS="-Wl,-O3 -s" &&
 
 . ./build/build.sh -s -a
 }
@@ -178,10 +178,10 @@ printf "${bold}${GRE}Building Codium for MacOS (arm64 version)...${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
-export CFLAGS="-DNDEBUG -march=armv8.3-a+simd -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export CXXFLAGS="-DNDEBUG -march=armv8.3-a+simd -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export CPPFLAGS="-DNDEBUG -march=armv8.3-a+simd -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export LDFLAGS="-march=armv8.3-a+simd -s" &&
+export CFLAGS="-DNDEBUG -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CXXFLAGS="-DNDEBUG -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CPPFLAGS="-DNDEBUG -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export LDFLAGS="-s" &&
 
 . ./build/build.sh -s -a
 }
