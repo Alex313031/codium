@@ -767,7 +767,7 @@ index a06baecbdeb..c943db2d3f1 100644
      "source-map": "0.6.1",
      "ternary-stream": "^3.0.0",
      "through2": "^4.0.2",
-@@ -58,6 +58,13 @@
+@@ -58,6 +58,14 @@
      "workerpool": "^6.4.0",
      "yauzl": "^2.10.0"
    },
@@ -776,6 +776,7 @@ index a06baecbdeb..c943db2d3f1 100644
 +    "@azure/core-client": "1.7.3",
 +    "@azure/core-lro": "2.5.4",
 +    "@azure/core-rest-pipeline": "1.12.2",
++    "@azure/core-tracing": "1.0.1",
 +    "@azure/core-util": "1.6.1"
 +  },
    "scripts": {
@@ -899,7 +900,7 @@ index 488e3cd2c58..e95d4fc1f0b 100644
      "source-map": "0.6.1",
      "source-map-support": "^0.3.2",
      "style-loader": "^3.3.2",
-@@ -219,6 +219,14 @@
+@@ -219,6 +219,15 @@
      "xml2js": "^0.5.0",
      "yaserver": "^0.4.0"
    },
@@ -908,6 +909,7 @@ index 488e3cd2c58..e95d4fc1f0b 100644
 +    "@azure/core-client": "1.7.3",
 +    "@azure/core-lro": "2.5.4",
 +    "@azure/core-rest-pipeline": "1.12.2",
++    "@azure/core-tracing": "1.0.1",
 +    "@azure/core-util": "1.6.1",
 +    "@types/sinon": "10.0.16"
 +  },
