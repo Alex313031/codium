@@ -34,7 +34,9 @@ rm -r -f build.env &&
 rm -r -f assets &&
 rm -r -f vscode &&
 rm -r -f VSCode-linux-x64 &&
+rm -r -f VSCode-linux-arm64 &&
 rm -r -f vscode-reh-linux-x64 &&
+rm -r -f vscode-reh-linux-arm64 &&
 rm -r -f VSCode-win32-x64 &&
 rm -r -f vscode-reh-win32-x64 &&
 rm -r -f VSCode-darwin-x64 &&
