@@ -1,5 +1,5 @@
 diff --git a/build/checksums/electron.txt b/build/checksums/electron.txt
-index 2d1c9eb..0a6a636 100644
+index 012f052..0a6a636 100644
 --- a/build/checksums/electron.txt
 +++ b/build/checksums/electron.txt
 @@ -2,7 +2,7 @@ e462d1d1f42fbd95f59606138c5f2d127ec7a0194627e613429fd6589f38c778 *chromedriver-v
@@ -29,7 +29,7 @@ index 2d1c9eb..0a6a636 100644
  5ecdc59a23417cc59ddb5a943cc2aa4fcad5da7c115d070fb697135662d1922e *ffmpeg-v22.3.27-mas-arm64.zip
  faee7693f94b51094210d2fb3355deb16fd1b15d4c04d4e51ab8f77633a50f58 *ffmpeg-v22.3.27-mas-x64.zip
  ab34f1ff4a781e71f6c268b5198e893ed4f6bd6962639eaa01779292e89bad0b *ffmpeg-v22.3.27-win32-arm64.zip
-@@ -67,9 +67,9 @@ aa703a89c36fc6c3970e491321b09aa9c22387da7fc24e033cd6ff4f1bd69fb3 *libcxxabi_head
+@@ -67,7 +67,7 @@ aa703a89c36fc6c3970e491321b09aa9c22387da7fc24e033cd6ff4f1bd69fb3 *libcxxabi_head
  ed46ab6112a3e4aaf12b223e1761896fcfa44ccf13a4d01445b71272dcb22b21 *mksnapshot-v22.3.27-darwin-x64.zip
  3a0e5ef31b91d2b7beb28ebc87e2ab5bd1abc8a3ab1902a147322c8824601ab2 *mksnapshot-v22.3.27-linux-arm64-x64.zip
  2614d68292d6267e8d7d2a598c605938d48c84ce895607137599ae4841086e41 *mksnapshot-v22.3.27-linux-armv7l-x64.zip
@@ -43,7 +43,7 @@ index 2d1c9eb..0a6a636 100644
 \ No newline at end of file
 +e61ed6727564ff5155c0c6df5394092c16f55c84542b55de6381d7b77fb638db *mksnapshot-v22.3.27-win32-x64.zip
 diff --git a/package.json b/package.json
-index 0b86f21..eead5f8 100644
+index 14d3c1e..accb365 100644
 --- a/package.json
 +++ b/package.json
 @@ -132,7 +132,7 @@
