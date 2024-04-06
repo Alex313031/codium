@@ -49,6 +49,16 @@ export VSCODE_LATEST="no"
 export VSCODE_QUALITY="stable"
 export VSCODE_SKIP_NODE_VERSION_CHECK="yes"
 
+UNAME_ARCH=$( uname -m )
+
+if [[ "${UNAME_ARCH}" == "arm64" ]]; then
+  export VSCODE_ARCH="arm64"
+elif [[ "${UNAME_ARCH}" == "ppc64le" ]]; then
+  export VSCODE_ARCH="ppc64le"
+else
+  export VSCODE_ARCH="x64"
+fi
+
 while getopts ":ilopsa" opt; do
   case "$opt" in
     i)
@@ -86,16 +96,6 @@ case "${OSTYPE}" in
     export OS_NAME="linux"
     ;;
 esac
-
-UNAME_ARCH=$( uname -m )
-
-if [[ "${UNAME_ARCH}" == "arm64" ]]; then
-  export VSCODE_ARCH="arm64"
-elif [[ "${UNAME_ARCH}" == "ppc64le" ]]; then
-  export VSCODE_ARCH="ppc64le"
-else
-  export VSCODE_ARCH="x64"
-fi
 
 export NODE_OPTIONS="--max-old-space-size=8192"
 
