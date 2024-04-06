@@ -2,7 +2,7 @@ diff --git a/build/linux/debian/calculate-deps.js b/build/linux/debian/calculate
 index 6304df9e..1ede0702 100644
 --- a/build/linux/debian/calculate-deps.js
 +++ b/build/linux/debian/calculate-deps.js
-@@ -79,9 +79,12 @@ function calculatePackageDeps(binaryPath, arch, chromiumSysroot, vscodeSysroot)
+@@ -78,9 +78,12 @@ function calculatePackageDeps(binaryPath, arch, chromiumSysroot, vscodeSysroot)
      // TODO(deepak1556): remove this workaround in favor of computing the
      // versions from build container for native modules.
      const filteredDeps = depsStr.split(', ').filter(dependency => {

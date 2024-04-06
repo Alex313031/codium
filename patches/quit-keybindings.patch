@@ -2,7 +2,7 @@ diff --git a/src/vs/workbench/electron-sandbox/actions/windowActions.ts b/src/vs
 index 2d49534..9d19164 100644
 --- a/src/vs/workbench/electron-sandbox/actions/windowActions.ts
 +++ b/src/vs/workbench/electron-sandbox/actions/windowActions.ts
-@@ -44,9 +44,9 @@ export class CloseWindowAction extends Action2 {
+@@ -43,9 +43,9 @@ export class CloseWindowAction extends Action2 {
  			f1: true,
  			keybinding: {
  				weight: KeybindingWeight.WorkbenchContrib,
