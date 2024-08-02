@@ -1,0 +1,14 @@
+diff --git a/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css b/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css
+index 3baf48c..781d2bd 100644
+--- a/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css
++++ b/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css
+@@ -42,7 +42,8 @@ body {
+ }
+ 
+ .pid {
+-	width: 50px
++	width: 50px;
++	margin-right: 4px;
+ }
+ 
+ .memory {

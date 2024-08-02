@@ -1,0 +1,942 @@
+diff --git a/.nvmrc b/.nvmrc
+index bc78e9f..c85fa1b 100644
+--- a/.nvmrc
++++ b/.nvmrc
+@@ -1 +1 @@
+-20.12.1
++16.17.1
+diff --git a/.yarnrc b/.yarnrc
+index b40fb7e..1341cbe 100644
+--- a/.yarnrc
++++ b/.yarnrc
+@@ -1,5 +1,5 @@
+ disturl "https://electronjs.org/headers"
+-target "29.4.0"
++target "22.3.27"
+ ms_build_id "9728852"
+ runtime "electron"
+ build_from_source "true"
+diff --git a/build/checksums/electron.txt b/build/checksums/electron.txt
+index a80aa15..2d1c9eb 100644
+--- a/build/checksums/electron.txt
++++ b/build/checksums/electron.txt
+@@ -1,75 +1,75 @@
+-3d3d8bb185d7b63b0db910661fdd69d6381afb8c97742bbd2526a9c932e1f8ca *chromedriver-v29.4.0-darwin-arm64.zip
+-c3d075943d87604ffa50382cc8d5798485349544ca391cab88c892f889d3b14c *chromedriver-v29.4.0-darwin-x64.zip
+-6d62d2dba55e4419fa003d45f93dad1324ec29a4d3eb84fd9fd5fd7a64339389 *chromedriver-v29.4.0-linux-arm64.zip
+-81bb3d362331c7296f700b1b0e8f07c4c7739b1151f698cd56af927bedda59e7 *chromedriver-v29.4.0-linux-armv7l.zip
+-ab593cc39aefac8c5abd259e31f6add4b2b70c52231724a6c08ac1872b4a0edf *chromedriver-v29.4.0-linux-x64.zip
+-705d42ccc05b2c48b0673b9dcf63eb78772bb79dba078a523d384ed2481bc9c0 *chromedriver-v29.4.0-mas-arm64.zip
+-956a7caa28eeeb0c02eb7638a53215ffd89b4f12880f0893ff10f497ca1a8117 *chromedriver-v29.4.0-mas-x64.zip
+-1f070176aa33e0139d61a3d758fd2f015f09bb275577293fe93564749b6310ba *chromedriver-v29.4.0-win32-arm64.zip
+-38a71526d243bcb73c28cb648bd4816d70b5e643df52f9f86a83416014589744 *chromedriver-v29.4.0-win32-ia32.zip
+-f90750d3589cb3c9f6f0ebc70d5e025cf81c382e8c23fa47a54570696a478ef0 *chromedriver-v29.4.0-win32-x64.zip
+-05dffc90dd1341cc7a6b50127985e4e217fef7f50a173c7d0ff34039dd2d81b6 *electron-api.json
+-7f63f7cf675ba6dec3a5e4173d729bd53c75f81e612f809641d9d0c4d9791649 *electron-v29.4.0-darwin-arm64-dsym-snapshot.zip
+-aa29530fcafa4db364978d4f414a6ec2005ea695f7fee70ffbe5e114e9e453f0 *electron-v29.4.0-darwin-arm64-dsym.zip
+-8d12fb6d9bcdf5bbfc93dbcd1cac348735dc6f98aa450ee03ec7837a01a8a938 *electron-v29.4.0-darwin-arm64-symbols.zip
+-c16d05f1231bb3c77da05ab236b454b3a2b6a642403be51e7c9b16cd2c421a19 *electron-v29.4.0-darwin-arm64.zip
+-2dfc1017831ab2f6e9ddb575d3b9cff5a0d56f16a335a3c0df508e964e2db963 *electron-v29.4.0-darwin-x64-dsym-snapshot.zip
+-025de6aa39d98762928e1b700f46177e74be20101b27457659b938e2c69db326 *electron-v29.4.0-darwin-x64-dsym.zip
+-ec4eb0a618207233985ceaab297be34b3d4f0813d88801d5637295b238dd661a *electron-v29.4.0-darwin-x64-symbols.zip
+-8ed7924f77a5c43c137a57097c5c47c2e8e9a78197e18af11a767c98035c123e *electron-v29.4.0-darwin-x64.zip
+-bde1772fa8ac4850e108012a9edd3bd93472bad8f68ddd55fca355dad81dde4f *electron-v29.4.0-linux-arm64-debug.zip
+-dfe7852a7423196efb2205c788d942db3ffc9de6ce52577e173bcf7ca6973d48 *electron-v29.4.0-linux-arm64-symbols.zip
+-c3764d6c3799950e3418e8e5a5a5b2c41abe421dd8bcdebf054c7c85798d9860 *electron-v29.4.0-linux-arm64.zip
+-bde1772fa8ac4850e108012a9edd3bd93472bad8f68ddd55fca355dad81dde4f *electron-v29.4.0-linux-armv7l-debug.zip
+-360668ba669cb2c01c2f960cdee76c29670e6ce907ccc0718e971a04af594ce9 *electron-v29.4.0-linux-armv7l-symbols.zip
+-c5e92943ad78b4e41a32ae53c679e148ea2ae09f95f914b1834dbdbae578ba91 *electron-v29.4.0-linux-armv7l.zip
+-375be885426bcbd272bd068bfcef41a83296c2f8e61e633233d2a9e9a69242fc *electron-v29.4.0-linux-x64-debug.zip
+-847e0f75624616c2918b33de2eefeec63419bd250685610d3f52fa115527d2b9 *electron-v29.4.0-linux-x64-symbols.zip
+-91e5eb374c2c85a07c2d4e99a89eb18515ff0169a49c3fa75289800e1225729e *electron-v29.4.0-linux-x64.zip
+-098f973537c3d9679a69409d0b84bcc1a6113bb2002ee60068e2c22f335a3855 *electron-v29.4.0-mas-arm64-dsym-snapshot.zip
+-2724aa32eb441eea21680d95fc1efdd75ac473fa19623c7acf3d546419e96154 *electron-v29.4.0-mas-arm64-dsym.zip
+-98dd81914752a57da4cbaad1f0aa94b16335f9b8f997be9aa049be90b96b2886 *electron-v29.4.0-mas-arm64-symbols.zip
+-fd2663f65c1f995304e3eb65870b7146adfefef07cf82bf44de75855fd4f36e8 *electron-v29.4.0-mas-arm64.zip
+-237983b2169e69bb73aa0987e871e3e486755904b71ebe36c3e902377f92754a *electron-v29.4.0-mas-x64-dsym-snapshot.zip
+-a5d59599827d32ef322b99eee8416e39235f4c7a0ada78342a885665e0b732dd *electron-v29.4.0-mas-x64-dsym.zip
+-5182e7697ac0591e0b95c33f70316af24093c9100f442be2cee0039660e959ac *electron-v29.4.0-mas-x64-symbols.zip
+-e0ee7057aff0240a70b9ed75ff44d55aeae9af67fbc8915f741711a8bb6fe744 *electron-v29.4.0-mas-x64.zip
+-2802872dfc6de0f0e2e8cef9d2f4f384e3d82b20ad36fc981c4e725dd2f2abcd *electron-v29.4.0-win32-arm64-pdb.zip
+-d49c954dc25ae9e4c75e61af80b9718014c52f016f43a29071913f0e7100c7bd *electron-v29.4.0-win32-arm64-symbols.zip
+-c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v29.4.0-win32-arm64-toolchain-profile.zip
+-483d692efbe4fb1231ff63afb8a236b2e22b486fbe5ac6abbc8b208abf94a4d3 *electron-v29.4.0-win32-arm64.zip
+-98458f49ba67a08e473d475a68a2818d9df076a5246fbc9b45403e8796f9d35b *electron-v29.4.0-win32-ia32-pdb.zip
+-69d505d4ae59d9dddf83c4e530e45dd7c5bc64d6da90cf4f851e523be9e51014 *electron-v29.4.0-win32-ia32-symbols.zip
+-c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v29.4.0-win32-ia32-toolchain-profile.zip
+-d5a21a17a64e9638f49f057356af23b51f56bd6a7fea3c2e0a28ff3186a7bc41 *electron-v29.4.0-win32-ia32.zip
+-521ee7b3398c4dc395b43dac86cd099e86a6123de2b43636ee805b7da014ed3f *electron-v29.4.0-win32-x64-pdb.zip
+-e33848ebd6c6e4ce431aa367bef887050947a136e883677cfc524ca5cabc1e98 *electron-v29.4.0-win32-x64-symbols.zip
+-c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v29.4.0-win32-x64-toolchain-profile.zip
+-e4ef85aa3608221f8a3e011c1b1c2d2d36093ad19bda12d16b3816929fb6c99b *electron-v29.4.0-win32-x64.zip
+-707ee08593289ee83514b4fc55123611309f995788f38a5ec03e285741aac1c8 *electron.d.ts
+-281b5f4a49de55fdb86b1662530f07f2ced1252c878eb7a941c88ede545339e0 *ffmpeg-v29.4.0-darwin-arm64.zip
+-0b735912df9b2ff3d03eb23942e03bc0116d82f1291d0a45cbde14177c2f3066 *ffmpeg-v29.4.0-darwin-x64.zip
+-4e2ba537d7c131abbd34168bce2c28cc9ef6262b217d5f4085afccfdf9635da6 *ffmpeg-v29.4.0-linux-arm64.zip
+-4aa56ad5d849f4e61af22678a179346b68aec9100282e1b8a43df25d95721677 *ffmpeg-v29.4.0-linux-armv7l.zip
+-0558e6e1f78229d303e16d4d8c290794baa9adc619fdd2ddccadb3ea241a1df4 *ffmpeg-v29.4.0-linux-x64.zip
+-224f15d8f96c75348cd7f1b85c4eab63468fae1e50ff4b1381e08011cf76e4f7 *ffmpeg-v29.4.0-mas-arm64.zip
+-175ec79f0dc4c5966d9a0ca6ec1674106340ecc64503585c12c2f854249af06f *ffmpeg-v29.4.0-mas-x64.zip
+-5fa13744b87fef1bfd24a37513677f446143e085504541f8ce97466803bd1893 *ffmpeg-v29.4.0-win32-arm64.zip
+-d7ba316bb7e13025c9db29e0acafebb540b7716c9f111e469733615d8521186a *ffmpeg-v29.4.0-win32-ia32.zip
+-35c70a28bcfd4f0b1f8c985d3d1348936bd60767d231ce28ba38f3daeeef64bb *ffmpeg-v29.4.0-win32-x64.zip
+-8c7228ea0ecab25a1f7fcd1ba9680684d19f9671a497113d71a851a53867b048 *hunspell_dictionaries.zip
+-7552547c8d585b9bc43518d239d7ce3ad7c5cad0346b07cdcfc1eab638b2b794 *libcxx-objects-v29.4.0-linux-arm64.zip
+-76054a779d4845ad752b625213ce8990f08dcc5b89aa20660dd4f2e817ba30a8 *libcxx-objects-v29.4.0-linux-armv7l.zip
+-761c317a9c874bd3d1118d0ecad33c4be23727f538cfbb42a08dd87c68da6039 *libcxx-objects-v29.4.0-linux-x64.zip
+-f98f9972cc30200b8e05815f5a9cd5cec04bdeee0e48ae2143cdaeff5db9d71d *libcxx_headers.zip
+-f0b0dd2be579baaf97901322ef489d03fae69a0b8524ea77b24fb3c896f73dd9 *libcxxabi_headers.zip
+-5da864ea23d70538298a40e0d037a5a461a6b74984e72fd4f0cd20904bccaed1 *mksnapshot-v29.4.0-darwin-arm64.zip
+-bde97bd7c69209ed6bf4cf1cdf7de622e3a9f50fe6b4dc4b5618eee868f47c62 *mksnapshot-v29.4.0-darwin-x64.zip
+-a3df9b9e6ef14efe5827d0256d8ecaebe6d8be130cfc3faac0dea76eb53b9b11 *mksnapshot-v29.4.0-linux-arm64-x64.zip
+-648b9dbca21194d663ddb706e6086a166e691263c764c80f836ae02c27e3657a *mksnapshot-v29.4.0-linux-armv7l-x64.zip
+-e7a4201cda3956380facc2b5b9d0b1020cc5e654fba44129fc7429a982411cc1 *mksnapshot-v29.4.0-linux-x64.zip
+-ffb44c45733675e0378f45fce25dafa95697d0c86179f8e46742ada16bc11aa1 *mksnapshot-v29.4.0-mas-arm64.zip
+-0242da3ca193206e56b88eb108502244bae35dcc587210bd0a32d9fa4cb71041 *mksnapshot-v29.4.0-mas-x64.zip
+-1445806dca6effbc60072bbde7997cefb62bdb7a9e295a090d26f27c3882685f *mksnapshot-v29.4.0-win32-arm64-x64.zip
+-09599adc3afb0a13ae87fc4b8ab97c729fe3689faa6a4f5f7a4a3cf0d9cc49d3 *mksnapshot-v29.4.0-win32-ia32.zip
+-84f80683d95665d29284386509bb104e840ff0b797bfbbd19da86b84d370aa49 *mksnapshot-v29.4.0-win32-x64.zip
++e462d1d1f42fbd95f59606138c5f2d127ec7a0194627e613429fd6589f38c778 *chromedriver-v22.3.27-darwin-arm64.zip
++59c89191158c810208dbe6a49015d9232e114330eca514efe362bdf1f9c8c819 *chromedriver-v22.3.27-darwin-x64.zip
++09d1b16ab31a17a914b9a871158458d34c7e5a52c7686ea923b9a9878e6d4539 *chromedriver-v22.3.27-linux-arm64.zip
++f020427cc1972928fd784b4f9ee912e8b42691c782c325fe7624aa2b38a7fcec *chromedriver-v22.3.27-linux-armv7l.zip
++2c0eb7ccc5d68ac52dfcf7264e8dc61de4a9480ededb464c35c0ad7db41b8e53 *chromedriver-v22.3.27-linux-x64.zip
++a6efc976fc8efd469ece8ef7349ba655128496929950beb7b4db4f910ca946fd *chromedriver-v22.3.27-mas-arm64.zip
++5b6dcd7edb370a88037cf858e63e0f03ead9c0089d337d6b5c6eee310dca228f *chromedriver-v22.3.27-mas-x64.zip
++e57141363f51445819436ca9320115931394e9349e6f6bfb2aa8123cb2a2ce21 *chromedriver-v22.3.27-win32-arm64.zip
++56e2a0e427cf889045ef533e350bb9be1c628c95d74b11e6477d654dba459b29 *chromedriver-v22.3.27-win32-ia32.zip
++8d01b742ca0e0f5b6d9eb73a2b650aaf5aeea4e060a6880bdfbf968d710793f7 *chromedriver-v22.3.27-win32-x64.zip
++918f116f80da1fdef14ba3a3a9bb628aac09cb6c3c5fff87cffca9d3c47771ff *electron-api.json
++e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-darwin-arm64-dsym-snapshot.zip
++dbff939cdfec7ce4d9fa16187fb69a357193ebc9ae4082e8da771dd5a5511a23 *electron-v22.3.27-darwin-arm64-dsym.zip
++6c67025cd392fbfd78fbb5676f437eaf62dbc083770899794f43ad10da07a311 *electron-v22.3.27-darwin-arm64-symbols.zip
++2b87e9f766692caaa16d7750bfab2f609c0eab906f55996c7d438d8e18ac8867 *electron-v22.3.27-darwin-arm64.zip
++57120f63f8b6aa91009aa20c76b75d4548b94ab0fdda7d62b835389d0ecc9ae2 *electron-v22.3.27-darwin-x64-dsym-snapshot.zip
++3552ff075bd25128bc6c0fc6a6aafa4db69db7299794aa40187ad87ddb0535b3 *electron-v22.3.27-darwin-x64-dsym.zip
++fef4cc317aeb4d6c790938dba14357932dba488e2116db84570edf0e3d1c5675 *electron-v22.3.27-darwin-x64-symbols.zip
++01f053d08cb2855acb14f0465f4e36324a41bd13b3b2ead142970a56df3e9db1 *electron-v22.3.27-darwin-x64.zip
++3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-arm64-debug.zip
++57806ef01cdceaecf6a4b7138aa035b91c63cc19b168adb91a45a855d724f6d0 *electron-v22.3.27-linux-arm64-symbols.zip
++60279395a5ce4eaf3c08f1e717771b203830902d3fe3a7c311bc37deb1a0e15e *electron-v22.3.27-linux-arm64.zip
++3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-armv7l-debug.zip
++136beb93675d0244e74ab51297c2f2cbe956c9ff8dfcdf74337a8e973cbc94f7 *electron-v22.3.27-linux-armv7l-symbols.zip
++9f8372606e5ede83cf1c73a3d8ff07047e4e3ef614aa89a76cd497dc06cf119d *electron-v22.3.27-linux-armv7l.zip
++6ac494b29e67781d55e3b4fbe73ffe2bdf1b422f883f3c265a753bc1547cc24a *electron-v22.3.27-linux-x64-debug.zip
++94b89f034554318d66098a6657d5bacaeb7f03ad98a2f856c8720aed31e75348 *electron-v22.3.27-linux-x64-symbols.zip
++631d8eb08098c48ce2b29421e74c69ac0312b1e42f445d8a805414ba1242bf3a *electron-v22.3.27-linux-x64.zip
++e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-mas-arm64-dsym-snapshot.zip
++b6cf5b125c6be773d3f915a64b13be9e96a4d44a1969c3de74d30cac9c73aafd *electron-v22.3.27-mas-arm64-dsym.zip
++19980e05fc846f45090a3e4571998981a33dccb5766ebfcfd375552bc99066eb *electron-v22.3.27-mas-arm64-symbols.zip
++7757470e871827b15c0b5c64e1734866e9334528689a69b34e64c15a9caada35 *electron-v22.3.27-mas-arm64.zip
++bf8f821d3650bbafa29ff4ea366799d13bda6e21aeab334f961a60a0d662e2b2 *electron-v22.3.27-mas-x64-dsym-snapshot.zip
++e082f5172e1ec429b688606a209eff0a20027b01bb5fac4782bc0b61f2d4d3d9 *electron-v22.3.27-mas-x64-dsym.zip
++f3313c2f9263e19cf9f59d16af86cd672f2581fb894c7b4c849a7cf3a7a989bf *electron-v22.3.27-mas-x64-symbols.zip
++b7c61f0c7c21377630572904ea8a499db9830a3e400672bb23da246c19e6e6a1 *electron-v22.3.27-mas-x64.zip
++3f0caf3642a756aa61c1cedb910fe36c9d0d252df479598940d3c56185da1349 *electron-v22.3.27-win32-arm64-pdb.zip
++a8e5997fcab7774f95301e8687d82538862944c03c50ec75702f32fb053c6b90 *electron-v22.3.27-win32-arm64-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-arm64-toolchain-profile.zip
++555371d63cae449625c169e9c32b00b1530cdee29bccef8b832f57cebfe8824e *electron-v22.3.27-win32-arm64.zip
++e9693674e527144ad4a4322d2eda8e19dd0042a63dadd51d3029effefe62dec6 *electron-v22.3.27-win32-ia32-pdb.zip
++819b0b9fe7ad888caec215f8e66aa07e3c476638617b969d0e169a973c58a479 *electron-v22.3.27-win32-ia32-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-ia32-toolchain-profile.zip
++1119ac7112590cb9c10a8c9b0bb5be65c0e11648a4f1311e6b7a5a00e497c2ce *electron-v22.3.27-win32-ia32.zip
++aa6a29c2b4a678ce5ec1e487d85e154d1e58c1c727b1858a24efe2610b7610c5 *electron-v22.3.27-win32-x64-pdb.zip
++8e9c3e42930b1937393b6478c37750f317872786c51f5296de09cec3c8af815e *electron-v22.3.27-win32-x64-symbols.zip
++948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-x64-toolchain-profile.zip
++ad723ed7dad32f9459f7a9de1fd6d718cf713c4809c2431503bea62ce8f786e6 *electron-v22.3.27-win32-x64.zip
++f7dd34e0b335a1980d6aebc62d4d1383a051d6a1f895052f73a3ff8f9dd03cce *electron.d.ts
++cc5f6b70a3d57e34492ee85a11346ed3a1aaf3b4f9f17c2594afe4048414e654 *ffmpeg-v22.3.27-darwin-arm64.zip
++ff4586bd27b1a0a4d19f9da9d1a77b30ff6afb6a9a868a3d4c9844b7d4aa8ae1 *ffmpeg-v22.3.27-darwin-x64.zip
++59d2e2b2f2cc515a86a4e0cfd1116d10a8b25a8d58d45bb04de3512e156c944b *ffmpeg-v22.3.27-linux-arm64.zip
++b9d3b227bee17666d395ee7882ef477a733c3eeef3f1d9f2e3616d2d02eb3376 *ffmpeg-v22.3.27-linux-armv7l.zip
++fa07ef910b23a4ef4b6761bc16d20c0e70ff0259325c4d523129e2d9c5084174 *ffmpeg-v22.3.27-linux-x64.zip
++5ecdc59a23417cc59ddb5a943cc2aa4fcad5da7c115d070fb697135662d1922e *ffmpeg-v22.3.27-mas-arm64.zip
++faee7693f94b51094210d2fb3355deb16fd1b15d4c04d4e51ab8f77633a50f58 *ffmpeg-v22.3.27-mas-x64.zip
++ab34f1ff4a781e71f6c268b5198e893ed4f6bd6962639eaa01779292e89bad0b *ffmpeg-v22.3.27-win32-arm64.zip
++b14e3730694de4763061d83bc3006e68c2b235de0bf087a64aedc10182eb8b79 *ffmpeg-v22.3.27-win32-ia32.zip
++9c503e5a180c756094c1bcba1d1f71f18eeb1f58ed00d7ed53a8442befce3f71 *ffmpeg-v22.3.27-win32-x64.zip
++d2869fbeb76c750dfdc7ab3cc18379ac7da596d3b67f96f7b37153410420a17b *hunspell_dictionaries.zip
++f5959546231f39e70fde4c10a21ec9cb6bf21792ce48260450a2fe8d79078f90 *libcxx-objects-v22.3.27-linux-arm64.zip
++64aede20ce330331b11021ac2a5bfb664cf85582d2d94a5fab83945ebd074720 *libcxx-objects-v22.3.27-linux-armv7l.zip
++25dcaf59ca47ed6ce9828b8134980f7ab7719623407aee6549335314b555d84c *libcxx-objects-v22.3.27-linux-x64.zip
++c38f100d27955a60e563aa0ffc5e03edbd37ad70ef5294e4021fd9971af262e7 *libcxx_headers.zip
++aa703a89c36fc6c3970e491321b09aa9c22387da7fc24e033cd6ff4f1bd69fb3 *libcxxabi_headers.zip
++160987240aafcf545ee73feeeda31cf9b9d59084a5268f2d8a83cf83703a7b72 *mksnapshot-v22.3.27-darwin-arm64.zip
++ed46ab6112a3e4aaf12b223e1761896fcfa44ccf13a4d01445b71272dcb22b21 *mksnapshot-v22.3.27-darwin-x64.zip
++3a0e5ef31b91d2b7beb28ebc87e2ab5bd1abc8a3ab1902a147322c8824601ab2 *mksnapshot-v22.3.27-linux-arm64-x64.zip
++2614d68292d6267e8d7d2a598c605938d48c84ce895607137599ae4841086e41 *mksnapshot-v22.3.27-linux-armv7l-x64.zip
++cf128df524c9c5e6916f41dcc49d094834cdad7d7cbb050deee9d55645a3bcab *mksnapshot-v22.3.27-linux-x64.zip
++0b02cab2889af3576c60f3b1912717827811c0084c54d636ee3f8bc33417e53d *mksnapshot-v22.3.27-mas-arm64.zip
++a9cffdd62850d4b62793556ed1aaa13664a75a26837543a364400e4fcd5ee4ea *mksnapshot-v22.3.27-mas-x64.zip
++3d69cf2b841f79892141ca5d5335e156bc2fda4208c172406a247786089fe4d1 *mksnapshot-v22.3.27-win32-arm64-x64.zip
++6323cffb19bbd7b8ba99080e1299f91f75ed96e4ffbe226a7dc5000a0db8bc3c *mksnapshot-v22.3.27-win32-ia32.zip
++e61ed6727564ff5155c0c6df5394092c16f55c84542b55de6381d7b77fb638db *mksnapshot-v22.3.27-win32-x64.zip
+\ No newline at end of file
+diff --git a/build/checksums/nodejs.txt b/build/checksums/nodejs.txt
+index bcc9340..edc1af9 100644
+--- a/build/checksums/nodejs.txt
++++ b/build/checksums/nodejs.txt
+@@ -1,7 +1,34 @@
+-e0065c61f340e85106a99c4b54746c5cee09d59b08c5712f67f99e92aa44995d  node-v20.11.1-darwin-arm64.tar.gz
+-c52e7fb0709dbe63a4cbe08ac8af3479188692937a7bd8e776e0eedfa33bb848  node-v20.11.1-darwin-x64.tar.gz
+-e34ab2fc2726b4abd896bcbff0250e9b2da737cbd9d24267518a802ed0606f3b  node-v20.11.1-linux-arm64.tar.gz
+-e42791f76ece283c7a4b97fbf716da72c5128c54a9779f10f03ae74a4bcfb8f6  node-v20.11.1-linux-armv7l.tar.gz
+-bf3a779bef19452da90fb88358ec2c57e0d2f882839b20dc6afc297b6aafc0d7  node-v20.11.1-linux-x64.tar.gz
+-a5a9d30a8f7d56e00ccb27c1a7d24c8d0bc96a2689ebba8eb7527698793496f1  win-arm64/node.exe
+-bc585910690318aaebe3c57669cb83ca9d1e5791efd63195e238f54686e6c2ec  win-x64/node.exe
++dfb37570ef34ac04f34c26d0ec558df60a9665df5961c01c1657c0ca495f2f01  node-v16.17.1-aix-ppc64.tar.gz
++f9f02f7872e2e8ee54320fce13deb9d56904f32bb0615b6e21aa3371d8899150  node-v16.17.1-darwin-arm64.tar.gz
++09a45f60bfb9dfbea4f69044dc733ef983945acd92ca89ccccac267f3d71bd44  node-v16.17.1-darwin-arm64.tar.xz
++3db26761ad8493b894d42260d7e65094b7af9bc473588739e61bc1c32d6ff955  node-v16.17.1-darwin-x64.tar.gz
++8e7089956fa01cf7d0045945c0863d282dc6818fb0476237c1396497e29a4254  node-v16.17.1-darwin-x64.tar.xz
++35ccb95caf02cda3bd680da4350a8ae5d666a7a9eae3afe5c2a1b3ef29aef108  node-v16.17.1-headers.tar.gz
++554c8d1b4b16e0f4c073b9df7c49c893716a3a533f25ac646f23619f5ccee7df  node-v16.17.1-headers.tar.xz
++adc7032888d4e672a4aac886baede8c04fccdd1a2e7ab4bcf325e3f336f44a3d  node-v16.17.1-linux-arm64.tar.gz
++3dfb8fd8f6b97df69cdc56524abc906c50ef1d0bf091188616802e6c7c731389  node-v16.17.1-linux-arm64.tar.xz
++aeab05e35f1d2824ecfb88ca321f1408b44d292b2775f2890972c828e00216d0  node-v16.17.1-linux-armv7l.tar.gz
++a035ceefb5e16f5fce98c8ddfdf721b96eec20542c72fb8781bcbb6ef20c5550  node-v16.17.1-linux-armv7l.tar.xz
++1f48de7bed99e973c4c50f1b7fc99fc9af5144d093fd6d2b50a1e43b5818bf05  node-v16.17.1-linux-ppc64le.tar.gz
++70305934661f89fca64053b85317a75f233d5e3fdb2caa6546a19262a519cf20  node-v16.17.1-linux-ppc64le.tar.xz
++029dad48018bda07b481213816549b632059fc673c30fdc7a353e04619128344  node-v16.17.1-linux-s390x.tar.gz
++1a47f604944c6aff37cb7483503155671cdb34bda9bfb8962007bc440fa04d77  node-v16.17.1-linux-s390x.tar.xz
++da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0  node-v16.17.1-linux-x64.tar.gz
++06ba2eb34aa385967f5f58c87a44753f83212f6cccea892b33f80a2e7fda8384  node-v16.17.1-linux-x64.tar.xz
++12d10476ea7483298364c810c037b9316d1a73dc8c81cfeff7d794aecadde498  node-v16.17.1.pkg
++e423985f6019b2026f9a191adb56a96ae83ecd56cdf839cf94aa980168b7a90f  node-v16.17.1.tar.gz
++6721feb4152d56d2c6b358ce397abd5a7f1daf09ee2e25c5021b9b4d3f86a330  node-v16.17.1.tar.xz
++9777e8c4b2864c5b54a0e4e9400f14887db68560a09b94b4113b560a64d1e680  node-v16.17.1-win-x64.7z
++ed290151efb417262b9808a70738d4ab79e9d53653a6a9f4b8dd97912e279dce  node-v16.17.1-win-x64.zip
++0f8101648d5c9e49e89fee541da9e574f899716c32b7c51a732b1766b9fc4526  node-v16.17.1-win-x86.7z
++189b5e8b23226403e7b07a46614de19b444d369e694901e3668e2f549799cbcd  node-v16.17.1-win-x86.zip
++1bdff65fb7642425c0d6826084d63c4be43520316f0ea0b46e6a51999a0ed7fc  node-v16.17.1-x64.msi
++b737eb23a2c67c253b9364b5284123faf5220d567615bebd4ec4b81070e4d177  node-v16.17.1-x86.msi
++f518a70dcab7c3fac5b2e1ef100b4f628edfb160f4fafa9a94ef222da8a6e9ab  win-x64/node.exe
++2f459a64647db493da63c790ce368ad54f59f086d9f22f59c5018680420197b3  win-x64/node.lib
++23215ce7d1e9de9777c3407239e7cf18d29d60f757b772219421ab361ac67c74  win-x64/node_pdb.7z
++8e32ec12028fd3e3147435be79a858ed9c870aaafa1fcb291362307ef3c47547  win-x64/node_pdb.zip
++2393aff88be19dbe0205cbde4ff0c1d89911b15de5c99c80f6e5e29604eecd12  win-x86/node.exe
++5018c3d42f3fbacbd06cb943b3f2696c8e67ca9bdf6864d0e263d6d6911dffd2  win-x86/node.lib
++05a4db56444a60ee70b0d2642d7f2d82a33339894d2d73bd07b1a41d6c869e04  win-x86/node_pdb.7z
++8f86eacb7f13a1bf6738cb0819d7854a2abca40fc2e9e1f91421e44ba52cad7e  win-x86/node_pdb.zip
+diff --git a/build/lib/builtInExtensionsCG.js b/build/lib/builtInExtensionsCG.js
+index 30b6791..df22f2d 100644
+--- a/build/lib/builtInExtensionsCG.js
++++ b/build/lib/builtInExtensionsCG.js
+@@ -4,6 +4,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ Object.defineProperty(exports, "__esModule", { value: true });
++const node_fetch_1 = require("node-fetch");
+ const fs = require("fs");
+ const path = require("path");
+ const url = require("url");
+@@ -22,9 +23,9 @@ async function downloadExtensionDetails(extension) {
+     const repositoryContentBaseUrl = `https://${token ? `${token}@` : ''}${contentBasePath}/${repository}/v${extension.version}`;
+     async function getContent(fileName) {
+         try {
+-            const response = await fetch(`${repositoryContentBaseUrl}/${fileName}`);
++            const response = await (0, node_fetch_1.default)(`${repositoryContentBaseUrl}/${fileName}`);
+             if (response.ok) {
+-                return { fileName, body: Buffer.from(await response.arrayBuffer()) };
++                return { fileName, body: await response.buffer() };
+             }
+             else if (response.status === 404) {
+                 return { fileName, body: undefined };
+@@ -76,4 +77,4 @@ main().then(() => {
+     console.error(err);
+     process.exit(1);
+ });
+-//# sourceMappingURL=builtInExtensionsCG.js.map
+\ No newline at end of file
++//# sourceMappingURL=builtInExtensionsCG.js.map
+diff --git a/build/lib/builtInExtensionsCG.ts b/build/lib/builtInExtensionsCG.ts
+index 62d0949..a84f431 100644
+--- a/build/lib/builtInExtensionsCG.ts
++++ b/build/lib/builtInExtensionsCG.ts
+@@ -3,6 +3,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ 
++import fetch from 'node-fetch';
+ import * as fs from 'fs';
+ import * as path from 'path';
+ import * as url from 'url';
+@@ -29,7 +30,7 @@ async function downloadExtensionDetails(extension: IExtensionDefinition): Promis
+ 		try {
+ 			const response = await fetch(`${repositoryContentBaseUrl}/${fileName}`);
+ 			if (response.ok) {
+-				return { fileName, body: Buffer.from(await response.arrayBuffer()) };
++				return { fileName, body: await response.buffer() };
+ 			} else if (response.status === 404) {
+ 				return { fileName, body: undefined };
+ 			} else {
+diff --git a/build/lib/compilation.ts b/build/lib/compilation.ts
+index b88d0d2..cf7fbda 100644
+--- a/build/lib/compilation.ts
++++ b/build/lib/compilation.ts
+@@ -226,7 +226,7 @@ class MonacoGenerator {
+ 		}
+ 	}
+ 
+-	private _executeSoonTimer: NodeJS.Timeout | null = null;
++	private _executeSoonTimer: NodeJS.Timer | null = null;
+ 	private _executeSoon(): void {
+ 		if (this._executeSoonTimer !== null) {
+ 			clearTimeout(this._executeSoonTimer);
+diff --git a/build/lib/fetch.js b/build/lib/fetch.js
+index 2fed63b..88491b6 100644
+--- a/build/lib/fetch.js
++++ b/build/lib/fetch.js
+@@ -8,6 +8,7 @@ exports.fetchUrls = fetchUrls;
+ exports.fetchUrl = fetchUrl;
+ exports.fetchGithub = fetchGithub;
+ const es = require("event-stream");
++const node_fetch_1 = require("node-fetch");
+ const VinylFile = require("vinyl");
+ const log = require("fancy-log");
+ const ansiColors = require("ansi-colors");
+@@ -43,7 +44,7 @@ async function fetchUrl(url, options, retries = 10, retryDelay = 1000) {
+         const controller = new AbortController();
+         const timeout = setTimeout(() => controller.abort(), 30 * 1000);
+         try {
+-            const response = await fetch(url, {
++            const response = await (0, node_fetch_1.default)(url, {
+                 ...options.nodeFetchOptions,
+                 signal: controller.signal /* Typings issue with lib.dom.d.ts */
+             });
+@@ -51,7 +52,7 @@ async function fetchUrl(url, options, retries = 10, retryDelay = 1000) {
+                 log(`Fetch completed: Status ${response.status}. Took ${ansiColors.magenta(`${new Date().getTime() - startTime} ms`)}`);
+             }
+             if (response.ok && (response.status >= 200 && response.status < 300)) {
+-                const contents = Buffer.from(await response.arrayBuffer());
++                const contents = await response.buffer();
+                 if (options.checksumSha256) {
+                     const actualSHA256Checksum = crypto.createHash('sha256').update(contents).digest('hex');
+                     if (actualSHA256Checksum !== options.checksumSha256) {
+@@ -135,4 +136,4 @@ function fetchGithub(repo, options) {
+         }
+     }));
+ }
+-//# sourceMappingURL=fetch.js.map
+\ No newline at end of file
++//# sourceMappingURL=fetch.js.map
+diff --git a/build/lib/fetch.ts b/build/lib/fetch.ts
+index dc1de77..ac9ac7c 100644
+--- a/build/lib/fetch.ts
++++ b/build/lib/fetch.ts
+@@ -4,6 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ 
+ import * as es from 'event-stream';
++import fetch, { RequestInit } from 'node-fetch';
+ import * as VinylFile from 'vinyl';
+ import * as log from 'fancy-log';
+ import * as ansiColors from 'ansi-colors';
+@@ -60,7 +61,7 @@ export async function fetchUrl(url: string, options: IFetchOptions, retries = 10
+ 				log(`Fetch completed: Status ${response.status}. Took ${ansiColors.magenta(`${new Date().getTime() - startTime} ms`)}`);
+ 			}
+ 			if (response.ok && (response.status >= 200 && response.status < 300)) {
+-				const contents = Buffer.from(await response.arrayBuffer());
++				const contents = await response.buffer();
+ 				if (options.checksumSha256) {
+ 					const actualSHA256Checksum = crypto.createHash('sha256').update(contents).digest('hex');
+ 					if (actualSHA256Checksum !== options.checksumSha256) {
+diff --git a/build/lib/policies.js b/build/lib/policies.js
+index 466295b..2b9d8af 100644
+--- a/build/lib/policies.js
++++ b/build/lib/policies.js
+@@ -10,6 +10,7 @@ const path = require("path");
+ const byline = require("byline");
+ const ripgrep_1 = require("@vscode/ripgrep");
+ const Parser = require("tree-sitter");
++const node_fetch_1 = require("node-fetch");
+ const { typescript } = require('tree-sitter-typescript');
+ const product = require('../../product.json');
+ const packageJson = require('../../package.json');
+@@ -425,7 +426,7 @@ async function getSpecificNLS(resourceUrlTemplate, languageId, version) {
+         path: 'extension/translations/main.i18n.json'
+     };
+     const url = resourceUrlTemplate.replace(/\{([^}]+)\}/g, (_, key) => resource[key]);
+-    const res = await fetch(url);
++    const res = await (0, node_fetch_1.default)(url);
+     if (res.status !== 200) {
+         throw new Error(`[${res.status}] Error downloading language pack ${languageId}@${version}`);
+     }
+@@ -446,7 +447,7 @@ function compareVersions(a, b) {
+     return a[2] - b[2];
+ }
+ async function queryVersions(serviceUrl, languageId) {
+-    const res = await fetch(`${serviceUrl}/extensionquery`, {
++    const res = await (0, node_fetch_1.default)(`${serviceUrl}/extensionquery`, {
+         method: 'POST',
+         headers: {
+             'Accept': 'application/json;api-version=3.0-preview.1',
+@@ -523,4 +524,4 @@ if (require.main === module) {
+         process.exit(1);
+     });
+ }
+-//# sourceMappingURL=policies.js.map
+\ No newline at end of file
++//# sourceMappingURL=policies.js.map
+diff --git a/build/lib/policies.ts b/build/lib/policies.ts
+index 68f6989..0e89508 100644
+--- a/build/lib/policies.ts
++++ b/build/lib/policies.ts
+@@ -9,6 +9,7 @@ import * as path from 'path';
+ import * as byline from 'byline';
+ import { rgPath } from '@vscode/ripgrep';
+ import * as Parser from 'tree-sitter';
++import fetch from 'node-fetch';
+ const { typescript } = require('tree-sitter-typescript');
+ const product = require('../../product.json');
+ const packageJson = require('../../package.json');
+diff --git a/build/linux/debian/dep-lists.js b/build/linux/debian/dep-lists.js
+index d843c09..1344cb0 100644
+--- a/build/linux/debian/dep-lists.js
++++ b/build/linux/debian/dep-lists.js
+@@ -13,6 +13,8 @@ exports.additionalDeps = [
+     'libnss3 (>= 3.26)',
+     'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3', // For Breakpad crash reports.
+     'xdg-utils (>= 1.0.2)', // OS integration
++    'libgssapi-krb5-2 (>= 1.16)',
++    'libkrb5-3 (>= 1.16)'
+ ];
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends
+ // Dependencies that we can only recommend
+@@ -31,22 +33,22 @@ exports.referenceGeneratedDepsByArch = {
+         'libc6 (>= 2.16)',
+         'libc6 (>= 2.17)',
+         'libc6 (>= 2.2.5)',
+-        'libc6 (>= 2.28)',
+         'libcairo2 (>= 1.6.0)',
+         'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-        'libdbus-1-3 (>= 1.9.14)',
+-        'libdrm2 (>= 2.4.75)',
+-        'libexpat1 (>= 2.1~beta3)',
++        'libdbus-1-3 (>= 1.5.12)',
++        'libdrm2 (>= 2.4.60)',
++        'libexpat1 (>= 2.0.1)',
+         'libgbm1 (>= 17.1.0~rc2)',
+-        'libglib2.0-0 (>= 2.37.3)',
+-        'libgssapi-krb5-2 (>= 1.17)',
++        'libglib2.0-0 (>= 2.16.0)',
++        'libgssapi-krb5-2 (>= 1.16)',
+         'libgtk-3-0 (>= 3.9.10)',
+         'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-        'libkrb5-3 (>= 1.6.dfsg.2)',
++        'libkrb5-3 (>= 1.16)',
+         'libnspr4 (>= 2:4.9-2~)',
+-        'libnss3 (>= 2:3.30)',
++        'libnss3 (>= 2:3.22)',
+         'libnss3 (>= 3.26)',
+         'libpango-1.0-0 (>= 1.14.0)',
++        'libsecret-1-0 (>= 0.18)',
+         'libx11-6',
+         'libx11-6 (>= 2:1.4.99.1)',
+         'libxcb1 (>= 1.9.2)',
+@@ -54,8 +56,8 @@ exports.referenceGeneratedDepsByArch = {
+         'libxdamage1 (>= 1:1.1)',
+         'libxext6',
+         'libxfixes3',
+-        'libxkbcommon0 (>= 0.5.0)',
+-        'libxkbfile1 (>= 1:1.1.0)',
++        'libxkbcommon0 (>= 0.4.1)',
++        'libxkbfile1',
+         'libxrandr2',
+         'xdg-utils (>= 1.0.2)'
+     ],
+@@ -67,25 +69,25 @@ exports.referenceGeneratedDepsByArch = {
+         'libatspi2.0-0 (>= 2.9.90)',
+         'libc6 (>= 2.16)',
+         'libc6 (>= 2.17)',
+-        'libc6 (>= 2.28)',
+         'libc6 (>= 2.4)',
++        'libc6 (>= 2.8)',
+         'libc6 (>= 2.9)',
+         'libcairo2 (>= 1.6.0)',
+         'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-        'libdbus-1-3 (>= 1.9.14)',
+-        'libdrm2 (>= 2.4.75)',
+-        'libexpat1 (>= 2.1~beta3)',
++        'libdbus-1-3 (>= 1.5.12)',
++        'libdrm2 (>= 2.4.60)',
++        'libexpat1 (>= 2.0.1)',
+         'libgbm1 (>= 17.1.0~rc2)',
+-        'libglib2.0-0 (>= 2.37.3)',
+-        'libgssapi-krb5-2 (>= 1.17)',
++        'libglib2.0-0 (>= 2.12.0)',
++        'libgssapi-krb5-2 (>= 1.16)',
+         'libgtk-3-0 (>= 3.9.10)',
+         'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-        'libkrb5-3 (>= 1.6.dfsg.2)',
++        'libkrb5-3 (>= 1.16)',
+         'libnspr4 (>= 2:4.9-2~)',
+-        'libnss3 (>= 2:3.30)',
++        'libnss3 (>= 2:3.22)',
+         'libnss3 (>= 3.26)',
+         'libpango-1.0-0 (>= 1.14.0)',
+-        'libstdc++6 (>= 4.1.1)',
++        'libsecret-1-0 (>= 0.18)',
+         'libstdc++6 (>= 5)',
+         'libstdc++6 (>= 5.2)',
+         'libstdc++6 (>= 6)',
+@@ -96,8 +98,8 @@ exports.referenceGeneratedDepsByArch = {
+         'libxdamage1 (>= 1:1.1)',
+         'libxext6',
+         'libxfixes3',
+-        'libxkbcommon0 (>= 0.5.0)',
+-        'libxkbfile1 (>= 1:1.1.0)',
++        'libxkbcommon0 (>= 0.4.1)',
++        'libxkbfile1',
+         'libxrandr2',
+         'xdg-utils (>= 1.0.2)'
+     ],
+@@ -108,23 +110,22 @@ exports.referenceGeneratedDepsByArch = {
+         'libatk1.0-0 (>= 2.2.0)',
+         'libatspi2.0-0 (>= 2.9.90)',
+         'libc6 (>= 2.17)',
+-        'libc6 (>= 2.28)',
+         'libcairo2 (>= 1.6.0)',
+         'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-        'libdbus-1-3 (>= 1.9.14)',
+-        'libdrm2 (>= 2.4.75)',
+-        'libexpat1 (>= 2.1~beta3)',
++        'libdbus-1-3 (>= 1.0.2)',
++        'libdrm2 (>= 2.4.60)',
++        'libexpat1 (>= 2.0.1)',
+         'libgbm1 (>= 17.1.0~rc2)',
+-        'libglib2.0-0 (>= 2.37.3)',
+-        'libgssapi-krb5-2 (>= 1.17)',
++        'libglib2.0-0 (>= 2.12.0)',
++        'libgssapi-krb5-2 (>= 1.16)',
+         'libgtk-3-0 (>= 3.9.10)',
+         'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-        'libkrb5-3 (>= 1.6.dfsg.2)',
++        'libkrb5-3 (>= 1.16)',
+         'libnspr4 (>= 2:4.9-2~)',
+-        'libnss3 (>= 2:3.30)',
++        'libnss3 (>= 2:3.22)',
+         'libnss3 (>= 3.26)',
+         'libpango-1.0-0 (>= 1.14.0)',
+-        'libstdc++6 (>= 4.1.1)',
++        'libsecret-1-0 (>= 0.18)',
+         'libstdc++6 (>= 5)',
+         'libstdc++6 (>= 5.2)',
+         'libstdc++6 (>= 6)',
+@@ -135,10 +136,10 @@ exports.referenceGeneratedDepsByArch = {
+         'libxdamage1 (>= 1:1.1)',
+         'libxext6',
+         'libxfixes3',
+-        'libxkbcommon0 (>= 0.5.0)',
+-        'libxkbfile1 (>= 1:1.1.0)',
++        'libxkbcommon0 (>= 0.4.1)',
++        'libxkbfile1',
+         'libxrandr2',
+         'xdg-utils (>= 1.0.2)'
+     ]
+ };
+-//# sourceMappingURL=dep-lists.js.map
+\ No newline at end of file
++//# sourceMappingURL=dep-lists.js.map
+diff --git a/build/linux/debian/dep-lists.ts b/build/linux/debian/dep-lists.ts
+index 4028370..2a72b94 100644
+--- a/build/linux/debian/dep-lists.ts
++++ b/build/linux/debian/dep-lists.ts
+@@ -11,6 +11,8 @@ export const additionalDeps = [
+ 	'libnss3 (>= 3.26)',
+ 	'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3', // For Breakpad crash reports.
+ 	'xdg-utils (>= 1.0.2)', // OS integration
++	'libgssapi-krb5-2 (>= 1.16)',
++	'libkrb5-3 (>= 1.16)'
+ ];
+ 
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends
+@@ -31,22 +33,23 @@ export const referenceGeneratedDepsByArch = {
+ 		'libc6 (>= 2.16)',
+ 		'libc6 (>= 2.17)',
+ 		'libc6 (>= 2.2.5)',
+-		'libc6 (>= 2.28)',
+ 		'libcairo2 (>= 1.6.0)',
+ 		'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-		'libdbus-1-3 (>= 1.9.14)',
+-		'libdrm2 (>= 2.4.75)',
+-		'libexpat1 (>= 2.1~beta3)',
++		'libdbus-1-3 (>= 1.5.12)',
++		'libdrm2 (>= 2.4.60)',
++		'libexpat1 (>= 2.0.1)',
+ 		'libgbm1 (>= 17.1.0~rc2)',
+ 		'libglib2.0-0 (>= 2.37.3)',
+-		'libgssapi-krb5-2 (>= 1.17)',
++		'libglib2.0-0 (>= 2.16.0)',
++		'libgssapi-krb5-2 (>= 1.16)',
+ 		'libgtk-3-0 (>= 3.9.10)',
+ 		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-		'libkrb5-3 (>= 1.6.dfsg.2)',
++		'libkrb5-3 (>= 1.16)',
+ 		'libnspr4 (>= 2:4.9-2~)',
+-		'libnss3 (>= 2:3.30)',
++		'libnss3 (>= 2:3.22)',
+ 		'libnss3 (>= 3.26)',
+ 		'libpango-1.0-0 (>= 1.14.0)',
++		'libsecret-1-0 (>= 0.18)',
+ 		'libx11-6',
+ 		'libx11-6 (>= 2:1.4.99.1)',
+ 		'libxcb1 (>= 1.9.2)',
+@@ -54,8 +57,8 @@ export const referenceGeneratedDepsByArch = {
+ 		'libxdamage1 (>= 1:1.1)',
+ 		'libxext6',
+ 		'libxfixes3',
+-		'libxkbcommon0 (>= 0.5.0)',
+-		'libxkbfile1 (>= 1:1.1.0)',
++		'libxkbcommon0 (>= 0.4.1)',
++		'libxkbfile1',
+ 		'libxrandr2',
+ 		'xdg-utils (>= 1.0.2)'
+ 	],
+@@ -67,24 +70,25 @@ export const referenceGeneratedDepsByArch = {
+ 		'libatspi2.0-0 (>= 2.9.90)',
+ 		'libc6 (>= 2.16)',
+ 		'libc6 (>= 2.17)',
+-		'libc6 (>= 2.28)',
+ 		'libc6 (>= 2.4)',
++		'libc6 (>= 2.8)',
+ 		'libc6 (>= 2.9)',
+ 		'libcairo2 (>= 1.6.0)',
+ 		'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-		'libdbus-1-3 (>= 1.9.14)',
+-		'libdrm2 (>= 2.4.75)',
+-		'libexpat1 (>= 2.1~beta3)',
++		'libdbus-1-3 (>= 1.5.12)',
++		'libdrm2 (>= 2.4.60)',
++		'libexpat1 (>= 2.0.1)',
+ 		'libgbm1 (>= 17.1.0~rc2)',
+-		'libglib2.0-0 (>= 2.37.3)',
+-		'libgssapi-krb5-2 (>= 1.17)',
++		'libglib2.0-0 (>= 2.16.0)',
++		'libgssapi-krb5-2 (>= 1.16)',
+ 		'libgtk-3-0 (>= 3.9.10)',
+ 		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-		'libkrb5-3 (>= 1.6.dfsg.2)',
++		'libkrb5-3 (>= 1.16)',
+ 		'libnspr4 (>= 2:4.9-2~)',
+-		'libnss3 (>= 2:3.30)',
++		'libnss3 (>= 2:3.22)',
+ 		'libnss3 (>= 3.26)',
+ 		'libpango-1.0-0 (>= 1.14.0)',
++		'libsecret-1-0 (>= 0.18)',
+ 		'libstdc++6 (>= 4.1.1)',
+ 		'libstdc++6 (>= 5)',
+ 		'libstdc++6 (>= 5.2)',
+@@ -96,8 +100,8 @@ export const referenceGeneratedDepsByArch = {
+ 		'libxdamage1 (>= 1:1.1)',
+ 		'libxext6',
+ 		'libxfixes3',
+-		'libxkbcommon0 (>= 0.5.0)',
+-		'libxkbfile1 (>= 1:1.1.0)',
++		'libxkbcommon0 (>= 0.4.1)',
++		'libxkbfile1',
+ 		'libxrandr2',
+ 		'xdg-utils (>= 1.0.2)'
+ 	],
+@@ -108,22 +112,23 @@ export const referenceGeneratedDepsByArch = {
+ 		'libatk1.0-0 (>= 2.2.0)',
+ 		'libatspi2.0-0 (>= 2.9.90)',
+ 		'libc6 (>= 2.17)',
+-		'libc6 (>= 2.28)',
+ 		'libcairo2 (>= 1.6.0)',
+ 		'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3',
+-		'libdbus-1-3 (>= 1.9.14)',
+-		'libdrm2 (>= 2.4.75)',
+-		'libexpat1 (>= 2.1~beta3)',
++		'libdbus-1-3 (>= 1.5.12)',
++		'libdrm2 (>= 2.4.60)',
++		'libexpat1 (>= 2.0.1)',
+ 		'libgbm1 (>= 17.1.0~rc2)',
+ 		'libglib2.0-0 (>= 2.37.3)',
+-		'libgssapi-krb5-2 (>= 1.17)',
++		'libglib2.0-0 (>= 2.16.0)',
++		'libgssapi-krb5-2 (>= 1.16)',
+ 		'libgtk-3-0 (>= 3.9.10)',
+ 		'libgtk-3-0 (>= 3.9.10) | libgtk-4-1',
+-		'libkrb5-3 (>= 1.6.dfsg.2)',
++		'libkrb5-3 (>= 1.16)',
+ 		'libnspr4 (>= 2:4.9-2~)',
+-		'libnss3 (>= 2:3.30)',
++		'libnss3 (>= 2:3.22)',
+ 		'libnss3 (>= 3.26)',
+ 		'libpango-1.0-0 (>= 1.14.0)',
++		'libsecret-1-0 (>= 0.18)',
+ 		'libstdc++6 (>= 4.1.1)',
+ 		'libstdc++6 (>= 5)',
+ 		'libstdc++6 (>= 5.2)',
+@@ -135,8 +140,8 @@ export const referenceGeneratedDepsByArch = {
+ 		'libxdamage1 (>= 1:1.1)',
+ 		'libxext6',
+ 		'libxfixes3',
+-		'libxkbcommon0 (>= 0.5.0)',
+-		'libxkbfile1 (>= 1:1.1.0)',
++		'libxkbcommon0 (>= 0.4.1)',
++		'libxkbfile1',
+ 		'libxrandr2',
+ 		'xdg-utils (>= 1.0.2)'
+ 	]
+diff --git a/build/linux/debian/install-sysroot.js b/build/linux/debian/install-sysroot.js
+index feca7d3..5000b9b 100644
+--- a/build/linux/debian/install-sysroot.js
++++ b/build/linux/debian/install-sysroot.js
+@@ -11,6 +11,7 @@ const os_1 = require("os");
+ const fs = require("fs");
+ const https = require("https");
+ const path = require("path");
++const fetch = require("node-fetch");
+ const crypto_1 = require("crypto");
+ const ansiColors = require("ansi-colors");
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:build/linux/sysroot_scripts/install-sysroot.py.
+@@ -214,4 +215,4 @@ async function getChromiumSysroot(arch) {
+     fs.writeFileSync(stamp, url);
+     return sysroot;
+ }
+-//# sourceMappingURL=install-sysroot.js.map
+\ No newline at end of file
++//# sourceMappingURL=install-sysroot.js.map
+diff --git a/build/linux/debian/install-sysroot.ts b/build/linux/debian/install-sysroot.ts
+index aa417dc..b2e3689 100644
+--- a/build/linux/debian/install-sysroot.ts
++++ b/build/linux/debian/install-sysroot.ts
+@@ -8,6 +8,7 @@ import { tmpdir } from 'os';
+ import * as fs from 'fs';
+ import * as https from 'https';
+ import * as path from 'path';
++import * as fetch from 'node-fetch';
+ import { createHash } from 'crypto';
+ import { DebianArchString } from './types';
+ import * as ansiColors from 'ansi-colors';
+diff --git a/build/package.json b/build/package.json
+index 2b89bbc..a207051 100644
+--- a/build/package.json
++++ b/build/package.json
+@@ -4,7 +4,7 @@
+   "license": "MIT",
+   "devDependencies": {
+     "@azure/cosmos": "^3",
+-    "@azure/identity": "^3.4.1",
++    "@azure/identity": "3.3.2",
+     "@azure/storage-blob": "^12.17.0",
+     "@electron/get": "^2.0.0",
+     "@types/ansi-colors": "^3.2.0",
+@@ -48,6 +48,7 @@
+     "jsonc-parser": "^2.3.0",
+     "mime": "^1.4.1",
+     "mkdirp": "^1.0.4",
++    "node-fetch": "2.7.0",
+     "source-map": "0.6.1",
+     "ternary-stream": "^3.0.0",
+     "through2": "^4.0.2",
+@@ -56,6 +57,14 @@
+     "workerpool": "^6.4.0",
+     "yauzl": "^2.10.0"
+   },
++  "resolutions": {
++    "@azure/core-auth": "1.5.0",
++    "@azure/core-client": "1.7.3",
++    "@azure/core-lro": "2.5.4",
++    "@azure/core-rest-pipeline": "1.12.2",
++    "@azure/core-tracing": "1.0.1",
++    "@azure/core-util": "1.6.1"
++  },
+   "scripts": {
+     "compile": "../node_modules/.bin/tsc -p tsconfig.build.json",
+     "watch": "../node_modules/.bin/tsc -p tsconfig.build.json --watch",
+diff --git a/cgmanifest.json b/cgmanifest.json
+index 6174734..f08c529 100644
+--- a/cgmanifest.json
++++ b/cgmanifest.json
+@@ -6,7 +6,7 @@
+ 				"git": {
+ 					"name": "chromium",
+ 					"repositoryUrl": "https://chromium.googlesource.com/chromium/src",
+-					"commitHash": "f1a45d7ded05d64ca8136cc142ddc0c271b1dd43"
++					"commitHash": "513ac8b2c47c7e1ac6b9f4fb5ea98e965cf29b66"
+ 				}
+ 			},
+ 			"licenseDetail": [
+@@ -40,7 +40,7 @@
+ 				"SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+ 			],
+ 			"isOnlyProductionDependency": true,
+-			"version": "122.0.6261.156"
++			"version": "108.0.5359.215"
+ 		},
+ 		{
+ 			"component": {
+@@ -48,7 +48,7 @@
+ 				"git": {
+ 					"name": "ffmpeg",
+ 					"repositoryUrl": "https://chromium.googlesource.com/chromium/third_party/ffmpeg",
+-					"commitHash": "17525de887d54b970ffdd421a0879c1db1952307"
++					"commitHash": "b9f01c3c54576330b2cf8918c54d5ee5be8faefe"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+@@ -516,11 +516,11 @@
+ 				"git": {
+ 					"name": "nodejs",
+ 					"repositoryUrl": "https://github.com/nodejs/node",
+-					"commitHash": "9b1bf44ea9e7785e38c93b7d22d32dbca262df6c"
++					"commitHash": "6b06e89c7dfccec6792008302af1cee57649445c"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+-			"version": "20.11.1"
++			"version": "16.17.1"
+ 		},
+ 		{
+ 			"component": {
+@@ -528,12 +528,12 @@
+ 				"git": {
+ 					"name": "electron",
+ 					"repositoryUrl": "https://github.com/electron/electron",
+-					"commitHash": "f9ed0eaee4b172733872c2f84e5061882dd08e5c"
++					"commitHash": "e2dac668c680a8b58f204ce14ad88431a2db4339"
+ 				}
+ 			},
+ 			"isOnlyProductionDependency": true,
+ 			"license": "MIT",
+-			"version": "29.4.0"
++			"version": "22.3.27"
+ 		},
+ 		{
+ 			"component": {
+diff --git a/package.json b/package.json
+index 804d8a6..32a436a 100644
+--- a/package.json
++++ b/package.json
+@@ -118,9 +118,9 @@
+     "@types/kerberos": "^1.1.2",
+     "@types/minimist": "^1.2.1",
+     "@types/mocha": "^9.1.1",
+-    "@types/node": "20.x",
+-    "@types/sinon": "^10.0.2",
+-    "@types/sinon-test": "^2.4.2",
++    "@types/node": "16.x",
++    "@types/sinon": "10.0.16",
++    "@types/sinon-test": "2.4.6",
+     "@types/trusted-types": "^1.0.6",
+     "@types/vscode-notebook-renderer": "^1.72.0",
+     "@types/webpack": "^5.28.5",
+@@ -132,8 +132,8 @@
+     "@typescript-eslint/eslint-plugin": "^6.21.0",
+     "@typescript-eslint/experimental-utils": "^5.57.0",
+     "@typescript-eslint/parser": "^6.21.0",
+-    "@vscode/gulp-electron": "^1.36.0",
+-    "@vscode/l10n-dev": "0.0.35",
++    "@vscode/gulp-electron": "git+https://github.com/Alex313031/vscode-gulp-electron.git",
++    "@vscode/l10n-dev": "0.0.30",
+     "@vscode/telemetry-extractor": "^1.10.2",
+     "@vscode/test-cli": "^0.0.6",
+     "@vscode/test-electron": "^2.3.8",
+@@ -149,7 +149,7 @@
+     "cssnano": "^6.0.3",
+     "debounce": "^1.0.0",
+     "deemon": "^1.8.0",
+-    "electron": "29.4.0",
++    "electron": "22.3.27",
+     "eslint": "8.36.0",
+     "eslint-plugin-header": "3.1.1",
+     "eslint-plugin-jsdoc": "^46.5.0",
+@@ -198,10 +198,10 @@
+     "postcss": "^8.4.33",
+     "postcss-nesting": "^12.0.2",
+     "pump": "^1.0.1",
+-    "rcedit": "^1.1.0",
++    "rcedit": "^1.1.2",
+     "rimraf": "^2.2.8",
+-    "sinon": "^12.0.1",
+-    "sinon-test": "^3.1.3",
++    "sinon": "12.0.1",
++    "sinon-test": "3.1.5",
+     "source-map": "0.6.1",
+     "source-map-support": "^0.3.2",
+     "style-loader": "^3.3.2",
+@@ -218,6 +218,14 @@
+     "yaserver": "^0.4.0"
+   },
+   "resolutions": {
++    "@azure/core-auth": "1.5.0",
++    "@azure/core-client": "1.7.3",
++    "@azure/core-lro": "2.5.4",
++    "@azure/core-rest-pipeline": "1.12.2",
++    "@azure/core-tracing": "1.0.1",
++    "@azure/core-util": "1.6.1",
++    "@azure-rest/core-client": "1.1.4",
++    "@types/sinon": "10.0.16",
+     "node-gyp-build": "4.8.1"
+   },
+   "repository": {
+diff --git a/remote/.yarnrc b/remote/.yarnrc
+index 4c99388..578cf1f 100644
+--- a/remote/.yarnrc
++++ b/remote/.yarnrc
+@@ -1,5 +1,5 @@
+ disturl "https://nodejs.org/dist"
+-target "20.11.1"
++target "16.17.1"
+ ms_build_id "275039"
+ runtime "node"
+ build_from_source "true"
+diff --git a/src/vs/base/parts/sandbox/common/electronTypes.ts b/src/vs/base/parts/sandbox/common/electronTypes.ts
+index 43fa750..724a48b 100644
+--- a/src/vs/base/parts/sandbox/common/electronTypes.ts
++++ b/src/vs/base/parts/sandbox/common/electronTypes.ts
+@@ -21,7 +21,7 @@ export interface MessageBoxOptions {
+ 	 * displays the same icon as `info`, unless you set an icon using the `icon`
+ 	 * option. On macOS, both `warning` and `error` display the same warning icon.
+ 	 */
+-	type?: ('none' | 'info' | 'error' | 'question' | 'warning');
++	type?: string;
+ 	/**
+ 	 * Array of texts for buttons. On Windows, an empty array will result in one button
+ 	 * labeled "OK".
+@@ -148,9 +148,9 @@ export interface SaveDialogReturnValue {
+ 	 */
+ 	canceled: boolean;
+ 	/**
+-	 * If the dialog is canceled, this will be an empty string.
++	 * If the dialog is canceled, this will be `undefined`.
+ 	 */
+-	filePath: string;
++	filePath?: string;
+ 	/**
+ 	 * Base64 encoded string which contains the security scoped bookmark data for the
+ 	 * saved file. `securityScopedBookmarks` must be enabled for this to be present.
+diff --git a/src/vs/platform/windows/electron-main/windowImpl.ts b/src/vs/platform/windows/electron-main/windowImpl.ts
+index dcb3a17..dc2074d 100644
+--- a/src/vs/platform/windows/electron-main/windowImpl.ts
++++ b/src/vs/platform/windows/electron-main/windowImpl.ts
+@@ -378,11 +378,7 @@ export abstract class BaseWindow extends Disposable implements IBaseWindow {
+ 		// macOS: traffic lights
+ 		else if (isMacintosh && options.height !== undefined) {
+ 			const verticalOffset = (options.height - 15) / 2; // 15px is the height of the traffic lights
+-			if (!verticalOffset) {
+-				win.setWindowButtonPosition(null);
+-			} else {
+-				win.setWindowButtonPosition({ x: verticalOffset, y: verticalOffset });
+-			}
++			win.setTrafficLightPosition({ x: verticalOffset, y: verticalOffset });
+ 		}
+ 	}
+ 
+diff --git a/src/vs/server/node/remoteExtensionHostAgentServer.ts b/src/vs/server/node/remoteExtensionHostAgentServer.ts
+index 9eace08..ed4898d 100644
+--- a/src/vs/server/node/remoteExtensionHostAgentServer.ts
++++ b/src/vs/server/node/remoteExtensionHostAgentServer.ts
+@@ -551,8 +551,7 @@ class RemoteExtensionHostAgentServer extends Disposable implements IServerAPI {
+ 			const socket = net.createConnection(
+ 				{
+ 					host: host,
+-					port: port,
+-					autoSelectFamily: true
++					port: port
+ 				}, () => {
+ 					socket.removeListener('error', e);
+ 					socket.pause();

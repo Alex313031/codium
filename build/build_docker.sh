@@ -3,11 +3,11 @@
 
 exists() { type -t "$1" &> /dev/null; }
 
-export APP_NAME="VSCodium"
+export APP_NAME="Codium"
 export CI_BUILD="no"
 export OS_NAME="linux"
 export SHOULD_BUILD="yes"
-export SKIP_ASSETS="yes"
+export SKIP_ASSETS="no"
 export VSCODE_LATEST="no"
 export VSCODE_QUALITY="stable"
 
@@ -20,7 +20,7 @@ while getopts ":ilp" opt; do
       export VSCODE_LATEST="yes"
       ;;
     p)
-      export SKIP_ASSETS="no" 
+      export SKIP_ASSETS="yes" 
       ;;
     *)
       ;;
@@ -53,7 +53,7 @@ echo "VSCODE_QUALITY=\"${VSCODE_QUALITY}\""
 rm -rf vscode* VSCode*
 
 . get_repo.sh
-. build.sh
+. build_codium.sh
 
 if [[ "${SKIP_ASSETS}" == "no" ]]; then
   . prepare_assets.sh

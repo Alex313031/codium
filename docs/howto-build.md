@@ -1,4 +1,4 @@
-# How to build VSCodium
+# How to build Codium
 
 ## Table of Contents
 
@@ -17,11 +17,13 @@
 
 ## <a id="dependencies"></a>Dependencies
 
-- node 18.15
-- yarn
-- jq
+- node 16
+- yarn 1.x
+- jq 1.x
 - git
-- python3 3.11
+- python3.11
+- python3-distutils
+- python3-setuptools
 
 ### <a id="dependencies-linux"></a>Linux
 
@@ -38,27 +40,34 @@
 - rpmbuild
 - dpkg
 - imagemagick (for AppImage)
-- snapcraft
+- snapcraft (for .snap)
 
 ### <a id="dependencies-macos"></a>MacOS
 
-see [the common dependencies](#dependencies)
+See [the common dependencies](#dependencies) and XCode 13.x or higher
 
 ### <a id="dependencies-windows"></a>Windows
 
+- bash (such as Git Bash from [Git for Windows](https://gitforwindows.org/) or MSYS2)
 - powershell
-- sed
-- 7z
+- sed (bundled with Git Bash)
+- jq.exe > https://jqlang.github.io/jq/download/ (rename to jq.exe and put in your PATH)
+- 7z > https://www.7-zip.org/download.html (download the "7-Zip Extra: standalone console version, 7z DLL, Plugin for Far Manager
+" and add to your existing 7-Zip installation folder, then add that folder to your path)
 - [WiX Toolset](http://wixtoolset.org/releases/)
-- 'Tools for Native Modules' from the official Node.js installer
+- 'Tools for Native Modules' from the official Node.js installer OR Visual Studio 2019/2022 with C++ Workload added
 
 ## <a id="build-scripts"></a>Build Scripts
 
-A build helper script can be found at `build/build.sh`.
+A build helper script can be found at `build/build.sh`.  
+A wrapper I made for this script that also passes compiler optimization flags, and patches the source for Win7/8/8.1 is `./build.sh`
 
-- Linux: `./build/build.sh`
-- MacOS: `./build/build.sh`
-- Windows: `powershell -ExecutionPolicy ByPass -File .\build\build.ps1` or `"C:\Program Files\Git\bin\bash.exe" ./build/build.sh`
+- Linux: `./get_repo.sh && ./build.sh --linux`
+- MacOS: `./get_repo.sh && ./build.sh --mac`
+- Windows: `./get_repo.sh && ./build.sh --win`
+
+ &ndash; Use the `--help` flag to see all available options.  
+NOTE: To build for Windows 7/8/8.1 or Ubuntu 18.04/Debian 9, use `./win7_patch.sh` after get_repo.sh, and before build_codium.sh. For MacOS 10.13/10.14, use `./macos_patch.sh` instead.
 
 ### Insider
 
@@ -73,12 +82,12 @@ The script `build/build.sh` provides several flags:
 - `-i`: build the Insiders version
 - `-l`: build with latest version of Visual Studio Code
 - `-o`: skip the build step
-- `-p`: generate the packages/assets/installers
+- `-p`: do not generate the packages/assets/installers
 - `-s`: do not retrieve the source code of Visual Studio Code, it won't delete the existing build
 
 ## <a id="build-docker"></a>Build in Docker
 
-To build for Linux, you can alternatively build VSCodium in docker
+To build for Linux, you can alternatively build Codium in docker
 
 ### <a id="build-docker-x64"></a>X64
 
@@ -141,7 +150,7 @@ review-tools.snap-review --allow-classic codium*.snap
 
 - run `./build/build_<os>.sh`, if a patch is failing then,
 - run `./build/update_patches.sh`
-- when the script pauses at `Press any key when the conflict have been resolved...`, open `vscode` directory in **VSCodium**
+- when the script pauses at `Press any key when the conflict have been resolved...`, open `vscode` directory in **Codium**
 - fix all the `*.rej` files
 - run `yarn watch`
 - run `./script/code.sh` until everything is ok
@@ -150,7 +159,7 @@ review-tools.snap-review --allow-classic codium*.snap
 ## <a id="patch-update-process-manual"></a>Manual
 
 - run `./build/build_<os>.sh`, if a patch is failing then,
-- open `vscode` directory in **VSCodium**
+- open `vscode` directory in **Codium**
 - revert all changes
 - run `git apply --reject ../patches/<name>.patch`
 - fix all the `*.rej` files

@@ -5,5 +5,5 @@ index 44c9f2f..454aa09 100644
 @@ -28,3 +28,3 @@ ChangesEnvironment=true
  ChangesAssociations=true
 -MinVersion=10.0
-+MinVersion=6.1.7600
++MinVersion=6.0
  SourceDir={#SourceDir}

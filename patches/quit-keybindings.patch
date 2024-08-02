@@ -1,0 +1,17 @@
+diff --git a/src/vs/workbench/electron-sandbox/actions/windowActions.ts b/src/vs/workbench/electron-sandbox/actions/windowActions.ts
+index 2d49534..9d19164 100644
+--- a/src/vs/workbench/electron-sandbox/actions/windowActions.ts
++++ b/src/vs/workbench/electron-sandbox/actions/windowActions.ts
+@@ -43,9 +43,9 @@ export class CloseWindowAction extends Action2 {
+ 			f1: true,
+ 			keybinding: {
+ 				weight: KeybindingWeight.WorkbenchContrib,
+-				mac: { primary: KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KeyW },
+-				linux: { primary: KeyMod.Alt | KeyCode.F4, secondary: [KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KeyW] },
+-				win: { primary: KeyMod.Alt | KeyCode.F4, secondary: [KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KeyW] }
++				mac: { primary: KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KeyQ },
++				linux: { primary: KeyMod.Alt | KeyCode.F4, secondary: [KeyMod.CtrlCmd | KeyCode.KeyQ] },
++				win: { primary: KeyMod.Alt | KeyCode.F4, secondary: [KeyMod.CtrlCmd | KeyCode.KeyQ] }
+ 			},
+ 			menu: {
+ 				id: MenuId.MenubarFileMenu,

@@ -1,0 +1,57 @@
+diff --git a/build/checksums/electron.txt b/build/checksums/electron.txt
+index 012f052..0a6a636 100644
+--- a/build/checksums/electron.txt
++++ b/build/checksums/electron.txt
+@@ -2,7 +2,7 @@ e462d1d1f42fbd95f59606138c5f2d127ec7a0194627e613429fd6589f38c778 *chromedriver-v
+ 59c89191158c810208dbe6a49015d9232e114330eca514efe362bdf1f9c8c819 *chromedriver-v22.3.27-darwin-x64.zip
+ 09d1b16ab31a17a914b9a871158458d34c7e5a52c7686ea923b9a9878e6d4539 *chromedriver-v22.3.27-linux-arm64.zip
+ f020427cc1972928fd784b4f9ee912e8b42691c782c325fe7624aa2b38a7fcec *chromedriver-v22.3.27-linux-armv7l.zip
+-2c0eb7ccc5d68ac52dfcf7264e8dc61de4a9480ededb464c35c0ad7db41b8e53 *chromedriver-v22.3.27-linux-x64.zip
++38255fe7a35d7121a9144691c12dd2692c46e0345814cedec39a31c50bfe2aa0 *chromedriver-v22.3.27-linux-x64.zip
+ a6efc976fc8efd469ece8ef7349ba655128496929950beb7b4db4f910ca946fd *chromedriver-v22.3.27-mas-arm64.zip
+ 5b6dcd7edb370a88037cf858e63e0f03ead9c0089d337d6b5c6eee310dca228f *chromedriver-v22.3.27-mas-x64.zip
+ e57141363f51445819436ca9320115931394e9349e6f6bfb2aa8123cb2a2ce21 *chromedriver-v22.3.27-win32-arm64.zip
+@@ -25,7 +25,7 @@ fef4cc317aeb4d6c790938dba14357932dba488e2116db84570edf0e3d1c5675 *electron-v22.3
+ 9f8372606e5ede83cf1c73a3d8ff07047e4e3ef614aa89a76cd497dc06cf119d *electron-v22.3.27-linux-armv7l.zip
+ 6ac494b29e67781d55e3b4fbe73ffe2bdf1b422f883f3c265a753bc1547cc24a *electron-v22.3.27-linux-x64-debug.zip
+ 94b89f034554318d66098a6657d5bacaeb7f03ad98a2f856c8720aed31e75348 *electron-v22.3.27-linux-x64-symbols.zip
+-631d8eb08098c48ce2b29421e74c69ac0312b1e42f445d8a805414ba1242bf3a *electron-v22.3.27-linux-x64.zip
++375f7da20908cb623908e3c0a64c50a4e163f044e5f447f8332c65403ccdfabd *electron-v22.3.27-linux-x64.zip
+ e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-mas-arm64-dsym-snapshot.zip
+ b6cf5b125c6be773d3f915a64b13be9e96a4d44a1969c3de74d30cac9c73aafd *electron-v22.3.27-mas-arm64-dsym.zip
+ 19980e05fc846f45090a3e4571998981a33dccb5766ebfcfd375552bc99066eb *electron-v22.3.27-mas-arm64-symbols.zip
+@@ -51,7 +51,7 @@ cc5f6b70a3d57e34492ee85a11346ed3a1aaf3b4f9f17c2594afe4048414e654 *ffmpeg-v22.3.2
+ ff4586bd27b1a0a4d19f9da9d1a77b30ff6afb6a9a868a3d4c9844b7d4aa8ae1 *ffmpeg-v22.3.27-darwin-x64.zip
+ 59d2e2b2f2cc515a86a4e0cfd1116d10a8b25a8d58d45bb04de3512e156c944b *ffmpeg-v22.3.27-linux-arm64.zip
+ b9d3b227bee17666d395ee7882ef477a733c3eeef3f1d9f2e3616d2d02eb3376 *ffmpeg-v22.3.27-linux-armv7l.zip
+-fa07ef910b23a4ef4b6761bc16d20c0e70ff0259325c4d523129e2d9c5084174 *ffmpeg-v22.3.27-linux-x64.zip
++44066305110f8b213c37c551357702ad9677d4af579bb721a21426f7387908f9 *ffmpeg-v22.3.27-linux-x64.zip
+ 5ecdc59a23417cc59ddb5a943cc2aa4fcad5da7c115d070fb697135662d1922e *ffmpeg-v22.3.27-mas-arm64.zip
+ faee7693f94b51094210d2fb3355deb16fd1b15d4c04d4e51ab8f77633a50f58 *ffmpeg-v22.3.27-mas-x64.zip
+ ab34f1ff4a781e71f6c268b5198e893ed4f6bd6962639eaa01779292e89bad0b *ffmpeg-v22.3.27-win32-arm64.zip
+@@ -67,7 +67,7 @@ aa703a89c36fc6c3970e491321b09aa9c22387da7fc24e033cd6ff4f1bd69fb3 *libcxxabi_head
+ ed46ab6112a3e4aaf12b223e1761896fcfa44ccf13a4d01445b71272dcb22b21 *mksnapshot-v22.3.27-darwin-x64.zip
+ 3a0e5ef31b91d2b7beb28ebc87e2ab5bd1abc8a3ab1902a147322c8824601ab2 *mksnapshot-v22.3.27-linux-arm64-x64.zip
+ 2614d68292d6267e8d7d2a598c605938d48c84ce895607137599ae4841086e41 *mksnapshot-v22.3.27-linux-armv7l-x64.zip
+-cf128df524c9c5e6916f41dcc49d094834cdad7d7cbb050deee9d55645a3bcab *mksnapshot-v22.3.27-linux-x64.zip
++b6b9603b58575fea4b501f551bcbfde36efa59bfc885eb73b34957a929484ba7 *mksnapshot-v22.3.27-linux-x64.zip
+ 0b02cab2889af3576c60f3b1912717827811c0084c54d636ee3f8bc33417e53d *mksnapshot-v22.3.27-mas-arm64.zip
+ a9cffdd62850d4b62793556ed1aaa13664a75a26837543a364400e4fcd5ee4ea *mksnapshot-v22.3.27-mas-x64.zip
+ 3d69cf2b841f79892141ca5d5335e156bc2fda4208c172406a247786089fe4d1 *mksnapshot-v22.3.27-win32-arm64-x64.zip
+ 6323cffb19bbd7b8ba99080e1299f91f75ed96e4ffbe226a7dc5000a0db8bc3c *mksnapshot-v22.3.27-win32-ia32.zip
+-e61ed6727564ff5155c0c6df5394092c16f55c84542b55de6381d7b77fb638db *mksnapshot-v22.3.27-win32-x64.zip
+\ No newline at end of file
++e61ed6727564ff5155c0c6df5394092c16f55c84542b55de6381d7b77fb638db *mksnapshot-v22.3.27-win32-x64.zip
+diff --git a/package.json b/package.json
+index 14d3c1e..accb365 100644
+--- a/package.json
++++ b/package.json
+@@ -132,7 +132,7 @@
+     "@typescript-eslint/eslint-plugin": "^6.21.0",
+     "@typescript-eslint/experimental-utils": "^5.57.0",
+     "@typescript-eslint/parser": "^6.21.0",
+-    "@vscode/gulp-electron": "git+https://github.com/Alex313031/vscode-gulp-electron.git",
++    "@vscode/gulp-electron": "git+https://github.com/Alex313031/vscode-gulp-electron-avx.git",
+     "@vscode/l10n-dev": "0.0.30",
+     "@vscode/telemetry-extractor": "^1.10.2",
+     "@vscode/test-cli": "^0.0.6",

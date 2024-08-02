@@ -1,21 +1,3 @@
-diff --git a/build/lib/fetch.js b/build/lib/fetch.js
-index 2fed63b..9a9f013 100644
---- a/build/lib/fetch.js
-+++ b/build/lib/fetch.js
-@@ -15,2 +15,3 @@ const crypto = require("crypto");
- const through2 = require("through2");
-+const fetch = require("node-fetch");
- function fetchUrls(urls, options) {
-diff --git a/build/linux/debian/install-sysroot.js b/build/linux/debian/install-sysroot.js
-index feca7d3..b4f6540 100644
---- a/build/linux/debian/install-sysroot.js
-+++ b/build/linux/debian/install-sysroot.js
-@@ -15,2 +15,3 @@ const crypto_1 = require("crypto");
- const ansiColors = require("ansi-colors");
-+const fetch = require("node-fetch");
- // Based on https://source.chromium.org/chromium/chromium/src/+/main:build/linux/sysroot_scripts/install-sysroot.py.
-diff --git a/yarn.lock b/yarn.lock
-index 2f4c572..6b65370 100644
 --- a/yarn.lock
 +++ b/yarn.lock
 @@ -6458,2 +6458,7 @@ liftoff@^3.1.0:

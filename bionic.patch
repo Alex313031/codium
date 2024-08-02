@@ -1,0 +1,49 @@
+diff --git a/build/linux/debian/calculate-deps.js b/build/linux/debian/calculate-deps.js
+index 6304df9e..1ede0702 100644
+--- a/build/linux/debian/calculate-deps.js
++++ b/build/linux/debian/calculate-deps.js
+@@ -78,9 +78,12 @@ function calculatePackageDeps(binaryPath, arch, chromiumSysroot, vscodeSysroot)
+     // TODO(deepak1556): remove this workaround in favor of computing the
+     // versions from build container for native modules.
+     const filteredDeps = depsStr.split(', ').filter(dependency => {
+-        return !dependency.startsWith('libgcc-s1');
++        return !dependency.startsWith('libgcc-s1') &&
++            !dependency.startsWith('libgssapi-krb5-2') &&
++            !dependency.startsWith('libkrb5-3') &&
++            !dependency.startsWith('libxkbfile1');
+     }).sort();
+     const requires = new Set(filteredDeps);
+     return requires;
+ }
+-//# sourceMappingURL=calculate-deps.js.map
+\ No newline at end of file
++//# sourceMappingURL=calculate-deps.js.map
+diff --git a/build/linux/debian/calculate-deps.ts b/build/linux/debian/calculate-deps.ts
+index 92f8065f..f964ccfb 100644
+--- a/build/linux/debian/calculate-deps.ts
++++ b/build/linux/debian/calculate-deps.ts
+@@ -90,7 +90,10 @@ function calculatePackageDeps(binaryPath: string, arch: DebianArchString, chromi
+ 	// TODO(deepak1556): remove this workaround in favor of computing the
+ 	// versions from build container for native modules.
+ 	const filteredDeps = depsStr.split(', ').filter(dependency => {
+-		return !dependency.startsWith('libgcc-s1');
++        return !dependency.startsWith('libgcc-s1') &&
++            !dependency.startsWith('libgssapi-krb5-2') &&
++            !dependency.startsWith('libkrb5-3') &&
++            !dependency.startsWith('libxkbfile1');
+ 	}).sort();
+ 	const requires = new Set(filteredDeps);
+ 	return requires;
+diff --git a/src/vs/workbench/electron-sandbox/parts/dialogs/dialogHandler.ts b/src/vs/workbench/electron-sandbox/parts/dialogs/dialogHandler.ts
+index 3940ab6..da6dcb6 100644
+--- a/src/vs/workbench/electron-sandbox/parts/dialogs/dialogHandler.ts
++++ b/src/vs/workbench/electron-sandbox/parts/dialogs/dialogHandler.ts
+@@ -86,7 +86,7 @@ export class NativeDialogHandler extends AbstractDialogHandler {
+ 				this.productService.commit || 'Unknown',
+ 				this.productService.date ? `${this.productService.date}${useAgo ? ' (' + fromNow(new Date(this.productService.date), true) + ')' : ''}` : 'Unknown',
+ 				process.versions['electron'],
+-				process.versions['microsoft-build'],
++				'e2dac66',
+ 				process.versions['chrome'],
+ 				process.versions['node'],
+ 				process.versions['v8'],

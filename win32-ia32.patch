@@ -1,0 +1,488 @@
+diff --git a/build/gulpfile.cli.js b/build/gulpfile.cli.js
+index 86646fd..2ed0931 100644
+--- a/build/gulpfile.cli.js
++++ b/build/gulpfile.cli.js
+@@ -30,7 +30,9 @@ const platformOpensslDirName =
+ 	process.platform === 'win32' ? (
+ 		process.arch === 'arm64'
+ 			? 'arm64-windows-static-md'
+-			: 'x64-windows-static-md')
++			: process.arch === 'ia32'
++				? 'x86-windows-static-md'
++				: 'x64-windows-static-md')
+ 		: process.platform === 'darwin' ? (
+ 			process.arch === 'arm64'
+ 				? 'arm64-osx'
+diff --git a/build/gulpfile.reh.js b/build/gulpfile.reh.js
+index c2b81d0..0d00ab7 100644
+--- a/build/gulpfile.reh.js
++++ b/build/gulpfile.reh.js
+@@ -38,6 +38,7 @@ const REMOTE_FOLDER = path.join(REPO_ROOT, 'remote');
+ // Targets
+ 
+ const BUILD_TARGETS = [
++	{ platform: 'win32', arch: 'ia32' },
+ 	{ platform: 'win32', arch: 'x64' },
+ 	{ platform: 'darwin', arch: 'x64' },
+ 	{ platform: 'darwin', arch: 'arm64' },
+@@ -184,7 +185,9 @@ function nodejs(platform, arch) {
+ 	const untar = require('gulp-untar');
+ 	const crypto = require('crypto');
+ 
+-	if (arch === 'armhf') {
++	if (arch === 'ia32') {
++		arch = 'x86';
++	} else if (arch === 'armhf') {
+ 		arch = 'armv7l';
+ 	} else if (arch === 'alpine') {
+ 		platform = 'alpine';
+diff --git a/build/gulpfile.scan.js b/build/gulpfile.scan.js
+index 6f8144b..9e5b511 100644
+--- a/build/gulpfile.scan.js
++++ b/build/gulpfile.scan.js
+@@ -18,6 +18,7 @@ const { existsSync, readdirSync } = require('fs');
+ const root = path.dirname(__dirname);
+ 
+ const BUILD_TARGETS = [
++	{ platform: 'win32', arch: 'ia32' },
+ 	{ platform: 'win32', arch: 'x64' },
+ 	{ platform: 'win32', arch: 'arm64' },
+ 	{ platform: 'darwin', arch: null, opts: { stats: true } },
+diff --git a/build/gulpfile.vscode.js b/build/gulpfile.vscode.js
+index e1507e0..93a1417 100644
+--- a/build/gulpfile.vscode.js
++++ b/build/gulpfile.vscode.js
+@@ -425,10 +425,12 @@ function patchWin32DependenciesTask(destinationFolderName) {
+ const buildRoot = path.dirname(root);
+ 
+ const BUILD_TARGETS = [
++	{ platform: 'win32', arch: 'ia32' },
+ 	{ platform: 'win32', arch: 'x64' },
+ 	{ platform: 'win32', arch: 'arm64' },
+ 	{ platform: 'darwin', arch: 'x64', opts: { stats: true } },
+ 	{ platform: 'darwin', arch: 'arm64', opts: { stats: true } },
++	{ platform: 'linux', arch: 'ia32' },
+ 	{ platform: 'linux', arch: 'x64' },
+ 	{ platform: 'linux', arch: 'armhf' },
+ 	{ platform: 'linux', arch: 'arm64' },
+diff --git a/build/gulpfile.vscode.win32.js b/build/gulpfile.vscode.win32.js
+index 5adfdfb..674eb41 100644
+--- a/build/gulpfile.vscode.win32.js
++++ b/build/gulpfile.vscode.win32.js
+@@ -70,6 +70,7 @@ function buildWin32Setup(arch, target) {
+ 	}
+ 
+ 	return cb => {
++		const ia32AppId = target === 'system' ? product.win32AppId : product.win32UserAppId;
+ 		const x64AppId = target === 'system' ? product.win32x64AppId : product.win32x64UserAppId;
+ 		const arm64AppId = target === 'system' ? product.win32arm64AppId : product.win32arm64UserAppId;
+ 
+@@ -100,11 +101,12 @@ function buildWin32Setup(arch, target) {
+ 			TunnelApplicationName: product.tunnelApplicationName,
+ 			ApplicationName: product.applicationName,
+ 			Arch: arch,
+-			AppId: { 'x64': x64AppId, 'arm64': arm64AppId }[arch],
+-			IncompatibleTargetAppId: { 'x64': product.win32x64AppId, 'arm64': product.win32arm64AppId }[arch],
++			AppId: { 'ia32': ia32AppId, 'x64': x64AppId, 'arm64': arm64AppId }[arch],
++			IncompatibleTargetAppId: { 'ia32': product.win32AppId, 'x64': product.win32x64AppId, 'arm64': product.win32arm64AppId }[arch],
++			IncompatibleArchAppId: { 'ia32': x64AppId, 'x64': ia32AppId, 'arm64': ia32AppId }[arch],
+ 			AppUserId: product.win32AppUserModelId,
+-			ArchitecturesAllowed: { 'x64': 'x64', 'arm64': 'arm64' }[arch],
+-			ArchitecturesInstallIn64BitMode: { 'x64': 'x64', 'arm64': 'arm64' }[arch],
++			ArchitecturesAllowed: { 'ia32': '', 'x64': 'x64', 'arm64': 'arm64' }[arch],
++			ArchitecturesInstallIn64BitMode: { 'ia32': '', 'x64': 'x64', 'arm64': 'arm64' }[arch],
+ 			SourceDir: sourcePath,
+ 			RepoDir: repoPath,
+ 			OutputDir: outputPath,
+@@ -114,7 +116,7 @@ function buildWin32Setup(arch, target) {
+ 		};
+ 
+ 		if (quality === 'insider') {
+-			definitions['AppxPackage'] = `code_insiders_explorer_${arch}.appx`;
++			definitions['AppxPackage'] = `code_insiders_explorer_${arch === 'ia32' ? 'x86' : arch}.appx`;
+ 			definitions['AppxPackageFullname'] = `Microsoft.${product.win32RegValueName}_1.0.0.0_neutral__8wekyb3d8bbwe`;
+ 		}
+ 
+@@ -131,8 +133,10 @@ function defineWin32SetupTasks(arch, target) {
+ 	gulp.task(task.define(`vscode-win32-${arch}-${target}-setup`, task.series(cleanTask, buildWin32Setup(arch, target))));
+ }
+ 
++defineWin32SetupTasks('ia32', 'system');
+ defineWin32SetupTasks('x64', 'system');
+ defineWin32SetupTasks('arm64', 'system');
++defineWin32SetupTasks('ia32', 'user');
+ defineWin32SetupTasks('x64', 'user');
+ defineWin32SetupTasks('arm64', 'user');
+ 
+@@ -156,5 +160,6 @@ function updateIcon(executablePath) {
+ 	};
+ }
+ 
++gulp.task(task.define('vscode-win32-ia32-inno-updater', task.series(copyInnoUpdater('ia32'), updateIcon(path.join(buildPath('ia32'), 'tools', 'inno_updater.exe')))));
+ gulp.task(task.define('vscode-win32-x64-inno-updater', task.series(copyInnoUpdater('x64'), updateIcon(path.join(buildPath('x64'), 'tools', 'inno_updater.exe')))));
+ gulp.task(task.define('vscode-win32-arm64-inno-updater', task.series(copyInnoUpdater('arm64'), updateIcon(path.join(buildPath('arm64'), 'tools', 'inno_updater.exe')))));
+diff --git a/build/npm/preinstall.js b/build/npm/preinstall.js
+index edf0d98..5405eb2 100644
+--- a/build/npm/preinstall.js
++++ b/build/npm/preinstall.js
+@@ -41,7 +41,7 @@ if (!/yarn[\w-.]*\.c?js$|yarnpkg$/.test(process.env['npm_execpath'])) {
+ 	err = true;
+ }
+ 
+-if (process.platform === 'win32') {
++if (process.platform === 'win32' && !process.env['VSCODE_SKIP_NODE_VERSION_CHECK']) {
+ 	if (!hasSupportedVisualStudioVersion()) {
+ 		console.error('\x1b[1;31m*** Invalid C/C++ Compiler Toolchain. Please check https://github.com/microsoft/vscode/wiki/How-to-Contribute#prerequisites.\x1b[0;0m');
+ 		err = true;
+diff --git a/build/win32/code.iss b/build/win32/code.iss
+index fca3d1e..f934318 100644
+--- a/build/win32/code.iss
++++ b/build/win32/code.iss
+@@ -1327,7 +1327,7 @@ begin
+   #endif
+ 
+   #if "user" == InstallTarget
+-    #if "arm64" == Arch
++    #if "ia32" == Arch || "arm64" == Arch
+       #define IncompatibleArchRootKey "HKLM32"
+     #else
+       #define IncompatibleArchRootKey "HKLM64"
+@@ -1344,6 +1344,22 @@ begin
+     end;
+   #endif
+ 
++  if Result and IsWin64 then begin
++    RegKey := 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\' + copy('{#IncompatibleArchAppId}', 2, 38) + '_is1';
++    if '{#Arch}' = 'ia32' then begin
++      Result := not RegKeyExists({#Uninstall64RootKey}, RegKey);
++      ThisArch := '32';
++      AltArch := '64';
++    end else begin
++      Result := not RegKeyExists({#Uninstall32RootKey}, RegKey);
++      ThisArch := '64';
++      AltArch := '32';
++    end;
++    if not Result and not WizardSilent() then begin
++      MsgBox('Please uninstall the ' + AltArch + '-bit version of {#NameShort} before installing this ' + ThisArch + '-bit version. Uninstalling will not delete settings.', mbInformation, MB_OK);
++    end;
++  end;
++
+ end;
+ 
+ function WizardNotSilent(): Boolean;
+diff --git a/build/win32/explorer-appx-fetcher.js b/build/win32/explorer-appx-fetcher.js
+index 554b449..d964937 100644
+--- a/build/win32/explorer-appx-fetcher.js
++++ b/build/win32/explorer-appx-fetcher.js
+@@ -37,10 +37,13 @@ async function downloadExplorerAppx(outDir, quality = 'stable', targetArch = 'x6
+     await extract(artifact, { dir: fs.realpathSync(outDir) });
+ }
+ async function main(outputDir) {
+-    const arch = process.env['VSCODE_ARCH'];
++    let arch = process.env['VSCODE_ARCH'];
+     if (!outputDir) {
+         throw new Error('Required build env not set');
+     }
++    if (arch === 'ia32') {
++        arch = 'x86';
++    }
+     const product = JSON.parse(fs.readFileSync(path.join(root, 'product.json'), 'utf8'));
+     await downloadExplorerAppx(outputDir, product.quality, arch);
+ }
+@@ -50,4 +53,4 @@ if (require.main === module) {
+         process.exit(1);
+     });
+ }
+-//# sourceMappingURL=explorer-appx-fetcher.js.map
+\ No newline at end of file
++//# sourceMappingURL=explorer-appx-fetcher.js.map
+diff --git a/build/win32/explorer-appx-fetcher.ts b/build/win32/explorer-appx-fetcher.ts
+index 89fbb57..5d9acb6 100644
+--- a/build/win32/explorer-appx-fetcher.ts
++++ b/build/win32/explorer-appx-fetcher.ts
+@@ -45,12 +45,16 @@ export async function downloadExplorerAppx(outDir: string, quality: string = 'st
+ }
+ 
+ async function main(outputDir?: string): Promise<void> {
+-	const arch = process.env['VSCODE_ARCH'];
++	let arch = process.env['VSCODE_ARCH'];
+ 
+ 	if (!outputDir) {
+ 		throw new Error('Required build env not set');
+ 	}
+ 
++	if (arch === 'ia32') {
++		arch = 'x86';
++	}
++
+ 	const product = JSON.parse(fs.readFileSync(path.join(root, 'product.json'), 'utf8'));
+ 	await downloadExplorerAppx(outputDir, (product as any).quality, arch);
+ }
+diff --git a/product.json b/product.json
+index ad46ae2..a8a50af 100644
+--- a/product.json
++++ b/product.json
+@@ -16,8 +16,10 @@
+ 	"win32DirName": "Microsoft Code OSS",
+ 	"win32NameVersion": "Microsoft Code OSS",
+ 	"win32RegValueName": "CodeOSS",
++	"win32AppId": "{{E34003BB-9E10-4501-8C11-BE3FAA83F23G}",
+ 	"win32x64AppId": "{{D77B7E06-80BA-4137-BCF4-654B95CCEBC5}",
+ 	"win32arm64AppId": "{{D1ACE434-89C5-48D1-88D3-E2991DF85475}",
++	"win32UserAppId": "{{C6065F05-9603-4FC4-8101-B9781A25D88F}",
+ 	"win32x64UserAppId": "{{CC6B787D-37A0-49E8-AE24-8559A032BE0C}",
+ 	"win32arm64UserAppId": "{{3AEBF0C8-F733-4AD4-BADE-FDB816D53D7B}",
+ 	"win32AppUserModelId": "Microsoft.CodeOSS",
+diff --git a/src/main.js b/src/main.js
+index 90de17b..cdd8e29 100644
+--- a/src/main.js
++++ b/src/main.js
+@@ -422,6 +422,9 @@ function configureCrashReporter() {
+ 			if (uuidPattern.test(crashReporterId)) {
+ 				if (isWindows) {
+ 					switch (process.arch) {
++						case 'ia32':
++							submitURL = appCenter['win32-ia32'];
++							break;
+ 						case 'x64':
+ 							submitURL = appCenter['win32-x64'];
+ 							break;
+diff --git a/src/vs/base/common/product.ts b/src/vs/base/common/product.ts
+index c6e335a..0623399 100644
+--- a/src/vs/base/common/product.ts
++++ b/src/vs/base/common/product.ts
+@@ -227,6 +227,7 @@ export interface IFilePathCondition extends IExtensionRecommendationCondition {
+ export type IFileContentCondition = (IFileLanguageCondition | IFilePathCondition) & { readonly contentPattern: string };
+ 
+ export interface IAppCenterConfiguration {
++	readonly 'win32-ia32': string;
+ 	readonly 'win32-x64': string;
+ 	readonly 'win32-arm64': string;
+ 	readonly 'linux-x64': string;
+diff --git a/src/vs/platform/extensionManagement/common/extensionGalleryService.ts b/src/vs/platform/extensionManagement/common/extensionGalleryService.ts
+index 0c9ec9e..c1801ff 100644
+--- a/src/vs/platform/extensionManagement/common/extensionGalleryService.ts
++++ b/src/vs/platform/extensionManagement/common/extensionGalleryService.ts
+@@ -15,7 +15,7 @@ import { URI } from 'vs/base/common/uri';
+ import { IHeaders, IRequestContext, IRequestOptions } from 'vs/base/parts/request/common/request';
+ import { IConfigurationService } from 'vs/platform/configuration/common/configuration';
+ import { IEnvironmentService } from 'vs/platform/environment/common/environment';
+-import { getTargetPlatform, IExtensionGalleryService, IExtensionIdentifier, IExtensionInfo, IGalleryExtension, IGalleryExtensionAsset, IGalleryExtensionAssets, IGalleryExtensionVersion, InstallOperation, IQueryOptions, IExtensionsControlManifest, isNotWebExtensionInWebTargetPlatform, isTargetPlatformCompatible, ITranslation, SortBy, SortOrder, StatisticType, toTargetPlatform, WEB_EXTENSION_TAG, IExtensionQueryOptions, IDeprecationInfo, ISearchPrefferedResults, ExtensionGalleryError, ExtensionGalleryErrorCode, IProductVersion } from 'vs/platform/extensionManagement/common/extensionManagement';
++import { getFallbackTargetPlarforms, getTargetPlatform, IExtensionGalleryService, IExtensionIdentifier, IExtensionInfo, IGalleryExtension, IGalleryExtensionAsset, IGalleryExtensionAssets, IGalleryExtensionVersion, InstallOperation, IQueryOptions, IExtensionsControlManifest, isNotWebExtensionInWebTargetPlatform, isTargetPlatformCompatible, ITranslation, SortBy, SortOrder, StatisticType, toTargetPlatform, WEB_EXTENSION_TAG, IExtensionQueryOptions, IDeprecationInfo, ISearchPrefferedResults, ExtensionGalleryError, ExtensionGalleryErrorCode, IProductVersion } from 'vs/platform/extensionManagement/common/extensionManagement';
+ import { adoptToGalleryExtensionId, areSameExtensions, getGalleryExtensionId, getGalleryExtensionTelemetryData } from 'vs/platform/extensionManagement/common/extensionManagementUtil';
+ import { IExtensionManifest, TargetPlatform } from 'vs/platform/extensions/common/extensions';
+ import { isEngineValid } from 'vs/platform/extensions/common/extensionValidator';
+@@ -477,6 +477,7 @@ function getAllTargetPlatforms(rawGalleryExtension: IRawGalleryExtension): Targe
+ 
+ export function sortExtensionVersions(versions: IRawGalleryExtensionVersion[], preferredTargetPlatform: TargetPlatform): IRawGalleryExtensionVersion[] {
+ 	/* It is expected that versions from Marketplace are sorted by version. So we are just sorting by preferred targetPlatform */
++	const fallbackTargetPlatforms = getFallbackTargetPlarforms(preferredTargetPlatform);
+ 	for (let index = 0; index < versions.length; index++) {
+ 		const version = versions[index];
+ 		if (version.version === versions[index - 1]?.version) {
+@@ -486,6 +487,10 @@ export function sortExtensionVersions(versions: IRawGalleryExtensionVersion[], p
+ 			if (versionTargetPlatform === preferredTargetPlatform) {
+ 				while (insertionIndex > 0 && versions[insertionIndex - 1].version === version.version) { insertionIndex--; }
+ 			}
++			/* put it after version with preferred targetPlatform or at the beginning */
++			else if (fallbackTargetPlatforms.includes(versionTargetPlatform)) {
++				while (insertionIndex > 0 && versions[insertionIndex - 1].version === version.version && getTargetPlatformForExtensionVersion(versions[insertionIndex - 1]) !== preferredTargetPlatform) { insertionIndex--; }
++			}
+ 			if (insertionIndex !== index) {
+ 				versions.splice(index, 1);
+ 				versions.splice(insertionIndex, 0, version);
+diff --git a/src/vs/platform/extensionManagement/common/extensionManagement.ts b/src/vs/platform/extensionManagement/common/extensionManagement.ts
+index 665ea2e..120d61b 100644
+--- a/src/vs/platform/extensionManagement/common/extensionManagement.ts
++++ b/src/vs/platform/extensionManagement/common/extensionManagement.ts
+@@ -34,6 +34,7 @@ export interface IProductVersion {
+ export function TargetPlatformToString(targetPlatform: TargetPlatform) {
+ 	switch (targetPlatform) {
+ 		case TargetPlatform.WIN32_X64: return 'Windows 64 bit';
++		case TargetPlatform.WIN32_IA32: return 'Windows 32 bit';
+ 		case TargetPlatform.WIN32_ARM64: return 'Windows ARM';
+ 
+ 		case TargetPlatform.LINUX_X64: return 'Linux 64 bit';
+@@ -51,6 +58,7 @@ export function TargetPlatformToString(targetPlatform: TargetPlatform) {
+ export function toTargetPlatform(targetPlatform: string): TargetPlatform {
+ 	switch (targetPlatform) {
+ 		case TargetPlatform.WIN32_X64: return TargetPlatform.WIN32_X64;
++		case TargetPlatform.WIN32_IA32: return TargetPlatform.WIN32_IA32;
+ 		case TargetPlatform.WIN32_ARM64: return TargetPlatform.WIN32_ARM64;
+ 
+ 		case TargetPlatform.LINUX_X64: return TargetPlatform.LINUX_X64;
+@@ -76,6 +84,9 @@ export function getTargetPlatform(platform: Platform | 'alpine', arch: string |
+ 			if (arch === 'x64') {
+ 				return TargetPlatform.WIN32_X64;
+ 			}
++			if (arch === 'ia32') {
++				return TargetPlatform.WIN32_IA32;
++			}
+ 			if (arch === 'arm64') {
+ 				return TargetPlatform.WIN32_ARM64;
+ 			}
+@@ -146,7 +157,17 @@ export function isTargetPlatformCompatible(extensionTargetPlatform: TargetPlatfo
+ 		return true;
+ 	}
+ 
+-	return false;
++	// Fallback
++	const fallbackTargetPlatforms = getFallbackTargetPlarforms(productTargetPlatform);
++	return fallbackTargetPlatforms.includes(extensionTargetPlatform);
++}
++
++export function getFallbackTargetPlarforms(targetPlatform: TargetPlatform): TargetPlatform[] {
++	switch (targetPlatform) {
++		case TargetPlatform.WIN32_X64: return [TargetPlatform.WIN32_IA32];
++		case TargetPlatform.WIN32_ARM64: return [TargetPlatform.WIN32_IA32];
++	}
++	return [];
+ }
+ 
+ export interface IGalleryExtensionProperties {
+diff --git a/src/vs/platform/extensionManagement/test/common/extensionGalleryService.test.ts b/src/vs/platform/extensionManagement/test/common/extensionGalleryService.test.ts
+index cebafab..a471a92 100644
+--- a/src/vs/platform/extensionManagement/test/common/extensionGalleryService.test.ts
++++ b/src/vs/platform/extensionManagement/test/common/extensionGalleryService.test.ts
+@@ -71,6 +71,13 @@ suite('Extension Gallery Service', () => {
+ 		assert.deepStrictEqual(actual, expected);
+ 	});
+ 
++	test('sorting single extension version with fallback target platform', async () => {
++		const actual = [aExtensionVersion('1.1.2', TargetPlatform.WIN32_IA32)];
++		const expected = [...actual];
++		sortExtensionVersions(actual, TargetPlatform.WIN32_X64);
++		assert.deepStrictEqual(actual, expected);
++	});
++
+ 	test('sorting single extension version with not compatible target platform', async () => {
+ 		const actual = [aExtensionVersion('1.1.2', TargetPlatform.DARWIN_ARM64)];
+ 		const expected = [...actual];
+@@ -78,6 +85,41 @@ suite('Extension Gallery Service', () => {
+ 		assert.deepStrictEqual(actual, expected);
+ 	});
+ 
++	test('sorting single extension version with multiple target platforms and preferred at first', async () => {
++		const actual = [aExtensionVersion('1.1.2', TargetPlatform.WIN32_X64), aExtensionVersion('1.1.2', TargetPlatform.WIN32_IA32), aExtensionVersion('1.1.2')];
++		const expected = [...actual];
++		sortExtensionVersions(actual, TargetPlatform.WIN32_X64);
++		assert.deepStrictEqual(actual, expected);
++	});
++
++	test('sorting single extension version with multiple target platforms and preferred at first with no fallbacks', async () => {
++		const actual = [aExtensionVersion('1.1.2', TargetPlatform.DARWIN_X64), aExtensionVersion('1.1.2'), aExtensionVersion('1.1.2', TargetPlatform.WIN32_IA32)];
++		const expected = [...actual];
++		sortExtensionVersions(actual, TargetPlatform.DARWIN_X64);
++		assert.deepStrictEqual(actual, expected);
++	});
++
++	test('sorting single extension version with multiple target platforms and preferred at first and fallback at last', async () => {
++		const actual = [aExtensionVersion('1.1.2', TargetPlatform.WIN32_X64), aExtensionVersion('1.1.2'), aExtensionVersion('1.1.2', TargetPlatform.WIN32_IA32)];
++		const expected = [actual[0], actual[2], actual[1]];
++		sortExtensionVersions(actual, TargetPlatform.WIN32_X64);
++		assert.deepStrictEqual(actual, expected);
++	});
++
++	test('sorting single extension version with multiple target platforms and preferred is not first', async () => {
++		const actual = [aExtensionVersion('1.1.2', TargetPlatform.WIN32_IA32), aExtensionVersion('1.1.2', TargetPlatform.WIN32_X64), aExtensionVersion('1.1.2')];
++		const expected = [actual[1], actual[0], actual[2]];
++		sortExtensionVersions(actual, TargetPlatform.WIN32_X64);
++		assert.deepStrictEqual(actual, expected);
++	});
++
++	test('sorting single extension version with multiple target platforms and preferred is at the end', async () => {
++		const actual = [aExtensionVersion('1.1.2', TargetPlatform.WIN32_IA32), aExtensionVersion('1.1.2'), aExtensionVersion('1.1.2', TargetPlatform.WIN32_X64)];
++		const expected = [actual[2], actual[0], actual[1]];
++		sortExtensionVersions(actual, TargetPlatform.WIN32_X64);
++		assert.deepStrictEqual(actual, expected);
++	});
++
+ 	test('sorting multiple extension versions without target platforms', async () => {
+ 		const actual = [aExtensionVersion('1.2.4'), aExtensionVersion('1.1.3'), aExtensionVersion('1.1.2'), aExtensionVersion('1.1.1')];
+ 		const expected = [...actual];
+@@ -100,8 +142,8 @@ suite('Extension Gallery Service', () => {
+ 	});
+ 
+ 	test('sorting multiple extension versions with target platforms - 3', async () => {
+-		const actual = [aExtensionVersion('1.2.4'), aExtensionVersion('1.1.2'), aExtensionVersion('1.1.1'), aExtensionVersion('1.0.0', TargetPlatform.DARWIN_ARM64), aExtensionVersion('1.0.0', TargetPlatform.WIN32_ARM64)];
+-		const expected = [actual[0], actual[1], actual[2], actual[4], actual[3]];
++		const actual = [aExtensionVersion('1.2.4'), aExtensionVersion('1.1.2'), aExtensionVersion('1.1.1'), aExtensionVersion('1.0.0', TargetPlatform.DARWIN_ARM64), aExtensionVersion('1.0.0', TargetPlatform.WIN32_IA32), aExtensionVersion('1.0.0', TargetPlatform.WIN32_ARM64)];
++		const expected = [actual[0], actual[1], actual[2], actual[5], actual[4], actual[3]];
+ 		sortExtensionVersions(actual, TargetPlatform.WIN32_ARM64);
+ 		assert.deepStrictEqual(actual, expected);
+ 	});
+diff --git a/src/vs/platform/extensionManagement/test/common/extensionManagement.test.ts b/src/vs/platform/extensionManagement/test/common/extensionManagement.test.ts
+index d081377..8e32055 100644
+--- a/src/vs/platform/extensionManagement/test/common/extensionManagement.test.ts
++++ b/src/vs/platform/extensionManagement/test/common/extensionManagement.test.ts
+@@ -35,13 +35,13 @@ suite('Extension Identifier Pattern', () => {
+ 	test('extension key', () => {
+ 		assert.strictEqual(new ExtensionKey({ id: 'pub.extension-name' }, '1.0.1').toString(), 'pub.extension-name-1.0.1');
+ 		assert.strictEqual(new ExtensionKey({ id: 'pub.extension-name' }, '1.0.1', TargetPlatform.UNDEFINED).toString(), 'pub.extension-name-1.0.1');
+-		assert.strictEqual(new ExtensionKey({ id: 'pub.extension-name' }, '1.0.1', TargetPlatform.WIN32_X64).toString(), `pub.extension-name-1.0.1-${TargetPlatform.WIN32_X64}`);
++		assert.strictEqual(new ExtensionKey({ id: 'pub.extension-name' }, '1.0.1', TargetPlatform.WIN32_IA32).toString(), `pub.extension-name-1.0.1-${TargetPlatform.WIN32_IA32}`);
+ 	});
+ 
+ 	test('extension key parsing', () => {
+ 		assert.strictEqual(ExtensionKey.parse('pub.extension-name'), null);
+ 		assert.strictEqual(ExtensionKey.parse('pub.extension-name@1.2.3'), null);
+ 		assert.strictEqual(ExtensionKey.parse('pub.extension-name-1.0.1')?.toString(), 'pub.extension-name-1.0.1');
+-		assert.strictEqual(ExtensionKey.parse('pub.extension-name-1.0.1-win32-x64')?.toString(), 'pub.extension-name-1.0.1-win32-x64');
++		assert.strictEqual(ExtensionKey.parse('pub.extension-name-1.0.1-win32-ia32')?.toString(), 'pub.extension-name-1.0.1-win32-ia32');
+ 	});
+ });
+diff --git a/src/vs/platform/extensions/common/extensions.ts b/src/vs/platform/extensions/common/extensions.ts
+index cfe5313..e6a15a7 100644
+--- a/src/vs/platform/extensions/common/extensions.ts
++++ b/src/vs/platform/extensions/common/extensions.ts
+@@ -299,6 +299,7 @@ export const enum ExtensionType {
+ 
+ export const enum TargetPlatform {
+ 	WIN32_X64 = 'win32-x64',
++	WIN32_IA32 = 'win32-ia32',
+ 	WIN32_ARM64 = 'win32-arm64',
+ 
+ 	LINUX_X64 = 'linux-x64',
+diff --git a/src/vs/platform/update/electron-main/updateService.win32.ts b/src/vs/platform/update/electron-main/updateService.win32.ts
+index 4c49a75..ebf2033 100644
+--- a/src/vs/platform/update/electron-main/updateService.win32.ts
++++ b/src/vs/platform/update/electron-main/updateService.win32.ts
+@@ -100,7 +100,11 @@ export class Win32UpdateService extends AbstractUpdateService implements IRelaun
+ 	}
+ 
+ 	protected buildUpdateFeedUrl(quality: string): string | undefined {
+-		let platform = `win32-${process.arch}`;
++		let platform = 'win32';
++
++		if (process.arch !== 'ia32') {
++			platform += `-${process.arch}`;
++		}
+ 
+ 		if (getUpdateType() === UpdateType.Archive) {
+ 			platform += '-archive';
+diff --git a/src/vs/workbench/contrib/extensions/test/electron-sandbox/extension.test.ts b/src/vs/workbench/contrib/extensions/test/electron-sandbox/extension.test.ts
+index 8c96cf7..1a27340 100644
+--- a/src/vs/workbench/contrib/extensions/test/electron-sandbox/extension.test.ts
++++ b/src/vs/workbench/contrib/extensions/test/electron-sandbox/extension.test.ts
+@@ -63,7 +63,7 @@ suite('Extension Test', () => {
+ 	});
+ 
+ 	test('extension is outdated when local and gallery are on same version but on different target platforms', () => {
+-		const extension = instantiationService.createInstance(Extension, () => ExtensionState.Installed, () => undefined, undefined, aLocalExtension('somext', {}, { targetPlatform: TargetPlatform.WIN32_ARM64 }), aGalleryExtension('somext', {}, { targetPlatform: TargetPlatform.WIN32_X64 }), undefined);
++		const extension = instantiationService.createInstance(Extension, () => ExtensionState.Installed, () => undefined, undefined, aLocalExtension('somext', {}, { targetPlatform: TargetPlatform.WIN32_IA32 }), aGalleryExtension('somext', {}, { targetPlatform: TargetPlatform.WIN32_X64 }), undefined);
+ 		assert.strictEqual(extension.outdated, true);
+ 	});
+ 
+diff --git a/src/vs/workbench/services/search/node/rawSearchService.ts b/src/vs/workbench/services/search/node/rawSearchService.ts
+index caad308..8dbba3b 100644
+--- a/src/vs/workbench/services/search/node/rawSearchService.ts
++++ b/src/vs/workbench/services/search/node/rawSearchService.ts
+@@ -81,7 +81,7 @@ export class SearchService implements IRawSearchService {
+ 
+ 	private getPlatformFileLimits(): { readonly maxFileSize: number } {
+ 		return {
+-			maxFileSize: 16 * ByteSize.GB
++			maxFileSize: process.arch === 'ia32' ? 300 * ByteSize.MB : 16 * ByteSize.GB
+ 		};
+ 	}
+ 
