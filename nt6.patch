@@ -719,12 +719,12 @@ index 2b89bbc..a207051 100644
    "license": "MIT",
    "devDependencies": {
      "@azure/cosmos": "^3",
--    "@azure/identity": "^3.4.1",
+-    "@azure/identity": "^4.2.1",
 +    "@azure/identity": "3.3.2",
      "@azure/storage-blob": "^12.17.0",
      "@electron/get": "^2.0.0",
      "@types/ansi-colors": "^3.2.0",
-@@ -48,6 +48,7 @@
+@@ -47,6 +47,7 @@
      "jsonc-parser": "^2.3.0",
      "mime": "^1.4.1",
      "mkdirp": "^1.0.4",
@@ -732,7 +732,7 @@ index 2b89bbc..a207051 100644
      "source-map": "0.6.1",
      "ternary-stream": "^3.0.0",
      "through2": "^4.0.2",
-@@ -56,6 +57,14 @@
+@@ -55,6 +56,14 @@
      "workerpool": "^6.4.0",
      "yauzl": "^2.10.0"
    },
@@ -811,7 +811,7 @@ diff --git a/package.json b/package.json
 index 804d8a6..32a436a 100644
 --- a/package.json
 +++ b/package.json
-@@ -118,9 +118,9 @@
+@@ -117,9 +117,9 @@
      "@types/kerberos": "^1.1.2",
      "@types/minimist": "^1.2.1",
      "@types/mocha": "^9.1.1",
@@ -824,7 +824,7 @@ index 804d8a6..32a436a 100644
      "@types/trusted-types": "^1.0.6",
      "@types/vscode-notebook-renderer": "^1.72.0",
      "@types/webpack": "^5.28.5",
-@@ -132,8 +132,8 @@
+@@ -131,8 +131,8 @@
      "@typescript-eslint/eslint-plugin": "^6.21.0",
      "@typescript-eslint/experimental-utils": "^5.57.0",
      "@typescript-eslint/parser": "^6.21.0",
@@ -835,7 +835,7 @@ index 804d8a6..32a436a 100644
      "@vscode/telemetry-extractor": "^1.10.2",
      "@vscode/test-cli": "^0.0.6",
      "@vscode/test-electron": "^2.3.8",
-@@ -149,7 +149,7 @@
+@@ -148,7 +148,7 @@
      "cssnano": "^6.0.3",
      "debounce": "^1.0.0",
      "deemon": "^1.8.0",
@@ -844,7 +844,7 @@ index 804d8a6..32a436a 100644
      "eslint": "8.36.0",
      "eslint-plugin-header": "3.1.1",
      "eslint-plugin-jsdoc": "^46.5.0",
-@@ -198,10 +198,10 @@
+@@ -197,10 +197,10 @@
      "postcss": "^8.4.33",
      "postcss-nesting": "^12.0.2",
      "pump": "^1.0.1",
@@ -858,7 +858,7 @@ index 804d8a6..32a436a 100644
      "source-map": "0.6.1",
      "source-map-support": "^0.3.2",
      "style-loader": "^3.3.2",
-@@ -218,6 +218,14 @@
+@@ -217,6 +217,14 @@
      "yaserver": "^0.4.0"
    },
    "resolutions": {
@@ -930,7 +930,7 @@ diff --git a/src/vs/server/node/remoteExtensionHostAgentServer.ts b/src/vs/serve
 index 9eace08..ed4898d 100644
 --- a/src/vs/server/node/remoteExtensionHostAgentServer.ts
 +++ b/src/vs/server/node/remoteExtensionHostAgentServer.ts
-@@ -551,8 +551,7 @@ class RemoteExtensionHostAgentServer extends Disposable implements IServerAPI {
+@@ -552,8 +552,7 @@ class RemoteExtensionHostAgentServer extends Disposable implements IServerAPI {
  			const socket = net.createConnection(
  				{
  					host: host,

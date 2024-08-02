@@ -25,7 +25,7 @@ index c2b81d0..0d00ab7 100644
  	{ platform: 'win32', arch: 'x64' },
  	{ platform: 'darwin', arch: 'x64' },
  	{ platform: 'darwin', arch: 'arm64' },
-@@ -184,7 +185,9 @@ function nodejs(platform, arch) {
+@@ -185,7 +186,9 @@ function nodejs(platform, arch) {
  	const untar = require('gulp-untar');
  	const crypto = require('crypto');
  
@@ -237,7 +237,7 @@ diff --git a/src/main.js b/src/main.js
 index 90de17b..cdd8e29 100644
 --- a/src/main.js
 +++ b/src/main.js
-@@ -422,6 +422,9 @@ function configureCrashReporter() {
+@@ -424,6 +424,9 @@ function configureCrashReporter() {
  			if (uuidPattern.test(crashReporterId)) {
  				if (isWindows) {
  					switch (process.arch) {
@@ -251,7 +251,7 @@ diff --git a/src/vs/base/common/product.ts b/src/vs/base/common/product.ts
 index c6e335a..0623399 100644
 --- a/src/vs/base/common/product.ts
 +++ b/src/vs/base/common/product.ts
-@@ -227,6 +227,7 @@ export interface IFilePathCondition extends IExtensionRecommendationCondition {
+@@ -228,6 +228,7 @@ export interface IFilePathCondition extends IExtensionRecommendationCondition {
  export type IFileContentCondition = (IFileLanguageCondition | IFilePathCondition) & { readonly contentPattern: string };
  
  export interface IAppCenterConfiguration {
@@ -268,19 +268,19 @@ index 0c9ec9e..c1801ff 100644
  import { IConfigurationService } from 'vs/platform/configuration/common/configuration';
  import { IEnvironmentService } from 'vs/platform/environment/common/environment';
 -import { getTargetPlatform, IExtensionGalleryService, IExtensionIdentifier, IExtensionInfo, IGalleryExtension, IGalleryExtensionAsset, IGalleryExtensionAssets, IGalleryExtensionVersion, InstallOperation, IQueryOptions, IExtensionsControlManifest, isNotWebExtensionInWebTargetPlatform, isTargetPlatformCompatible, ITranslation, SortBy, SortOrder, StatisticType, toTargetPlatform, WEB_EXTENSION_TAG, IExtensionQueryOptions, IDeprecationInfo, ISearchPrefferedResults, ExtensionGalleryError, ExtensionGalleryErrorCode, IProductVersion } from 'vs/platform/extensionManagement/common/extensionManagement';
-+import { getFallbackTargetPlarforms, getTargetPlatform, IExtensionGalleryService, IExtensionIdentifier, IExtensionInfo, IGalleryExtension, IGalleryExtensionAsset, IGalleryExtensionAssets, IGalleryExtensionVersion, InstallOperation, IQueryOptions, IExtensionsControlManifest, isNotWebExtensionInWebTargetPlatform, isTargetPlatformCompatible, ITranslation, SortBy, SortOrder, StatisticType, toTargetPlatform, WEB_EXTENSION_TAG, IExtensionQueryOptions, IDeprecationInfo, ISearchPrefferedResults, ExtensionGalleryError, ExtensionGalleryErrorCode, IProductVersion } from 'vs/platform/extensionManagement/common/extensionManagement';
++import { getFallbackTargetPlatforms, getTargetPlatform, IExtensionGalleryService, IExtensionIdentifier, IExtensionInfo, IGalleryExtension, IGalleryExtensionAsset, IGalleryExtensionAssets, IGalleryExtensionVersion, InstallOperation, IQueryOptions, IExtensionsControlManifest, isNotWebExtensionInWebTargetPlatform, isTargetPlatformCompatible, ITranslation, SortBy, SortOrder, StatisticType, toTargetPlatform, WEB_EXTENSION_TAG, IExtensionQueryOptions, IDeprecationInfo, ISearchPrefferedResults, ExtensionGalleryError, ExtensionGalleryErrorCode, IProductVersion } from 'vs/platform/extensionManagement/common/extensionManagement';
  import { adoptToGalleryExtensionId, areSameExtensions, getGalleryExtensionId, getGalleryExtensionTelemetryData } from 'vs/platform/extensionManagement/common/extensionManagementUtil';
  import { IExtensionManifest, TargetPlatform } from 'vs/platform/extensions/common/extensions';
- import { isEngineValid } from 'vs/platform/extensions/common/extensionValidator';
-@@ -477,6 +477,7 @@ function getAllTargetPlatforms(rawGalleryExtension: IRawGalleryExtension): Targe
+ import { areApiProposalsCompatible, isEngineValid } from 'vs/platform/extensions/common/extensionValidator';
+@@ -484,6 +484,7 @@ function getAllTargetPlatforms(rawGalleryExtension: IRawGalleryExtension): Targe
  
  export function sortExtensionVersions(versions: IRawGalleryExtensionVersion[], preferredTargetPlatform: TargetPlatform): IRawGalleryExtensionVersion[] {
  	/* It is expected that versions from Marketplace are sorted by version. So we are just sorting by preferred targetPlatform */
-+	const fallbackTargetPlatforms = getFallbackTargetPlarforms(preferredTargetPlatform);
++	const fallbackTargetPlatforms = getFallbackTargetPlatforms(preferredTargetPlatform);
  	for (let index = 0; index < versions.length; index++) {
  		const version = versions[index];
  		if (version.version === versions[index - 1]?.version) {
-@@ -486,6 +487,10 @@ export function sortExtensionVersions(versions: IRawGalleryExtensionVersion[], p
+@@ -493,6 +494,10 @@ export function sortExtensionVersions(versions: IRawGalleryExtensionVersion[], p
  			if (versionTargetPlatform === preferredTargetPlatform) {
  				while (insertionIndex > 0 && versions[insertionIndex - 1].version === version.version) { insertionIndex--; }
  			}
@@ -327,11 +327,11 @@ index 665ea2e..120d61b 100644
  
 -	return false;
 +	// Fallback
-+	const fallbackTargetPlatforms = getFallbackTargetPlarforms(productTargetPlatform);
++	const fallbackTargetPlatforms = getFallbackTargetPlatforms(productTargetPlatform);
 +	return fallbackTargetPlatforms.includes(extensionTargetPlatform);
 +}
 +
-+export function getFallbackTargetPlarforms(targetPlatform: TargetPlatform): TargetPlatform[] {
++export function getFallbackTargetPlatforms(targetPlatform: TargetPlatform): TargetPlatform[] {
 +	switch (targetPlatform) {
 +		case TargetPlatform.WIN32_X64: return [TargetPlatform.WIN32_IA32];
 +		case TargetPlatform.WIN32_ARM64: return [TargetPlatform.WIN32_IA32];
@@ -477,7 +477,7 @@ diff --git a/src/vs/workbench/services/search/node/rawSearchService.ts b/src/vs/
 index caad308..8dbba3b 100644
 --- a/src/vs/workbench/services/search/node/rawSearchService.ts
 +++ b/src/vs/workbench/services/search/node/rawSearchService.ts
-@@ -81,7 +81,7 @@ export class SearchService implements IRawSearchService {
+@@ -83,7 +83,7 @@ export class SearchService implements IRawSearchService {
  
  	private getPlatformFileLimits(): { readonly maxFileSize: number } {
  		return {

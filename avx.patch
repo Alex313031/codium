@@ -46,7 +46,7 @@ diff --git a/package.json b/package.json
 index 14d3c1e..accb365 100644
 --- a/package.json
 +++ b/package.json
-@@ -132,7 +132,7 @@
+@@ -131,7 +131,7 @@
      "@typescript-eslint/eslint-plugin": "^6.21.0",
      "@typescript-eslint/experimental-utils": "^5.57.0",
      "@typescript-eslint/parser": "^6.21.0",
