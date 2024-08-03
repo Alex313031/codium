@@ -38,7 +38,7 @@ esac
 # Install prerequisites
 installDeps () {
 	sudo apt-get install build-essential git g++ pkg-config automake make gcc libsecret-1-dev \
-	fakeroot rpm dpkg dpkg-dev imagemagick libkrb5-dev libx11-dev libxkbfile-dev jq python3 librsvg
+	fakeroot rpm dpkg dpkg-dev imagemagick libkrb5-dev libx11-dev libxkbfile-dev jq python3 librsvg2-bin
 }
 case $1 in
 	--deps) installDeps; exit 0;;
