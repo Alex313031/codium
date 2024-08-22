@@ -20,11 +20,6 @@ diff --git a/build/gulpfile.vscode.js b/build/gulpfile.vscode.js
 index 4af4067..21146e8 100644
 --- a/build/gulpfile.vscode.js
 +++ b/build/gulpfile.vscode.js
-@@ -236,3 +236,3 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
- 
--		let version = packageJson.version;
-+		let version = packageJson.version
- 		const quality = product.quality;
 @@ -244,3 +244,4 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
  		const name = product.nameShort;
 -		const packageJsonUpdates = { name, version };

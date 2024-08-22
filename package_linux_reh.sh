@@ -14,7 +14,6 @@ cd vscode || { echo "'vscode' dir not found"; exit 1; }
 GLIBC_VERSION="2.17"
 GLIBCXX_VERSION="3.4.22"
 NODE_VERSION="16.20.2"
-
 if [[ "${VSCODE_ARCH}" == "ppc64le" ]]; then
   GLIBC_VERSION="2.28"
 elif [[ "${VSCODE_ARCH}" == "riscv64" ]]; then

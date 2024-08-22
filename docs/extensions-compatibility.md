@@ -12,7 +12,7 @@
 
 ## Incompatibility due to licensing
 
-The following extensions are not compatible with VSCodium due to their licensing:
+The following extensions are not compatible with Codium due to their licensing:
 
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
