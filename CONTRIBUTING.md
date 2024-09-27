@@ -10,7 +10,7 @@
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [VSCodium Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by the [Codium Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
 ## Reporting Bugs
 
@@ -23,9 +23,9 @@ When you are creating a bug report, please include as many details as possible. 
 
 If you want to make changes, please read [the Build page](./docs/howto-build.md).
 
-### Building VSCodium
+### Building Codium
 
-To build VSCodium, please follow the command found in the section [`Build Scripts`](./docs/howto-build.md#build-scripts).
+To build Codium, please follow the command found in the section [`Build Scripts`](./docs/howto-build.md#build-scripts).
 
 ### Updating patches
 
@@ -33,9 +33,9 @@ If you want to update the existing patches, please follow the section [`Patch Up
 
 ### Add a new patch
 
-- first, you need to build VSCodium
+- first, you need to build Codium
 - then use the command `patch.sh <your patch name>`, to initiate a new patch
-- when the script pauses at `Press any key when the conflict have been resolved...`, open `vscode` directory in **VSCodium**
+- when the script pauses at `Press any key when the conflict have been resolved...`, open `vscode` directory in **Codium**
 - run `yarn watch`
 - run `./script/code.sh`
 - make your changes

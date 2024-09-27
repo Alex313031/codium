@@ -23,7 +23,7 @@ index 8d15015..dc50d78 100644
 @@ -320,3 +320,3 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
  
 -		let version = packageJson.version;
-+		let version = packageJson.version
++			let version = packageJson.version;
  		const quality = product.quality;
 @@ -333,3 +333,4 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
  		const name = product.nameShort;

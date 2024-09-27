@@ -1,0 +1,58 @@
+name: Submit Codium User Setup package to the Windows Package Manager Community Repository
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  winget:
+    name: Publish WinGet Package
+    runs-on: windows-latest
+    steps:
+      - name: Submit Codium User Setup (.exe) package with WinGet Create
+        run: |
+          # Define the GitHub repository owner and repository name
+          $owner = "Alex313031"
+          $repo = "codium"
+
+          # Define the pattern to filter assets
+          $pattern = "*.exe"
+
+          # Construct the API URL
+          $url = "https://api.github.com/repos/$owner/$repo/releases/latest"
+
+          # Make a GET request to the GitHub API
+          $response = Invoke-RestMethod -Uri $url -Method Get
+
+          # Filter assets based on the pattern
+          $filteredAssets = $response.assets | Where-Object { $_.name -like $pattern }
+
+          # Initialize variables to store the version and download URL
+          $version = ""
+          $downloadUrl = ""
+
+          # Check if any matching assets were found
+          if ($filteredAssets.Count -eq 0) {
+              Write-Output "No matching assets found."
+          } else {
+              # Extract the version and download URL from the first matching asset
+              $version = $response.tag_name
+              $downloadUrl = $filteredAssets[0].browser_download_url
+
+              # Output the version and download URL
+              Write-Output "Latest release version: $version"
+              Write-Output "Latest release download URL: $downloadUrl"
+          }
+          $version
+          $downloadUrl
+          $packageId = "Alex313031.Codium"
+          $gitToken = "${{ secrets.GITHUB_TOKEN }}"
+
+          # Install .NET Runtime
+          Invoke-WebRequest https://dot.net/v1/dotnet-install.ps1 -OutFile dotnet-install.ps1
+          .\dotnet-install.ps1 -Runtime dotnet -Architecture x64 -Version 6.0.13 -InstallDir $env:ProgramFiles\dotnet
+
+          # Update package using wingetcreate
+          Invoke-WebRequest https://aka.ms/wingetcreate/latest -OutFile wingetcreate.exe
+          .\wingetcreate.exe update $packageId --version $version --urls "$installerUrl" --submit --token $gitToken
