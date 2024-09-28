@@ -421,6 +421,21 @@ index aa417dc..b2e3689 100644
  import { createHash } from 'crypto';
  import { DebianArchString } from './types';
  import * as ansiColors from 'ansi-colors';
+diff --git a/build/npm/preinstall.js b/build/npm/preinstall.js
+index f359215..0b56cde 100644
+--- a/build/npm/preinstall.js
++++ b/build/npm/preinstall.js
+@@ -10,8 +10,8 @@ const minorNodeVersion = parseInt(nodeVersion[2]);
+ const patchNodeVersion = parseInt(nodeVersion[3]);
+ 
+ if (!process.env['VSCODE_SKIP_NODE_VERSION_CHECK']) {
+-	if (majorNodeVersion < 20) {
+-		console.error('\x1b[1;31m*** Please use latest Node.js v20 LTS for development.\x1b[0;0m');
++	if (majorNodeVersion < 16) {
++		console.error('\x1b[1;31m*** Please use 16 for development.\x1b[0;0m');
+ 		err = true;
+ 	}
+ }
 diff --git a/build/package.json b/build/package.json
 index c93b66e..9a91308 100644
 --- a/build/package.json
