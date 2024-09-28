@@ -474,7 +474,7 @@ index c93b66e..9a91308 100644
 +    "@azure/core-client": "1.7.3",
 +    "@azure/core-lro": "2.5.4",
 +    "@azure/core-rest-pipeline": "1.12.2",
-+    "@azure/core-tracing": "1.0.1",
++    "@azure/core-tracing": "1.0.0-preview.13",
 +    "@azure/core-util": "1.6.1"
 +  },
    "type": "commonjs",
@@ -622,7 +622,7 @@ index 13fc4f4..aa4d5a9 100644
 +    "@azure/core-client": "1.7.3",
 +    "@azure/core-lro": "2.5.4",
 +    "@azure/core-rest-pipeline": "1.12.2",
-+    "@azure/core-tracing": "1.0.1",
++    "@azure/core-tracing": "1.0.0-preview.13",
 +    "@azure/core-util": "1.6.1",
 +    "@azure-rest/core-client": "1.1.4",
 +    "@types/sinon": "10.0.16",
