@@ -74,10 +74,10 @@ printf "${bold}${GRE}Building Codium for Linux...${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
-export CFLAGS="-DNDEBUG -O3 -g0 -s" &&
-export CXXFLAGS="-DNDEBUG -O3 -g0 -s" &&
-export CPPFLAGS="-DNDEBUG -O3 -g0 -s" &&
-export LDFLAGS="-Wl,-O3 -s" &&
+export CFLAGS="-DNDEBUG -march=armv8-a+simd -mtune=cortex-a72 -O3 -g0 -s" &&
+export CXXFLAGS="-DNDEBUG -march=armv8-a+simd -mtune=cortex-a72 -O3 -g0 -s" &&
+export CPPFLAGS="-DNDEBUG -march=armv8-a+simd -mtune=cortex-a72 -O3 -g0 -s" &&
+export LDFLAGS="-march=armv8-a+simd -mtune=cortex-a72 -Wl,-O3 -s" &&
 
 . ./build/build.sh -s -a
 }
@@ -91,10 +91,10 @@ printf "${bold}${GRE}Building Codium for Linux (AVX Version)...${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
-export CFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -O3 -g0 -s" &&
-export CXXFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -s" &&
-export CPPFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -s" &&
-export LDFLAGS="-Wl,-O3 -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -s" &&
+export CFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -mpclmul -O3 -g0 -s" &&
+export CXXFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -mpclmul -s" &&
+export CPPFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -mpclmul -s" &&
+export LDFLAGS="-Wl,-O3 -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -mpclmul -s" &&
 
 printf "\n" &&
 printf "${GRE}Patching vscode to use AVX Electron...${c0}\n" &&
@@ -175,9 +175,9 @@ printf "${bold}${GRE}Building Codium for MacOS (x86_64 version)...${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
-export CFLAGS="-DNDEBUG -msse3 -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export CXXFLAGS="-DNDEBUG -msse3 -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export CPPFLAGS="-DNDEBUG -msse3 -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CXXFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CPPFLAGS="-DNDEBUG -msse3 -mssse3 -msse4.1 -O3 -g0 -s -Wno-unused-command-line-argument" &&
 export LDFLAGS="-msse3 -s" &&
 
 . ./build/build.sh -s
@@ -192,10 +192,10 @@ printf "${bold}${GRE}Building Codium for MacOS (arm64 version)...${c0}\n" &&
 printf "\n" &&
 tput sgr0 &&
 
-export CFLAGS="-DNDEBUG -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export CXXFLAGS="-DNDEBUG -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export CPPFLAGS="-DNDEBUG -O3 -g0 -s -Wno-unused-command-line-argument" &&
-export LDFLAGS="-s" &&
+export CFLAGS="-DNDEBUG -march=armv8.3-a+simd -mtune=apple-m1 -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CXXFLAGS="-DNDEBUG -march=armv8.3-a+simd -mtune=apple-m1 -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export CPPFLAGS="-DNDEBUG -march=armv8.3-a+simd -mtune=apple-m1 -O3 -g0 -s -Wno-unused-command-line-argument" &&
+export LDFLAGS="-march=armv8.3-a+simd -mtune=apple-m1 -s" &&
 
 . ./build/build.sh -s -a
 }
