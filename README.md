@@ -25,7 +25,7 @@ __This is a fork of <a rel="noopener" target="_blank" href="https://github.com/V
 ## <a id="download-install"></a>Download/Install
 
 :tada: :tada:
-Download latest release in the releases section > https://github.com/Alex313031/codium/releases
+Download the latest release in the releases section > https://github.com/Alex313031/codium/releases
 :tada: :tada:
 
 [More info / helpful tips are here.](https://github.com/Alex313031/codium/blob/master/docs/index.md)
@@ -48,9 +48,9 @@ Microsoft's releases of Visual Studio Code are licensed under [this not-FLOSS li
 
 This repo exists so that you don't have to download+build from source. The build scripts in this repo clone Microsoft's vscode repo, run the build commands, and upload the resulting binaries to [GitHub releases](https://github.com/Alex313031/codium/releases). __These binaries are licensed under the MIT license. Telemetry is disabled.__
 
-If you want to build from source yourself, head over to [Microsoft's vscode repo](https://github.com/Microsoft/vscode) and follow their [instructions](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run). This repo exists to make it easier to get the latest version of MIT-licensed VS Code.
+If you want to build from the source yourself, head over to [Microsoft's vscode repo](https://github.com/Microsoft/vscode) and follow their [instructions](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run). This repo exists to make it easier to get the latest version of MIT-licensed VS Code.
 
-Microsoft's build process (which we are running to build the binaries) does download additional files. Those packages downloaded during build are:
+Microsoft's build process (which we are running to build the binaries) does download additional files. Those packages downloaded during the build process are:
 
 - Pre-built extensions from the GitHub:
   - [ms-vscode.js-debug-companion](https://github.com/microsoft/vscode-js-debug-companion)
@@ -64,11 +64,11 @@ Microsoft's build process (which we are running to build the binaries) does down
 
 ### Documentation
 
-For more information on getting all the telemetry disabled, tips for migrating from Visual Studio Code to Codium and more, have a look at [the Docs page](https://github.com/Alex313031/codium/blob/master/docs/index.md) page.
+For more information on getting all the telemetry disabled, tips for migrating from Visual Studio Code to Codium, and more, have a look at [the Docs page](https://github.com/Alex313031/codium/blob/master/docs/index.md).
 
 ### Troubleshooting
 
-If you have any issue, please check [the Troubleshooting page](https://github.com/Alex313031/codium/blob/master/docs/troubleshooting.md) or the existing issues.
+If you have any issues, please check [the Troubleshooting page](https://github.com/Alex313031/codium/blob/master/docs/troubleshooting.md) or the existing issues.
 
 ### Extensions and the Marketplace
 
@@ -78,9 +78,9 @@ Please note that some Visual Studio Code extensions have licenses that restrict 
 
 ### How are the Codium binaries built?
 
-If you would like to see the commands we run to build `vscode` into Codium binaries, have a look at the workflow files in `.github/workflows` for Windows, GNU/Linux and macOS. These build files call all the other scripts in the repo. If you find something that doesn't make sense, feel free to ask about it in an issue or in [the discussions](https://github.com/Alex313031/codium/discussions).
+If you would like to see the commands we run to build `vscode` into Codium binaries, have a look at the workflow files in `.github/workflows` for Windows, GNU/Linux, and macOS. These build files call all the other scripts in the repo. If you find something that doesn't make sense, feel free to ask about it in an issue or in [the discussions](https://github.com/Alex313031/codium/discussions).
 
-The builds are run every day, but exit early if there isn't a new release from Microsoft.
+The builds are run every day but exit early if there isn't a new release from Microsoft.
 
 ## <a id="supported-platforms"></a>Supported Platforms
 
