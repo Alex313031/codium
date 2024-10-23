@@ -1,0 +1,62 @@
+diff --git a/build/linux/debian/calculate-deps.js b/build/linux/debian/calculate-deps.js
+index bbcb6bf..ff88c25 100644
+--- a/build/linux/debian/calculate-deps.js
++++ b/build/linux/debian/calculate-deps.js
+@@ -78,9 +78,12 @@ function calculatePackageDeps(binaryPath, arch, chromiumSysroot, vscodeSysroot)
+     // TODO(deepak1556): remove this workaround in favor of computing the
+     // versions from build container for native modules.
+     const filteredDeps = depsStr.split(', ').filter(dependency => {
+-        return !dependency.startsWith('libgcc-s1');
++        return !dependency.startsWith('libgcc-s1') &&
++            !dependency.startsWith('libgssapi-krb5-2') &&
++            !dependency.startsWith('libkrb5-3') &&
++            !dependency.startsWith('libxkbfile1');
+     }).sort();
+     const requires = new Set(filteredDeps);
+     return requires;
+ }
+-//# sourceMappingURL=calculate-deps.js.map
+\ No newline at end of file
++//# sourceMappingURL=calculate-deps.js.map
+diff --git a/build/linux/debian/calculate-deps.ts b/build/linux/debian/calculate-deps.ts
+index 92f8065..f964ccf 100644
+--- a/build/linux/debian/calculate-deps.ts
++++ b/build/linux/debian/calculate-deps.ts
+@@ -90,7 +90,10 @@ function calculatePackageDeps(binaryPath: string, arch: DebianArchString, chromi
+ 	// TODO(deepak1556): remove this workaround in favor of computing the
+ 	// versions from build container for native modules.
+ 	const filteredDeps = depsStr.split(', ').filter(dependency => {
+-		return !dependency.startsWith('libgcc-s1');
++        return !dependency.startsWith('libgcc-s1') &&
++            !dependency.startsWith('libgssapi-krb5-2') &&
++            !dependency.startsWith('libkrb5-3') &&
++            !dependency.startsWith('libxkbfile1');
+ 	}).sort();
+ 	const requires = new Set(filteredDeps);
+ 	return requires;
+diff --git a/build/linux/debian/dep-lists.js b/build/linux/debian/dep-lists.js
+index 3a642a7..a822c56 100644
+--- a/build/linux/debian/dep-lists.js
++++ b/build/linux/debian/dep-lists.js
+@@ -13,6 +13,8 @@ exports.additionalDeps = [
+     'libnss3 (>= 3.26)',
+     'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3', // For Breakpad crash reports.
+     'xdg-utils (>= 1.0.2)', // OS integration
++    'libgssapi-krb5-2 (>= 1.16)',
++    'libkrb5-3 (>= 1.16)'
+ ];
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends
+ // Dependencies that we can only recommend
+diff --git a/build/linux/debian/dep-lists.ts b/build/linux/debian/dep-lists.ts
+index 86d1de1..2a72b94 100644
+--- a/build/linux/debian/dep-lists.ts
++++ b/build/linux/debian/dep-lists.ts
+@@ -11,6 +11,8 @@ export const additionalDeps = [
+ 	'libnss3 (>= 3.26)',
+ 	'libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3', // For Breakpad crash reports.
+ 	'xdg-utils (>= 1.0.2)', // OS integration
++	'libgssapi-krb5-2 (>= 1.16)',
++	'libkrb5-3 (>= 1.16)'
+ ];
+ 
+ // Based on https://source.chromium.org/chromium/chromium/src/+/main:chrome/installer/linux/debian/manual_recommends

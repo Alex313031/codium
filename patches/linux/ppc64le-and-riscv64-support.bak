@@ -1,0 +1,15 @@
+diff --git a/build/azure-pipelines/linux/setup-env.sh b/build/azure-pipelines/linux/setup-env.sh
+index e42a6b12b1f..854445538ba 100755
+--- a/build/azure-pipelines/linux/setup-env.sh
++++ b/build/azure-pipelines/linux/setup-env.sh
+@@ -7,6 +7,10 @@ if [ "$SYSROOT_ARCH" == "x64" ]; then
+   SYSROOT_ARCH="amd64"
+ fi
+ 
++if [ "$npm_config_arch" == "riscv64" ] || [ "$npm_config_arch" == "ppc64" ]; then
++  exit 0
++fi
++
+ export VSCODE_SYSROOT_DIR=$PWD/.build/sysroots
+ SYSROOT_ARCH="$SYSROOT_ARCH" node -e '(async () => { const { getVSCodeSysroot } = require("./build/linux/debian/install-sysroot.js"); await getVSCodeSysroot(process.env["SYSROOT_ARCH"]); })()'
+ 
