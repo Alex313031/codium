@@ -4,7 +4,7 @@ index 48b14e6..c85fa1b 100644
 +++ b/.nvmrc
 @@ -1 +1 @@
 -20.16.0
-+16.17.1
++18.18.2
 diff --git a/.npmrc b/.npmrc
 index 87dc701..4e8e481 100644
 --- a/.npmrc
@@ -12,12 +12,12 @@ index 87dc701..4e8e481 100644
 @@ -1,5 +1,5 @@
  disturl="https://electronjs.org/headers"
 -target="30.5.1"
-+target="22.3.27"
++target="28.3.3"
  ms_build_id="10262041"
  runtime="electron"
  build_from_source="true"
 diff --git a/build/checksums/electron.txt b/build/checksums/electron.txt
-index 5365421..2d1c9eb 100644
+index 5365421..9ecb134 100644
 --- a/build/checksums/electron.txt
 +++ b/build/checksums/electron.txt
 @@ -1,75 +1,75 @@
@@ -96,84 +96,84 @@ index 5365421..2d1c9eb 100644
 -94b9ce6cb40ae001962b77525d12483c3458776066a69a4e714b327bab1decfc *mksnapshot-v30.5.1-win32-arm64-x64.zip
 -4d89d06c2e85b25d52bb64f48258ad5d05b98ac21697ae9c49ccd19bad9d7d94 *mksnapshot-v30.5.1-win32-ia32.zip
 -ccfd322bafde0485a0ac6b0acc3669c7b08f30003a1c2e044eebc1bf02289de3 *mksnapshot-v30.5.1-win32-x64.zip
-+e462d1d1f42fbd95f59606138c5f2d127ec7a0194627e613429fd6589f38c778 *chromedriver-v22.3.27-darwin-arm64.zip
-+59c89191158c810208dbe6a49015d9232e114330eca514efe362bdf1f9c8c819 *chromedriver-v22.3.27-darwin-x64.zip
-+09d1b16ab31a17a914b9a871158458d34c7e5a52c7686ea923b9a9878e6d4539 *chromedriver-v22.3.27-linux-arm64.zip
-+f020427cc1972928fd784b4f9ee912e8b42691c782c325fe7624aa2b38a7fcec *chromedriver-v22.3.27-linux-armv7l.zip
-+2c0eb7ccc5d68ac52dfcf7264e8dc61de4a9480ededb464c35c0ad7db41b8e53 *chromedriver-v22.3.27-linux-x64.zip
-+a6efc976fc8efd469ece8ef7349ba655128496929950beb7b4db4f910ca946fd *chromedriver-v22.3.27-mas-arm64.zip
-+5b6dcd7edb370a88037cf858e63e0f03ead9c0089d337d6b5c6eee310dca228f *chromedriver-v22.3.27-mas-x64.zip
-+e57141363f51445819436ca9320115931394e9349e6f6bfb2aa8123cb2a2ce21 *chromedriver-v22.3.27-win32-arm64.zip
-+56e2a0e427cf889045ef533e350bb9be1c628c95d74b11e6477d654dba459b29 *chromedriver-v22.3.27-win32-ia32.zip
-+8d01b742ca0e0f5b6d9eb73a2b650aaf5aeea4e060a6880bdfbf968d710793f7 *chromedriver-v22.3.27-win32-x64.zip
-+918f116f80da1fdef14ba3a3a9bb628aac09cb6c3c5fff87cffca9d3c47771ff *electron-api.json
-+e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-darwin-arm64-dsym-snapshot.zip
-+dbff939cdfec7ce4d9fa16187fb69a357193ebc9ae4082e8da771dd5a5511a23 *electron-v22.3.27-darwin-arm64-dsym.zip
-+6c67025cd392fbfd78fbb5676f437eaf62dbc083770899794f43ad10da07a311 *electron-v22.3.27-darwin-arm64-symbols.zip
-+2b87e9f766692caaa16d7750bfab2f609c0eab906f55996c7d438d8e18ac8867 *electron-v22.3.27-darwin-arm64.zip
-+57120f63f8b6aa91009aa20c76b75d4548b94ab0fdda7d62b835389d0ecc9ae2 *electron-v22.3.27-darwin-x64-dsym-snapshot.zip
-+3552ff075bd25128bc6c0fc6a6aafa4db69db7299794aa40187ad87ddb0535b3 *electron-v22.3.27-darwin-x64-dsym.zip
-+fef4cc317aeb4d6c790938dba14357932dba488e2116db84570edf0e3d1c5675 *electron-v22.3.27-darwin-x64-symbols.zip
-+01f053d08cb2855acb14f0465f4e36324a41bd13b3b2ead142970a56df3e9db1 *electron-v22.3.27-darwin-x64.zip
-+3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-arm64-debug.zip
-+57806ef01cdceaecf6a4b7138aa035b91c63cc19b168adb91a45a855d724f6d0 *electron-v22.3.27-linux-arm64-symbols.zip
-+60279395a5ce4eaf3c08f1e717771b203830902d3fe3a7c311bc37deb1a0e15e *electron-v22.3.27-linux-arm64.zip
-+3dce7df72fc9aae439e6b93c3abbc8fa32db7685e77ebb143ae9a75a1e06ed82 *electron-v22.3.27-linux-armv7l-debug.zip
-+136beb93675d0244e74ab51297c2f2cbe956c9ff8dfcdf74337a8e973cbc94f7 *electron-v22.3.27-linux-armv7l-symbols.zip
-+9f8372606e5ede83cf1c73a3d8ff07047e4e3ef614aa89a76cd497dc06cf119d *electron-v22.3.27-linux-armv7l.zip
-+6ac494b29e67781d55e3b4fbe73ffe2bdf1b422f883f3c265a753bc1547cc24a *electron-v22.3.27-linux-x64-debug.zip
-+94b89f034554318d66098a6657d5bacaeb7f03ad98a2f856c8720aed31e75348 *electron-v22.3.27-linux-x64-symbols.zip
-+631d8eb08098c48ce2b29421e74c69ac0312b1e42f445d8a805414ba1242bf3a *electron-v22.3.27-linux-x64.zip
-+e0ad02272f26d62ce61535658299217599bf7453631e1272f12b8fc883573b77 *electron-v22.3.27-mas-arm64-dsym-snapshot.zip
-+b6cf5b125c6be773d3f915a64b13be9e96a4d44a1969c3de74d30cac9c73aafd *electron-v22.3.27-mas-arm64-dsym.zip
-+19980e05fc846f45090a3e4571998981a33dccb5766ebfcfd375552bc99066eb *electron-v22.3.27-mas-arm64-symbols.zip
-+7757470e871827b15c0b5c64e1734866e9334528689a69b34e64c15a9caada35 *electron-v22.3.27-mas-arm64.zip
-+bf8f821d3650bbafa29ff4ea366799d13bda6e21aeab334f961a60a0d662e2b2 *electron-v22.3.27-mas-x64-dsym-snapshot.zip
-+e082f5172e1ec429b688606a209eff0a20027b01bb5fac4782bc0b61f2d4d3d9 *electron-v22.3.27-mas-x64-dsym.zip
-+f3313c2f9263e19cf9f59d16af86cd672f2581fb894c7b4c849a7cf3a7a989bf *electron-v22.3.27-mas-x64-symbols.zip
-+b7c61f0c7c21377630572904ea8a499db9830a3e400672bb23da246c19e6e6a1 *electron-v22.3.27-mas-x64.zip
-+3f0caf3642a756aa61c1cedb910fe36c9d0d252df479598940d3c56185da1349 *electron-v22.3.27-win32-arm64-pdb.zip
-+a8e5997fcab7774f95301e8687d82538862944c03c50ec75702f32fb053c6b90 *electron-v22.3.27-win32-arm64-symbols.zip
-+948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-arm64-toolchain-profile.zip
-+555371d63cae449625c169e9c32b00b1530cdee29bccef8b832f57cebfe8824e *electron-v22.3.27-win32-arm64.zip
-+e9693674e527144ad4a4322d2eda8e19dd0042a63dadd51d3029effefe62dec6 *electron-v22.3.27-win32-ia32-pdb.zip
-+819b0b9fe7ad888caec215f8e66aa07e3c476638617b969d0e169a973c58a479 *electron-v22.3.27-win32-ia32-symbols.zip
-+948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-ia32-toolchain-profile.zip
-+1119ac7112590cb9c10a8c9b0bb5be65c0e11648a4f1311e6b7a5a00e497c2ce *electron-v22.3.27-win32-ia32.zip
-+aa6a29c2b4a678ce5ec1e487d85e154d1e58c1c727b1858a24efe2610b7610c5 *electron-v22.3.27-win32-x64-pdb.zip
-+8e9c3e42930b1937393b6478c37750f317872786c51f5296de09cec3c8af815e *electron-v22.3.27-win32-x64-symbols.zip
-+948e3eee0cf634361eb1afcc0e124d2cf009f9729c4cfac99cddba167f80273b *electron-v22.3.27-win32-x64-toolchain-profile.zip
-+ad723ed7dad32f9459f7a9de1fd6d718cf713c4809c2431503bea62ce8f786e6 *electron-v22.3.27-win32-x64.zip
-+f7dd34e0b335a1980d6aebc62d4d1383a051d6a1f895052f73a3ff8f9dd03cce *electron.d.ts
-+cc5f6b70a3d57e34492ee85a11346ed3a1aaf3b4f9f17c2594afe4048414e654 *ffmpeg-v22.3.27-darwin-arm64.zip
-+ff4586bd27b1a0a4d19f9da9d1a77b30ff6afb6a9a868a3d4c9844b7d4aa8ae1 *ffmpeg-v22.3.27-darwin-x64.zip
-+59d2e2b2f2cc515a86a4e0cfd1116d10a8b25a8d58d45bb04de3512e156c944b *ffmpeg-v22.3.27-linux-arm64.zip
-+b9d3b227bee17666d395ee7882ef477a733c3eeef3f1d9f2e3616d2d02eb3376 *ffmpeg-v22.3.27-linux-armv7l.zip
-+fa07ef910b23a4ef4b6761bc16d20c0e70ff0259325c4d523129e2d9c5084174 *ffmpeg-v22.3.27-linux-x64.zip
-+5ecdc59a23417cc59ddb5a943cc2aa4fcad5da7c115d070fb697135662d1922e *ffmpeg-v22.3.27-mas-arm64.zip
-+faee7693f94b51094210d2fb3355deb16fd1b15d4c04d4e51ab8f77633a50f58 *ffmpeg-v22.3.27-mas-x64.zip
-+ab34f1ff4a781e71f6c268b5198e893ed4f6bd6962639eaa01779292e89bad0b *ffmpeg-v22.3.27-win32-arm64.zip
-+b14e3730694de4763061d83bc3006e68c2b235de0bf087a64aedc10182eb8b79 *ffmpeg-v22.3.27-win32-ia32.zip
-+9c503e5a180c756094c1bcba1d1f71f18eeb1f58ed00d7ed53a8442befce3f71 *ffmpeg-v22.3.27-win32-x64.zip
-+d2869fbeb76c750dfdc7ab3cc18379ac7da596d3b67f96f7b37153410420a17b *hunspell_dictionaries.zip
-+f5959546231f39e70fde4c10a21ec9cb6bf21792ce48260450a2fe8d79078f90 *libcxx-objects-v22.3.27-linux-arm64.zip
-+64aede20ce330331b11021ac2a5bfb664cf85582d2d94a5fab83945ebd074720 *libcxx-objects-v22.3.27-linux-armv7l.zip
-+25dcaf59ca47ed6ce9828b8134980f7ab7719623407aee6549335314b555d84c *libcxx-objects-v22.3.27-linux-x64.zip
-+c38f100d27955a60e563aa0ffc5e03edbd37ad70ef5294e4021fd9971af262e7 *libcxx_headers.zip
-+aa703a89c36fc6c3970e491321b09aa9c22387da7fc24e033cd6ff4f1bd69fb3 *libcxxabi_headers.zip
-+160987240aafcf545ee73feeeda31cf9b9d59084a5268f2d8a83cf83703a7b72 *mksnapshot-v22.3.27-darwin-arm64.zip
-+ed46ab6112a3e4aaf12b223e1761896fcfa44ccf13a4d01445b71272dcb22b21 *mksnapshot-v22.3.27-darwin-x64.zip
-+3a0e5ef31b91d2b7beb28ebc87e2ab5bd1abc8a3ab1902a147322c8824601ab2 *mksnapshot-v22.3.27-linux-arm64-x64.zip
-+2614d68292d6267e8d7d2a598c605938d48c84ce895607137599ae4841086e41 *mksnapshot-v22.3.27-linux-armv7l-x64.zip
-+cf128df524c9c5e6916f41dcc49d094834cdad7d7cbb050deee9d55645a3bcab *mksnapshot-v22.3.27-linux-x64.zip
-+0b02cab2889af3576c60f3b1912717827811c0084c54d636ee3f8bc33417e53d *mksnapshot-v22.3.27-mas-arm64.zip
-+a9cffdd62850d4b62793556ed1aaa13664a75a26837543a364400e4fcd5ee4ea *mksnapshot-v22.3.27-mas-x64.zip
-+3d69cf2b841f79892141ca5d5335e156bc2fda4208c172406a247786089fe4d1 *mksnapshot-v22.3.27-win32-arm64-x64.zip
-+6323cffb19bbd7b8ba99080e1299f91f75ed96e4ffbe226a7dc5000a0db8bc3c *mksnapshot-v22.3.27-win32-ia32.zip
-+e61ed6727564ff5155c0c6df5394092c16f55c84542b55de6381d7b77fb638db *mksnapshot-v22.3.27-win32-x64.zip
++2a623f1ad98c60c7f47b13301cec44941279771e675f2ec89027f26e1ee52678 *chromedriver-v28.3.3-darwin-arm64.zip
++3cbb0bafefca106477943c5d9d2463d0fa5fa6ef6ea5d55efe44dd814eb3a3e7 *chromedriver-v28.3.3-darwin-x64.zip
++c9d8092bb21198fc90eba452233871d81d1b549c3505e4fbd505eca61ce2c294 *chromedriver-v28.3.3-linux-arm64.zip
++5ea3a62da4e0c44de8a498eaca963849daffe8e96128fb9d9d52ca254e6072bc *chromedriver-v28.3.3-linux-armv7l.zip
++5272607001d4294d536e5ebdc6a10555557bd81b905bebe89b128e2c3ec106a5 *chromedriver-v28.3.3-linux-x64.zip
++c3e82eccc77c0c52d2cf8853ffdbd8c61ff25d6b2eaa0e2d1070e2fb62af1ff5 *chromedriver-v28.3.3-mas-arm64.zip
++7d47a5cc056ab9dddd3d4e1f450cc1bbaa824390e6a1e971e4b0d142e52f4982 *chromedriver-v28.3.3-mas-x64.zip
++45ee23f9450b68df9f802121eaec4cfc2658eba2214611e8fdc4464e4baff907 *chromedriver-v28.3.3-win32-arm64.zip
++cc6199a4f5e8e52836f627febec9b83fd1eebfeef234597e5c6eb988f51b66a5 *chromedriver-v28.3.3-win32-ia32.zip
++dd78f8914aa17eeabcb575872ca51fca900c514f070219370ca0267e91129665 *chromedriver-v28.3.3-win32-x64.zip
++e53cf1d2b836a15fec89b479e2b9cc600086c9d841482a0418944e54cda391be *electron-api.json
++72b8c08c8675dcf045a31e84e4579fda4329abbe98be9a0dedadb6cc51d5e67c *electron-v28.3.3-darwin-arm64-dsym-snapshot.zip
++604a7742068ce33f9da4b058add0a1a6ca033aef6ea40fbfd4438b04195b015e *electron-v28.3.3-darwin-arm64-dsym.zip
++371f8cebebd745147026a7a21ab1552f2f153e58e99c2e47c64a4dde2ed06e3e *electron-v28.3.3-darwin-arm64-symbols.zip
++c310ab098d8849c4aa05f05b1c8521031241a046e023a911f964fd1db31c64c9 *electron-v28.3.3-darwin-arm64.zip
++56d76484ce86963af476a075a753232b3e590a17590f8dea80bca17282d27c6f *electron-v28.3.3-darwin-x64-dsym-snapshot.zip
++7953214655b563394e46b516381eeccbe169b99321f26cc477c8f9b90e937fee *electron-v28.3.3-darwin-x64-dsym.zip
++56c20a5bea1665abb5c717ee98dd4791b63a4e319c4eaae69bed2a69adb0f39b *electron-v28.3.3-darwin-x64-symbols.zip
++6bc63916b7fe52de7559e7631fef5c93315a18ee90a0d3d08168c91414b09ecf *electron-v28.3.3-darwin-x64.zip
++77ce557574f9f8dacbb64b01e071c169d18fde2c51d7ee8c18e19c73ea617a72 *electron-v28.3.3-linux-arm64-debug.zip
++72ad5fdae67fde0f8c842e2fc041ad30180141c4646144f137cd4dbceb29d88f *electron-v28.3.3-linux-arm64-symbols.zip
++f77107266581a6b9880757876518df1c4bf6eeff5c193bb5de0a8f6c9902bd1f *electron-v28.3.3-linux-arm64.zip
++77ce557574f9f8dacbb64b01e071c169d18fde2c51d7ee8c18e19c73ea617a72 *electron-v28.3.3-linux-armv7l-debug.zip
++964a5ebe451679ccf703e082748c81301f89be42cf18981f0d547e59c3f8313b *electron-v28.3.3-linux-armv7l-symbols.zip
++384d8b43f52b5350a438031ad12980418fc244b4b0aecfa5f7dcc3d6f103ebed *electron-v28.3.3-linux-armv7l.zip
++d11fb190b8d737c3c9f44302f27adbe91dfdcf5355bf0502f36fb7b7941988c5 *electron-v28.3.3-linux-x64-debug.zip
++c9dac90edd66fa962c400b855ba518f3ce49f61223bcc332b848130ae7e5af35 *electron-v28.3.3-linux-x64-symbols.zip
++20f6be493cbd6c9924206e744b1c490af1f97f4735451b9dc19f0d305366d546 *electron-v28.3.3-linux-x64.zip
++865dc4f53dd6174fcc3da178f505fff0db04738f30c52b1b87e909f53be49585 *electron-v28.3.3-mas-arm64-dsym-snapshot.zip
++7f9323cd95662de4172dc66eb33cbe8a2b0a578c8edba95a571a2acbdaaee57e *electron-v28.3.3-mas-arm64-dsym.zip
++1df04dfae35660c9b7dae931eb3b74e748b19f61485e83c22b17a9379256a3eb *electron-v28.3.3-mas-arm64-symbols.zip
++6d8c25101238ad8f41cb5bc1fd780c945c01a2322cd370a2c0ee6cedb2c408c8 *electron-v28.3.3-mas-arm64.zip
++5b07b8ecbc045c877b94958f556cc69e971845309da973a3bd6c6846861f9658 *electron-v28.3.3-mas-x64-dsym-snapshot.zip
++acc72dd0b52be35a553caefd421b927088c6a7d6e969dab494b67af8d8400332 *electron-v28.3.3-mas-x64-dsym.zip
++70c8eac7c16789cd0d5e8cd14f07b0c73bab27f96efe323a7035f19feabfdde5 *electron-v28.3.3-mas-x64-symbols.zip
++72a083458fad09ce91bd3202270263d01da360f7f730e68974e48febaed95ac6 *electron-v28.3.3-mas-x64.zip
++ee4e0e895e4f0c6979dab69dfd72bc36458d6d58ae256fd7a66dfe7514c2b825 *electron-v28.3.3-win32-arm64-pdb.zip
++4d4d1aaf04d5747033f33735800a92684fe0dc8caa52d3c34a882e7c2d1d70f9 *electron-v28.3.3-win32-arm64-symbols.zip
++c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v28.3.3-win32-arm64-toolchain-profile.zip
++be766cc3598e8a888770cff2949a0866abed18d441c11c7abf206856e0dd2c7d *electron-v28.3.3-win32-arm64.zip
++6dd6a972fea04be1da03d92844b1782f903537eae05234fccf1f2cfee86849bd *electron-v28.3.3-win32-ia32-pdb.zip
++22f2e5b6b83fc6bd8591afbf852759e230f1e5bd19ba9b450164ba33299d6ece *electron-v28.3.3-win32-ia32-symbols.zip
++c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v28.3.3-win32-ia32-toolchain-profile.zip
++9d016b77e7034a236776208da5329a7ff21dc8a8eaf059722fade46ec69b4d64 *electron-v28.3.3-win32-ia32.zip
++5731598aff4d77d4006a7095d0b8f2df83beeb401c3dd8fe3f97f013bd33ceeb *electron-v28.3.3-win32-x64-pdb.zip
++e715521480ff466ee3e37d512aea19bf746d97e78e2e9fef8cf2d09eea2e663f *electron-v28.3.3-win32-x64-symbols.zip
++c9f31ae6408aa6936b5d683eda601773789185890375cd097e61e924d4fed77a *electron-v28.3.3-win32-x64-toolchain-profile.zip
++254c86fa6446df752f651955aa3eaba222469759f24bb3e7fd1f522d83cddb4a *electron-v28.3.3-win32-x64.zip
++7bad40dc76076678d55ac14ab5856aa608a84c1ae999434e80e1f70a5e3f6841 *electron.d.ts
++0d6d742cd3fc6d664d2894d7b8f75338a3b5563b2c0ea3d8b737e7cf15286ed2 *ffmpeg-v28.3.3-darwin-arm64.zip
++ec8343f766c9ead3915f94a377d934287f1d9efc27b6094556afd95410a430aa *ffmpeg-v28.3.3-darwin-x64.zip
++8e108e533811febcc51f377ac8604d506663453e41c02dc818517e1ea9a4e8d5 *ffmpeg-v28.3.3-linux-arm64.zip
++51ecd03435f56a2ced31b1c9dbf281955ba82a814ca0214a4292bdc711e5a45c *ffmpeg-v28.3.3-linux-armv7l.zip
++acc9dc3765f68b7563045e2d0df11bbef6b41be0a1c34bbf9fa778f36eefb42f *ffmpeg-v28.3.3-linux-x64.zip
++71307d74be6e5d9da253e69f731cc1b5ee17d72957f2f53600a80db2722e1944 *ffmpeg-v28.3.3-mas-arm64.zip
++46caea3583b5c12736a3a3e44e3c55353b234743d6a570e0f8feb0b4046ed43e *ffmpeg-v28.3.3-mas-x64.zip
++a867e5e334e2b77ae7bf6b82882532bb71d3da2a64057d31d7b0bae06e6f9c8e *ffmpeg-v28.3.3-win32-arm64.zip
++529befd18cf099e42efadab75587c37797de302d19762ac5c5ec0584cc3b0de9 *ffmpeg-v28.3.3-win32-ia32.zip
++3c5abc159ffb615290876370f8261e282b20992e0f1e72cccb9243d26d0b76f7 *ffmpeg-v28.3.3-win32-x64.zip
++24934acfa3a5b137e5081fc26be20cf2970949845551e2d66e74537230b2383c *hunspell_dictionaries.zip
++abc010611bc7bf51f7892c2107050af29076ac18da9d8ee16025119461b6f59d *libcxx-objects-v28.3.3-linux-arm64.zip
++733126da8217848ab369b0a0d96f2600e6bec5b6b48c3618c55a2a47bd6993e3 *libcxx-objects-v28.3.3-linux-armv7l.zip
++b515a6f32ee6737bdba0584898f507cfc81cdb971067014c6e44075267207dd7 *libcxx-objects-v28.3.3-linux-x64.zip
++8b1ad3108988a4d9d3ec17be1e7542f7910268d3924d2e624f85238fef2837ab *libcxx_headers.zip
++84366dd31ec3abeae1f0b6cc7beb0c2bb618a2a2763fe1898bf52e938e3a02ef *libcxxabi_headers.zip
++0e55a1df0d10db0ae8370d917c36200ccfcab1357fdbdf1655ecb12d0ad2d794 *mksnapshot-v28.3.3-darwin-arm64.zip
++4d47e024e8463661913a40f22f943aabdba46e5736cf8a7011b079e49e7fda55 *mksnapshot-v28.3.3-darwin-x64.zip
++9133011f453b98b35fa60cff0cc0d3918afb3cb9bc7b37447cf78406d36f5c90 *mksnapshot-v28.3.3-linux-arm64-x64.zip
++03f4bc2a52fba194b4aae2c549dd3eff595b0b90d71a4fb1f1d8b48e77777865 *mksnapshot-v28.3.3-linux-armv7l-x64.zip
++55caf274fdebd46652d7747efc80dcd0498d4e772e703571f5721be5019a2a46 *mksnapshot-v28.3.3-linux-x64.zip
++64f5c2ad45210dec8d1037dc3bc0d7682fff7ec8923d932e667efc4414af92b1 *mksnapshot-v28.3.3-mas-arm64.zip
++8c17f3ce0ab07b0f79935a15affa4a08c42c0c059ab551329fcc7e7f28c63236 *mksnapshot-v28.3.3-mas-x64.zip
++1299ab5a143d49eea89a72a037e2d4dfb6e4a50481b50e1bbca2bc02b37ece70 *mksnapshot-v28.3.3-win32-arm64-x64.zip
++f34fd3b76488ea3e3b0fafda4271126c2f403fdba9ed63bf0b34f1d9316897fb *mksnapshot-v28.3.3-win32-ia32.zip
++9956d87fac2043cbf9f445551622615a57b47b440e8fcd2ac211a82d94fd2e09 *mksnapshot-v28.3.3-win32-x64.zip
 \ No newline at end of file
 diff --git a/build/checksums/nodejs.txt b/build/checksums/nodejs.txt
-index 3436ff3..edc1af9 100644
+index 3436ff3..8a14a69 100644
 --- a/build/checksums/nodejs.txt
 +++ b/build/checksums/nodejs.txt
 @@ -1,7 +1,34 @@
@@ -184,40 +184,40 @@ index 3436ff3..edc1af9 100644
 -b3f874ea84e440d69ed02ca92429d0eccd17737fde86db69c1c153d16ec654f2  node-v20.16.0-linux-x64.tar.gz
 -7e773fba3a19eac5ccbe85c1f87a05d7b112ecf41440076e6b6de1c7bffa0fdf  win-arm64/node.exe
 -ba221658a3b68bd583e3068903eb675b5206d86a883c084ed95502e8f634b82a  win-x64/node.exe
-+dfb37570ef34ac04f34c26d0ec558df60a9665df5961c01c1657c0ca495f2f01  node-v16.17.1-aix-ppc64.tar.gz
-+f9f02f7872e2e8ee54320fce13deb9d56904f32bb0615b6e21aa3371d8899150  node-v16.17.1-darwin-arm64.tar.gz
-+09a45f60bfb9dfbea4f69044dc733ef983945acd92ca89ccccac267f3d71bd44  node-v16.17.1-darwin-arm64.tar.xz
-+3db26761ad8493b894d42260d7e65094b7af9bc473588739e61bc1c32d6ff955  node-v16.17.1-darwin-x64.tar.gz
-+8e7089956fa01cf7d0045945c0863d282dc6818fb0476237c1396497e29a4254  node-v16.17.1-darwin-x64.tar.xz
-+35ccb95caf02cda3bd680da4350a8ae5d666a7a9eae3afe5c2a1b3ef29aef108  node-v16.17.1-headers.tar.gz
-+554c8d1b4b16e0f4c073b9df7c49c893716a3a533f25ac646f23619f5ccee7df  node-v16.17.1-headers.tar.xz
-+adc7032888d4e672a4aac886baede8c04fccdd1a2e7ab4bcf325e3f336f44a3d  node-v16.17.1-linux-arm64.tar.gz
-+3dfb8fd8f6b97df69cdc56524abc906c50ef1d0bf091188616802e6c7c731389  node-v16.17.1-linux-arm64.tar.xz
-+aeab05e35f1d2824ecfb88ca321f1408b44d292b2775f2890972c828e00216d0  node-v16.17.1-linux-armv7l.tar.gz
-+a035ceefb5e16f5fce98c8ddfdf721b96eec20542c72fb8781bcbb6ef20c5550  node-v16.17.1-linux-armv7l.tar.xz
-+1f48de7bed99e973c4c50f1b7fc99fc9af5144d093fd6d2b50a1e43b5818bf05  node-v16.17.1-linux-ppc64le.tar.gz
-+70305934661f89fca64053b85317a75f233d5e3fdb2caa6546a19262a519cf20  node-v16.17.1-linux-ppc64le.tar.xz
-+029dad48018bda07b481213816549b632059fc673c30fdc7a353e04619128344  node-v16.17.1-linux-s390x.tar.gz
-+1a47f604944c6aff37cb7483503155671cdb34bda9bfb8962007bc440fa04d77  node-v16.17.1-linux-s390x.tar.xz
-+da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0  node-v16.17.1-linux-x64.tar.gz
-+06ba2eb34aa385967f5f58c87a44753f83212f6cccea892b33f80a2e7fda8384  node-v16.17.1-linux-x64.tar.xz
-+12d10476ea7483298364c810c037b9316d1a73dc8c81cfeff7d794aecadde498  node-v16.17.1.pkg
-+e423985f6019b2026f9a191adb56a96ae83ecd56cdf839cf94aa980168b7a90f  node-v16.17.1.tar.gz
-+6721feb4152d56d2c6b358ce397abd5a7f1daf09ee2e25c5021b9b4d3f86a330  node-v16.17.1.tar.xz
-+9777e8c4b2864c5b54a0e4e9400f14887db68560a09b94b4113b560a64d1e680  node-v16.17.1-win-x64.7z
-+ed290151efb417262b9808a70738d4ab79e9d53653a6a9f4b8dd97912e279dce  node-v16.17.1-win-x64.zip
-+0f8101648d5c9e49e89fee541da9e574f899716c32b7c51a732b1766b9fc4526  node-v16.17.1-win-x86.7z
-+189b5e8b23226403e7b07a46614de19b444d369e694901e3668e2f549799cbcd  node-v16.17.1-win-x86.zip
-+1bdff65fb7642425c0d6826084d63c4be43520316f0ea0b46e6a51999a0ed7fc  node-v16.17.1-x64.msi
-+b737eb23a2c67c253b9364b5284123faf5220d567615bebd4ec4b81070e4d177  node-v16.17.1-x86.msi
-+f518a70dcab7c3fac5b2e1ef100b4f628edfb160f4fafa9a94ef222da8a6e9ab  win-x64/node.exe
-+2f459a64647db493da63c790ce368ad54f59f086d9f22f59c5018680420197b3  win-x64/node.lib
-+23215ce7d1e9de9777c3407239e7cf18d29d60f757b772219421ab361ac67c74  win-x64/node_pdb.7z
-+8e32ec12028fd3e3147435be79a858ed9c870aaafa1fcb291362307ef3c47547  win-x64/node_pdb.zip
-+2393aff88be19dbe0205cbde4ff0c1d89911b15de5c99c80f6e5e29604eecd12  win-x86/node.exe
-+5018c3d42f3fbacbd06cb943b3f2696c8e67ca9bdf6864d0e263d6d6911dffd2  win-x86/node.lib
-+05a4db56444a60ee70b0d2642d7f2d82a33339894d2d73bd07b1a41d6c869e04  win-x86/node_pdb.7z
-+8f86eacb7f13a1bf6738cb0819d7854a2abca40fc2e9e1f91421e44ba52cad7e  win-x86/node_pdb.zip
++8911c72a1395cdf88b826da49e1dc0af9700c9db880a69da24a9e061769c94f2  node-v18.18.2-aix-ppc64.tar.gz
++9f982cc91b28778dd8638e4f94563b0c2a1da7aba62beb72bd427721035ab553  node-v18.18.2-darwin-arm64.tar.gz
++890bc7a53375ba53f0860796c88f3e8ada0d307df25ac25cf85140ffacbfb0bf  node-v18.18.2-darwin-arm64.tar.xz
++5bb8da908ed590e256a69bf2862238c8a67bc4600119f2f7721ca18a7c810c0f  node-v18.18.2-darwin-x64.tar.gz
++6492bc80eb736f2694e9e78f624c0a34c404d19b844a4f23b0e9a81bd515ebcc  node-v18.18.2-darwin-x64.tar.xz
++70c9164c1952a77ce06bd80e3507a11124cf60b6c82409e2c3ad1a6d5bc5a910  node-v18.18.2-headers.tar.gz
++c2c1298a1ccd1bfb2cb76725fb87715cf88db2a2515d28d8a66376300de96d67  node-v18.18.2-headers.tar.xz
++0c9a6502b66310cb26e12615b57304e91d92ac03d4adcb91c1906351d7928f0d  node-v18.18.2-linux-arm64.tar.gz
++2e630e18548627f61eaf573233da7949dc0a1df5eef3f486fa9820c5f6c121aa  node-v18.18.2-linux-arm64.tar.xz
++7a3b34a6fdb9514bc2374114ec6df3c36113dc5075c38b22763aa8f106783737  node-v18.18.2-linux-armv7l.tar.gz
++663160a8a2bbc42c9d2b2591d7dc556d245254f7c5e5aafb4adcad791ed39875  node-v18.18.2-linux-armv7l.tar.xz
++dbf0939c2ad50b74f2aaa005473b2e14c1cbe68318b69f4c1b4e6dda8e5aa43a  node-v18.18.2-linux-ppc64le.tar.gz
++b0adff5cf5938266b711d6c724fb134d802e0dee40b3a3f73d162de1b3d11880  node-v18.18.2-linux-ppc64le.tar.xz
++c5ed8da4272740190ce2a477096cb8486ade0d15e2b830f298d7d599c2e6cd97  node-v18.18.2-linux-s390x.tar.gz
++c70ec2074b5e2b42c55bb4b8105418b67bf8a61c500d9376a07430dfcc341fdb  node-v18.18.2-linux-s390x.tar.xz
++a44c3e7f8bf91e852c928e5d8bd67ca316b35e27eec1d8acbe3b9dbe03688dab  node-v18.18.2-linux-x64.tar.gz
++75aba25ae76999309fc6c598efe56ce53fbfc221381a44a840864276264ab8ac  node-v18.18.2-linux-x64.tar.xz
++01eba2502b9c60f20df0cd0a027d2eb6ea80c265e3cb05b2e14f14e5aedc025c  node-v18.18.2-win-x64.7z
++3bb0e51e579a41a22b3bf6cb2f3e79c03801aa17acbe0ca00fc555d1282e7acd  node-v18.18.2-win-x64.zip
++28422e9ebb45715e9744916299596519e80fc37680c06155b8e0108c7eb17974  node-v18.18.2-win-x86.7z
++1ba446246ac47e25f165b8a00d5245d68980d747bc5feffbc421d003dd186f14  node-v18.18.2-win-x86.zip
++221f2a904f13105122a108fb735a8f89615864c7bcba3842fa1ef684f136abe3  node-v18.18.2-x64.msi
++77684d746d977404ee1832505ae64fb4cb8355eb12e4bf37c3036f7cf3b84e5b  node-v18.18.2-x86.msi
++a7b27f8dbe7c73f357875a0e983ccab5ccc26f3e1e02cfc5c70404f3909d49dc  node-v18.18.2.pkg
++509cd2cfc3a515bf2257ed3886b9fac64aeaac2a70ea59c0a6e02e2dbb722132  node-v18.18.2.tar.gz
++7249e2f0af943ec38599504f4b2a2bd31fb938787291b6ccca6c8badf01e3b56  node-v18.18.2.tar.xz
++54884183ff5108874c091746465e8156ae0acc68af589cc10bc41b3927db0f4a  win-x64/node.exe
++57f0bf8dbc68fe3468105a7f9d8fe773220f135a171dde2682f30e118a6fc7d7  win-x64/node.lib
++f1fbe0be82f279f281336a9e8b29a5b41363d6f1d4aef88937d57c9fce985515  win-x64/node_pdb.7z
++07ce9bdc39f1a5dfd970837d1fc72c8461a010ed359f4dc12065ab917855d0cb  win-x64/node_pdb.zip
++a5226bb0dd7bbd7c33dad6456579a7da3e05a8f8bb0a2019296c556acae411e8  win-x86/node.exe
++62ee700c739ed89bfea9a5151be27c0ae035aa6dfb3efd7433076de1df389e35  win-x86/node.lib
++289e324c58377c086b4abf83096f4f2690427af20b1343d186808b6e4b2a356b  win-x86/node_pdb.7z
++021042696076e19e17ed67dc11bd2eee6eeccc7a3091bd070772b8b0630e8b34  win-x86/node_pdb.zip
 diff --git a/build/lib/builtInExtensionsCG.js b/build/lib/builtInExtensionsCG.js
 index 30b6791..df22f2d 100644
 --- a/build/lib/builtInExtensionsCG.js
@@ -431,8 +431,8 @@ index b98f229..d9195d0 100644
  if (!process.env['VSCODE_SKIP_NODE_VERSION_CHECK']) {
 -	if (majorNodeVersion < 20) {
 -		console.error('\x1b[1;31m*** Please use latest Node.js v20 LTS for development.\x1b[0;0m');
-+	if (majorNodeVersion < 16) {
-+		console.error('\x1b[1;31m*** Please use Node.js v16 for development.\x1b[0;0m');
++	if (majorNodeVersion < 18) {
++		console.error('\x1b[1;31m*** Please use Node.js v18 for development.\x1b[0;0m');
  		throw new Error();
  	}
  }
@@ -454,7 +454,7 @@ index 7017b91..7a5804e 100644
      "@types/minimist": "^1.2.1",
      "@types/mocha": "^9.1.1",
 -    "@types/node": "20.x",
-+    "@types/node": "16.18.111",
++    "@types/node": "18.x",
      "@types/pump": "^1.0.1",
      "@types/rimraf": "^2.0.4",
      "@types/through": "^0.0.29",
@@ -505,7 +505,7 @@ index dcb4791..c79bfa0 100644
  					"name": "chromium",
  					"repositoryUrl": "https://chromium.googlesource.com/chromium/src",
 -					"commitHash": "7fa4f6e14e0707c0e604cf7c1da33566e78169ce"
-+					"commitHash": "513ac8b2c47c7e1ac6b9f4fb5ea98e965cf29b66"
++					"commitHash": "14d11e5bb9b5b1cd51f7b19546e74a73cab42084"
  				}
  			},
  			"licenseDetail": [
@@ -514,7 +514,7 @@ index dcb4791..c79bfa0 100644
  			],
  			"isOnlyProductionDependency": true,
 -			"version": "124.0.6367.243"
-+			"version": "108.0.5359.215"
++			"version": "120.0.6099.291"
  		},
  		{
  			"component": {
@@ -523,7 +523,7 @@ index dcb4791..c79bfa0 100644
  					"name": "ffmpeg",
  					"repositoryUrl": "https://chromium.googlesource.com/chromium/third_party/ffmpeg",
 -					"commitHash": "52d8ef3799b2f16b66351dd0972bb0bcee1648ac"
-+					"commitHash": "b9f01c3c54576330b2cf8918c54d5ee5be8faefe"
++					"commitHash": "e1ca3f06adec15150a171bc38f550058b4bbb23b"
  				}
  			},
  			"isOnlyProductionDependency": true,
@@ -532,12 +532,12 @@ index dcb4791..c79bfa0 100644
  					"name": "nodejs",
  					"repositoryUrl": "https://github.com/nodejs/node",
 -					"commitHash": "1968ef32415607643770efb320d7d4e941baaa25"
-+					"commitHash": "6b06e89c7dfccec6792008302af1cee57649445c"
++					"commitHash": "8a01b3dcb7d08a48bfd3e6bf85ef49faa1454839"
  				}
  			},
  			"isOnlyProductionDependency": true,
 -			"version": "20.16.0"
-+			"version": "16.17.1"
++			"version": "18.18.2"
  		},
  		{
  			"component": {
@@ -546,13 +546,13 @@ index dcb4791..c79bfa0 100644
  					"name": "electron",
  					"repositoryUrl": "https://github.com/electron/electron",
 -					"commitHash": "a07a70e8db21718dd76644d99892d3e15e0ed440"
-+					"commitHash": "e2dac668c680a8b58f204ce14ad88431a2db4339"
++					"commitHash": "92e4123de76879f438b69d3185a00ffb359176b7"
  				}
  			},
  			"isOnlyProductionDependency": true,
  			"license": "MIT",
 -			"version": "30.5.1"
-+			"version": "22.3.27"
++			"version": "28.3.3"
  		},
  		{
  			"component": {
@@ -616,7 +616,7 @@ index 7e0de18..861cc06 100644
      "debounce": "^1.0.0",
      "deemon": "^1.8.0",
 -    "electron": "30.5.1",
-+    "electron": "22.3.27",
++    "electron": "28.3.3",
      "eslint": "8.36.0",
      "eslint-plugin-header": "3.1.1",
      "eslint-plugin-jsdoc": "^46.5.0",
@@ -675,7 +675,7 @@ index d6905a0..cedd548 100644
 @@ -1,5 +1,5 @@
  disturl="https://nodejs.org/dist"
 -target="20.16.0"
-+target="16.17.1"
++target="18.18.2"
  ms_build_id="289487"
  runtime="node"
  build_from_source="true"
