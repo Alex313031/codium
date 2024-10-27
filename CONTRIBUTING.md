@@ -16,8 +16,8 @@ This project and everyone participating in it is governed by the [Codium Code of
 
 ### Before Submitting an Issue
 
-Before creating bug reports, please check existing issues and [the Troubleshooting page](https://github.com/VSCodium/vscodium/blob/master/docs/troubleshooting.md) as you might find out that you don't need to create one.
-When you are creating a bug report, please include as many details as possible. Fill out [the required template](https://github.com/VSCodium/vscodium/issues/new?&labels=bug&&template=bug_report.md), the information it asks for helps us resolve issues faster.
+Before creating bug reports, please check existing issues and [the Troubleshooting page](https://github.com/Alex313031/codium/blob/master/docs/troubleshooting.md) as you might find out that you don't need to create one.
+When you are creating a bug report, please include as many details as possible. Fill out [the required template](https://github.com/Alex313031/codium/issues/new?&labels=bug&&template=bug_report.md), the information it asks for helps us resolve issues faster.
 
 ## Making Changes
 
