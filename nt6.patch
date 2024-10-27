@@ -589,7 +589,7 @@ index 7e0de18..861cc06 100644
 -    "@types/node": "20.x",
 -    "@types/sinon": "^10.0.2",
 -    "@types/sinon-test": "^2.4.2",
-+    "@types/node": "16.18.111",
++    "@types/node": "18.x",
 +    "@types/sinon": "10.0.16",
 +    "@types/sinon-test": "2.4.6",
      "@types/trusted-types": "^1.0.6",
@@ -679,57 +679,6 @@ index d6905a0..cedd548 100644
  ms_build_id="289487"
  runtime="node"
  build_from_source="true"
-diff --git a/src/vs/base/parts/sandbox/common/electronTypes.ts b/src/vs/base/parts/sandbox/common/electronTypes.ts
-index ef8c102..d5180c3 100644
---- a/src/vs/base/parts/sandbox/common/electronTypes.ts
-+++ b/src/vs/base/parts/sandbox/common/electronTypes.ts
-@@ -21,7 +21,7 @@ export interface MessageBoxOptions {
- 	 * displays the same icon as `info`, unless you set an icon using the `icon`
- 	 * option. On macOS, both `warning` and `error` display the same warning icon.
- 	 */
--	type?: ('none' | 'info' | 'error' | 'question' | 'warning');
-+	type?: string;
- 	/**
- 	 * Array of texts for buttons. On Windows, an empty array will result in one button
- 	 * labeled "OK".
-@@ -148,9 +148,9 @@ export interface SaveDialogReturnValue {
- 	 */
- 	canceled: boolean;
- 	/**
--	 * If the dialog is canceled, this will be an empty string.
-+	 * If the dialog is canceled, this will be `undefined`.
- 	 */
--	filePath: string;
-+	filePath?: string;
- 	/**
- 	 * Base64 encoded string which contains the security scoped bookmark data for the
- 	 * saved file. `securityScopedBookmarks` must be enabled for this to be present.
-diff --git a/src/vs/platform/windows/electron-main/windowImpl.ts b/src/vs/platform/windows/electron-main/windowImpl.ts
-index 5d3b1c5..8b6c3c0 100644
---- a/src/vs/platform/windows/electron-main/windowImpl.ts
-+++ b/src/vs/platform/windows/electron-main/windowImpl.ts
-@@ -378,11 +378,7 @@ export abstract class BaseWindow extends Disposable implements IBaseWindow {
- 		// macOS: traffic lights
- 		else if (isMacintosh && options.height !== undefined) {
- 			const verticalOffset = (options.height - 15) / 2; // 15px is the height of the traffic lights
--			if (!verticalOffset) {
--				win.setWindowButtonPosition(null);
--			} else {
--				win.setWindowButtonPosition({ x: verticalOffset, y: verticalOffset });
--			}
-+			win.setTrafficLightPosition({ x: verticalOffset, y: verticalOffset });
- 		}
- 	}
- 
-@@ -984,7 +980,7 @@ export class CodeWindow extends BaseWindow implements ICodeWindow {
- 				const proxyBypassRules = newNoProxy ? `${newNoProxy},<local>` : '<local>';
- 				this.logService.trace(`Setting proxy to '${proxyRules}', bypassing '${proxyBypassRules}'`);
- 				this._win.webContents.session.setProxy({ proxyRules, proxyBypassRules, pacScript: '' });
--				electron.app.setProxy({ proxyRules, proxyBypassRules, pacScript: '' });
-+				electron.session.defaultSession.setProxy({ proxyRules, proxyBypassRules, pacScript: '' });
- 			}
- 		}
- 	}
 diff --git a/src/vs/server/node/remoteExtensionHostAgentServer.ts b/src/vs/server/node/remoteExtensionHostAgentServer.ts
 index c076b5c..f315a2e 100644
 --- a/src/vs/server/node/remoteExtensionHostAgentServer.ts
