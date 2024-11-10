@@ -454,7 +454,7 @@ index 7017b91..7a5804e 100644
      "@types/minimist": "^1.2.1",
      "@types/mocha": "^9.1.1",
 -    "@types/node": "20.x",
-+    "@types/node": "18.x",
++    "@types/node": "18.19.53",
      "@types/pump": "^1.0.1",
      "@types/rimraf": "^2.0.4",
      "@types/through": "^0.0.29",
@@ -463,7 +463,7 @@ index 7017b91..7a5804e 100644
      "debug": "^4.3.2",
      "electron-osx-sign": "^0.4.16",
 -    "esbuild": "0.23.0",
-+    "esbuild": "0.21.5",
++    "esbuild": "0.23.1",
      "extract-zip": "^2.0.1",
      "gulp-merge-json": "^2.1.1",
      "gulp-sort": "^2.0.0",
@@ -473,29 +473,6 @@ index 7017b91..7a5804e 100644
      "source-map": "0.6.1",
      "ternary-stream": "^3.0.0",
      "through2": "^4.0.2",
-@@ -55,6 +56,22 @@
-     "workerpool": "^6.4.0",
-     "yauzl": "^2.10.0"
-   },
-+  "resolutions": {
-+    "@azure/core-auth": "1.5.0",
-+    "@azure/core-client": "1.7.3",
-+    "@azure/core-lro": "2.5.4",
-+    "@azure/core-rest-pipeline": "1.12.2",
-+    "@azure/core-tracing": "1.0.1",
-+    "@azure/core-util": "1.6.1"
-+  },
-+  "overrides": {
-+    "@azure/core-auth": "1.5.0",
-+    "@azure/core-client": "1.7.3",
-+    "@azure/core-lro": "2.5.4",
-+    "@azure/core-rest-pipeline": "1.12.2",
-+    "@azure/core-tracing": "1.0.1",
-+    "@azure/core-util": "1.6.1"
-+  },
-   "type": "commonjs",
-   "scripts": {
-     "compile": "../node_modules/.bin/tsc -p tsconfig.build.json",
 diff --git a/cgmanifest.json b/cgmanifest.json
 index dcb4791..c79bfa0 100644
 --- a/cgmanifest.json
@@ -565,7 +542,7 @@ index c918c19..10b6b86 100644
    "devDependencies": {
      "@parcel/watcher": "2.1.0",
 -    "esbuild": "0.23.0",
-+    "esbuild": "0.21.5",
++    "esbuild": "0.23.1",
      "vscode-grammar-updater": "^1.1.0"
    },
    "resolutions": {
@@ -578,7 +555,7 @@ index 7e0de18..861cc06 100644
    },
    "devDependencies": {
 -    "@playwright/test": "^1.46.1",
-+    "@playwright/test": "1.44.1",
++    "@playwright/test": "1.45.1",
      "@swc/core": "1.3.62",
      "@types/cookie": "^0.3.3",
      "@types/debug": "^4.1.5",
@@ -589,7 +566,7 @@ index 7e0de18..861cc06 100644
 -    "@types/node": "20.x",
 -    "@types/sinon": "^10.0.2",
 -    "@types/sinon-test": "^2.4.2",
-+    "@types/node": "18.x",
++    "@types/node": "18.19.53",
 +    "@types/sinon": "10.0.16",
 +    "@types/sinon-test": "2.4.6",
      "@types/trusted-types": "^1.0.6",
@@ -602,7 +579,7 @@ index 7e0de18..861cc06 100644
 -    "@vscode/gulp-electron": "^1.36.0",
 -    "@vscode/l10n-dev": "0.0.35",
 +    "@vscode/gulp-electron": "git+https://github.com/Alex313031/vscode-gulp-electron.git",
-+    "@vscode/l10n-dev": "0.0.30",
++    "@vscode/l10n-dev": "0.0.35",
      "@vscode/telemetry-extractor": "^1.10.2",
      "@vscode/test-cli": "^0.0.6",
      "@vscode/test-electron": "^2.4.0",
@@ -634,40 +611,6 @@ index 7e0de18..861cc06 100644
      "source-map": "0.6.1",
      "source-map-support": "^0.3.2",
      "style-loader": "^3.3.2",
-@@ -225,7 +225,32 @@
-     "yaserver": "^0.4.0"
-   },
-   "overrides": {
--    "node-gyp-build": "4.8.1"
-+    "@azure/core-auth": "1.5.0",
-+    "@azure/core-client": "1.7.3",
-+    "@azure/core-lro": "2.5.4",
-+    "@azure/core-rest-pipeline": "1.12.2",
-+    "@azure/core-tracing": "1.0.1",
-+    "@azure/core-util": "1.6.1",
-+    "@azure-rest/core-client": "1.1.4",
-+    "@types/sinon": "10.0.16",
-+    "@playwright/browser-chromium": "1.44.1",
-+    "node-gyp-build": "4.8.1",
-+    "playwright": "1.44.1",
-+    "playwright-core": "1.44.1"
-+  },
-+  "resolutions": {
-+    "@azure/core-auth": "1.5.0",
-+    "@azure/core-client": "1.7.3",
-+    "@azure/core-lro": "2.5.4",
-+    "@azure/core-rest-pipeline": "1.12.2",
-+    "@azure/core-tracing": "1.0.1",
-+    "@azure/core-util": "1.6.1",
-+    "@azure-rest/core-client": "1.1.4",
-+    "@types/sinon": "10.0.16",
-+    "@playwright/browser-chromium": "1.44.1",
-+    "node-gyp-build": "4.8.1",
-+    "playwright": "1.44.1",
-+    "playwright-core": "1.44.1"
-   },
-   "repository": {
-     "type": "git",
 diff --git a/remote/.npmrc b/remote/.npmrc
 index d6905a0..cedd548 100644
 --- a/remote/.npmrc
@@ -722,26 +665,4 @@ index 51e767f..89b00c2 100644
 +				options.paths = node_module._nodeModulePaths(__dirname);
  			}
  			return originalResolveFilename.call(this, request, parent, isMain, options);
- 		};
-diff --git a/src/vs/workbench/api/node/proxyResolver.ts b/src/vs/workbench/api/node/proxyResolver.ts
-index 3f6253c..b9947ea 100644
---- a/src/vs/workbench/api/node/proxyResolver.ts
-+++ b/src/vs/workbench/api/node/proxyResolver.ts
-@@ -122,7 +122,7 @@ function patchGlobalFetch(configProvider: ExtHostConfigProvider, mainThreadTelem
- 				useElectronFetch = configProvider.getConfiguration('http').get<boolean>('electronFetch', useElectronFetchDefault);
- 			}
- 		}));
--		const electron = require('electron');
-+		//const electron = require('electron');
- 		// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
- 		globalThis.fetch = async function fetch(input: any /* RequestInfo */ | URL, init?: RequestInit) {
- 			function getRequestProperty(name: keyof any /* Request */ & keyof RequestInit) {
-@@ -162,7 +162,7 @@ function patchGlobalFetch(configProvider: ExtHostConfigProvider, mainThreadTelem
- 			}
- 			// Support for URL: https://github.com/electron/electron/issues/43712
- 			const electronInput = input instanceof URL ? input.toString() : input;
--			const response = await electron.net.fetch(electronInput, init);
-+			const response = await originalFetch(electronInput, init);
- 			monitorResponseProperties(mainThreadTelemetry, response, urlString);
- 			return response;
  		};

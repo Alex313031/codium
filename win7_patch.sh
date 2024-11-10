@@ -49,7 +49,7 @@ printf "\n" &&
 
 git apply --reject ../bionic.patch  &&
 
-/usr/bin/find ./ \( -type d -name .git -prune -type d -name node_modules -prune \) -o -type f -name package.json -print0 | xargs -0 sed -i 's/\"\@types\/node\"\:\ \"20\.x\"/\"\@types\/node\"\:\ \"18\.x\"/g' &&
+/usr/bin/find ./ \( -type d -name .git -prune -type d -name node_modules -prune \) -o -type f -name package.json -print0 | xargs -0 sed -i 's/\"\@types\/node\"\:\ \"20\.x\"/\"\@types\/node\"\:\ \"18\.19\.53\"/g' &&
 
 /usr/bin/find ./ \( -type d -name .git -prune -type d -name node_modules -prune \) -o -type f -name package.json -print0 | xargs -0 sed -i 's/\"node\"\:\ \"20\.x\"/\"node\"\:\ \"18\.x\"/g' &&
 

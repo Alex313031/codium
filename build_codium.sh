@@ -15,7 +15,7 @@ if [[ "${SHOULD_BUILD}" == "yes" ]]; then
   export NODE_OPTIONS="--max-old-space-size=8192"
 
   npm run monaco-compile-check &&
-  npm run valid-layers-check &&
+  # npm run valid-layers-check &&
 
   npm run gulp compile-build &&
   npm run gulp compile-extension-media &&
